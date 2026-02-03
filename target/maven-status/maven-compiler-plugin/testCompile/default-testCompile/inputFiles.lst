@@ -2,6 +2,7 @@ D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\stepDefinitions
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\runners\UiTestRunner.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\models\response\SaleResponse.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\stepDefinitions\categories\CategoryListSteps.java
+D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\stepDefinitions\sales\SalesStepDefinitions.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\pages\sales\SalesListPage.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\stepDefinitions\categories\CategoryCRUDSteps.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\models\response\PlantResponse.java
@@ -14,7 +15,6 @@ D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\pages\dashboard\
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\models\response\LoginResponse.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\pages\plants\PlantListPage.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\pages\login\LoginPage.java
-D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\stepDefinitions\sales\SalesListSteps.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\models\request\LoginRequest.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\models\request\PlantRequest.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\stepDefinitions\dashboard\DashboardSteps.java
@@ -25,7 +25,6 @@ D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\models\request\
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\stepDefinitions\AuthApiSteps.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\stepDefinitions\CategoryApiSteps.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\runners\TestRunner.java
-D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\stepDefinitions\sales\SellPlantSteps.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\utils\ConfigReader.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\ui\stepDefinitions\plants\PlantCRUDSteps.java
 D:\L4\QA\plant-sales-ui-automation\src\test\java\com\example\api\clients\AuthClient.java
