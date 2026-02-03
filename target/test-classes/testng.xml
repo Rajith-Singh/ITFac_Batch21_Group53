@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Plant Sales Automation Suite" verbose="1">
+    
+    <!-- Option 1: Run All Tests -->
+    <test name="All Tests">
+        <classes>
+            <class name="com.example.runners.TestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Option 2: Separate UI and API Tests -->
+    <test name="UI Tests">
+        <parameter name="cucumber.filter.tags" value="@ui"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+    <test name="API Tests">
+        <parameter name="cucumber.filter.tags" value="@api"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+</suite>
