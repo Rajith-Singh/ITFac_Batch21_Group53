@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-02-04T15:18:25 IST" name="Plant Sales Automation Suite" finished-at="2026-02-04T15:18:25 IST" duration-ms="237">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.TestRunner@689604d9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3c46e67a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-02-04T15:18:25 IST" name="All Tests" finished-at="2026-02-04T15:18:25 IST" duration-ms="207">
+      <class name="com.example.runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.TestRunner@689604d9]" started-at="2026-02-04T15:18:25 IST" name="setUpClass" finished-at="2026-02-04T15:18:25 IST" duration-ms="177" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@55740540]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.TestRunner@689604d9]" started-at="2026-02-04T15:18:25 IST" name="tearDownClass" finished-at="2026-02-04T15:18:25 IST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.example.runners.TestRunner -->
+    </test> <!-- All Tests -->
+    <test started-at="2026-02-04T15:18:25 IST" name="UI Tests" finished-at="2026-02-04T15:18:25 IST" duration-ms="13">
+      <class name="com.example.runners.UiTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@3c46e67a]" started-at="2026-02-04T15:18:25 IST" name="setUpClass" finished-at="2026-02-04T15:18:25 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@60015ef5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@3c46e67a]" started-at="2026-02-04T15:18:25 IST" name="tearDownClass" finished-at="2026-02-04T15:18:25 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.example.runners.UiTestRunner -->
+    </test> <!-- UI Tests -->
+  </suite> <!-- Plant Sales Automation Suite -->
+</testng-results>
