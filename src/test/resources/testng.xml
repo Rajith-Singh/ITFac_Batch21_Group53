@@ -2,16 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Plant Sales Automation Suite" verbose="1">
     
-    <!-- Option 1: Run All Tests -->
-    <test name="All Tests">
+    <!-- Run Admin Tests -->
+    <test name="Admin Tests">
+        <parameter name="cucumber.filter.tags" value="@ui and @admin"/>
         <classes>
-            <class name="com.example.runners.TestRunner"/>
+            <class name="com.example.runners.UiTestRunner"/>
         </classes>
     </test>
     
-    <!-- Option 2: Separate UI and API Tests -->
-    <test name="UI Tests">
-        <parameter name="cucumber.filter.tags" value="@ui"/>
+    <!-- Run User Tests -->
+    <test name="User Tests">
+        <parameter name="cucumber.filter.tags" value="@ui and @user"/>
         <classes>
             <class name="com.example.runners.UiTestRunner"/>
         </classes>
