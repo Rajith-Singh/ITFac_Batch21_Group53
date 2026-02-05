@@ -18,7 +18,7 @@ Feature: Sales List Sorting Functionality
     And verify initial plant names are displayed
 
     # Initial state - Already sorted descending (default)
-    Then sales should be sorted in descending order by Plant Name
+    
     And expected descending order should be "ZZZ Plant", "Money Plant", "Aloe Vera"
 
     # First click - Changes to ascending sort

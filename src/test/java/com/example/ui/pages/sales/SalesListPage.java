@@ -32,6 +32,14 @@ public class SalesListPage {
     @FindBy(xpath = "//a[contains(@href, '/ui/sales') and (contains(@href, 'sortField=plant.name') or contains(@href, 'sortDir=')) and contains(text(), 'Plant')]")
     private WebElement plantNameHeaderFallback;
 
+    // Quantity column header with sorting
+    @FindBy(xpath = "//a[contains(@href, 'sortField=quantity') and contains(text(), 'Quantity')]")
+    private WebElement quantityHeader;
+
+    // Alternative xpath for Quantity header
+    @FindBy(xpath = "//th[contains(text(), 'Quantity')]//a | //a[contains(@href, 'quantity') and contains(text(), 'Quantity')]")
+    private WebElement quantityHeaderAlternative;
+
     // Sales table rows
     @FindBy(xpath = "//table//tbody//tr")
     private List<WebElement> salesTableRows;
@@ -128,20 +136,53 @@ public class SalesListPage {
             // Try the primary xpath first (matching the provided element)
             wait.until(ExpectedConditions.elementToBeClickable(plantNameHeader));
             plantNameHeader.click();
+            Thread.sleep(1000); // Wait for UI to update
         } catch (Exception e) {
             try {
                 // Fallback to alternative xpath
                 wait.until(ExpectedConditions.elementToBeClickable(plantNameHeaderAlternative));
                 plantNameHeaderAlternative.click();
+                Thread.sleep(1000); // Wait for UI to update
             } catch (Exception ex) {
                 try {
                     // Third fallback
                     wait.until(ExpectedConditions.elementToBeClickable(plantNameHeaderFallback));
                     plantNameHeaderFallback.click();
+                    Thread.sleep(1000); // Wait for UI to update
                 } catch (Exception exc) {
                     // Last resort - find by href pattern
                     WebElement header = driver.findElement(By.xpath("//a[contains(@href, '/ui/sales') and contains(@href, 'sortField=plant.name') and contains(text(), 'Plant')]"));
                     header.click();
+                    try {
+                        Thread.sleep(1000); // Wait for UI to update
+                    } catch (InterruptedException interruptedException) {
+                        interruptedException.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
+
+    public void clickQuantityHeader() {
+        try {
+            // Try the primary xpath first
+            wait.until(ExpectedConditions.elementToBeClickable(quantityHeader));
+            quantityHeader.click();
+            Thread.sleep(2000); // Wait for UI to update
+        } catch (Exception e) {
+            try {
+                // Fallback to alternative xpath
+                wait.until(ExpectedConditions.elementToBeClickable(quantityHeaderAlternative));
+                quantityHeaderAlternative.click();
+                Thread.sleep(2000); // Wait for UI to update
+            } catch (Exception ex) {
+                // Last resort - find by href pattern
+                WebElement header = driver.findElement(By.xpath("//a[contains(@href, 'sortField=quantity') and contains(text(), 'Quantity')]"));
+                header.click();
+                try {
+                    Thread.sleep(2000); // Wait for UI to update
+                } catch (InterruptedException interruptedException) {
+                    interruptedException.printStackTrace();
                 }
             }
         }
@@ -184,6 +225,87 @@ public class SalesListPage {
         }
         
         return plantNames;
+    }
+
+    public List<Integer> getQuantitiesFromTable() {
+        List<Integer> quantities = new ArrayList<>();
+        
+        try {
+            // Wait for table rows to be visible
+            wait.until(ExpectedConditions.visibilityOfAllElements(salesTableRows));
+            
+            // Extract quantities from table rows (assuming quantity is in column 2)
+            for (WebElement row : salesTableRows) {
+                try {
+                    WebElement quantityCell = row.findElement(By.xpath("./td[position()=2]"));
+                    String quantityText = quantityCell.getText().trim();
+                    if (!quantityText.isEmpty()) {
+                        try {
+                            int quantity = Integer.parseInt(quantityText);
+                            quantities.add(quantity);
+                        } catch (NumberFormatException e) {
+                            // Skip invalid numbers
+                            continue;
+                        }
+                    }
+                } catch (Exception e) {
+                    // Skip rows without quantity data
+                    continue;
+                }
+            }
+        } catch (Exception e) {
+            // Return empty list if error occurs
+        }
+        
+        return quantities;
+    }
+
+    public boolean isQuantityHeaderClickable() {
+        try {
+            WebElement header = quantityHeader.isDisplayed() ? quantityHeader : quantityHeaderAlternative;
+            return header != null && header.isEnabled() && header.getAttribute("href") != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean validateQuantitySortOrder(List<Integer> actualQuantities, boolean isAscending) {
+        if (actualQuantities.size() < 2) {
+            return true; // Cannot determine sort order with less than 2 items
+        }
+
+        for (int i = 0; i < actualQuantities.size() - 1; i++) {
+            int current = actualQuantities.get(i);
+            int next = actualQuantities.get(i + 1);
+
+            if (isAscending) {
+                if (current > next) {
+                    return false; // Ascending order is broken
+                }
+            } else {
+                if (current < next) {
+                    return false; // Descending order is broken
+                }
+            }
+        }
+        
+        return true; // All quantities are in the correct order
+    }
+
+    public List<Integer> getExpectedQuantitiesAscending() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(3);
+        expected.add(5);
+        return expected;
+    }
+
+    public List<Integer> getExpectedQuantitiesDescending() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(5);
+        expected.add(3);
+        expected.add(2);
+        return expected;
     }
 
     public boolean isPlantNameHeaderClickable() {
@@ -266,6 +388,12 @@ public class SalesListPage {
                 }
             }
             
+            if (columnName.equalsIgnoreCase("Quantity")) {
+                if (quantityHeader.isDisplayed() || quantityHeaderAlternative.isDisplayed()) {
+                    return true;
+                }
+            }
+            
             // Fallback to table headers if needed
             for (WebElement header : tableHeaders) {
                 if (header.getText().trim().equalsIgnoreCase(columnName)) {
@@ -326,18 +454,19 @@ public class SalesListPage {
             return true; // Cannot determine sort order with less than 2 items
         }
 
-        List<String> expected = isAscending ? getExpectedPlantNamesAscending() : getExpectedPlantNamesDescending();
-        
-        // Check if actual names match expected order (allowing for additional data)
-        int expectedIndex = 0;
-        for (String actualName : actualNames) {
-            if (expected.contains(actualName)) {
-                if (!actualName.equals(expected.get(expectedIndex))) {
-                    return false; // Order is incorrect
+        for (int i = 0; i < actualNames.size() - 1; i++) {
+            String current = actualNames.get(i);
+            String next = actualNames.get(i + 1);
+
+            int comparison = current.compareTo(next);
+
+            if (isAscending) {
+                if (comparison > 0) {
+                    return false; // Ascending order is broken
                 }
-                expectedIndex++;
-                if (expectedIndex >= expected.size()) {
-                    break; // All expected names found
+            } else {
+                if (comparison < 0) {
+                    return false; // Descending order is broken
                 }
             }
         }

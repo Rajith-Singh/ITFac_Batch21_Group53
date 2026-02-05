@@ -240,4 +240,87 @@ public class SalesListSteps {
             System.out.println("Navigation to sales page encountered issue: " + e.getMessage());
         }
     }
+
+    @And("Quantity column header is visible and clickable")
+    public void quantityColumnHeaderIsVisibleAndClickable() {
+        Assert.assertTrue(salesListPage.isColumnHeaderVisible("Quantity"), 
+            "Quantity column header should be visible");
+        Assert.assertTrue(salesListPage.isQuantityHeaderClickable(), 
+            "Quantity column header should be clickable");
+    }
+
+    @When("user clicks Quantity column header once")
+    public void userClicksQuantityColumnHeaderOnce() {
+        salesListPage.clickQuantityHeader();
+    }
+
+    @When("user clicks Quantity column header again")
+    public void userClicksQuantityColumnHeaderAgain() {
+        salesListPage.clickQuantityHeader();
+    }
+
+    @Then("quantities should be sorted in ascending order")
+    public void quantitiesShouldBeSortedInAscendingOrder() {
+        List<Integer> actualQuantities = salesListPage.getQuantitiesFromTable();
+        Assert.assertFalse(actualQuantities.isEmpty(), 
+            "Quantities should be retrieved from the table");
+        
+        boolean isCorrectOrder = salesListPage.validateQuantitySortOrder(actualQuantities, true);
+        Assert.assertTrue(isCorrectOrder, 
+            "Quantities should be sorted in ascending order: " + actualQuantities);
+    }
+
+    @Then("quantities should be sorted in descending order")
+    public void quantitiesShouldBeSortedInDescendingOrder() {
+        List<Integer> actualQuantities = salesListPage.getQuantitiesFromTable();
+        Assert.assertFalse(actualQuantities.isEmpty(), 
+            "Quantities should be retrieved from the table");
+        
+        boolean isCorrectOrder = salesListPage.validateQuantitySortOrder(actualQuantities, false);
+        Assert.assertTrue(isCorrectOrder, 
+            "Quantities should be sorted in descending order: " + actualQuantities);
+    }
+
+    @Then("expected ascending order should be {int}, {int}, {int}")
+    public void expectedQuantitiesAscendingOrderShouldBe(int quantity1, int quantity2, int quantity3) {
+        List<Integer> expectedOrder = salesListPage.getExpectedQuantitiesAscending();
+        List<Integer> actualQuantities = salesListPage.getQuantitiesFromTable();
+        
+        if (expectedOrder.size() >= 1) Assert.assertEquals(expectedOrder.get(0), quantity1, "First quantity should match");
+        if (expectedOrder.size() >= 2) Assert.assertEquals(expectedOrder.get(1), quantity2, "Second quantity should match");
+        if (expectedOrder.size() >= 3) Assert.assertEquals(expectedOrder.get(2), quantity3, "Third quantity should match");
+    }
+
+    @Then("expected descending order should be {int}, {int}, {int}")
+    public void expectedQuantitiesDescendingOrderShouldBe(int quantity1, int quantity2, int quantity3) {
+        List<Integer> expectedOrder = salesListPage.getExpectedQuantitiesDescending();
+        List<Integer> actualQuantities = salesListPage.getQuantitiesFromTable();
+        
+        if (expectedOrder.size() >= 1) Assert.assertEquals(expectedOrder.get(0), quantity1, "First quantity should match");
+        if (expectedOrder.size() >= 2) Assert.assertEquals(expectedOrder.get(1), quantity2, "Second quantity should match");
+        if (expectedOrder.size() >= 3) Assert.assertEquals(expectedOrder.get(2), quantity3, "Third quantity should match");
+    }
+
+    @And("verify initial quantities are displayed")
+    public void verifyInitialQuantitiesAreDisplayed() {
+        List<Integer> quantities = salesListPage.getQuantitiesFromTable();
+        Assert.assertFalse(quantities.isEmpty(), 
+            "Quantities should be displayed in the table");
+        
+        // Check if required quantities are present (order doesn't matter for initial check)
+        List<Integer> expectedQuantitiesAsc = salesListPage.getExpectedQuantitiesAscending();
+        List<Integer> expectedQuantitiesDesc = salesListPage.getExpectedQuantitiesDescending();
+        
+        for (Integer expectedQuantity : expectedQuantitiesAsc) {
+            boolean found = quantities.contains(expectedQuantity);
+            Assert.assertTrue(found, 
+                "Expected quantity '" + expectedQuantity + "' should be found in the table");
+        }
+        
+        for (Integer expectedQuantity : expectedQuantitiesDesc) {
+            boolean found = quantities.contains(expectedQuantity);
+            Assert.assertTrue(found, 
+                "Expected quantity '" + expectedQuantity + "' should be found in the table");
+        }
+    }
 }

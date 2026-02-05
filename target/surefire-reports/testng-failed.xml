@@ -13,16 +13,4 @@
       </class> <!-- com.example.runners.UiTestRunner -->
     </classes>
   </test> <!-- Admin Tests(failed) -->
-  <test thread-count="3" parallel="methods" name="User Tests(failed)" verbose="0">
-    <parameter name="cucumber.filter.tags" value="@ui and @user"/>
-    <classes>
-      <class name="com.example.runners.UiTestRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- com.example.runners.UiTestRunner -->
-    </classes>
-  </test> <!-- User Tests(failed) -->
 </suite> <!-- Failed suite [Plant Sales Automation Suite] -->
