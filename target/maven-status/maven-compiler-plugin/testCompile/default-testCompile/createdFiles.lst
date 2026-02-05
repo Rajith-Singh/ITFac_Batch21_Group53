@@ -20,6 +20,7 @@ com/example/ui/stepDefinitions/categories/CategoryListSteps.class
 com/example/api/clients/CategoryClient.class
 com/example/api/models/request/LoginRequest.class
 com/example/api/models/request/SaleRequest.class
+com/example/runners/SalesListSortingTestRunner.class
 com/example/ui/pages/plants/PlantListPage.class
 com/example/api/models/response/SaleResponse.class
 com/example/api/clients/SalesClient.class

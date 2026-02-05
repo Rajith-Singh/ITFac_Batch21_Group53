@@ -1,5 +1,347 @@
 package com.example.ui.pages.sales;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
 public class SalesListPage {
-    
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    // Page heading
+    @FindBy(xpath = "//h3[contains(text(), 'Sales') or contains(text(), 'Sales List')]")
+    private WebElement salesListHeading;
+
+    // Plant Name column header with sorting indicator
+    @FindBy(xpath = "//a[@class='text-white text-decoration-none' and contains(@href, '/ui/sales') and contains(text(), 'Plant')]")
+    private WebElement plantNameHeader;
+
+    // Alternative xpath for Plant Name header with more specificity
+    @FindBy(xpath = "//a[contains(@href, 'sortField=plant.name') and contains(text(), 'Plant')]")
+    private WebElement plantNameHeaderAlternative;
+
+    // Additional fallback for table header version
+    @FindBy(xpath = "//a[contains(@href, '/ui/sales') and (contains(@href, 'sortField=plant.name') or contains(@href, 'sortDir=')) and contains(text(), 'Plant')]")
+    private WebElement plantNameHeaderFallback;
+
+    // Sales table rows
+    @FindBy(xpath = "//table//tbody//tr")
+    private List<WebElement> salesTableRows;
+
+    // All column headers
+    @FindBy(xpath = "//table//th")
+    private List<WebElement> tableHeaders;
+
+    // Plant name cells in table rows
+    @FindBy(xpath = "//table//tbody//tr//td[contains(@class, 'plant') or contains(@class, 'name') or position()=1]")
+    private List<WebElement> plantNameCells;
+
+    // Sales table
+    @FindBy(xpath = "//table")
+    private WebElement salesTable;
+
+    // Sort indicators (up/down arrows) - look for sortDir parameter in href
+    @FindBy(xpath = "//a[contains(@href, 'sortDir=desc') and contains(text(), 'Plant')]")
+    private WebElement descendingSortIndicator;
+
+    @FindBy(xpath = "//a[contains(@href, 'sortDir=asc') and contains(text(), 'Plant')]")
+    private WebElement ascendingSortIndicator;
+
+    public SalesListPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        PageFactory.initElements(driver, this);
+    }
+
+    public boolean isSalesListPageLoaded() {
+        try {
+            // Wait for URL to contain sales
+            wait.until(ExpectedConditions.urlContains("/ui/sales"));
+            
+            // Check if we're on sales page by URL
+            String currentUrl = driver.getCurrentUrl();
+            if (!currentUrl.contains("/ui/sales")) {
+                return false;
+            }
+            
+            // Try to find any sales-related element to confirm page is loaded
+            boolean hasSalesElements = false;
+            
+            // Check for sales heading (try multiple variations)
+            try {
+                WebElement heading = driver.findElement(By.xpath("//h1[contains(text(), 'Sales') or contains(text(), 'sales')] | //h2[contains(text(), 'Sales') or contains(text(), 'sales')] | //h3[contains(text(), 'Sales') or contains(text(), 'sales')]"));
+                if (heading.isDisplayed()) {
+                    hasSalesElements = true;
+                }
+            } catch (Exception e) {
+                // Continue checking other elements
+            }
+            
+            // Check for sales table
+            try {
+                WebElement table = driver.findElement(By.xpath("//table"));
+                if (table.isDisplayed()) {
+                    hasSalesElements = true;
+                }
+            } catch (Exception e) {
+                // Continue checking other elements
+            }
+            
+            // Check for Plant Name sorting link
+            try {
+                WebElement plantLink = driver.findElement(By.xpath("//a[contains(@href, '/ui/sales') and contains(@href, 'sortField=plant.name') and contains(text(), 'Plant')]"));
+                if (plantLink.isDisplayed()) {
+                    hasSalesElements = true;
+                }
+            } catch (Exception e) {
+                // Continue checking other elements
+            }
+            
+            // If no specific elements found, at least check if page title contains Sales
+            if (!hasSalesElements) {
+                try {
+                    String pageTitle = driver.getTitle();
+                    if (pageTitle.toLowerCase().contains("sales")) {
+                        hasSalesElements = true;
+                    }
+                } catch (Exception e) {
+                    // Use final fallback
+                }
+            }
+            
+            return hasSalesElements;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickPlantNameHeader() {
+        try {
+            // Try the primary xpath first (matching the provided element)
+            wait.until(ExpectedConditions.elementToBeClickable(plantNameHeader));
+            plantNameHeader.click();
+        } catch (Exception e) {
+            try {
+                // Fallback to alternative xpath
+                wait.until(ExpectedConditions.elementToBeClickable(plantNameHeaderAlternative));
+                plantNameHeaderAlternative.click();
+            } catch (Exception ex) {
+                try {
+                    // Third fallback
+                    wait.until(ExpectedConditions.elementToBeClickable(plantNameHeaderFallback));
+                    plantNameHeaderFallback.click();
+                } catch (Exception exc) {
+                    // Last resort - find by href pattern
+                    WebElement header = driver.findElement(By.xpath("//a[contains(@href, '/ui/sales') and contains(@href, 'sortField=plant.name') and contains(text(), 'Plant')]"));
+                    header.click();
+                }
+            }
+        }
+    }
+
+    public List<String> getPlantNamesFromTable() {
+        List<String> plantNames = new ArrayList<>();
+        
+        try {
+            // Wait for table rows to be visible
+            wait.until(ExpectedConditions.visibilityOfAllElements(salesTableRows));
+            
+            // Extract plant names from table rows
+            for (WebElement row : salesTableRows) {
+                try {
+                    // Try to find plant name in the first column or a column with plant/name class
+                    WebElement plantCell = row.findElement(By.xpath("./td[contains(@class, 'plant') or contains(@class, 'name') or position()=1]"));
+                    String plantName = plantCell.getText().trim();
+                    if (!plantName.isEmpty()) {
+                        plantNames.add(plantName);
+                    }
+                } catch (Exception e) {
+                    // Skip rows that don't have plant names
+                    continue;
+                }
+            }
+        } catch (Exception e) {
+            // Alternative approach: get all cells that might contain plant names
+            try {
+                List<WebElement> cells = driver.findElements(By.xpath("//table//tbody//td[contains(text(), 'Aloe Vera') or contains(text(), 'Monstera') or contains(text(), 'Snake Plant') or contains(text(), 'ZZ Plant')]"));
+                for (WebElement cell : cells) {
+                    String plantName = cell.getText().trim();
+                    if (!plantName.isEmpty() && !plantNames.contains(plantName)) {
+                        plantNames.add(plantName);
+                    }
+                }
+            } catch (Exception ex) {
+                // Return empty list if no plant names found
+            }
+        }
+        
+        return plantNames;
+    }
+
+    public boolean isPlantNameHeaderClickable() {
+        try {
+            WebElement header = null;
+            if (plantNameHeader.isDisplayed()) {
+                header = plantNameHeader;
+            } else if (plantNameHeaderAlternative.isDisplayed()) {
+                header = plantNameHeaderAlternative;
+            } else if (plantNameHeaderFallback.isDisplayed()) {
+                header = plantNameHeaderFallback;
+            }
+            
+            return header != null && header.isEnabled() && header.getAttribute("href") != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getSortIndicator() {
+        try {
+            // Check for descending sort indicator in href
+            if (descendingSortIndicator.isDisplayed()) {
+                return "desc";
+            }
+            // Check for ascending sort indicator in href
+            if (ascendingSortIndicator.isDisplayed()) {
+                return "asc";
+            }
+            
+            // Check the href attribute of the main header for sort direction
+            WebElement header = null;
+            if (plantNameHeader.isDisplayed()) {
+                header = plantNameHeader;
+            } else if (plantNameHeaderAlternative.isDisplayed()) {
+                header = plantNameHeaderAlternative;
+            } else if (plantNameHeaderFallback.isDisplayed()) {
+                header = plantNameHeaderFallback;
+            }
+            
+            if (header != null) {
+                String href = header.getAttribute("href");
+                if (href != null) {
+                    if (href.contains("sortDir=desc")) {
+                        return "desc";
+                    } else if (href.contains("sortDir=asc")) {
+                        return "asc";
+                    }
+                }
+            }
+        } catch (Exception e) {
+            // No sort indicator found
+        }
+        return "none";
+    }
+
+    public boolean areSalesRecordsDisplayed() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfAllElements(salesTableRows));
+            return !salesTableRows.isEmpty();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public int getSalesRecordCount() {
+        try {
+            return salesTableRows.size();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public boolean isColumnHeaderVisible(String columnName) {
+        try {
+            // First try the new link-based headers
+            if (columnName.equalsIgnoreCase("Plant") || columnName.equalsIgnoreCase("Plant Name")) {
+                if (plantNameHeader.isDisplayed() || plantNameHeaderAlternative.isDisplayed() || plantNameHeaderFallback.isDisplayed()) {
+                    return true;
+                }
+            }
+            
+            // Fallback to table headers if needed
+            for (WebElement header : tableHeaders) {
+                if (header.getText().trim().equalsIgnoreCase(columnName)) {
+                    return header.isDisplayed();
+                }
+            }
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void waitForPageLoad() {
+        try {
+            // Wait for URL to contain sales
+            wait.until(ExpectedConditions.urlContains("/ui/sales"));
+            
+            // Try to wait for sales table
+            try {
+                wait.until(ExpectedConditions.visibilityOf(salesTable));
+            } catch (Exception e) {
+                // Table might not be present, continue
+            }
+            
+            // Try to wait for heading
+            try {
+                wait.until(ExpectedConditions.visibilityOf(salesListHeading));
+            } catch (Exception e) {
+                // Heading might not be present, continue
+            }
+            
+            // At least wait for some content to load
+            Thread.sleep(1000);
+            
+        } catch (Exception e) {
+            // Page might still be loading, continue anyway
+        }
+    }
+
+    public List<String> getExpectedPlantNamesAscending() {
+        List<String> expected = new ArrayList<>();
+        expected.add("Aloe Vera");
+        expected.add("Money Plant");
+        expected.add("ZZZ Plant");
+        return expected;
+    }
+
+    public List<String> getExpectedPlantNamesDescending() {
+        List<String> expected = new ArrayList<>();
+        expected.add("ZZZ Plant");
+        expected.add("Money Plant");
+        expected.add("Aloe Vera");
+        return expected;
+    }
+
+    public boolean validateSortOrder(List<String> actualNames, boolean isAscending) {
+        if (actualNames.size() < 2) {
+            return true; // Cannot determine sort order with less than 2 items
+        }
+
+        List<String> expected = isAscending ? getExpectedPlantNamesAscending() : getExpectedPlantNamesDescending();
+        
+        // Check if actual names match expected order (allowing for additional data)
+        int expectedIndex = 0;
+        for (String actualName : actualNames) {
+            if (expected.contains(actualName)) {
+                if (!actualName.equals(expected.get(expectedIndex))) {
+                    return false; // Order is incorrect
+                }
+                expectedIndex++;
+                if (expectedIndex >= expected.size()) {
+                    break; // All expected names found
+                }
+            }
+        }
+        
+        return true;
+    }
 }
