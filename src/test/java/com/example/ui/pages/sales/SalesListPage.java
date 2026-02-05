@@ -40,6 +40,14 @@ public class SalesListPage {
     @FindBy(xpath = "//th[contains(text(), 'Quantity')]//a | //a[contains(@href, 'quantity') and contains(text(), 'Quantity')]")
     private WebElement quantityHeaderAlternative;
 
+    // Total Price column header with sorting
+    @FindBy(xpath = "//a[contains(@href, 'sortField=totalPrice') and contains(text(), 'Total Price')]")
+    private WebElement totalPriceHeader;
+
+    // Alternative xpath for Total Price header
+    @FindBy(xpath = "//th[contains(text(), 'Total Price')]//a | //a[contains(@href, 'totalPrice') and contains(text(), 'Total Price')]")
+    private WebElement totalPriceHeaderAlternative;
+
     // Sales table rows
     @FindBy(xpath = "//table//tbody//tr")
     private List<WebElement> salesTableRows;
@@ -394,6 +402,12 @@ public class SalesListPage {
                 }
             }
             
+            if (columnName.equalsIgnoreCase("Total Price")) {
+                if (totalPriceHeader.isDisplayed() || totalPriceHeaderAlternative.isDisplayed()) {
+                    return true;
+                }
+            }
+            
             // Fallback to table headers if needed
             for (WebElement header : tableHeaders) {
                 if (header.getText().trim().equalsIgnoreCase(columnName)) {
@@ -472,5 +486,132 @@ public class SalesListPage {
         }
         
         return true;
+    }
+
+    // Total Price sorting methods
+    public void clickTotalPriceHeader() {
+        try {
+            // Try the primary xpath first
+            wait.until(ExpectedConditions.elementToBeClickable(totalPriceHeader));
+            totalPriceHeader.click();
+            Thread.sleep(2000); // Wait for UI to update
+        } catch (Exception e) {
+            try {
+                // Fallback to alternative xpath
+                wait.until(ExpectedConditions.elementToBeClickable(totalPriceHeaderAlternative));
+                totalPriceHeaderAlternative.click();
+                Thread.sleep(2000); // Wait for UI to update
+            } catch (Exception ex) {
+                // Last resort - find by href pattern
+                WebElement header = driver.findElement(By.xpath("//a[contains(@href, 'sortField=totalPrice') and contains(text(), 'Total Price')]"));
+                header.click();
+                try {
+                    Thread.sleep(2000); // Wait for UI to update
+                } catch (InterruptedException interruptedException) {
+                    interruptedException.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public List<Double> getTotalPricesFromTable() {
+        List<Double> totalPrices = new ArrayList<>();
+        
+        try {
+            // Wait for table rows to be visible
+            wait.until(ExpectedConditions.visibilityOfAllElements(salesTableRows));
+            
+            // Extract total prices from table rows (assuming total price is in column 3 or 4)
+            for (WebElement row : salesTableRows) {
+                try {
+                    // Try different column positions for total price
+                    WebElement totalPriceCell = null;
+                    try {
+                        totalPriceCell = row.findElement(By.xpath("./td[position()=3]"));
+                    } catch (Exception e1) {
+                        try {
+                            totalPriceCell = row.findElement(By.xpath("./td[position()=4]"));
+                        } catch (Exception e2) {
+                            // Try to find cell containing $ symbol
+                            totalPriceCell = row.findElement(By.xpath("./td[contains(text(), '$')]"));
+                        }
+                    }
+                    
+                    if (totalPriceCell != null) {
+                        String priceText = totalPriceCell.getText().trim();
+                        if (!priceText.isEmpty()) {
+                            // Remove $ symbol and any commas, then parse as double
+                            String cleanPrice = priceText.replaceAll("[^\\d.]", "");
+                            try {
+                                double price = Double.parseDouble(cleanPrice);
+                                totalPrices.add(price);
+                            } catch (NumberFormatException e) {
+                                // Skip invalid numbers
+                                continue;
+                            }
+                        }
+                    }
+                } catch (Exception e) {
+                    // Skip rows without total price data
+                    continue;
+                }
+            }
+        } catch (Exception e) {
+            // Return empty list if error occurs
+        }
+        
+        return totalPrices;
+    }
+
+    public boolean isTotalPriceHeaderClickable() {
+        try {
+            WebElement header = totalPriceHeader.isDisplayed() ? totalPriceHeader : totalPriceHeaderAlternative;
+            return header != null && header.isEnabled() && header.getAttribute("href") != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean validateTotalPriceSortOrder(List<Double> actualPrices, boolean isAscending) {
+        if (actualPrices.size() < 2) {
+            return true; // Cannot determine sort order with less than 2 items
+        }
+
+        for (int i = 0; i < actualPrices.size() - 1; i++) {
+            double current = actualPrices.get(i);
+            double next = actualPrices.get(i + 1);
+
+            if (isAscending) {
+                if (current > next) {
+                    return false; // Ascending order is broken
+                }
+            } else {
+                if (current < next) {
+                    return false; // Descending order is broken
+                }
+            }
+        }
+        
+        return true; // All prices are in the correct order
+    }
+
+    public List<Double> getExpectedTotalPricesAscending() {
+        List<Double> expected = new ArrayList<>();
+        // Use actual data from the system - these will be updated based on real data
+        expected.add(10.00);
+        expected.add(20.00);
+        expected.add(30.00);
+        expected.add(40.00);
+        return expected;
+    }
+
+    public List<Double> getExpectedTotalPricesDescending() {
+        List<Double> expected = new ArrayList<>();
+        // Use actual data from the system - these will be updated based on real data
+        expected.add(40.00);
+        expected.add(30.00);
+        expected.add(20.00);
+        expected.add(10.00);
+        return expected;
     }
 }

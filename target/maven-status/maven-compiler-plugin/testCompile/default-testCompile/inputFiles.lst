@@ -21,6 +21,7 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/tests/CategoryApiTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/clients/CategoryClient.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/clients/SalesClient.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/TotalPriceDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/QuantitySortBehaviorDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/QuantityColumnDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/request/CategoryRequest.java
@@ -31,6 +32,7 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/plants/PlantListSteps.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/utils/ConfigReader.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/stepDefinitions/CategoryApiSteps.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/SalesTableStructureDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/sales/SalesListPage.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/SalesPageDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/plants/PlantListPage.java

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="128.011" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="196.163" tests="19" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="webdriver.chrome.driver" value="/Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="LK"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206002353620_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-06T00-23-53_569-jvmRun1 surefire-20260206002353620_1tmp surefire_0-20260206002353620_2tmp"/>
+    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206005943034_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-06T00-59-42_982-jvmRun1 surefire-20260206005943034_1tmp surefire_0-20260206005943034_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/test-classes:/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/classes:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-java/4.15.0/selenium-java-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-api/4.15.0/selenium-api-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.15.0/selenium-chrome-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.15.0/selenium-chromium-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-json/4.15.0/selenium-json-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.15.0/selenium-manager-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v117/4.15.0/selenium-devtools-v117-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v118/4.15.0/selenium-devtools-v118-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v119/4.15.0/selenium-devtools-v119-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.15.0/selenium-devtools-v85-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.15.0/selenium-edge-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.15.0/selenium-firefox-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-http/4.15.0/selenium-http-4.15.0.jar:/Users/rajithsingh/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.15.0/selenium-ie-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.15.0/selenium-remote-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/Users/rajithsingh/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-os/4.15.0/selenium-os-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.15.0/selenium-safari-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-support/4.15.0/selenium-support-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar:/Users/rajithsingh/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/rajithsingh/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/rajithsingh/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.2/webdrivermanager-5.6.2.jar:/Users/rajithsingh/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java/3.3.4/docker-java-3.3.4.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-core/3.3.4/docker-java-core-3.3.4.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/rajithsingh/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/rajithsingh/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/rajithsingh/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/rajithsingh/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.4/docker-java-transport-httpclient5-3.3.4.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/rajithsingh/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/rajithsingh/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/rajithsingh/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/rajithsingh/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/rajithsingh/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/rajithsingh/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/rajithsingh/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/rajithsingh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-testng/7.14.0/cucumber-testng-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/rajithsingh/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/Users/rajithsingh/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar:/Users/rajithsingh/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/Users/rajithsingh/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/rajithsingh/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/rajithsingh/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/json-schema-validator/5.3.2/json-schema-validator-5.3.2.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/Users/rajithsingh/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/Users/rajithsingh/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/Users/rajithsingh/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/rajithsingh/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/Users/rajithsingh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/rajithsingh/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/rajithsingh/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/Users/rajithsingh/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/rajithsingh/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rajithsingh/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/rajithsingh/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/rajithsingh/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/json-path/5.3.2/json-path-5.3.2.jar:/Users/rajithsingh/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/rest-assured-common/5.3.2/rest-assured-common-5.3.2.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/xml-path/5.3.2/xml-path-5.3.2.jar:/Users/rajithsingh/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/rajithsingh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/rajithsingh/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/Users/rajithsingh/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/rajithsingh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/rajithsingh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/rajithsingh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/rajithsingh/.m2/repository/org/apache/poi/poi-ooxml/5.2.4/poi-ooxml-5.2.4.jar:/Users/rajithsingh/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.4/poi-ooxml-lite-5.2.4.jar:/Users/rajithsingh/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/rajithsingh/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/rajithsingh/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/rajithsingh/.m2/repository/org/apache/poi/poi/5.2.4/poi-5.2.4.jar:/Users/rajithsingh/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/rajithsingh/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/extentreports-cucumber7-adapter/1.14.0/extentreports-cucumber7-adapter-1.14.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/extent-pdf-report/2.12.0/extent-pdf-report-2.12.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/cucumber-pdf-report/2.14.0/cucumber-pdf-report-2.14.0.jar:/Users/rajithsingh/.m2/repository/org/apache/pdfbox/pdfbox/2.0.26/pdfbox-2.0.26.jar:/Users/rajithsingh/.m2/repository/org/apache/pdfbox/fontbox/2.0.26/fontbox-2.0.26.jar:/Users/rajithsingh/.m2/repository/org/knowm/xchart/xchart/3.8.0/xchart-3.8.0.jar:/Users/rajithsingh/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/Users/rajithsingh/.m2/repository/de/rototor/pdfbox/graphics2d/0.30/graphics2d-0.30.jar:/Users/rajithsingh/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/Users/rajithsingh/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/table-layout/1.5.1/table-layout-1.5.1.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/rest-assured-cucumber-pdf-report/1.5.0/rest-assured-cucumber-pdf-report-1.5.0.jar:/Users/rajithsingh/.m2/repository/org/jsoup/jsoup/1.15.3/jsoup-1.15.3.jar:/Users/rajithsingh/.m2/repository/com/aventstack/klov-reporter/5.1.0/klov-reporter-5.1.0.jar:/Users/rajithsingh/.m2/repository/org/mongodb/mongodb-driver/3.6.4/mongodb-driver-3.6.4.jar:/Users/rajithsingh/.m2/repository/org/mongodb/mongodb-driver-core/3.6.4/mongodb-driver-core-3.6.4.jar:/Users/rajithsingh/.m2/repository/org/mongodb/bson/3.6.4/bson-3.6.4.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/htmlextentreporter/1.1.0/htmlextentreporter-1.1.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/extent-excel-report/1.4.0/extent-excel-report-1.4.0.jar:/Users/rajithsingh/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.24.0/allure-cucumber7-jvm-2.24.0.jar:/Users/rajithsingh/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/Users/rajithsingh/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/rajithsingh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/rajithsingh/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/rajithsingh/.m2/repository/org/slf4j/slf4j-simple/2.0.9/slf4j-simple-2.0.9.jar:"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206002353620_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206005943034_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -60,7 +60,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Dashboard loads immediately after Admin login&quot;, &quot;Dashboard Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="11.449">
+  <testcase name="runScenario[&quot;Dashboard loads immediately after Admin login&quot;, &quot;Dashboard Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="11.313">
     <system-out><![CDATA[
 @ui @dashboard @admin @smoke
 Scenario: Dashboard loads immediately after Admin login # src/test/resources/features/ui/dashboard/dashboard.feature:12
@@ -78,17 +78,17 @@ Scenario: Dashboard loads immediately after Admin login # src/test/resources/fea
 === Finished UI Test: Dashboard loads immediately after Admin login ===
 
 ]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 12:23:54 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+    <system-err><![CDATA[Feb 06, 2026 12:59:43 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
 WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
 [TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:23:58 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 12:59:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:23:58 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 12:59:47 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Navigation menu highlights Dashboard as active for Admin&quot;, &quot;Dashboard Functionality&quot;](2)" classname="com.example.runners.UiTestRunner" time="2.106">
+  <testcase name="runScenario[&quot;Navigation menu highlights Dashboard as active for Admin&quot;, &quot;Dashboard Functionality&quot;](2)" classname="com.example.runners.UiTestRunner" time="2.588">
     <system-out><![CDATA[
 @ui @dashboard @admin
 Scenario: Navigation menu highlights Dashboard as active for Admin    # src/test/resources/features/ui/dashboard/dashboard.feature:24
@@ -104,13 +104,13 @@ Scenario: Navigation menu highlights Dashboard as active for Admin    # src/test
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 12:59:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:07 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 12:59:56 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Dashboard summary cards are visible for Admin&quot;, &quot;Dashboard Functionality&quot;](3)" classname="com.example.runners.UiTestRunner" time="2.198">
+  <testcase name="runScenario[&quot;Dashboard summary cards are visible for Admin&quot;, &quot;Dashboard Functionality&quot;](3)" classname="com.example.runners.UiTestRunner" time="2.024">
     <system-out><![CDATA[
 @ui @dashboard @admin
 Scenario: Dashboard summary cards are visible for Admin # src/test/resources/features/ui/dashboard/dashboard.feature:32
@@ -131,13 +131,13 @@ Scenario: Dashboard summary cards are visible for Admin # src/test/resources/fea
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:09 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 12:59:58 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:09 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 12:59:58 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Manage View buttons navigate to correct modules for Admin&quot;, &quot;Dashboard Functionality&quot;](4)" classname="com.example.runners.UiTestRunner" time="3.01">
+  <testcase name="runScenario[&quot;Manage View buttons navigate to correct modules for Admin&quot;, &quot;Dashboard Functionality&quot;](4)" classname="com.example.runners.UiTestRunner" time="2.535">
     <system-out><![CDATA[
 @ui @dashboard @admin
 Scenario: Manage View buttons navigate to correct modules for Admin # src/test/resources/features/ui/dashboard/dashboard.feature:45
@@ -162,13 +162,13 @@ Scenario: Manage View buttons navigate to correct modules for Admin # src/test/r
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:00 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:11 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:00 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Admin can see Dashboard and all menu items&quot;, &quot;Dashboard Functionality&quot;](5)" classname="com.example.runners.UiTestRunner" time="1.988">
+  <testcase name="runScenario[&quot;Admin can see Dashboard and all menu items&quot;, &quot;Dashboard Functionality&quot;](5)" classname="com.example.runners.UiTestRunner" time="2.025">
     <system-out><![CDATA[
 @ui @dashboard @admin
 Scenario: Admin can see Dashboard and all menu items                # src/test/resources/features/ui/dashboard/dashboard.feature:62
@@ -195,13 +195,13 @@ Scenario: Admin can see Dashboard and all menu items                # src/test/r
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=Admin Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:14 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:14 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:03 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Dashboard loads immediately after User login&quot;, &quot;Dashboard Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="7.936">
+  <testcase name="runScenario[&quot;Dashboard loads immediately after User login&quot;, &quot;Dashboard Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="7.796">
     <system-out><![CDATA[
 @ui @dashboard @user @smoke
 Scenario: Dashboard loads immediately after User login # src/test/resources/features/ui/dashboard/dashboard.feature:82
@@ -219,17 +219,17 @@ Scenario: Dashboard loads immediately after User login # src/test/resources/feat
 === Finished UI Test: Dashboard loads immediately after User login ===
 
 ]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 12:24:15 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+    <system-err><![CDATA[Feb 06, 2026 1:00:04 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
 WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:16 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:05 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:16 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:05 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Navigation menu highlights Dashboard as active for User&quot;, &quot;Dashboard Functionality&quot;](2)" classname="com.example.runners.UiTestRunner" time="1.822">
+  <testcase name="runScenario[&quot;Navigation menu highlights Dashboard as active for User&quot;, &quot;Dashboard Functionality&quot;](2)" classname="com.example.runners.UiTestRunner" time="2.061">
     <system-out><![CDATA[
 @ui @dashboard @user
 Scenario: Navigation menu highlights Dashboard as active for User     # src/test/resources/features/ui/dashboard/dashboard.feature:94
@@ -245,13 +245,13 @@ Scenario: Navigation menu highlights Dashboard as active for User     # src/test
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:24 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:13 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:24 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:13 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Dashboard summary cards are visible for User&quot;, &quot;Dashboard Functionality&quot;](3)" classname="com.example.runners.UiTestRunner" time="2.031">
+  <testcase name="runScenario[&quot;Dashboard summary cards are visible for User&quot;, &quot;Dashboard Functionality&quot;](3)" classname="com.example.runners.UiTestRunner" time="1.969">
     <system-out><![CDATA[
 @ui @dashboard @user
 Scenario: Dashboard summary cards are visible for User  # src/test/resources/features/ui/dashboard/dashboard.feature:102
@@ -272,13 +272,13 @@ Scenario: Dashboard summary cards are visible for User  # src/test/resources/fea
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:26 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:15 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:26 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:15 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;View buttons navigate to correct modules for User&quot;, &quot;Dashboard Functionality&quot;](4)" classname="com.example.runners.UiTestRunner" time="4.064">
+  <testcase name="runScenario[&quot;View buttons navigate to correct modules for User&quot;, &quot;Dashboard Functionality&quot;](4)" classname="com.example.runners.UiTestRunner" time="4.152">
     <system-out><![CDATA[
 @ui @dashboard @user
 Scenario: View buttons navigate to correct modules for User # src/test/resources/features/ui/dashboard/dashboard.feature:115
@@ -296,13 +296,13 @@ Scenario: View buttons navigate to correct modules for User # src/test/resources
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:28 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:17 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:28 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:17 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;User can see Dashboard and permitted menu items&quot;, &quot;Dashboard Functionality&quot;](5)" classname="com.example.runners.UiTestRunner" time="2.068">
+  <testcase name="runScenario[&quot;User can see Dashboard and permitted menu items&quot;, &quot;Dashboard Functionality&quot;](5)" classname="com.example.runners.UiTestRunner" time="1.981">
     <system-out><![CDATA[
 @ui @dashboard @user
 Scenario: User can see Dashboard and permitted menu items           # src/test/resources/features/ui/dashboard/dashboard.feature:125
@@ -322,13 +322,13 @@ Scenario: User can see Dashboard and permitted menu items           # src/test/r
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:32 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:21 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:32 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:21 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_12 - Verify sorting by Quantity column&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](6)" classname="com.example.runners.UiTestRunner" time="23.409">
+  <testcase name="runScenario[&quot;TC_UI_SAL_12 - Verify sorting by Quantity column&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](6)" classname="com.example.runners.UiTestRunner" time="23.494">
     <system-out><![CDATA[
 @ui @user @sales @sorting @TC_UI_SAL_12 @smoke @regression
 Scenario: TC_UI_SAL_12 - Verify sorting by Quantity column # src/test/resources/features/ui/sales/sales_list_quantity_sorting.feature:5
@@ -362,13 +362,13 @@ Current URL when checking Sales List page: http://localhost:8081/ui/sales
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:34 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:23 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:34 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:23 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_12_Positive - Verify ascending sort by Quantity&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](7)" classname="com.example.runners.UiTestRunner" time="14.701">
+  <testcase name="runScenario[&quot;TC_UI_SAL_12_Positive - Verify ascending sort by Quantity&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](7)" classname="com.example.runners.UiTestRunner" time="14.435">
     <system-out><![CDATA[
 @ui @user @sales @sorting @TC_UI_SAL_12_positive @ascending_quantity
 Scenario: TC_UI_SAL_12_Positive - Verify ascending sort by Quantity # src/test/resources/features/ui/sales/sales_list_quantity_sorting.feature:50
@@ -388,13 +388,13 @@ Current URL when checking Sales List page: http://localhost:8081/ui/sales
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:24:58 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:00:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:24:58 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:00:47 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_12_Negative - Verify descending sort by Quantity&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](8)" classname="com.example.runners.UiTestRunner" time="16.727">
+  <testcase name="runScenario[&quot;TC_UI_SAL_12_Negative - Verify descending sort by Quantity&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](8)" classname="com.example.runners.UiTestRunner" time="17.065">
     <system-out><![CDATA[
 @ui @user @sales @sorting @TC_UI_SAL_12_negative @descending_quantity
 Scenario: TC_UI_SAL_12_Negative - Verify descending sort by Quantity # src/test/resources/features/ui/sales/sales_list_quantity_sorting.feature:66
@@ -416,13 +416,13 @@ Current URL when checking Sales List page: http://localhost:8081/ui/sales
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:25:12 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:01:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:25:12 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:01:01 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_12_Toggle - Verify Quantity sort toggle functionality&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](9)" classname="com.example.runners.UiTestRunner" time="18.511">
+  <testcase name="runScenario[&quot;TC_UI_SAL_12_Toggle - Verify Quantity sort toggle functionality&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](9)" classname="com.example.runners.UiTestRunner" time="18.835">
     <system-out><![CDATA[
 @ui @user @sales @sorting @TC_UI_SAL_12_toggle @toggle_quantity_sort
 Scenario: TC_UI_SAL_12_Toggle - Verify Quantity sort toggle functionality # src/test/resources/features/ui/sales/sales_list_quantity_sorting.feature:85
@@ -445,13 +445,13 @@ Current URL when checking Sales List page: http://localhost:8081/ui/sales
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:25:29 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:01:18 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:25:29 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:01:18 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_11 - Verify sorting by Plant Name column&quot;, &quot;Sales List Sorting Functionality&quot;](10)" classname="com.example.runners.UiTestRunner" time="14.499">
+  <testcase name="runScenario[&quot;TC_UI_SAL_11 - Verify sorting by Plant Name column&quot;, &quot;Sales List Sorting Functionality&quot;](10)" classname="com.example.runners.UiTestRunner" time="14.786">
     <system-out><![CDATA[
 @ui @user @sales @sorting @TC_UI_SAL_11 @smoke @regression
 Scenario: TC_UI_SAL_11 - Verify sorting by Plant Name column                      # src/test/resources/features/ui/sales/sales_list_sorting.feature:5
@@ -476,9 +476,140 @@ Current URL when checking Sales List page: http://localhost:8081/ui/sales
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 12:25:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 06, 2026 1:01:37 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 12:25:47 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 06, 2026 1:01:37 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_UI_SAL_13 - Verify sorting by Total Price column&quot;, &quot;Sales List Total Price Sorting Functionality&quot;](11)" classname="com.example.runners.UiTestRunner" time="16.572">
+    <system-out><![CDATA[
+@ui @user @sales @sorting @TC_UI_SAL_13 @smoke @regression
+Scenario: TC_UI_SAL_13 - Verify sorting by Total Price column                    # src/test/resources/features/ui/sales/sales_list_total_price_sorting.feature:5
+=== Starting UI Test: TC_UI_SAL_13 - Verify sorting by Total Price column ===
+  Given user is logged into the application                                      # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
+After navigation, current URL: http://localhost:8081/ui/sales
+  And user navigates to Sales List page                                          # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+Current URL when checking Sales List page: http://localhost:8081/ui/sales
+  And user is on Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                     # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+  And Total Price column header is visible and clickable                         # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPriceColumnHeaderIsVisibleAndClickable()
+Actual total prices found: [10.0, 90.0, 28.0, 21.0]
+Has different prices for sorting: true
+  And verify initial total prices are displayed                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialTotalPricesAreDisplayed()
+  When user clicks Total Price column header once                                # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderOnce()
+  Then total prices should be sorted in ascending order                          # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInAscendingOrder()
+Actual prices in ascending order: [10.0, 21.0, 28.0, 90.0]
+  And expected ascending order should be "$9.99", "$24.50", "$49.99", "$120.00"  # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedTotalPriceAscendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+  When user clicks Total Price column header again                               # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderAgain()
+  Then total prices should be sorted in descending order                         # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInDescendingOrder()
+Actual prices in descending order: [90.0, 28.0, 21.0, 10.0]
+  And expected descending order should be "$120.00", "$49.99", "$24.50", "$9.99" # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedTotalPriceDescendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+=== Finished UI Test: TC_UI_SAL_13 - Verify sorting by Total Price column ===
+
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+Feb 06, 2026 1:01:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+Feb 06, 2026 1:01:52 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_UI_SAL_13_Positive - Verify ascending sort by Total Price&quot;, &quot;Sales List Total Price Sorting Functionality&quot;](12)" classname="com.example.runners.UiTestRunner" time="14.232">
+    <system-out><![CDATA[
+@ui @user @sales @sorting @TC_UI_SAL_13_positive @ascending_price
+Scenario: TC_UI_SAL_13_Positive - Verify ascending sort by Total Price          # src/test/resources/features/ui/sales/sales_list_total_price_sorting.feature:31
+=== Starting UI Test: TC_UI_SAL_13_Positive - Verify ascending sort by Total Price ===
+  Given user is logged into the application                                     # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
+After navigation, current URL: http://localhost:8081/ui/sales
+  And user navigates to Sales List page                                         # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+Current URL when checking Sales List page: http://localhost:8081/ui/sales
+  And user is on Sales List page                                                # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                    # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+  And Total Price column header is visible and clickable                        # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPriceColumnHeaderIsVisibleAndClickable()
+  When user clicks Total Price column header once                               # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderOnce()
+  Then total prices should be sorted in ascending order                         # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInAscendingOrder()
+Actual prices in ascending order: [10.0, 21.0, 28.0, 90.0]
+  And expected ascending order should be "$9.99", "$24.50", "$49.99", "$120.00" # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedTotalPriceAscendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+=== Finished UI Test: TC_UI_SAL_13_Positive - Verify ascending sort by Total Price ===
+
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+Feb 06, 2026 1:02:08 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+Feb 06, 2026 1:02:08 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_UI_SAL_13_Negative - Verify descending sort by Total Price&quot;, &quot;Sales List Total Price Sorting Functionality&quot;](13)" classname="com.example.runners.UiTestRunner" time="16.743">
+    <system-out><![CDATA[
+@ui @user @sales @sorting @TC_UI_SAL_13_negative @descending_price
+Scenario: TC_UI_SAL_13_Negative - Verify descending sort by Total Price          # src/test/resources/features/ui/sales/sales_list_total_price_sorting.feature:47
+=== Starting UI Test: TC_UI_SAL_13_Negative - Verify descending sort by Total Price ===
+  Given user is logged into the application                                      # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
+After navigation, current URL: http://localhost:8081/ui/sales
+  And user navigates to Sales List page                                          # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+Current URL when checking Sales List page: http://localhost:8081/ui/sales
+  And user is on Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                     # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+  And Total Price column header is visible and clickable                         # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPriceColumnHeaderIsVisibleAndClickable()
+  When user clicks Total Price column header once                                # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderOnce()
+  Then total prices should be sorted in ascending order                          # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInAscendingOrder()
+  When user clicks Total Price column header again                               # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderAgain()
+  Then total prices should be sorted in descending order                         # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInDescendingOrder()
+Actual prices in descending order: [90.0, 28.0, 21.0, 10.0]
+  And expected descending order should be "$120.00", "$49.99", "$24.50", "$9.99" # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedTotalPriceDescendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+=== Finished UI Test: TC_UI_SAL_13_Negative - Verify descending sort by Total Price ===
+
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+Feb 06, 2026 1:02:23 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+Feb 06, 2026 1:02:23 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_UI_SAL_13_Toggle - Verify Total Price sort toggle functionality&quot;, &quot;Sales List Total Price Sorting Functionality&quot;](14)" classname="com.example.runners.UiTestRunner" time="19.888">
+    <system-out><![CDATA[
+@ui @user @sales @sorting @TC_UI_SAL_13_toggle @toggle_price_sort
+Scenario: TC_UI_SAL_13_Toggle - Verify Total Price sort toggle functionality # src/test/resources/features/ui/sales/sales_list_total_price_sorting.feature:66
+=== Starting UI Test: TC_UI_SAL_13_Toggle - Verify Total Price sort toggle functionality ===
+  Given user is logged into the application                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
+After navigation, current URL: http://localhost:8081/ui/sales
+  And user navigates to Sales List page                                      # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+Current URL when checking Sales List page: http://localhost:8081/ui/sales
+  And user is on Sales List page                                             # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+  And Total Price column header is visible and clickable                     # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPriceColumnHeaderIsVisibleAndClickable()
+  When user clicks Total Price column header once                            # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderOnce()
+  Then total prices should be sorted in ascending order                      # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInAscendingOrder()
+  When user clicks Total Price column header again                           # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderAgain()
+  Then total prices should be sorted in descending order                     # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInDescendingOrder()
+  When user clicks Total Price column header once                            # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderOnce()
+  Then total prices should be sorted in ascending order                      # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInAscendingOrder()
+=== Finished UI Test: TC_UI_SAL_13_Toggle - Verify Total Price sort toggle functionality ===
+
+]]></system-out>
+    <system-err><![CDATA[Feb 06, 2026 1:02:38 AM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
+WARNING: failed to copy the output of process 10204
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
+	at java.base/java.io.InputStream.transferTo(InputStream.java:796)
+	at java.base/java.io.BufferedInputStream.implTransferTo(BufferedInputStream.java:657)
+	at java.base/java.io.BufferedInputStream.transferTo(BufferedInputStream.java:637)
+	at org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:209)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+[TestNG-test=User Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+Feb 06, 2026 1:02:40 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+Feb 06, 2026 1:02:40 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
