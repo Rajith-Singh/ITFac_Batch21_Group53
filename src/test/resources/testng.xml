@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Plant Sales Automation Suite" verbose="1">
+<suite name="Sales Sorting Test Suite" verbose="1">
     
-    <!-- Run Admin Tests -->
-    <test name="Admin Tests">
-        <parameter name="cucumber.filter.tags" value="@ui and @admin"/>
-        <classes>
-            <class name="com.example.runners.UiTestRunner"/>
-        </classes>
-    </test>
-    
-    <!-- Run User Tests -->
-    <test name="User Tests">
-        <parameter name="cucumber.filter.tags" value="@ui and @user"/>
+    <!-- Run Sales Sorting Tests Only -->
+    <test name="Sales Sorting Tests">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_11 or @TC_UI_SAL_12 or @TC_UI_SAL_13"/>
         <classes>
             <class name="com.example.runners.UiTestRunner"/>
         </classes>

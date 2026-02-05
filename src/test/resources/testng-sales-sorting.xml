@@ -6,7 +6,7 @@
     <test name="Sales Sorting Tests">
         <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_11 or @TC_UI_SAL_12 or @TC_UI_SAL_13"/>
         <classes>
-            <class name="com.example.runners.UiTestRunner"/>
+            <class name="com.example.runners.SalesSortingTestRunner"/>
         </classes>
     </test>
     
