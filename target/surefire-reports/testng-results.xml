@@ -1,27 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-06T03:42:52 IST" name="Sales Sorting Test Suite" finished-at="2026-02-06T03:43:16 IST" duration-ms="23564">
+  <suite started-at="2026-02-06T04:27:22 IST" name="Sales Sorting Test Suite" finished-at="2026-02-06T04:28:39 IST" duration-ms="76504">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-02-06T03:42:52 IST" name="Sales Sorting Tests" finished-at="2026-02-06T03:43:16 IST" duration-ms="23564">
+    <test started-at="2026-02-06T04:27:22 IST" name="Sales Sorting Tests" finished-at="2026-02-06T04:28:22 IST" duration-ms="60206">
       <class name="com.example.runners.UiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T03:42:52 IST" name="setUpClass" finished-at="2026-02-06T03:42:53 IST" duration-ms="825" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T04:27:22 IST" name="setUpClass" finished-at="2026-02-06T04:27:23 IST" duration-ms="410" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6ff29830]]>
+                <![CDATA[org.testng.TestRunner@610f7aa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T03:42:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T03:43:16 IST" duration-ms="22649" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T04:27:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T04:27:50 IST" duration-ms="27457" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_UI_SAL_12 - Verify sorting by Quantity column"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Sales List Quantity Sorting Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T04:27:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T04:28:05 IST" duration-ms="15003" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_UI_SAL_11 - Verify sorting by Plant Name column"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Sales List Sorting Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T04:28:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T04:28:22 IST" duration-ms="17223" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,11 +70,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T03:43:16 IST" name="tearDownClass" finished-at="2026-02-06T03:43:16 IST" duration-ms="52" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-06T04:28:22 IST" name="tearDownClass" finished-at="2026-02-06T04:28:22 IST" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.example.runners.UiTestRunner -->
     </test> <!-- Sales Sorting Tests -->
+    <test started-at="2026-02-06T04:28:22 IST" name="Sell Plant Navigation Test" finished-at="2026-02-06T04:28:39 IST" duration-ms="16253">
+      <class name="com.example.runners.UiTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" started-at="2026-02-06T04:28:22 IST" name="setUpClass" finished-at="2026-02-06T04:28:22 IST" duration-ms="49" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6a03bcb1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" started-at="2026-02-06T04:28:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T04:28:39 IST" duration-ms="16175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TC_UI_SAL_14 - Verify "Sell Plant" button navigation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Sales Navigation Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" started-at="2026-02-06T04:28:39 IST" name="tearDownClass" finished-at="2026-02-06T04:28:39 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.example.runners.UiTestRunner -->
+    </test> <!-- Sell Plant Navigation Test -->
   </suite> <!-- Sales Sorting Test Suite -->
 </testng-results>

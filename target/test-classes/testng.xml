@@ -9,5 +9,13 @@
             <class name="com.example.runners.UiTestRunner"/>
         </classes>
     </test>
+
+    <!-- Run Sell Plant Navigation Test -->
+    <test name="Sell Plant Navigation Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_14"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
     
 </suite>

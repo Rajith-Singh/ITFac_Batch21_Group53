@@ -160,8 +160,11 @@ public class SalesListSteps {
         // Perform actual login
         try {
             String loginUrl = ConfigReader.getProperty("login.url", "http://localhost:8081/ui/login");
-            String username = ConfigReader.getProperty("user.username", "testuser");
-            String password = ConfigReader.getProperty("user.password", "test123");
+            // For TC_UI_SAL_14 test, use admin credentials since test case specifies "Admin clicks Sell Plant button"
+            String username = ConfigReader.getProperty("admin.username", "admin");
+            String password = ConfigReader.getProperty("admin.password", "admin123");
+            
+            System.out.println("Using admin credentials for login: " + username);
             
             // Navigate to login page
             driver.get(loginUrl);
@@ -442,5 +445,28 @@ public class SalesListSteps {
             // This is not a strict requirement - sometimes all prices might be the same
             System.out.println("Has different prices for sorting: " + hasDifferentPrices);
         }
+    }
+
+    // Sell Plant button related step definitions
+    @And("Sell Plant button is visible")
+    public void sellPlantButtonIsVisible() {
+        Assert.assertTrue(salesListPage.isSellPlantButtonVisible(), 
+            "Sell Plant button should be visible on Sales List page");
+    }
+
+    @When("user clicks Sell Plant button")
+    public void userClicksSellPlantButton() {
+        // Verify button is clickable before clicking
+        Assert.assertTrue(salesListPage.isSellPlantButtonClickable(), 
+            "Sell Plant button should be clickable");
+        
+        salesListPage.clickSellPlantButton();
+    }
+
+    @Then("Sell Plant button href should contain {string}")
+    public void sellPlantButtonHrefShouldContain(String expectedPath) {
+        String actualHref = salesListPage.getSellPlantButtonHref();
+        Assert.assertTrue(actualHref.contains(expectedPath), 
+            "Sell Plant button href should contain " + expectedPath + ". Actual href: " + actualHref);
     }
 }

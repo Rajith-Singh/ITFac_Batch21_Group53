@@ -48,6 +48,10 @@ public class SalesListPage {
     @FindBy(xpath = "//th[contains(text(), 'Total Price')]//a | //a[contains(@href, 'totalPrice') and contains(text(), 'Total Price')]")
     private WebElement totalPriceHeaderAlternative;
 
+    // Sell Plant button
+    @FindBy(xpath = "//a[contains(@href, '/ui/sales/new') and contains(text(), 'Sell Plant')]")
+    private WebElement sellPlantButton;
+
     // Sales table rows
     @FindBy(xpath = "//table//tbody//tr")
     private List<WebElement> salesTableRows;
@@ -613,5 +617,77 @@ public class SalesListPage {
         expected.add(20.00);
         expected.add(10.00);
         return expected;
+    }
+
+    // Sell Plant button related methods
+    public boolean isSellPlantButtonVisible() {
+        try {
+            return sellPlantButton.isDisplayed();
+        } catch (Exception e) {
+            System.out.println("Sell Plant button not found with primary locator, trying fallback...");
+            try {
+                // Try alternative locator
+                WebElement fallbackButton = driver.findElement(By.xpath("//a[contains(@href, '/ui/sales/new')]"));
+                if (fallbackButton.isDisplayed()) {
+                    System.out.println("Found Sell Plant button with fallback locator");
+                    return true;
+                }
+            } catch (Exception ex) {
+                System.out.println("Sell Plant button not found with fallback locator either");
+                // Try even more flexible locator
+                try {
+                    WebElement flexibleButton = driver.findElement(By.xpath("//a[contains(text(), 'Sell Plant')]"));
+                    if (flexibleButton.isDisplayed()) {
+                        System.out.println("Found Sell Plant button with flexible locator");
+                        return true;
+                    }
+                } catch (Exception exc) {
+                    System.out.println("Sell Plant button not found with any locator");
+                }
+            }
+            return false;
+        }
+    }
+
+    public boolean isSellPlantButtonClickable() {
+        try {
+            return sellPlantButton.isEnabled() && sellPlantButton.getAttribute("href") != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickSellPlantButton() {
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(sellPlantButton));
+            sellPlantButton.click();
+            Thread.sleep(2000); // Wait for navigation
+        } catch (Exception e) {
+            try {
+                // Fallback - find by direct xpath
+                WebElement button = driver.findElement(By.xpath("//a[contains(@href, '/ui/sales/new')]"));
+                System.out.println("Clicking Sell Plant button with fallback locator");
+                button.click();
+                Thread.sleep(2000);
+            } catch (Exception ex) {
+                try {
+                    // Even more flexible fallback
+                    WebElement flexibleButton = driver.findElement(By.xpath("//a[contains(text(), 'Sell Plant')]"));
+                    System.out.println("Clicking Sell Plant button with flexible locator");
+                    flexibleButton.click();
+                    Thread.sleep(2000);
+                } catch (Exception exc) {
+                    throw new RuntimeException("Failed to click Sell Plant button", exc);
+                }
+            }
+        }
+    }
+
+    public String getSellPlantButtonHref() {
+        try {
+            return sellPlantButton.getAttribute("href");
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
