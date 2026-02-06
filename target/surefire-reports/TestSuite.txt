@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 223.9 s <<< FAILURE! -- in TestSuite
-com.example.runners.SalesListSoldDateSortIndicatorTestRunner.runScenario["TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator", "Sales List Sold Date Sort Indicator"](1) -- Time elapsed: 29.36 s <<< FAILURE!
-java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
-	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 117.3 s -- in TestSuite

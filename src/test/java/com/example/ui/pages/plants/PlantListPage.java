@@ -302,4 +302,69 @@ public class PlantListPage {
             return null;
         }
     }
+
+    // TC_UI_PLANTS_USER_11 - Edit Plant page restriction methods
+    public boolean hasEditForm() {
+        try {
+            // Check for edit form elements
+            List<WebElement> editForms = driver.findElements(By.xpath(
+                "//form[contains(@action,'edit') or contains(@action,'update')] | " +
+                "//form[contains(@id,'edit') or contains(@id,'update')] | " +
+                "//div[contains(@class,'edit-form') or contains(@class,'edit-form')]"
+            ));
+            
+            for (WebElement form : editForms) {
+                if (form.isDisplayed()) {
+                    return true;
+                }
+            }
+            
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean hasEditFormFields() {
+        try {
+            // Check for typical edit form fields (name, description, price, etc.)
+            List<WebElement> editFields = driver.findElements(By.xpath(
+                "//input[@type='text' or @type='number' or @type='email'] | " +
+                "//textarea | " +
+                "//select | " +
+                "//input[contains(@name,'name') or contains(@name,'description') or contains(@name,'price')]"
+            ));
+            
+            for (WebElement field : editFields) {
+                if (field.isDisplayed()) {
+                    return true;
+                }
+            }
+            
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean hasSaveUpdateButtons() {
+        try {
+            // Check for save/update buttons
+            List<WebElement> saveButtons = driver.findElements(By.xpath(
+                "//button[contains(text(),'Save') or contains(text(),'Update') or contains(text(),'Submit')] | " +
+                "//input[@type='submit' and contains(@value,'Save') or contains(@value,'Update') or contains(@value,'Submit')] | " +
+                "//a[contains(text(),'Save') or contains(text(),'Update')]"
+            ));
+            
+            for (WebElement button : saveButtons) {
+                if (button.isDisplayed() && button.isEnabled()) {
+                    return true;
+                }
+            }
+            
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }

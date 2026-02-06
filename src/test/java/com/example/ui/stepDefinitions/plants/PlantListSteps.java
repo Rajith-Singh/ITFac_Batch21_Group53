@@ -279,5 +279,67 @@ public class PlantListSteps {
             "Error message should indicate insufficient permissions. Message: " + errorMessage);
     }
 
+    // TC_UI_PLANTS_USER_11 - Edit Plant page restriction step definitions
+    @When("user manually navigates to the Edit Plant page {string}")
+    public void userManuallyNavigatesToTheEditPlantPage(String editUrl) {
+        // Construct the full URL
+        String fullUrl = "http://localhost:8081" + editUrl;
+        System.out.println("Attempting to access Edit Plant page: " + fullUrl);
+        
+        try {
+            driver.get(fullUrl);
+            Thread.sleep(3000); // Wait for redirection/error to occur
+        } catch (Exception e) {
+            System.out.println("Navigation to Edit Plant page encountered issue: " + e.getMessage());
+        }
+    }
+
+    @Then("user should be restricted from accessing the Edit Plant page")
+    public void userShouldBeRestrictedFromAccessingTheEditPlantPage() {
+        // Check that user is restricted (not able to access the edit page)
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL after restriction attempt: " + currentUrl);
+        
+        // Verify that we're not on the edit page
+        Assert.assertFalse(currentUrl.contains("/ui/plants/edit/"), 
+            "User should not be able to access the Edit Plant page");
+    }
+
+    @And("no edit form should be displayed to the user")
+    public void noEditFormShouldBeDisplayedToTheUser() {
+        // Check that no edit form is displayed
+        boolean hasEditForm = plantListPage.hasEditForm();
+        
+        Assert.assertFalse(hasEditForm, 
+            "No edit form should be displayed to the user");
+    }
+
+    @And("the edit form fields should not be accessible")
+    public void theEditFormFieldsShouldNotBeAccessible() {
+        // Check that edit form fields are not accessible
+        boolean hasEditFields = plantListPage.hasEditFormFields();
+        
+        Assert.assertFalse(hasEditFields, 
+            "Edit form fields should not be accessible");
+    }
+
+    @And("save/update buttons should not be available")
+    public void saveUpdateButtonsShouldNotBeAvailable() {
+        // Check that save/update buttons are not available
+        boolean hasSaveButtons = plantListPage.hasSaveUpdateButtons();
+        
+        Assert.assertFalse(hasSaveButtons, 
+            "Save/Update buttons should not be available");
+    }
+
+    @Then("save\\/update buttons should not be available")
+    public void save_update_buttons_should_not_be_available() {
+        // Check that save/update buttons are not available
+        boolean hasSaveButtons = plantListPage.hasSaveUpdateButtons();
+        
+        Assert.assertFalse(hasSaveButtons, 
+            "Save/Update buttons should not be available");
+    }
+
     
 }

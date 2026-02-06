@@ -74,4 +74,12 @@
         </classes>
     </test>
     
+    <!-- Run Edit Plant Page Restriction Test -->
+    <test name="Edit Plant Page Restriction Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_PLANTS_USER_11"/>
+        <classes>
+            <class name="com.example.runners.EditPlantPageRestrictionTestRunner"/>
+        </classes>
+    </test>
+    
 </suite>
