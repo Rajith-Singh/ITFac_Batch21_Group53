@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Sell Plant Navigation Test Suite" verbose="1">
+<suite name="Sell Plant Test Suite" verbose="1">
     
-    <!-- Run Sell Plant Navigation Test Only -->
+    <!-- Run Sell Plant Navigation Test -->
     <test name="Sell Plant Navigation Test">
         <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_14"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Sell Plant Validation Test -->
+    <test name="Sell Plant Validation Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_15"/>
         <classes>
             <class name="com.example.runners.UiTestRunner"/>
         </classes>

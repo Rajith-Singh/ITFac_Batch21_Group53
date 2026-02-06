@@ -18,4 +18,20 @@
         </classes>
     </test>
     
+    <!-- Run Sell Plant Validation Test -->
+    <test name="Sell Plant Validation Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_15"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Multi-tab Stock Update Test -->
+    <test name="Multi-tab Stock Update Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_16"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
 </suite>

@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 77.03 s -- in TestSuite
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 126.6 s <<< FAILURE! -- in TestSuite
+com.example.runners.UiTestRunner.runScenario["TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)", "Sales Navigation Functionality"](1) -- Time elapsed: 32.65 s <<< FAILURE!
+java.lang.AssertionError: Stock for Mango Tree should be 7 in Tab1. Actual: 4 expected [7] but found [4]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.ui.stepDefinitions.sales.SellPlantSteps.stock_for_should_be_in_tab1(SellPlantSteps.java:249)
+	at ✽.stock for "Mango Tree" should be 7 in Tab1(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sell_plant_navigation.feature:88)
+
