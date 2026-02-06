@@ -43,6 +43,7 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/SalesListSortingTestRunner.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/stepDefinitions/SalesApiSteps.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/sales/SalesListSteps.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/SalesListDateSortingTestRunner.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/response/CategoryResponse.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/login/LoginPage.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/clients/AuthClient.java

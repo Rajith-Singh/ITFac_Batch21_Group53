@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.util.List;
 
 public class SalesListSteps {
@@ -160,10 +161,9 @@ public class SalesListSteps {
 
     @Given("user is logged into the application")
     public void userIsLoggedIntoTheApplication() {
-        // Perform actual login
+        // Perform actual login with admin credentials for TC_UI_SAL_11 to TC_UI_SAL_17 tests
         try {
             String loginUrl = ConfigReader.getProperty("login.url", "http://localhost:8081/ui/login");
-            // For TC_UI_SAL_14 test, use admin credentials since test case specifies "Admin clicks Sell Plant button"
             String username = ConfigReader.getProperty("admin.username", "admin");
             String password = ConfigReader.getProperty("admin.password", "admin123");
             
@@ -500,5 +500,155 @@ public class SalesListSteps {
         String actualHref = salesListPage.getSellPlantButtonHref();
         Assert.assertTrue(actualHref.contains(expectedPath), 
             "Sell Plant button href should contain " + expectedPath + ". Actual href: " + actualHref);
+    }
+
+    // Sold Date sorting step definitions
+    @And("verify initial sold dates are displayed")
+    public void verifyInitialSoldDatesAreDisplayed() {
+        Assert.assertTrue(salesListPage.areSoldDatesDisplayed(), 
+            "Sold dates should be displayed in the table");
+        
+        List<LocalDate> soldDates = salesListPage.getSoldDatesFromTable();
+        System.out.println("Sold dates found: " + soldDates);
+        
+        Assert.assertFalse(soldDates.isEmpty(), 
+            "At least one sold date should be present");
+    }
+
+    @Then("sales should be sorted in descending order by Sold Date")
+    public void salesShouldBeSortedInDescendingOrderBySoldDate() {
+        List<LocalDate> actualDates = salesListPage.getSoldDatesFromTable();
+        Assert.assertFalse(actualDates.isEmpty(), 
+            "Sold dates should be retrieved from the table");
+        
+        System.out.println("Actual sold dates: " + actualDates);
+        
+        boolean isCorrectOrder = salesListPage.validateSoldDateSortOrder(actualDates, false);
+        Assert.assertTrue(isCorrectOrder, 
+            "Sold dates should be sorted in descending order (newest first): " + actualDates);
+    }
+
+    @And("the first record should show the most recent date")
+    public void theFirstRecordShouldShowTheMostRecentDate() {
+        List<LocalDate> soldDates = salesListPage.getSoldDatesFromTable();
+        Assert.assertFalse(soldDates.isEmpty(), 
+            "Sold dates should be present");
+        
+        LocalDate firstDate = soldDates.get(0);
+        LocalDate mostRecentDate = salesListPage.getMostRecentDate(soldDates);
+        
+        Assert.assertEquals(firstDate, mostRecentDate, 
+            "First record should show the most recent date");
+    }
+
+    @And("the second record should show the next most recent date")
+    public void theSecondRecordShouldShowTheNextMostRecentDate() {
+        List<LocalDate> soldDates = salesListPage.getSoldDatesFromTable();
+        Assert.assertTrue(soldDates.size() >= 2, 
+            "At least two sold dates should be present");
+        
+        LocalDate secondDate = soldDates.get(1);
+        LocalDate mostRecentDate = salesListPage.getMostRecentDate(soldDates);
+        
+        // The second date should be equal to or earlier than the most recent date
+        Assert.assertTrue(secondDate.isBefore(mostRecentDate) || secondDate.equals(mostRecentDate), 
+            "Second record should show the next most recent date");
+    }
+
+    @And("the last record should show an older date")
+    public void theLastRecordShouldShowAnOlderDate() {
+        List<LocalDate> soldDates = salesListPage.getSoldDatesFromTable();
+        Assert.assertTrue(soldDates.size() >= 2, 
+            "At least two sold dates should be present");
+        
+        LocalDate lastDate = soldDates.get(soldDates.size() - 1);
+        LocalDate mostRecentDate = salesListPage.getMostRecentDate(soldDates);
+        
+        Assert.assertTrue(lastDate.isBefore(mostRecentDate) || lastDate.equals(mostRecentDate), 
+            "Last record should show an older date than the first record");
+    }
+
+    @When("user refreshes the sales list page")
+    public void userRefreshesTheSalesListPage() {
+        salesListPage.refreshPage();
+    }
+
+    @Then("sales should still be sorted in descending order by Sold Date")
+    public void salesShouldStillBeSortedInDescendingOrderBySoldDate() {
+        // Re-verify the descending order after refresh
+        salesShouldBeSortedInDescendingOrderBySoldDate();
+    }
+
+    @And("the sort order remains consistent after refreshing")
+    public void theSortOrderRemainsConsistentAfterRefreshing() {
+        List<LocalDate> soldDates = salesListPage.getSoldDatesFromTable();
+        Assert.assertFalse(soldDates.isEmpty(), 
+            "Sold dates should still be present after refresh");
+        
+        // Verify that the order is still descending
+        boolean isCorrectOrder = salesListPage.validateSoldDateSortOrder(soldDates, false);
+        Assert.assertTrue(isCorrectOrder, 
+            "Sort order should remain consistent after refresh: " + soldDates);
+    }
+
+    @Given("testuser is logged into the application")
+    public void testuserIsLoggedIntoTheApplication() {
+        // Perform actual login with testuser credentials
+        try {
+            String loginUrl = ConfigReader.getProperty("login.url", "http://localhost:8081/ui/login");
+            String username = ConfigReader.getProperty("user.username", "testuser");
+            String password = ConfigReader.getProperty("user.password", "test123");
+            
+            System.out.println("Using testuser credentials for login: " + username);
+            
+            // Navigate to login page
+            driver.get(loginUrl);
+            Thread.sleep(2000);
+            
+            // Find login form elements and login
+            try {
+                WebElement usernameField = driver.findElement(By.name("username"));
+                WebElement passwordField = driver.findElement(By.name("password"));
+                WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit'] | //input[@type='submit']"));
+                
+                usernameField.clear();
+                usernameField.sendKeys(username);
+                
+                passwordField.clear();
+                passwordField.sendKeys(password);
+                
+                loginButton.click();
+                
+                // Wait for login to complete with enhanced strategy
+                try {
+                    // Wait for URL to change away from login page
+                    new WebDriverWait(driver, Duration.ofSeconds(30))
+                        .until(ExpectedConditions.not(ExpectedConditions.urlContains("/ui/login")));
+                    
+                    // Wait for page to be ready
+                    new WebDriverWait(driver, Duration.ofSeconds(20))
+                        .until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete'"));
+                    
+                    System.out.println("Login completed successfully");
+                    
+                } catch (Exception e) {
+                    System.out.println("Login wait timed out, checking current state...");
+                    // Additional fallback wait
+                    Thread.sleep(5000);
+                }
+                
+            } catch (Exception e) {
+                System.out.println("Login form elements not found, trying alternative selectors...");
+                // Try alternative login selectors if needed
+            }
+            
+            // Verify login was successful by checking if we're no longer on login page
+            String currentUrl = driver.getCurrentUrl();
+            Assert.assertFalse(currentUrl.contains("login") && currentUrl.contains("error"), 
+                "User should be successfully logged in, but login failed or still on login page");
+            
+        } catch (Exception e) {
+            Assert.fail("Login failed: " + e.getMessage());
+        }
     }
 }

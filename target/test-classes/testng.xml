@@ -42,4 +42,12 @@
         </classes>
     </test>
     
+    <!-- Run Sales List Date Sorting Test -->
+    <test name="Sales List Date Sorting Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SALES_USER_06"/>
+        <classes>
+            <class name="com.example.runners.SalesListDateSortingTestRunner"/>
+        </classes>
+    </test>
+    
 </suite>

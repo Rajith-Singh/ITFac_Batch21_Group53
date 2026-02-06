@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -688,6 +690,141 @@ public class SalesListPage {
             return sellPlantButton.getAttribute("href");
         } catch (Exception e) {
             return null;
+        }
+    }
+
+    // Sold Date sorting methods
+    public List<LocalDate> getSoldDatesFromTable() {
+        List<LocalDate> soldDates = new ArrayList<>();
+        
+        try {
+            // Wait for table rows to be visible
+            wait.until(ExpectedConditions.visibilityOfAllElements(salesTableRows));
+            
+            // Extract sold dates from table rows (dates are in column 4 based on debug analysis)
+            for (WebElement row : salesTableRows) {
+                try {
+                    // Sold date is in column 4 (position=4)
+                    WebElement soldDateCell = row.findElement(By.xpath("./td[position()=4]"));
+                    
+                    if (soldDateCell != null) {
+                        String dateText = soldDateCell.getText().trim();
+                        if (!dateText.isEmpty()) {
+                            try {
+                                LocalDate date = parseDate(dateText);
+                                if (date != null) {
+                                    soldDates.add(date);
+                                }
+                            } catch (Exception e) {
+                                // Skip invalid dates
+                                continue;
+                            }
+                        }
+                    }
+                } catch (Exception e) {
+                    // Skip rows without sold date data
+                    continue;
+                }
+            }
+        } catch (Exception e) {
+            // Return empty list if error occurs
+        }
+        
+        return soldDates;
+    }
+
+    private LocalDate parseDate(String dateText) {
+        // Remove any extra spaces and common separators
+        dateText = dateText.trim().replaceAll("[,\\s]+", " ");
+        
+        // Try common date formats
+        DateTimeFormatter[] formatters = {
+            DateTimeFormatter.ofPattern("yyyy-MM-dd"),
+            DateTimeFormatter.ofPattern("MM/dd/yyyy"),
+            DateTimeFormatter.ofPattern("dd/MM/yyyy"),
+            DateTimeFormatter.ofPattern("MM-dd-yyyy"),
+            DateTimeFormatter.ofPattern("dd-MM-yyyy"),
+            DateTimeFormatter.ofPattern("MMM dd, yyyy"),
+            DateTimeFormatter.ofPattern("yyyy/MM/dd"),
+            DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm"),
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"),
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+        };
+        
+        for (DateTimeFormatter formatter : formatters) {
+            try {
+                return LocalDate.parse(dateText, formatter);
+            } catch (Exception e) {
+                // Continue to next format
+            }
+        }
+        
+        return null;
+    }
+
+    public boolean validateSoldDateSortOrder(List<LocalDate> actualDates, boolean isAscending) {
+        if (actualDates.size() < 2) {
+            return true; // Cannot determine sort order with less than 2 items
+        }
+
+        for (int i = 0; i < actualDates.size() - 1; i++) {
+            LocalDate current = actualDates.get(i);
+            LocalDate next = actualDates.get(i + 1);
+
+            if (isAscending) {
+                if (current.isAfter(next)) {
+                    return false; // Ascending order is broken
+                }
+            } else {
+                if (current.isBefore(next)) {
+                    return false; // Descending order is broken
+                }
+            }
+        }
+        
+        return true; // All dates are in the correct order
+    }
+
+    public boolean areSoldDatesDisplayed() {
+        List<LocalDate> dates = getSoldDatesFromTable();
+        return !dates.isEmpty();
+    }
+
+    public LocalDate getMostRecentDate(List<LocalDate> dates) {
+        if (dates.isEmpty()) {
+            return null;
+        }
+        
+        LocalDate mostRecent = dates.get(0);
+        for (LocalDate date : dates) {
+            if (date.isAfter(mostRecent)) {
+                mostRecent = date;
+            }
+        }
+        return mostRecent;
+    }
+
+    public LocalDate getOldestDate(List<LocalDate> dates) {
+        if (dates.isEmpty()) {
+            return null;
+        }
+        
+        LocalDate oldest = dates.get(0);
+        for (LocalDate date : dates) {
+            if (date.isBefore(oldest)) {
+                oldest = date;
+            }
+        }
+        return oldest;
+    }
+
+    public void refreshPage() {
+        try {
+            driver.navigate().refresh();
+            Thread.sleep(2000); // Wait for page to reload
+            waitForPageLoad();
+        } catch (Exception e) {
+            // Continue if refresh fails
         }
     }
 }
