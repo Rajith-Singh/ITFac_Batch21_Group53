@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Enhanced Sales Tests TC_UI_SAL_11_to_TC_UI_SAL_17" verbose="1">
+    
+    <!-- Configure test parameters for slow loading -->
+    <parameter name="browser.timeout" value="60"/>
+    <parameter name="page.load.timeout" value="90"/>
+    <parameter name="element.wait.timeout" value="45"/>
+    
+    <!-- Run Sales Tests TC_UI_SAL_11 through TC_UI_SAL_17 respectively -->
+    <test name="Enhanced Sales Tests TC_UI_SAL_11_to_TC_UI_SAL_17" time-out="600000"> <!-- 10 minutes timeout -->
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_11 or @TC_UI_SAL_12 or @TC_UI_SAL_13 or @TC_UI_SAL_14 or @TC_UI_SAL_15 or @TC_UI_SAL_16 or @TC_UI_SAL_17"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+</suite>

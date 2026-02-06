@@ -22,6 +22,7 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/clients/CategoryClient.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/clients/SalesClient.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/QuantitySortBehaviorDebugTest.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/utils/EnhancedWaitUtils.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/QuantityColumnDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/request/CategoryRequest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/categories/CategoryCRUDSteps.java
@@ -49,3 +50,4 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/request/SaleRequest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/categories/CategoryListSteps.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/QuantityExtractionDebugTest.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/FormValidationDebugTest.java

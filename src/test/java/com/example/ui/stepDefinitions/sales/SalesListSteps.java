@@ -10,8 +10,11 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.List;
 
 public class SalesListSteps {
@@ -184,8 +187,23 @@ public class SalesListSteps {
                 
                 loginButton.click();
                 
-                // Wait for login to complete
-                Thread.sleep(3000);
+                // Wait for login to complete with enhanced strategy
+                try {
+                    // Wait for URL to change away from login page
+                    new WebDriverWait(driver, Duration.ofSeconds(30))
+                        .until(ExpectedConditions.not(ExpectedConditions.urlContains("/ui/login")));
+                    
+                    // Wait for page to be ready
+                    new WebDriverWait(driver, Duration.ofSeconds(20))
+                        .until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete'"));
+                    
+                    System.out.println("Login completed successfully");
+                    
+                } catch (Exception e) {
+                    System.out.println("Login wait timed out, checking current state...");
+                    // Additional fallback wait
+                    Thread.sleep(5000);
+                }
                 
             } catch (Exception e) {
                 System.out.println("Login form elements not found, trying alternative selectors...");
@@ -211,8 +229,22 @@ public class SalesListSteps {
             // Navigate to sales page
             driver.get(salesUrl);
             
-            // Wait for URL to update
-            Thread.sleep(3000);
+            // Enhanced wait for navigation with fallback strategy
+            try {
+                // Wait for URL to contain sales path
+                new WebDriverWait(driver, Duration.ofSeconds(30))
+                    .until(ExpectedConditions.urlContains("/ui/sales"));
+                
+                // Wait for page to be ready
+                new WebDriverWait(driver, Duration.ofSeconds(20))
+                    .until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete'"));
+                
+                System.out.println("Navigation to sales list completed");
+                
+            } catch (Exception e) {
+                System.out.println("Navigation wait timed out, using fallback wait...");
+                Thread.sleep(5000);
+            }
             
             // Check if we were redirected to error page
             String currentUrl = driver.getCurrentUrl();

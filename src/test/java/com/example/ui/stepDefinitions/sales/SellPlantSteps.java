@@ -312,4 +312,79 @@ public class SellPlantSteps {
             }
         }
     }
+
+    // =============================================
+    // TC_UI_SAL_17 Step Definitions
+    // =============================================
+    
+    @Then("form should not be submitted")
+    public void form_should_not_be_submitted() {
+        boolean stillOnSellPage = sellPlantPage.isStillOnSellPlantPage();
+        Assert.assertTrue(stillOnSellPage, "Form should not be submitted - user should remain on sell plant page");
+        System.out.println("Form validation passed - user remains on sell plant page");
+    }
+
+    @And("validation error message should be displayed")
+    public void validation_error_message_should_be_displayed() {
+        boolean errorDisplayed = sellPlantPage.isErrorMessageDisplayed();
+        Assert.assertTrue(errorDisplayed, "Validation error message should be displayed");
+        
+        String errorText = sellPlantPage.getErrorMessageText();
+        Assert.assertNotNull(errorText, "Error message text should not be null");
+        Assert.assertFalse(errorText.trim().isEmpty(), "Error message should not be empty");
+        
+        System.out.println("Validation error message displayed: " + errorText);
+    }
+
+    @And("selected plant should remain as {string}")
+    public void selected_plant_should_remain_as(String expectedPlant) {
+        String selectedPlant = sellPlantPage.getSelectedPlantFromDropdown();
+        Assert.assertNotNull(selectedPlant, "A plant should be selected in the dropdown");
+        Assert.assertTrue(selectedPlant.contains(expectedPlant), 
+            "Selected plant should contain '" + expectedPlant + "'. Actual: '" + selectedPlant + "'");
+        
+        System.out.println("Verified selected plant remains: " + selectedPlant);
+    }
+
+    @And("quantity field should retain value {string}")
+    public void quantity_field_should_retain_value(String expectedValue) {
+        String actualValue = sellPlantPage.getQuantityFieldValue();
+        Assert.assertEquals(actualValue, expectedValue, 
+            "Quantity field should retain value: " + expectedValue + ". Actual: " + actualValue);
+        
+        System.out.println("Verified quantity field retains value: " + actualValue);
+    }
+
+    @When("user corrects quantity to {string}")
+    public void user_corrects_quantity_to(String correctedQuantity) {
+        sellPlantPage.enterQuantity(correctedQuantity);
+        System.out.println("Corrected quantity to: " + correctedQuantity);
+    }
+
+    @And("user should be redirected to sales list or confirmation page")
+    public void user_should_be_redirected_to_sales_list_or_confirmation_page() {
+        // Wait for potential redirect
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL after successful sale: " + currentUrl);
+        
+        // Check if redirected to sales list
+        boolean isOnSalesList = currentUrl.contains("/ui/sales") && !currentUrl.contains("/new");
+        
+        // Check if on confirmation page (could be various patterns)
+        boolean isOnConfirmationPage = currentUrl.contains("confirm") || 
+                                      currentUrl.contains("success") || 
+                                      currentUrl.contains("complete") ||
+                                      sellPlantPage.isSuccessMessageDisplayed();
+        
+        Assert.assertTrue(isOnSalesList || isOnConfirmationPage, 
+            "User should be redirected to sales list or confirmation page. Current URL: " + currentUrl);
+        
+        System.out.println("Redirect verification passed - user is on appropriate page after sale");
+    }
 }

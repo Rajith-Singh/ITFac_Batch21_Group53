@@ -34,6 +34,7 @@ com/example/ui/pages/categories/AddEditCategoryPage.class
 com/example/utils/ElementLocatorVerifier.class
 com/example/utils/ConfigReader.class
 com/example/debug/QuantitySortBehaviorDebugTest.class
+com/example/debug/FormValidationDebugTest.class
 com/example/api/tests/CategoryApiTest.class
 com/example/ui/pages/categories/CategoryListPage.class
 com/example/debug/QuantityExtractionDebugTest.class
@@ -48,4 +49,5 @@ com/example/debug/SortIndicatorDebugTest.class
 com/example/api/stepDefinitions/CategoryApiSteps.class
 com/example/api/clients/AuthClient.class
 com/example/ui/stepDefinitions/dashboard/DashboardSteps.class
+com/example/utils/EnhancedWaitUtils.class
 com/example/api/stepDefinitions/SalesApiSteps.class

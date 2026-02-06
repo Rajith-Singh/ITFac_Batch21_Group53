@@ -93,3 +93,34 @@ Feature: Sales Navigation Functionality
     Then page should refresh without errors
     And plant "Mango Tree" should be available in dropdown after refresh
     And stock for "Mango Tree" should be 7 in Tab2
+
+  @TC_UI_SAL_17 @form-retention @validation @regression
+  Scenario: TC_UI_SAL_17 - Verify form retains data after validation error
+    """
+    Test Summary: Verify form retains data after validation error.
+    Test Description: Verify that entered form data persists after a validation error occurs, allowing the user to correct and resubmit without re-entering all information.
+    Precondition: Admin logged in, User is on the Sell Plant page (/ui/sales/new).
+    """
+
+    # Setup prerequisites
+    Given user is logged into the application
+    And user navigates to Sales List page
+    And user is on Sales List page
+    And Sell Plant button is visible
+    When user clicks Sell Plant button
+    Then Sell Plant form should load successfully
+
+    # Test execution - First attempt with invalid quantity
+    When user selects "Mango Tree" from plant dropdown
+    And user enters "0" in Quantity field
+    And user clicks Sell button
+    Then form should not be submitted
+    And validation error message should be displayed
+    And selected plant should remain as "Mango Tree"
+    And quantity field should retain value "0"
+
+    # Test execution - Second attempt with corrected quantity
+    When user corrects quantity to "2"
+    And user clicks Sell button
+    Then sale should be successful
+    And user should be redirected to sales list or confirmation page

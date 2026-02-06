@@ -34,4 +34,12 @@
         </classes>
     </test>
     
+    <!-- Run Form Retention Test -->
+    <test name="Form Retention Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_17"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
 </suite>

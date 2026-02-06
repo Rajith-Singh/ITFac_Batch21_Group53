@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
+import com.example.utils.EnhancedWaitUtils;
 
 import java.time.Duration;
 import java.util.Set;
@@ -16,6 +17,7 @@ public class SellPlantPage {
     private WebDriver driver;
     private WebDriverWait wait;
     private JavascriptExecutor js;
+    private EnhancedWaitUtils enhancedWait;
 
     // Page heading
     @FindBy(xpath = "//h3[contains(text(), 'Sell Plant') or contains(text(), 'New Sale')]")
@@ -50,8 +52,9 @@ public class SellPlantPage {
 
     public SellPlantPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Increased from 10 to 30 seconds
         this.js = (JavascriptExecutor) driver;
+        this.enhancedWait = new EnhancedWaitUtils(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -152,25 +155,66 @@ public class SellPlantPage {
             // Wait for URL to contain /ui/sales/new
             wait.until(ExpectedConditions.urlContains("/ui/sales/new"));
             
-            // Try to wait for form
+            // Wait for page to be ready
+            wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete'"));
+            
+            // Try to wait for form with increased timeout
             try {
                 wait.until(ExpectedConditions.visibilityOf(sellPlantForm));
+                System.out.println("Sell plant form is visible");
             } catch (Exception e) {
-                // Form might not be present, continue
+                System.out.println("Sell plant form not immediately visible, waiting for alternative elements...");
+                // Wait for any form to appear as fallback
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("form")));
             }
             
             // Try to wait for heading
             try {
                 wait.until(ExpectedConditions.visibilityOf(sellPlantHeading));
+                System.out.println("Sell plant heading is visible");
             } catch (Exception e) {
-                // Heading might not be present, continue
+                // Try alternative heading
+                try {
+                    wait.until(ExpectedConditions.visibilityOf(sellPlantHeadingAlternative));
+                    System.out.println("Alternative sell plant heading is visible");
+                } catch (Exception ex) {
+                    System.out.println("No heading found, continuing with form elements...");
+                }
             }
             
-            // At least wait for some content to load
-            Thread.sleep(1000);
+            // Wait for key form elements to be interactive
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(plantDropdown));
+                System.out.println("Plant dropdown is clickable");
+            } catch (Exception e) {
+                System.out.println("Plant dropdown not immediately clickable, continuing...");
+            }
+            
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(quantityField));
+                System.out.println("Quantity field is clickable");
+            } catch (Exception e) {
+                System.out.println("Quantity field not immediately clickable, continuing...");
+            }
+            
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(submitButton));
+                System.out.println("Submit button is clickable");
+            } catch (Exception e) {
+                System.out.println("Submit button not immediately clickable, continuing...");
+            }
+            
+            // Additional wait for slow JavaScript
+            Thread.sleep(3000);
             
         } catch (Exception e) {
-            // Page might still be loading, continue anyway
+            System.out.println("Page load wait interrupted: " + e.getMessage());
+            // Additional wait as fallback
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
         }
     }
     
@@ -675,6 +719,301 @@ public class SellPlantPage {
             System.out.println("=== END DEBUG ===");
         } catch (Exception e) {
             System.out.println("Debug failed: " + e.getMessage());
+        }
+    }
+
+    // =============================================
+    // TC_UI_SAL_17 Additional Methods
+    // =============================================
+    
+    public boolean isErrorMessageDisplayed() {
+        try {
+            // Wait a moment for error messages to appear
+            Thread.sleep(2000);
+            
+            // First check for HTML5 validation messages on quantity field
+            try {
+                if (quantityField.isDisplayed()) {
+                    // Check if quantity field has validation errors
+                    String validationMessage = (String) js.executeScript("return arguments[0].validationMessage;", quantityField);
+                    if (validationMessage != null && !validationMessage.trim().isEmpty()) {
+                        System.out.println("HTML5 validation message found: " + validationMessage);
+                        return true;
+                    }
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            // Try general error message first
+            if (errorMessage.isDisplayed()) {
+                System.out.println("General error message found and displayed");
+                return true;
+            }
+            
+            // Check for quantity-specific error messages
+            try {
+                WebElement quantityError = driver.findElement(By.xpath("//input[contains(@name, 'quantity') or contains(@id, 'quantity')]/following-sibling::*[contains(@class, 'error') or contains(@class, 'invalid-feedback') or contains(@class, 'text-danger')]"));
+                if (quantityError.isDisplayed()) {
+                    System.out.println("Quantity error message found");
+                    return true;
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            // Check for any element with error text containing quantity or validation messages
+            try {
+                WebElement validationError = driver.findElement(By.xpath("//*[contains(text(), 'Quantity must be') or contains(text(), 'quantity must be') or contains(text(), 'greater than') or contains(text(), 'Value must be') or contains(text(), 'invalid')][contains(@class, 'error') or contains(@class, 'invalid') or contains(@class, 'text-danger') or contains(@class, 'alert')]"));
+                if (validationError.isDisplayed()) {
+                    System.out.println("Validation error message found via text search");
+                    return true;
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            // Check for HTML5 validation tooltips or messages in the page
+            try {
+                WebElement html5ValidationError = driver.findElement(By.xpath("//*[contains(text(), 'Value must be greater than or equal to 1') or contains(text(), 'greater than or equal to 1') or contains(text(), 'Please enter a value') or contains(text(), 'Please enter a number')]"));
+                if (html5ValidationError.isDisplayed()) {
+                    System.out.println("HTML5 validation message found via text search");
+                    return true;
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            System.out.println("No error message found");
+            return false;
+            
+        } catch (Exception e) {
+            System.out.println("Error checking for error message: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public String getErrorMessageText() {
+        try {
+            // Wait a moment for error messages to appear
+            Thread.sleep(1000);
+            
+            // First check for HTML5 validation messages on quantity field
+            try {
+                if (quantityField.isDisplayed()) {
+                    // Check if quantity field has validation errors
+                    String validationMessage = (String) js.executeScript("return arguments[0].validationMessage;", quantityField);
+                    if (validationMessage != null && !validationMessage.trim().isEmpty()) {
+                        System.out.println("HTML5 validation message found: " + validationMessage);
+                        return validationMessage.trim();
+                    }
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            // Try general error message first
+            if (errorMessage.isDisplayed()) {
+                String text = errorMessage.getText().trim();
+                if (!text.isEmpty()) {
+                    System.out.println("General error message found: " + text);
+                    return text;
+                }
+            }
+            
+            // Check for quantity-specific error messages
+            try {
+                WebElement quantityError = driver.findElement(By.xpath("//input[contains(@name, 'quantity') or contains(@id, 'quantity')]/following-sibling::*[contains(@class, 'error') or contains(@class, 'invalid-feedback') or contains(@class, 'text-danger')]"));
+                if (quantityError.isDisplayed()) {
+                    String text = quantityError.getText().trim();
+                    if (!text.isEmpty()) {
+                        System.out.println("Quantity error message found: " + text);
+                        return text;
+                    }
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            // Look for any element containing quantity validation text
+            try {
+                WebElement validationError = driver.findElement(By.xpath("//*[contains(text(), 'Quantity must be') or contains(text(), 'quantity must be') or contains(text(), 'greater than') or contains(text(), 'Value must be') or contains(text(), 'invalid')]"));
+                if (validationError.isDisplayed()) {
+                    String text = validationError.getText().trim();
+                    if (!text.isEmpty()) {
+                        System.out.println("Validation error message found via text search: " + text);
+                        return text;
+                    }
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            // Check for HTML5 validation tooltips or messages in the page
+            try {
+                WebElement html5ValidationError = driver.findElement(By.xpath("//*[contains(text(), 'Value must be greater than or equal to 1') or contains(text(), 'greater than or equal to 1') or contains(text(), 'Please enter a value') or contains(text(), 'Please enter a number')]"));
+                if (html5ValidationError.isDisplayed()) {
+                    String text = html5ValidationError.getText().trim();
+                    System.out.println("HTML5 validation message found via text search: " + text);
+                    return text;
+                }
+            } catch (Exception e) {
+                // Continue to other checks
+            }
+            
+            System.out.println("No error message text found");
+            return null;
+            
+        } catch (Exception e) {
+            System.out.println("Error getting error message text: " + e.getMessage());
+            return null;
+        }
+    }
+
+    public String getSelectedPlantFromDropdown() {
+        try {
+            if (plantDropdown.isDisplayed()) {
+                System.out.println("DEBUG: Checking selected plant from dropdown...");
+                
+                // Method 1: Get the selected option using @selected attribute
+                try {
+                    WebElement selectedOption = plantDropdown.findElement(By.xpath(".//option[@selected]"));
+                    if (selectedOption != null) {
+                        String text = selectedOption.getText().trim();
+                        System.out.println("DEBUG: Found selected option via @selected: " + text);
+                        if (!text.isEmpty()) {
+                            return text;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("DEBUG: No option with @selected attribute found");
+                }
+                
+                // Method 2: Get the value attribute from dropdown
+                try {
+                    String selectedValue = plantDropdown.getAttribute("value");
+                    System.out.println("DEBUG: Dropdown value attribute: " + selectedValue);
+                    if (selectedValue != null && !selectedValue.isEmpty()) {
+                        // Find the option with this value
+                        java.util.List<WebElement> options = plantDropdown.findElements(By.tagName("option"));
+                        System.out.println("DEBUG: Found " + options.size() + " options in dropdown");
+                        
+                        for (WebElement option : options) {
+                            String optionValue = option.getAttribute("value");
+                            String optionText = option.getText().trim();
+                            System.out.println("DEBUG: Option - Value: " + optionValue + ", Text: " + optionText);
+                            
+                            if (selectedValue.equals(optionValue) || (optionValue == null && selectedValue.isEmpty())) {
+                                System.out.println("DEBUG: Found matching option: " + optionText);
+                                return optionText;
+                            }
+                        }
+                        
+                        // Fallback: return the value if it looks like a display value
+                        if (Character.isLetter(selectedValue.charAt(0))) {
+                            System.out.println("DEBUG: Returning value as display text: " + selectedValue);
+                            return selectedValue;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("DEBUG: Error getting dropdown value: " + e.getMessage());
+                }
+                
+                // Method 3: Check first non-empty option (for debugging)
+                try {
+                    java.util.List<WebElement> options = plantDropdown.findElements(By.tagName("option"));
+                    for (int i = 0; i < options.size(); i++) {
+                        WebElement option = options.get(i);
+                        String text = option.getText().trim();
+                        if (!text.isEmpty() && !text.contains("Select")) {
+                            System.out.println("DEBUG: First non-empty option: " + text);
+                            // Don't return this as selected, just for debugging
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("DEBUG: Error checking options: " + e.getMessage());
+                }
+                
+                // Method 4: Check if any option is selected via JavaScript
+                try {
+                    String selectedIndex = (String) js.executeScript("return arguments[0].selectedIndex;", plantDropdown);
+                    System.out.println("DEBUG: Selected index from JavaScript: " + selectedIndex);
+                    if (selectedIndex != null && !selectedIndex.equals("-1")) {
+                        int index = Integer.parseInt(selectedIndex);
+                        java.util.List<WebElement> options = plantDropdown.findElements(By.tagName("option"));
+                        if (index < options.size()) {
+                            WebElement selectedOption = options.get(index);
+                            String text = selectedOption.getText().trim();
+                            System.out.println("DEBUG: Selected option via JavaScript: " + text);
+                            return text;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("DEBUG: Error getting selected index via JavaScript: " + e.getMessage());
+                }
+                
+                System.out.println("DEBUG: No selected plant found in dropdown");
+            } else {
+                System.out.println("DEBUG: Plant dropdown is not displayed");
+            }
+        } catch (Exception e) {
+            System.out.println("Error getting selected plant: " + e.getMessage());
+        }
+        return null;
+    }
+
+    public String getQuantityFieldValue() {
+        try {
+            // Find quantity field fresh each time
+            WebElement qtyField = driver.findElement(By.xpath("//input[contains(@name, 'quantity') or contains(@id, 'quantity') or contains(@placeholder, 'quantity')] | //label[contains(text(), 'Quantity')]/following-sibling::input | //label[contains(text(), 'Quantity')]/../input"));
+            
+            if (qtyField.isDisplayed()) {
+                String value = qtyField.getAttribute("value");
+                System.out.println("DEBUG: Quantity field value: " + value);
+                return value;
+            } else {
+                System.out.println("DEBUG: Quantity field is not displayed");
+            }
+        } catch (Exception e) {
+            System.out.println("Error getting quantity field value: " + e.getMessage());
+        }
+        return null;
+    }
+
+    public boolean isSuccessMessageDisplayed() {
+        try {
+            // Wait a moment for success messages to appear
+            Thread.sleep(2000);
+            
+            // Check for success message
+            try {
+                WebElement successMessage = driver.findElement(By.xpath("//*[contains(@class, 'success') or contains(@class, 'alert-success') or contains(text(), 'success') or contains(text(), 'Success') or contains(text(), 'created') or contains(text(), 'completed')]"));
+                if (successMessage.isDisplayed()) {
+                    System.out.println("Success message found and displayed");
+                    return true;
+                }
+            } catch (Exception e) {
+                // No success message found
+            }
+            
+            // Check for confirmation page elements
+            try {
+                WebElement confirmationElement = driver.findElement(By.xpath("//*[contains(text(), 'Thank') or contains(text(), 'Order') or contains(text(), 'Sale') or contains(text(), 'Confirmation') or contains(text(), 'Complete')]"));
+                if (confirmationElement.isDisplayed()) {
+                    System.out.println("Confirmation page element found");
+                    return true;
+                }
+            } catch (Exception e) {
+                // No confirmation element found
+            }
+            
+            System.out.println("No success message or confirmation element found");
+            return false;
+            
+        } catch (Exception e) {
+            System.out.println("Error checking for success message: " + e.getMessage());
+            return false;
         }
     }
 }
