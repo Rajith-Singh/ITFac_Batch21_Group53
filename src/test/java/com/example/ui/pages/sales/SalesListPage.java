@@ -827,4 +827,187 @@ public class SalesListPage {
             // Continue if refresh fails
         }
     }
+
+    // TC_UI_SALES_USER_07 - Sort indicator methods for Sold Date column
+    public boolean hasSortIndicator(String columnName) {
+        try {
+            WebElement columnHeader = getColumnHeaderByName(columnName);
+            if (columnHeader == null) {
+                return false;
+            }
+
+            // Check for sort indicator through various means:
+            // 1. CSS classes that indicate sorting
+            // 2. Sort direction in href attribute
+            // 3. Arrow symbols in text content
+            // 4. Specific sort indicator elements
+
+            String className = columnHeader.getAttribute("class");
+            String href = columnHeader.getAttribute("href");
+            String text = columnHeader.getText();
+
+            // Check for sort-related CSS classes
+            if (className != null && (className.contains("sort") || 
+                className.contains("sorted") || className.contains("asc") || 
+                className.contains("desc"))) {
+                return true;
+            }
+
+            // Check for sort direction in href
+            if (href != null && (href.contains("sortDir=asc") || href.contains("sortDir=desc"))) {
+                return true;
+            }
+
+            // Check for arrow symbols in text content
+            if (text != null && (text.contains("↑") || text.contains("↓") || 
+                text.contains("▲") || text.contains("▼") || text.contains("⇑") || text.contains("⇓"))) {
+                return true;
+            }
+
+            // Check for nested sort indicator elements
+            try {
+                WebElement sortIndicator = columnHeader.findElement(By.xpath(".//span[contains(@class,'sort')] | .//i[contains(@class,'sort')] | .//div[contains(@class,'sort')]"));
+                if (sortIndicator.isDisplayed()) {
+                    return true;
+                }
+            } catch (Exception e) {
+                // No nested sort indicator found
+            }
+
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getSortIndicatorForColumn(String columnName) {
+        try {
+            WebElement columnHeader = getColumnHeaderByName(columnName);
+            if (columnHeader == null) {
+                return "none";
+            }
+
+            // Check href for sort direction
+            String href = columnHeader.getAttribute("href");
+            if (href != null) {
+                if (href.contains("sortDir=desc")) {
+                    return "desc";
+                } else if (href.contains("sortDir=asc")) {
+                    return "asc";
+                }
+            }
+
+            // Check CSS classes
+            String className = columnHeader.getAttribute("class");
+            if (className != null) {
+                if (className.contains("desc") || className.contains("down")) {
+                    return "desc";
+                } else if (className.contains("asc") || className.contains("up")) {
+                    return "asc";
+                }
+            }
+
+            // Check text content for arrows
+            String text = columnHeader.getText();
+            if (text != null) {
+                if (text.contains("↓") || text.contains("▼") || text.contains("⇓")) {
+                    return "desc";
+                } else if (text.contains("↑") || text.contains("▲") || text.contains("⇑")) {
+                    return "asc";
+                }
+            }
+
+            // Check nested elements for sort indicators
+            try {
+                WebElement sortIndicator = columnHeader.findElement(By.xpath(".//span[contains(@class,'sort')] | .//i[contains(@class,'sort')]"));
+                if (sortIndicator.isDisplayed()) {
+                    String indicatorClass = sortIndicator.getAttribute("class");
+                    String indicatorText = sortIndicator.getText();
+                    
+                    if (indicatorClass != null) {
+                        if (indicatorClass.contains("desc") || indicatorClass.contains("down")) {
+                            return "desc";
+                        } else if (indicatorClass.contains("asc") || indicatorClass.contains("up")) {
+                            return "asc";
+                        }
+                    }
+                    
+                    if (indicatorText != null) {
+                        if (indicatorText.contains("↓") || indicatorText.contains("▼")) {
+                            return "desc";
+                        } else if (indicatorText.contains("↑") || indicatorText.contains("▲")) {
+                            return "asc";
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                // No nested sort indicator found
+            }
+
+            return "none";
+        } catch (Exception e) {
+            return "none";
+        }
+    }
+
+    public boolean isSortDirectionDescending(String columnName) {
+        String sortIndicator = getSortIndicatorForColumn(columnName);
+        return "desc".equals(sortIndicator);
+    }
+
+    private WebElement getColumnHeaderByName(String columnName) {
+        try {
+            // Try different strategies to find the column header
+            
+            // Strategy 1: Find by text content
+            List<WebElement> allHeaders = driver.findElements(By.xpath("//th | //table//thead//td | //div[contains(@class,'header')] | //a[contains(@href,'sortField')]"));
+            
+            for (WebElement header : allHeaders) {
+                String headerText = header.getText().trim();
+                if (headerText.equalsIgnoreCase(columnName) || 
+                    headerText.toLowerCase().contains(columnName.toLowerCase())) {
+                    if (header.isDisplayed()) {
+                        return header;
+                    }
+                }
+            }
+
+            // Strategy 2: Find by href pattern for sortable columns
+            if (columnName.equalsIgnoreCase("Sold Date") || columnName.equalsIgnoreCase("Date")) {
+                try {
+                    WebElement dateHeader = driver.findElement(By.xpath("//a[contains(@href,'soldDate') or contains(@href,'date') and contains(@href,'sortField')]"));
+                    if (dateHeader.isDisplayed()) {
+                        return dateHeader;
+                    }
+                } catch (Exception e) {
+                    // Continue to next strategy
+                }
+            }
+
+            // Strategy 3: More specific xpath patterns
+            String[] xpathPatterns = {
+                "//th[contains(text(),'" + columnName + "')]",
+                "//td[contains(text(),'" + columnName + "')]",
+                "//a[contains(text(),'" + columnName + "')]",
+                "//th[contains(.,'" + columnName + "')]",
+                "//td[contains(.,'" + columnName + "')]",
+                "//a[contains(.,'" + columnName + "')]"
+            };
+
+            for (String pattern : xpathPatterns) {
+                try {
+                    WebElement header = driver.findElement(By.xpath(pattern));
+                    if (header.isDisplayed()) {
+                        return header;
+                    }
+                } catch (Exception e) {
+                    // Continue to next pattern
+                }
+            }
+
+            return null;
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }

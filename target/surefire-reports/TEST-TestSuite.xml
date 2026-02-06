@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="174.907" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="156.197" tests="5" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="webdriver.chrome.driver" value="/Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="LK"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206234337666_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-06T23-43-37_566-jvmRun1 surefire-20260206234337666_1tmp surefire_0-20260206234337666_2tmp"/>
+    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207004840619_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-07T00-48-40_548-jvmRun1 surefire-20260207004840619_1tmp surefire_0-20260207004840619_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/test-classes:/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/classes:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-java/4.15.0/selenium-java-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-api/4.15.0/selenium-api-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.15.0/selenium-chrome-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.15.0/selenium-chromium-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-json/4.15.0/selenium-json-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.15.0/selenium-manager-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v117/4.15.0/selenium-devtools-v117-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v118/4.15.0/selenium-devtools-v118-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v119/4.15.0/selenium-devtools-v119-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.15.0/selenium-devtools-v85-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.15.0/selenium-edge-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.15.0/selenium-firefox-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-http/4.15.0/selenium-http-4.15.0.jar:/Users/rajithsingh/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.15.0/selenium-ie-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.15.0/selenium-remote-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar:/Users/rajithsingh/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/Users/rajithsingh/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-os/4.15.0/selenium-os-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.15.0/selenium-safari-driver-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/seleniumhq/selenium/selenium-support/4.15.0/selenium-support-4.15.0.jar:/Users/rajithsingh/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar:/Users/rajithsingh/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/rajithsingh/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/rajithsingh/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.2/webdrivermanager-5.6.2.jar:/Users/rajithsingh/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java/3.3.4/docker-java-3.3.4.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-core/3.3.4/docker-java-core-3.3.4.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/rajithsingh/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/rajithsingh/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/rajithsingh/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/rajithsingh/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.4/docker-java-transport-httpclient5-3.3.4.jar:/Users/rajithsingh/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/rajithsingh/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/rajithsingh/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/rajithsingh/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/rajithsingh/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/rajithsingh/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/rajithsingh/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/rajithsingh/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/rajithsingh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-testng/7.14.0/cucumber-testng-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/rajithsingh/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/Users/rajithsingh/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar:/Users/rajithsingh/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/Users/rajithsingh/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/rajithsingh/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/rajithsingh/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/rajithsingh/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/json-schema-validator/5.3.2/json-schema-validator-5.3.2.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/Users/rajithsingh/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/Users/rajithsingh/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/Users/rajithsingh/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/Users/rajithsingh/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/rajithsingh/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/Users/rajithsingh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/rajithsingh/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/rajithsingh/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/Users/rajithsingh/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/rajithsingh/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rajithsingh/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/rajithsingh/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/rajithsingh/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/json-path/5.3.2/json-path-5.3.2.jar:/Users/rajithsingh/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/rest-assured-common/5.3.2/rest-assured-common-5.3.2.jar:/Users/rajithsingh/.m2/repository/io/rest-assured/xml-path/5.3.2/xml-path-5.3.2.jar:/Users/rajithsingh/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/rajithsingh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/rajithsingh/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/Users/rajithsingh/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/rajithsingh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/rajithsingh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/rajithsingh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/rajithsingh/.m2/repository/org/apache/poi/poi-ooxml/5.2.4/poi-ooxml-5.2.4.jar:/Users/rajithsingh/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.4/poi-ooxml-lite-5.2.4.jar:/Users/rajithsingh/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/rajithsingh/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/rajithsingh/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/rajithsingh/.m2/repository/org/apache/poi/poi/5.2.4/poi-5.2.4.jar:/Users/rajithsingh/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/rajithsingh/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/rajithsingh/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/extentreports-cucumber7-adapter/1.14.0/extentreports-cucumber7-adapter-1.14.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/extent-pdf-report/2.12.0/extent-pdf-report-2.12.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/cucumber-pdf-report/2.14.0/cucumber-pdf-report-2.14.0.jar:/Users/rajithsingh/.m2/repository/org/apache/pdfbox/pdfbox/2.0.26/pdfbox-2.0.26.jar:/Users/rajithsingh/.m2/repository/org/apache/pdfbox/fontbox/2.0.26/fontbox-2.0.26.jar:/Users/rajithsingh/.m2/repository/org/knowm/xchart/xchart/3.8.0/xchart-3.8.0.jar:/Users/rajithsingh/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/Users/rajithsingh/.m2/repository/de/rototor/pdfbox/graphics2d/0.30/graphics2d-0.30.jar:/Users/rajithsingh/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/Users/rajithsingh/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/table-layout/1.5.1/table-layout-1.5.1.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/rest-assured-cucumber-pdf-report/1.5.0/rest-assured-cucumber-pdf-report-1.5.0.jar:/Users/rajithsingh/.m2/repository/org/jsoup/jsoup/1.15.3/jsoup-1.15.3.jar:/Users/rajithsingh/.m2/repository/com/aventstack/klov-reporter/5.1.0/klov-reporter-5.1.0.jar:/Users/rajithsingh/.m2/repository/org/mongodb/mongodb-driver/3.6.4/mongodb-driver-3.6.4.jar:/Users/rajithsingh/.m2/repository/org/mongodb/mongodb-driver-core/3.6.4/mongodb-driver-core-3.6.4.jar:/Users/rajithsingh/.m2/repository/org/mongodb/bson/3.6.4/bson-3.6.4.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/htmlextentreporter/1.1.0/htmlextentreporter-1.1.0.jar:/Users/rajithsingh/.m2/repository/tech/grasshopper/extent-excel-report/1.4.0/extent-excel-report-1.4.0.jar:/Users/rajithsingh/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.24.0/allure-cucumber7-jvm-2.24.0.jar:/Users/rajithsingh/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/Users/rajithsingh/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/Users/rajithsingh/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/rajithsingh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/rajithsingh/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/rajithsingh/.m2/repository/org/slf4j/slf4j-simple/2.0.9/slf4j-simple-2.0.9.jar:"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206234337666_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207004840619_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -47,6 +47,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/xk/cpvhm0_x78v4j7xkwszzys8h0000gn/T/"/>
     <property name="java.version" value="21.0.10"/>
+    <property name="cucumber.filter.tags" value="@TC_UI_SALES_USER_07"/>
     <property name="user.dir" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
@@ -60,430 +61,254 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;TC_UI_SAL_12 - Verify sorting by Quantity column&quot;, &quot;Sales List Quantity Sorting Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="22.96">
+  <testcase name="runScenario[&quot;TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator&quot;, &quot;Sales List Sold Date Sort Indicator&quot;](1)" classname="com.example.runners.UiTestRunner" time="33.237">
+    <failure message="Sold Date column header should display a sort indicator expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+]]></failure>
     <system-out><![CDATA[
-@ui @user @sales @sorting @TC_UI_SAL_12 @smoke @regression
-Scenario: TC_UI_SAL_12 - Verify sorting by Quantity column # src/test/resources/features/ui/sales/sales_list_quantity_sorting.feature:5
-=== Starting UI Test: TC_UI_SAL_12 - Verify sorting by Quantity column ===
-Using admin credentials for login: admin
+@ui @user @sales @sorting @date @indicator @TC_UI_SALES_USER_07 @smoke @regression
+Scenario: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator # src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:5
+=== Starting UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+Using testuser credentials for login: testuser
 Login completed successfully
-  Given user is logged into the application                # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
-Navigation to sales list completed
-After navigation, current URL: http://localhost:8081/ui/sales
-  And user navigates to Sales List page                    # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
-Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                           # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And sales records are displayed for plants               # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
-  And Quantity column header is visible and clickable      # com.example.ui.stepDefinitions.sales.SalesListSteps.quantityColumnHeaderIsVisibleAndClickable()
-  And verify initial quantities are displayed              # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialQuantitiesAreDisplayed()
-  And expected descending order should be 5, 3, 2          # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedQuantitiesDescendingOrderShouldBe(int,int,int)
-  When user clicks Quantity column header once             # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksQuantityColumnHeaderOnce()
-  Then quantities should be sorted in ascending order      # com.example.ui.stepDefinitions.sales.SalesListSteps.quantitiesShouldBeSortedInAscendingOrder()
-  And expected ascending order should be 2, 3, 5           # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedQuantitiesAscendingOrderShouldBe(int,int,int)
-  When user clicks Quantity column header again            # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksQuantityColumnHeaderAgain()
-  Then quantities should be sorted in descending order     # com.example.ui.stepDefinitions.sales.SalesListSteps.quantitiesShouldBeSortedInDescendingOrder()
-  And expected descending order should be 5, 3, 2          # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedQuantitiesDescendingOrderShouldBe(int,int,int)
-  When user clicks Quantity column header once             # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksQuantityColumnHeaderOnce()
-  Then quantities should be sorted in ascending order      # com.example.ui.stepDefinitions.sales.SalesListSteps.quantitiesShouldBeSortedInAscendingOrder()
-  And expected ascending order should be 2, 3, 5           # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedQuantitiesAscendingOrderShouldBe(int,int,int)
-  When user clicks Quantity column header once             # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksQuantityColumnHeaderOnce()
-  Then quantities should be sorted in descending order     # com.example.ui.stepDefinitions.sales.SalesListSteps.quantitiesShouldBeSortedInDescendingOrder()
-  And expected descending order should be 5, 3, 2          # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedQuantitiesDescendingOrderShouldBe(int,int,int)
-  When user clicks Quantity column header again            # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksQuantityColumnHeaderAgain()
-  Then quantities should be sorted in ascending order      # com.example.ui.stepDefinitions.sales.SalesListSteps.quantitiesShouldBeSortedInAscendingOrder()
-  And expected ascending order should be 2, 3, 5           # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedQuantitiesAscendingOrderShouldBe(int,int,int)
-=== Finished UI Test: TC_UI_SAL_12 - Verify sorting by Quantity column ===
-
-]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 11:43:38 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
-WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
-[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
-[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:43:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:43:41 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Feb 06, 2026 11:44:01 PM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
-WARNING: failed to copy the output of process 80643
-java.io.IOException: Stream closed
-	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
-	at java.base/java.io.InputStream.transferTo(InputStream.java:796)
-	at java.base/java.io.BufferedInputStream.implTransferTo(BufferedInputStream.java:657)
-	at java.base/java.io.BufferedInputStream.transferTo(BufferedInputStream.java:637)
-	at org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:209)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_11 - Verify sorting by Plant Name column&quot;, &quot;Sales List Sorting Functionality&quot;](2)" classname="com.example.runners.UiTestRunner" time="10.935">
-    <system-out><![CDATA[
-@ui @user @sales @sorting @TC_UI_SAL_11 @smoke @regression
-Scenario: TC_UI_SAL_11 - Verify sorting by Plant Name column                      # src/test/resources/features/ui/sales/sales_list_sorting.feature:5
-=== Starting UI Test: TC_UI_SAL_11 - Verify sorting by Plant Name column ===
-Using admin credentials for login: admin
-Login completed successfully
-  Given user is logged into the application                                       # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
-Navigation to sales list completed
-After navigation, current URL: http://localhost:8081/ui/sales
-  And user navigates to Sales List page                                           # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
-Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And sales records are displayed for plants                                      # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
-  And Plant Name column header is visible and clickable                           # com.example.ui.stepDefinitions.sales.SalesListSteps.plantNameColumnHeaderIsVisibleAndClickable()
-  And verify initial plant names are displayed                                    # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialPlantNamesAreDisplayed()
-  And expected descending order should be "ZZZ Plant", "Money Plant", "Aloe Vera" # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedDescendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String)
-  When user clicks Plant Name column header once                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksPlantNameColumnHeaderOnce()
-  Then sales should be sorted in ascending order by Plant Name                    # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInAscendingOrderByPlantName()
-  And expected ascending order should be "Aloe Vera", "Money Plant", "ZZZ Plant"  # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedAscendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String)
-  When user clicks Plant Name column header again                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksPlantNameColumnHeaderAgain()
-  Then sales should be sorted in descending order by Plant Name                   # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInDescendingOrderByPlantName()
-  And expected descending order should be "ZZZ Plant", "Money Plant", "Aloe Vera" # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedDescendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String)
-=== Finished UI Test: TC_UI_SAL_11 - Verify sorting by Plant Name column ===
-
-]]></system-out>
-    <system-err><![CDATA[[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
-[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:44:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:44:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_13 - Verify sorting by Total Price column&quot;, &quot;Sales List Total Price Sorting Functionality&quot;](3)" classname="com.example.runners.UiTestRunner" time="12.3">
-    <system-out><![CDATA[
-@ui @user @sales @sorting @TC_UI_SAL_13 @smoke @regression
-Scenario: TC_UI_SAL_13 - Verify sorting by Total Price column                    # src/test/resources/features/ui/sales/sales_list_total_price_sorting.feature:5
-=== Starting UI Test: TC_UI_SAL_13 - Verify sorting by Total Price column ===
-Using admin credentials for login: admin
-Login completed successfully
-  Given user is logged into the application                                      # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
-Navigation to sales list completed
-After navigation, current URL: http://localhost:8081/ui/sales
-  And user navigates to Sales List page                                          # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
-Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And sales records are displayed for plants                                     # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
-  And Total Price column header is visible and clickable                         # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPriceColumnHeaderIsVisibleAndClickable()
-Actual total prices found: [10.0, 90.0, 28.0, 21.0]
-Has different prices for sorting: true
-  And verify initial total prices are displayed                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialTotalPricesAreDisplayed()
-  When user clicks Total Price column header once                                # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderOnce()
-  Then total prices should be sorted in ascending order                          # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInAscendingOrder()
-Actual prices in ascending order: [10.0, 21.0, 28.0, 90.0]
-  And expected ascending order should be "$9.99", "$24.50", "$49.99", "$120.00"  # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedTotalPriceAscendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-  When user clicks Total Price column header again                               # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksTotalPriceColumnHeaderAgain()
-  Then total prices should be sorted in descending order                         # com.example.ui.stepDefinitions.sales.SalesListSteps.totalPricesShouldBeSortedInDescendingOrder()
-Actual prices in descending order: [90.0, 28.0, 21.0, 10.0]
-  And expected descending order should be "$120.00", "$49.99", "$24.50", "$9.99" # com.example.ui.stepDefinitions.sales.SalesListSteps.expectedTotalPriceDescendingOrderShouldBe(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-=== Finished UI Test: TC_UI_SAL_13 - Verify sorting by Total Price column ===
-
-]]></system-out>
-    <system-err><![CDATA[[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
-[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:44:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:44:13 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_14 - Verify &quot;Sell Plant&quot; button navigation&quot;, &quot;Sales Navigation Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="13.168">
-    <system-out><![CDATA[
-@ui @user @sales @navigation @TC_UI_SAL_14 @smoke @regression
-Scenario: TC_UI_SAL_14 - Verify "Sell Plant" button navigation # src/test/resources/features/ui/sales/sell_plant_navigation.feature:5
-=== Starting UI Test: TC_UI_SAL_14 - Verify "Sell Plant" button navigation ===
-Using admin credentials for login: admin
-Login completed successfully
-  Given user is logged into the application                    # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
-Navigation to sales list completed
-After navigation, current URL: http://localhost:8081/ui/sales
-  And user navigates to Sales List page                        # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
-Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                               # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And Sell Plant button is visible                             # com.example.ui.stepDefinitions.sales.SalesListSteps.sellPlantButtonIsVisible()
-  When user clicks Sell Plant button                           # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksSellPlantButton()
-Expected URL: /ui/sales/new
-Actual URL: http://localhost:8081/ui/sales/new
-  Then URL should change to "/ui/sales/new"                    # com.example.ui.stepDefinitions.sales.SellPlantSteps.url_should_change_to(java.lang.String)
-  And URL should contain "/ui/sales/new"                       # com.example.ui.stepDefinitions.sales.SellPlantSteps.url_should_contain(java.lang.String)
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-  And Sell Plant form should load successfully                 # com.example.ui.stepDefinitions.sales.SellPlantSteps.sell_plant_form_should_load_successfully()
-=== Finished UI Test: TC_UI_SAL_14 - Verify "Sell Plant" button navigation ===
-
-]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 11:44:25 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
-WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
-[TestNG-test=Sell Plant Navigation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
-[TestNG-test=Sell Plant Navigation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:44:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:44:26 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_15 - Verify error when Plant not selected&quot;, &quot;Sales Navigation Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="16.671">
-    <system-out><![CDATA[
-@ui @user @sales @navigation @TC_UI_SAL_15 @validation @regression
-Scenario: TC_UI_SAL_15 - Verify error when Plant not selected                        # src/test/resources/features/ui/sales/sell_plant_navigation.feature:30
-=== Starting UI Test: TC_UI_SAL_15 - Verify error when Plant not selected ===
-Using admin credentials for login: admin
-Login completed successfully
-  Given user is logged into the application                                          # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
-Navigation to sales list completed
-After navigation, current URL: http://localhost:8081/ui/sales
-  And user navigates to Sales List page                                              # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
-Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                                                     # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And Sell Plant button is visible                                                   # com.example.ui.stepDefinitions.sales.SalesListSteps.sellPlantButtonIsVisible()
-  When user clicks Sell Plant button                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksSellPlantButton()
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-  And Sell Plant form should load successfully                                       # com.example.ui.stepDefinitions.sales.SellPlantSteps.sell_plant_form_should_load_successfully()
-Plant dropdown current value: 
-  When user leaves Plant dropdown empty                                              # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_leaves_plant_dropdown_empty()
-Entered quantity: 2
-  And user enters "2" in Quantity field                                              # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_enters_in_quantity_field(java.lang.String)
-Clicked Sell button
-=== DEBUG: Page Elements ===
-Current URL: http://localhost:8081/ui/sales/new
-Form not found
-Plant dropdown found: true
-Plant dropdown value: 
-Dropdown options found: 15
-  Option: '-- Select Plant --'
-  Option: 'Rose (Stock: 50)'
-  Option: 'Tulip (Stock: 40)'
-  Option: 'Lily (Stock: 60)'
-  Option: 'Snake Plant (Stock: 30)'
-  Option: 'Spider Plant (Stock: 45)'
-  Option: 'Peace Lily (Stock: 25)'
-  Option: 'Mango Tree (Stock: 10)'
-  Option: 'Neem Tree (Stock: 15)'
-  Option: 'Aloe Vera (Stock: 67)'
-  Option: 'Cactus (Stock: 80)'
-  Option: 'Bonsai (Stock: 55)'
-  Option: 'Money Plant (Stock: 53)'
-  Option: 'Monstera (Stock: 20)'
-  Option: 'ZZZ Plant (Stock: 20)'
-Quantity field found: true
-Quantity field value: 2
-Error elements found: 2
-Error text: 'Logout' (displayed: true)
-Error text: 'Plant is required' (displayed: true)
-Page source contains error-related text
-=== END DEBUG ===
-  And user clicks Sell button                                                        # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_clicks_sell_button()
-Form submission handled by application
-  Then form submission should be handled                                             # com.example.ui.stepDefinitions.sales.SellPlantSteps.form_submission_should_be_handled()
-Plant error message found and displayed
-Plant error message found: Plant is required
-  And error message should appear below Plant dropdown with text "Plant is required" # com.example.ui.stepDefinitions.sales.SellPlantSteps.error_message_should_appear_below_plant_dropdown_with_text(java.lang.String)
-  And Sell button should remain enabled                                              # com.example.ui.stepDefinitions.sales.SellPlantSteps.sell_button_should_remain_enabled()
-=== Finished UI Test: TC_UI_SAL_15 - Verify error when Plant not selected ===
-
-]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 11:44:38 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
-WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
-[TestNG-test=Sell Plant Validation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
-[TestNG-test=Sell Plant Validation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:44:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:44:39 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)&quot;, &quot;Sales Navigation Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="46.497">
-    <system-out><![CDATA[
-@ui @user @sales @navigation @TC_UI_SAL_16 @multi-tab @stock-update @regression
-Scenario: TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows) # src/test/resources/features/ui/sales/sell_plant_navigation.feature:61
-=== Starting UI Test: TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows) ===
-Using admin credentials for login: admin
-Login completed successfully
-  Given user is logged into the application                                             # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
+  Given testuser is logged into the application                                         # com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication()
 Navigation to sales list completed
 After navigation, current URL: http://localhost:8081/ui/sales
   And user navigates to Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
 Current URL when checking Sales List page: http://localhost:8081/ui/sales
   And user is on Sales List page                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And Sell Plant button is visible                                                      # com.example.ui.stepDefinitions.sales.SalesListSteps.sellPlantButtonIsVisible()
-  When user clicks Sell Plant button                                                    # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksSellPlantButton()
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-  Then Sell Plant form should load successfully                                         # com.example.ui.stepDefinitions.sales.SellPlantSteps.sell_plant_form_should_load_successfully()
-DEBUG: Found 15 dropdown options:
-DEBUG: Option text: '-- Select Plant --'
-DEBUG: Option text: 'Rose (Stock: 50)'
-DEBUG: Option text: 'Tulip (Stock: 40)'
-DEBUG: Option text: 'Lily (Stock: 60)'
-DEBUG: Option text: 'Snake Plant (Stock: 30)'
-DEBUG: Option text: 'Spider Plant (Stock: 45)'
-DEBUG: Option text: 'Peace Lily (Stock: 25)'
-DEBUG: Option text: 'Mango Tree (Stock: 10)'
-DEBUG: Found plant Mango Tree in dropdown
-DEBUG: Extracted stock (Stock: format): 10
-Initial stock for Mango Tree: 10
-  And plant "Mango Tree" is available in dropdown                                       # com.example.ui.stepDefinitions.sales.SellPlantSteps.plant_is_available_in_dropdown(java.lang.String)
-DEBUG: Found 15 dropdown options:
-DEBUG: Option text: '-- Select Plant --'
-DEBUG: Option text: 'Rose (Stock: 50)'
-DEBUG: Option text: 'Tulip (Stock: 40)'
-DEBUG: Option text: 'Lily (Stock: 60)'
-DEBUG: Option text: 'Snake Plant (Stock: 30)'
-DEBUG: Option text: 'Spider Plant (Stock: 45)'
-DEBUG: Option text: 'Peace Lily (Stock: 25)'
-DEBUG: Option text: 'Mango Tree (Stock: 10)'
-DEBUG: Found plant Mango Tree in dropdown
-DEBUG: Extracted stock (Stock: format): 10
-Mango Tree initial stock: 10
-  And Mango Tree has initial stock of 10                                                # com.example.ui.stepDefinitions.sales.SellPlantSteps.mango_tree_has_initial_stock_of(java.lang.Integer)
-Tab1 handle: 42B72754734D74899794E742A47020A8
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-Opened new tab and navigated to Sell Plant form
-Tab2 handle: E61C64D7F93379F5595AF4324485BE86
-  When user opens new tab and navigates to Sell Plant form                              # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_opens_new_tab_and_navigates_to_sell_plant_form()
-Switched to Tab1
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-  And user switches to Tab1                                                             # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_switches_to_tab1()
-Selected plant: Mango Tree
-  When user selects "Mango Tree" from plant dropdown                                    # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_selects_from_plant_dropdown(java.lang.String)
-Entered quantity: 3
-  And user enters "3" in Quantity field                                                 # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_enters_in_quantity_field(java.lang.String)
-Clicked Sell button
-=== DEBUG: Page Elements ===
-Current URL: http://localhost:8081/ui/sales/new
-Form not found
-Plant dropdown not found
-Quantity field not found
-Error elements found: 1
-Error text: 'Logout' (displayed: true)
-=== END DEBUG ===
-  And user clicks Sell button                                                           # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_clicks_sell_button()
-  Then sale should be successful                                                        # com.example.ui.stepDefinitions.sales.SellPlantSteps.sale_should_be_successful()
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-Navigated to Sell Plant form
-  And user navigates back to Sell Plant form                                            # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_navigates_back_to_sell_plant_form()
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-DEBUG: Found 15 dropdown options:
-DEBUG: Option text: '-- Select Plant --'
-DEBUG: Option text: 'Rose (Stock: 50)'
-DEBUG: Option text: 'Tulip (Stock: 40)'
-DEBUG: Option text: 'Lily (Stock: 60)'
-DEBUG: Option text: 'Snake Plant (Stock: 30)'
-DEBUG: Option text: 'Spider Plant (Stock: 45)'
-DEBUG: Option text: 'Peace Lily (Stock: 25)'
-DEBUG: Option text: 'Mango Tree (Stock: 7)'
-DEBUG: Found plant Mango Tree in dropdown
-DEBUG: Extracted stock (Stock: format): 7
-Using calculated expected stock for Mango Tree: 7 (initial: 10 - 3 sold)
-Verified in Tab1: Mango Tree stock is 7
-  And stock for "Mango Tree" should be 7 in Tab1                                        # com.example.ui.stepDefinitions.sales.SellPlantSteps.stock_for_should_be_in_tab1(java.lang.String,java.lang.Integer)
-Switched to Tab2
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-  When user switches to Tab2                                                            # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_switches_to_tab2()
-Page refreshed successfully
-  And user refreshes the page                                                           # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_refreshes_the_page()
-  Then page should refresh without errors                                               # com.example.ui.stepDefinitions.sales.SellPlantSteps.page_should_refresh_without_errors()
-After refresh, dropdown shows: Mango Tree (Stock: 7)
-  And plant "Mango Tree" should be available in dropdown after refresh                  # com.example.ui.stepDefinitions.sales.SellPlantSteps.plant_should_be_available_in_dropdown_after_refresh(java.lang.String)
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-DEBUG: Found 15 dropdown options:
-DEBUG: Option text: '-- Select Plant --'
-DEBUG: Option text: 'Rose (Stock: 50)'
-DEBUG: Option text: 'Tulip (Stock: 40)'
-DEBUG: Option text: 'Lily (Stock: 60)'
-DEBUG: Option text: 'Snake Plant (Stock: 30)'
-DEBUG: Option text: 'Spider Plant (Stock: 45)'
-DEBUG: Option text: 'Peace Lily (Stock: 25)'
-DEBUG: Option text: 'Mango Tree (Stock: 7)'
-DEBUG: Found plant Mango Tree in dropdown
-DEBUG: Extracted stock (Stock: format): 7
-Using calculated expected stock for Mango Tree: 7 (initial: 10 - 3 sold)
-Verified in Tab2: Mango Tree stock is 7
-  And stock for "Mango Tree" should be 7 in Tab2                                        # com.example.ui.stepDefinitions.sales.SellPlantSteps.stock_for_should_be_in_tab2(java.lang.String,java.lang.Integer)
-=== Finished UI Test: TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows) ===
+  And sales records are displayed for plants                                            # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+Sold dates found: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
+  And verify initial sold dates are displayed                                           # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialSoldDatesAreDisplayed()
+  When the Sales List page loads                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.theSalesListPageLoads()
+  Then the "Sold Date" column header should display a visual sort indicator             # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(java.lang.String)
+      java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+
+  And the sort indicator should be a downward arrow (↓) indicating descending order
+  And no other column headers should show any sort indicators                           # com.example.ui.stepDefinitions.sales.SalesListSteps.noOtherColumnHeadersShouldShowAnySortIndicators()
+  And the "Plant Name" column header should not show any sort indicators                # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Quantity" column header should not show any sort indicators                  # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Total Price" column header should not show any sort indicators               # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And sales should be sorted in descending order by Sold Date                           # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInDescendingOrderBySoldDate()
+  And the visual indicator should match the actual sort direction                       # com.example.ui.stepDefinitions.sales.SalesListSteps.theVisualIndicatorShouldMatchTheActualSortDirection()
+Test FAILED: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator
+
+    Embedding Screenshot on Failure [image/png 155004 bytes]
+
+=== Finished UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
 
 ]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 11:44:55 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+    <system-err><![CDATA[Feb 07, 2026 12:48:41 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
+[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+[TestNG-test=Sales Sorting Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+Feb 07, 2026 12:48:45 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+Feb 07, 2026 12:48:45 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Feb 07, 2026 12:49:14 AM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
+WARNING: failed to copy the output of process 82990
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
+	at java.base/java.io.InputStream.transferTo(InputStream.java:796)
+	at java.base/java.io.BufferedInputStream.implTransferTo(BufferedInputStream.java:657)
+	at java.base/java.io.BufferedInputStream.transferTo(BufferedInputStream.java:637)
+	at org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:209)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator&quot;, &quot;Sales List Sold Date Sort Indicator&quot;](1)" classname="com.example.runners.UiTestRunner" time="30.777">
+    <failure message="Sold Date column header should display a sort indicator expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+]]></failure>
+    <system-out><![CDATA[
+@ui @user @sales @sorting @date @indicator @TC_UI_SALES_USER_07 @smoke @regression
+Scenario: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator # src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:5
+=== Starting UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+Using testuser credentials for login: testuser
+Login completed successfully
+  Given testuser is logged into the application                                         # com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication()
+Navigation to sales list completed
+After navigation, current URL: http://localhost:8081/ui/sales
+  And user navigates to Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+Current URL when checking Sales List page: http://localhost:8081/ui/sales
+  And user is on Sales List page                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                            # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+Sold dates found: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
+  And verify initial sold dates are displayed                                           # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialSoldDatesAreDisplayed()
+  When the Sales List page loads                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.theSalesListPageLoads()
+  Then the "Sold Date" column header should display a visual sort indicator             # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(java.lang.String)
+      java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+
+  And the sort indicator should be a downward arrow (↓) indicating descending order
+  And no other column headers should show any sort indicators                           # com.example.ui.stepDefinitions.sales.SalesListSteps.noOtherColumnHeadersShouldShowAnySortIndicators()
+  And the "Plant Name" column header should not show any sort indicators                # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Quantity" column header should not show any sort indicators                  # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Total Price" column header should not show any sort indicators               # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And sales should be sorted in descending order by Sold Date                           # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInDescendingOrderBySoldDate()
+  And the visual indicator should match the actual sort direction                       # com.example.ui.stepDefinitions.sales.SalesListSteps.theVisualIndicatorShouldMatchTheActualSortDirection()
+Test FAILED: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator
+
+    Embedding Screenshot on Failure [image/png 155004 bytes]
+
+=== Finished UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+
+]]></system-out>
+    <system-err><![CDATA[Feb 07, 2026 12:49:15 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
+[TestNG-test=Sell Plant Navigation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+[TestNG-test=Sell Plant Navigation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+Feb 07, 2026 12:49:17 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+Feb 07, 2026 12:49:17 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator&quot;, &quot;Sales List Sold Date Sort Indicator&quot;](1)" classname="com.example.runners.UiTestRunner" time="30.043">
+    <failure message="Sold Date column header should display a sort indicator expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+]]></failure>
+    <system-out><![CDATA[
+@ui @user @sales @sorting @date @indicator @TC_UI_SALES_USER_07 @smoke @regression
+Scenario: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator # src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:5
+=== Starting UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+Using testuser credentials for login: testuser
+Login completed successfully
+  Given testuser is logged into the application                                         # com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication()
+Navigation to sales list completed
+After navigation, current URL: http://localhost:8081/ui/sales
+  And user navigates to Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+Current URL when checking Sales List page: http://localhost:8081/ui/sales
+  And user is on Sales List page                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                            # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+Sold dates found: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
+  And verify initial sold dates are displayed                                           # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialSoldDatesAreDisplayed()
+  When the Sales List page loads                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.theSalesListPageLoads()
+  Then the "Sold Date" column header should display a visual sort indicator             # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(java.lang.String)
+      java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+
+  And the sort indicator should be a downward arrow (↓) indicating descending order
+  And no other column headers should show any sort indicators                           # com.example.ui.stepDefinitions.sales.SalesListSteps.noOtherColumnHeadersShouldShowAnySortIndicators()
+  And the "Plant Name" column header should not show any sort indicators                # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Quantity" column header should not show any sort indicators                  # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Total Price" column header should not show any sort indicators               # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And sales should be sorted in descending order by Sold Date                           # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInDescendingOrderBySoldDate()
+  And the visual indicator should match the actual sort direction                       # com.example.ui.stepDefinitions.sales.SalesListSteps.theVisualIndicatorShouldMatchTheActualSortDirection()
+Test FAILED: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator
+
+    Embedding Screenshot on Failure [image/png 155004 bytes]
+
+=== Finished UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+
+]]></system-out>
+    <system-err><![CDATA[Feb 07, 2026 12:49:46 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
+[TestNG-test=Sell Plant Validation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+[TestNG-test=Sell Plant Validation Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+Feb 07, 2026 12:49:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+Feb 07, 2026 12:49:47 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Feb 07, 2026 12:50:16 AM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
+WARNING: failed to copy the output of process 83138
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
+	at java.base/java.io.InputStream.transferTo(InputStream.java:796)
+	at java.base/java.io.BufferedInputStream.implTransferTo(BufferedInputStream.java:657)
+	at java.base/java.io.BufferedInputStream.transferTo(BufferedInputStream.java:637)
+	at org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:209)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator&quot;, &quot;Sales List Sold Date Sort Indicator&quot;](1)" classname="com.example.runners.UiTestRunner" time="29.882">
+    <failure message="Sold Date column header should display a sort indicator expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+]]></failure>
+    <system-out><![CDATA[
+@ui @user @sales @sorting @date @indicator @TC_UI_SALES_USER_07 @smoke @regression
+Scenario: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator # src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:5
+=== Starting UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+Using testuser credentials for login: testuser
+Login completed successfully
+  Given testuser is logged into the application                                         # com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication()
+Navigation to sales list completed
+After navigation, current URL: http://localhost:8081/ui/sales
+  And user navigates to Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+Current URL when checking Sales List page: http://localhost:8081/ui/sales
+  And user is on Sales List page                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                            # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+Sold dates found: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
+  And verify initial sold dates are displayed                                           # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialSoldDatesAreDisplayed()
+  When the Sales List page loads                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.theSalesListPageLoads()
+  Then the "Sold Date" column header should display a visual sort indicator             # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(java.lang.String)
+      java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+
+  And the sort indicator should be a downward arrow (↓) indicating descending order
+  And no other column headers should show any sort indicators                           # com.example.ui.stepDefinitions.sales.SalesListSteps.noOtherColumnHeadersShouldShowAnySortIndicators()
+  And the "Plant Name" column header should not show any sort indicators                # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Quantity" column header should not show any sort indicators                  # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Total Price" column header should not show any sort indicators               # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And sales should be sorted in descending order by Sold Date                           # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInDescendingOrderBySoldDate()
+  And the visual indicator should match the actual sort direction                       # com.example.ui.stepDefinitions.sales.SalesListSteps.theVisualIndicatorShouldMatchTheActualSortDirection()
+Test FAILED: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator
+
+    Embedding Screenshot on Failure [image/png 155004 bytes]
+
+=== Finished UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+
+]]></system-out>
+    <system-err><![CDATA[Feb 07, 2026 12:50:16 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
 WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
 [TestNG-test=Multi-tab Stock Update Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=Multi-tab Stock Update Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:44:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 07, 2026 12:50:17 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:44:56 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 07, 2026 12:50:17 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Feb 06, 2026 11:45:41 PM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
-WARNING: failed to copy the output of process 80801
-java.io.IOException: Stream closed
-	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
-	at java.base/java.io.InputStream.transferTo(InputStream.java:796)
-	at java.base/java.io.BufferedInputStream.implTransferTo(BufferedInputStream.java:657)
-	at java.base/java.io.BufferedInputStream.transferTo(BufferedInputStream.java:637)
-	at org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:209)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-
-Feb 06, 2026 11:45:41 PM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
-WARNING: failed to copy the output of process 80801
-java.io.IOException: Stream closed
-	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
-	at java.base/java.io.InputStream.transferTo(InputStream.java:796)
-	at java.base/java.io.BufferedInputStream.implTransferTo(BufferedInputStream.java:657)
-	at java.base/java.io.BufferedInputStream.transferTo(BufferedInputStream.java:637)
-	at org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:209)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-
-Feb 06, 2026 11:45:41 PM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
-WARNING: failed to copy the output of process 80801
-java.io.IOException: Stream closed
-	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
-	at java.base/java.io.InputStream.transferTo(InputStream.java:796)
-	at java.base/java.io.BufferedInputStream.implTransferTo(BufferedInputStream.java:657)
-	at java.base/java.io.BufferedInputStream.transferTo(BufferedInputStream.java:637)
-	at org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:209)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-
-Feb 06, 2026 11:45:41 PM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
-WARNING: failed to copy the output of process 80801
+Feb 07, 2026 12:50:46 AM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
+WARNING: failed to copy the output of process 83237
 java.io.IOException: Stream closed
 	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:206)
 	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:411)
@@ -496,149 +321,59 @@ java.io.IOException: Stream closed
 
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SAL_17 - Verify form retains data after validation error&quot;, &quot;Sales Navigation Functionality&quot;](1)" classname="com.example.runners.UiTestRunner" time="37.291">
+  <testcase name="runScenario[&quot;TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator&quot;, &quot;Sales List Sold Date Sort Indicator&quot;](1)" classname="com.example.runners.UiTestRunner" time="30.233">
+    <failure message="Sold Date column header should display a sort indicator expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+]]></failure>
     <system-out><![CDATA[
-@ui @user @sales @navigation @TC_UI_SAL_17 @form-retention @validation @regression
-Scenario: TC_UI_SAL_17 - Verify form retains data after validation error # src/test/resources/features/ui/sales/sell_plant_navigation.feature:98
-=== Starting UI Test: TC_UI_SAL_17 - Verify form retains data after validation error ===
-Using admin credentials for login: admin
+@ui @user @sales @sorting @date @indicator @TC_UI_SALES_USER_07 @smoke @regression
+Scenario: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator # src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:5
+=== Starting UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
+Using testuser credentials for login: testuser
 Login completed successfully
-  Given user is logged into the application                              # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsLoggedIntoTheApplication()
+  Given testuser is logged into the application                                         # com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication()
 Navigation to sales list completed
 After navigation, current URL: http://localhost:8081/ui/sales
-  And user navigates to Sales List page                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
+  And user navigates to Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
 Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                                         # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And Sell Plant button is visible                                       # com.example.ui.stepDefinitions.sales.SalesListSteps.sellPlantButtonIsVisible()
-  When user clicks Sell Plant button                                     # com.example.ui.stepDefinitions.sales.SalesListSteps.userClicksSellPlantButton()
-Sell plant form is visible
-Sell plant heading is visible
-Plant dropdown is clickable
-Quantity field is clickable
-Submit button is clickable
-  Then Sell Plant form should load successfully                          # com.example.ui.stepDefinitions.sales.SellPlantSteps.sell_plant_form_should_load_successfully()
-Selected plant: Mango Tree
-  When user selects "Mango Tree" from plant dropdown                     # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_selects_from_plant_dropdown(java.lang.String)
-Entered quantity: 0
-  And user enters "0" in Quantity field                                  # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_enters_in_quantity_field(java.lang.String)
-Clicked Sell button
-=== DEBUG: Page Elements ===
-Current URL: http://localhost:8081/ui/sales/new
-Form found: true
-Plant dropdown found: true
-Plant dropdown value: 8
-Dropdown options found: 15
-  Option: '-- Select Plant --'
-  Option: 'Rose (Stock: 50)'
-  Option: 'Tulip (Stock: 40)'
-  Option: 'Lily (Stock: 60)'
-  Option: 'Snake Plant (Stock: 30)'
-  Option: 'Spider Plant (Stock: 45)'
-  Option: 'Peace Lily (Stock: 25)'
-  Option: 'Mango Tree (Stock: 7)'
-  Option: 'Neem Tree (Stock: 15)'
-  Option: 'Aloe Vera (Stock: 67)'
-  Option: 'Cactus (Stock: 80)'
-  Option: 'Bonsai (Stock: 55)'
-  Option: 'Money Plant (Stock: 53)'
-  Option: 'Monstera (Stock: 20)'
-  Option: 'ZZZ Plant (Stock: 20)'
-Quantity field found: true
-Quantity field value: 0
-Error elements found: 1
-Error text: 'Logout' (displayed: true)
-Page source contains error-related text
-=== END DEBUG ===
-  And user clicks Sell button                                            # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_clicks_sell_button()
-Form validation passed - user remains on sell plant page
-  Then form should not be submitted                                      # com.example.ui.stepDefinitions.sales.SellPlantSteps.form_should_not_be_submitted()
-HTML5 validation message found: Value must be greater than or equal to 1.
-HTML5 validation message found: Value must be greater than or equal to 1.
-Validation error message displayed: Value must be greater than or equal to 1.
-  And validation error message should be displayed                       # com.example.ui.stepDefinitions.sales.SellPlantSteps.validation_error_message_should_be_displayed()
-DEBUG: Checking selected plant from dropdown...
-DEBUG: No option with @selected attribute found
-DEBUG: Dropdown value attribute: 8
-DEBUG: Found 15 options in dropdown
-DEBUG: Option - Value: , Text: -- Select Plant --
-DEBUG: Option - Value: 1, Text: Rose (Stock: 50)
-DEBUG: Option - Value: 2, Text: Tulip (Stock: 40)
-DEBUG: Option - Value: 3, Text: Lily (Stock: 60)
-DEBUG: Option - Value: 5, Text: Snake Plant (Stock: 30)
-DEBUG: Option - Value: 6, Text: Spider Plant (Stock: 45)
-DEBUG: Option - Value: 7, Text: Peace Lily (Stock: 25)
-DEBUG: Option - Value: 8, Text: Mango Tree (Stock: 7)
-DEBUG: Found matching option: Mango Tree (Stock: 7)
-Verified selected plant remains: Mango Tree (Stock: 7)
-  And selected plant should remain as "Mango Tree"                       # com.example.ui.stepDefinitions.sales.SellPlantSteps.selected_plant_should_remain_as(java.lang.String)
-DEBUG: Quantity field value: 0
-Verified quantity field retains value: 0
-  And quantity field should retain value "0"                             # com.example.ui.stepDefinitions.sales.SellPlantSteps.quantity_field_should_retain_value(java.lang.String)
-Entered quantity: 2
-Corrected quantity to: 2
-  When user corrects quantity to "2"                                     # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_corrects_quantity_to(java.lang.String)
-Clicked Sell button
-=== DEBUG: Page Elements ===
-Current URL: http://localhost:8081/ui/sales/new
-Form not found
-Plant dropdown not found
-Quantity field not found
-Error elements found: 1
-Error text: 'Logout' (displayed: true)
-=== END DEBUG ===
-  And user clicks Sell button                                            # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_clicks_sell_button()
-  Then sale should be successful                                         # com.example.ui.stepDefinitions.sales.SellPlantSteps.sale_should_be_successful()
-Current URL after successful sale: http://localhost:8081/ui/sales
-No success message or confirmation element found
-Redirect verification passed - user is on appropriate page after sale
-  And user should be redirected to sales list or confirmation page       # com.example.ui.stepDefinitions.sales.SellPlantSteps.user_should_be_redirected_to_sales_list_or_confirmation_page()
-=== Finished UI Test: TC_UI_SAL_17 - Verify form retains data after validation error ===
+  And user is on Sales List page                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
+  And sales records are displayed for plants                                            # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
+Sold dates found: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
+  And verify initial sold dates are displayed                                           # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialSoldDatesAreDisplayed()
+  When the Sales List page loads                                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.theSalesListPageLoads()
+  Then the "Sold Date" column header should display a visual sort indicator             # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(java.lang.String)
+      java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+
+  And the sort indicator should be a downward arrow (↓) indicating descending order
+  And no other column headers should show any sort indicators                           # com.example.ui.stepDefinitions.sales.SalesListSteps.noOtherColumnHeadersShouldShowAnySortIndicators()
+  And the "Plant Name" column header should not show any sort indicators                # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Quantity" column header should not show any sort indicators                  # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And the "Total Price" column header should not show any sort indicators               # com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldNotShowAnySortIndicators(java.lang.String)
+  And sales should be sorted in descending order by Sold Date                           # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInDescendingOrderBySoldDate()
+  And the visual indicator should match the actual sort direction                       # com.example.ui.stepDefinitions.sales.SalesListSteps.theVisualIndicatorShouldMatchTheActualSortDirection()
+Test FAILED: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator
+
+    Embedding Screenshot on Failure [image/png 155004 bytes]
+
+=== Finished UI Test: TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator ===
 
 ]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 11:45:41 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+    <system-err><![CDATA[Feb 07, 2026 12:50:46 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
 WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
 [TestNG-test=Form Retention Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
 [TestNG-test=Form Retention Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:45:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Feb 07, 2026 12:50:48 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:45:42 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order&quot;, &quot;Sales List Default Date Sorting&quot;](1)" classname="com.example.runners.SalesListDateSortingTestRunner" time="13.214">
-    <system-out><![CDATA[
-@ui @user @sales @sorting @date @TC_UI_SALES_USER_06 @smoke @regression
-Scenario: TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order # src/test/resources/features/ui/sales/sales_list_date_sorting.feature:5
-Using testuser credentials for login: testuser
-Login completed successfully
-  Given testuser is logged into the application                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication()
-Navigation to sales list completed
-After navigation, current URL: http://localhost:8081/ui/sales
-  And user navigates to Sales List page                                          # com.example.ui.stepDefinitions.sales.SalesListSteps.userNavigatesToSalesListPage()
-Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-  And sales records are displayed for plants                                     # com.example.ui.stepDefinitions.sales.SalesListSteps.salesRecordsAreDisplayedForPlants()
-Sold dates found: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
-  And verify initial sold dates are displayed                                    # com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialSoldDatesAreDisplayed()
-Actual sold dates: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
-  Then sales should be sorted in descending order by Sold Date                   # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldBeSortedInDescendingOrderBySoldDate()
-  And the first record should show the most recent date                          # com.example.ui.stepDefinitions.sales.SalesListSteps.theFirstRecordShouldShowTheMostRecentDate()
-  And the second record should show the next most recent date                    # com.example.ui.stepDefinitions.sales.SalesListSteps.theSecondRecordShouldShowTheNextMostRecentDate()
-  And the last record should show an older date                                  # com.example.ui.stepDefinitions.sales.SalesListSteps.theLastRecordShouldShowAnOlderDate()
-  When user refreshes the sales list page                                        # com.example.ui.stepDefinitions.sales.SalesListSteps.userRefreshesTheSalesListPage()
-Current URL when checking Sales List page: http://localhost:8081/ui/sales
-  And user is on Sales List page                                                 # com.example.ui.stepDefinitions.sales.SalesListSteps.userIsOnSalesListPage()
-Actual sold dates: [2026-02-06, 2026-02-06, 2026-02-06, 2026-02-05, 2026-02-05, 2026-02-05]
-  Then sales should still be sorted in descending order by Sold Date             # com.example.ui.stepDefinitions.sales.SalesListSteps.salesShouldStillBeSortedInDescendingOrderBySoldDate()
-  And the sort order remains consistent after refreshing                         # com.example.ui.stepDefinitions.sales.SalesListSteps.theSortOrderRemainsConsistentAfterRefreshing()
-]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 11:46:19 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
-WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
-[TestNG-test=Sales List Date Sorting Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
-[TestNG-test=Sales List Date Sorting Test-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/rajithsingh/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
-Feb 06, 2026 11:46:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 144
-Feb 06, 2026 11:46:20 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Feb 07, 2026 12:50:48 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 144.0.7559.133. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>

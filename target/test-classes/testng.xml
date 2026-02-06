@@ -50,4 +50,12 @@
         </classes>
     </test>
     
+    <!-- Run Sales List Sold Date Sort Indicator Test -->
+    <test name="Sales List Sold Date Sort Indicator Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SALES_USER_07"/>
+        <classes>
+            <class name="com.example.runners.SalesListSoldDateSortIndicatorTestRunner"/>
+        </classes>
+    </test>
+    
 </suite>

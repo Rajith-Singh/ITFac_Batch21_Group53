@@ -651,4 +651,57 @@ public class SalesListSteps {
             Assert.fail("Login failed: " + e.getMessage());
         }
     }
+
+    // TC_UI_SALES_USER_07 - Sold Date sort indicator step definitions
+    @When("the Sales List page loads")
+    public void theSalesListPageLoads() {
+        // Ensure the page is fully loaded
+        salesListPage.waitForPageLoad();
+        Assert.assertTrue(salesListPage.isSalesListPageLoaded(), 
+            "Sales List page should be loaded");
+    }
+
+    @Then("the {string} column header should display a visual sort indicator")
+    public void theColumnHeaderShouldDisplayAVisualSortIndicator(String columnName) {
+        Assert.assertTrue(salesListPage.hasSortIndicator(columnName), 
+            columnName + " column header should display a sort indicator");
+    }
+
+    @And("the sort indicator should be a downward arrow (↓) indicating descending order")
+    public void theSortIndicatorShouldBeADownwardArrowIndicatingDescendingOrder() {
+        String sortIndicator = salesListPage.getSortIndicatorForColumn("Sold Date");
+        // Check if the indicator shows descending order
+        // This could be through CSS class, text content, or arrow symbol
+        boolean isDescending = salesListPage.isSortDirectionDescending("Sold Date");
+        Assert.assertTrue(isDescending, 
+            "Sort indicator should show descending order (downward arrow)");
+    }
+
+    @And("no other column headers should show any sort indicators")
+    public void noOtherColumnHeadersShouldShowAnySortIndicators() {
+        // Check that other columns don't have sort indicators
+        Assert.assertFalse(salesListPage.hasSortIndicator("Plant Name"), 
+            "Plant Name column should not have sort indicator");
+        Assert.assertFalse(salesListPage.hasSortIndicator("Quantity"), 
+            "Quantity column should not have sort indicator");
+        Assert.assertFalse(salesListPage.hasSortIndicator("Total Price"), 
+            "Total Price column should not have sort indicator");
+    }
+
+    @And("the {string} column header should not show any sort indicators")
+    public void theColumnHeaderShouldNotShowAnySortIndicators(String columnName) {
+        Assert.assertFalse(salesListPage.hasSortIndicator(columnName), 
+            columnName + " column header should not show any sort indicators");
+    }
+
+    @And("the visual indicator should match the actual sort direction")
+    public void theVisualIndicatorShouldMatchTheActualSortDirection() {
+        // Verify that the visual indicator corresponds to the actual sorting
+        boolean isVisuallyDescending = salesListPage.isSortDirectionDescending("Sold Date");
+        List<LocalDate> soldDates = salesListPage.getSoldDatesFromTable();
+        boolean isActuallyDescending = salesListPage.validateSoldDateSortOrder(soldDates, false);
+        
+        Assert.assertEquals(isVisuallyDescending, isActuallyDescending, 
+            "Visual sort indicator should match actual sort direction");
+    }
 }
