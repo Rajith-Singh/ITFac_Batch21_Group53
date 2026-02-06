@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>UI Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 05 17:51:32 IST 2026</td>
+<td>Started on:</td><td>Fri Feb 06 17:47:28 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>154 seconds (154025 ms)</td>
+<tr><td>Total time:</td><td>260 seconds (260767 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,150 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant list sorting properties", "Plant List Management"</td>
+<td><div><pre>java.lang.RuntimeException: Could not find sort link for column: Quantity
+	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+	at ✽.user sorts the list by &quot;Quantity&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1603321248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1603321248'><pre>java.lang.RuntimeException: Could not find sort link for column: Quantity
+	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+	at ✽.user sorts the list by &quot;Quantity&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+</pre></div></td>
+<td>17</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can successfully add a new plant with valid data", "Plant CRUD Operations"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;newly added plant &quot;Red Rose&quot; should be displayed in the plants list&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;newly added plant {string} should be displayed in the plants list&quot;)
+public void newly_added_plant_should_be_displayed_in_the_plants_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1405375910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1405375910'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;newly added plant &quot;Red Rose&quot; should be displayed in the plants list&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;newly added plant {string} should be displayed in the plants list&quot;)
+public void newly_added_plant_should_be_displayed_in_the_plants_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>10</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant search by name", "Plant List Management"</td>
+<td><div><pre>java.lang.AssertionError: No plants displayed after searching for: Yellow Rose
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.thePlantListShouldDisplayPlantsMatching(PlantListSteps.java:218)
+	at ✽.the plant list should display plants matching &quot;Yellow Rose&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1418127618", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1418127618'><pre>java.lang.AssertionError: No plants displayed after searching for: Yellow Rose
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.thePlantListShouldDisplayPlantsMatching(PlantListSteps.java:218)
+	at ✽.the plant list should display plants matching &quot;Yellow Rose&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:9)
+</pre></div></td>
+<td>10</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant list sorting properties", "Plant List Management"</td>
+<td><div><pre>java.lang.RuntimeException: Could not find sort link for column: Quantity
+	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+	at ✽.user sorts the list by &quot;Quantity&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace237734783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace237734783'><pre>java.lang.RuntimeException: Could not find sort link for column: Quantity
+	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+	at ✽.user sorts the list by &quot;Quantity&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+</pre></div></td>
+<td>16</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that admin can successfully edit existing plant data with valid input data", "Plant List Management"</td>
+<td><div><pre>java.lang.AssertionError: Plant Rose UK not found in the list after update expected [true] but found [false]
+	at com.example.ui.stepDefinitions.plants.PlantCRUDSteps.plantShouldBeUpdatedWith(PlantCRUDSteps.java:91)
+	at ✽.plant &quot;Rose UK&quot; should be updated with category &quot;Rose&quot;, price &quot;3000&quot;, and quantity &quot;20&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:66)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace811807828", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace811807828'><pre>java.lang.AssertionError: Plant Rose UK not found in the list after update expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.plants.PlantCRUDSteps.plantShouldBeUpdatedWith(PlantCRUDSteps.java:91)
+	at ✽.plant &quot;Rose UK&quot; should be updated with category &quot;Rose&quot;, price &quot;3000&quot;, and quantity &quot;20&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:66)
+</pre></div></td>
+<td>9</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant list sorting properties", "Plant List Management"</td>
+<td><div><pre>java.lang.AssertionError: List is NOT sorted by Name in Ascending order.
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+	at ✽.the list should be sorted by &quot;Name&quot; in &quot;Ascending&quot; order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1611193601", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1611193601'><pre>java.lang.AssertionError: List is NOT sorted by Name in Ascending order.
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+	at ✽.the list should be sorted by &quot;Name&quot; in &quot;Ascending&quot; order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+</pre></div></td>
+<td>8</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant list sorting properties", "Plant List Management"</td>
+<td><div><pre>java.lang.AssertionError: List is NOT sorted by Price in Descending order.
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+	at ✽.the list should be sorted by &quot;Price&quot; in &quot;Descending&quot; order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace114528169", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace114528169'><pre>java.lang.AssertionError: List is NOT sorted by Price in Descending order.
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+	at ✽.the list should be sorted by &quot;Price&quot; in &quot;Descending&quot; order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+</pre></div></td>
+<td>8</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,19 +220,49 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that Plant Name, Sub category, Price, Quantity are mandatory", "Plant form validation"</td>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant search by name", "Plant List Management"</td>
 <td></td>
-<td>105</td>
+<td>9</td>
 <td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
 <tr>
 <td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can successfully delete a plant record from plant list", "Plant Deletion"</td>
 <td></td>
-<td>27</td>
+<td>8</td>
 <td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
 <tr>
-<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can successfully add a new plant with valid data", "Plant CRUD Operations"</td>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant list sorting properties", "Plant List Management"</td>
 <td></td>
-<td>20</td>
+<td>8</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify "Low" badge for plants with low stock", "Plant List Management"</td>
+<td></td>
+<td>8</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify "Low" badge for plants with low stock (User)", "Plant List Management"</td>
+<td></td>
+<td>7</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify plant list sorting properties", "Plant List Management"</td>
+<td></td>
+<td>8</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify filter plant by category", "Plant List Management"</td>
+<td></td>
+<td>9</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that Plant Name, Sub category, Price, Quantity are mandatory", "Plant form validation"</td>
+<td></td>
+<td>99</td>
+<td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
+<tr>
+<td title='com.example.runners.UiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.UiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Category selection is a sub-category", "Plant Category Selection"</td>
+<td></td>
+<td>18</td>
 <td>com.example.runners.UiTestRunner@3b69e7d1</td></tr>
 </table><p>
 </body>

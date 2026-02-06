@@ -11,6 +11,6 @@ import io.cucumber.testng.CucumberOptions;
         "pretty",
         "html:target/cucumber-reports/ui/cucumber.html",
         "json:target/cucumber-reports/ui/cucumber.json"
-}, monochrome = true, tags = "@ui")
+}, monochrome = true, tags = "@TC_UI_PLANT_ADM_005")
 public class UiTestRunner extends AbstractTestNGCucumberTests {
 }

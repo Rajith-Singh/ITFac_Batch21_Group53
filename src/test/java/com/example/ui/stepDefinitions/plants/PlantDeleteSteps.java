@@ -26,27 +26,20 @@ public class PlantDeleteSteps {
         if (!plantListPage.isPlantDisplayedInList(plantName)) {
             // If not, create it
             plantListPage.clickAddPlantButton();
-            
+
             // Fill in the form with test data
             addEditPlantPage.enterPlantName(plantName);
             addEditPlantPage.selectCategory("Rose UK");
             addEditPlantPage.enterPrice("1500");
             addEditPlantPage.enterQuantity("10");
             addEditPlantPage.clickSaveButton();
-            
-            // Wait a moment for the success message and redirect
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
+
         }
-        
+
         // Verify the plant is in the list
         Assert.assertTrue(
-            plantListPage.isPlantDisplayedInList(plantName),
-            "Plant '" + plantName + "' should be displayed in the list"
-        );
+                plantListPage.isPlantDisplayedInList(plantName),
+                "Plant '" + plantName + "' should be displayed in the list");
     }
 
     @When("user clicks delete button for plant {string}")
@@ -59,13 +52,7 @@ public class PlantDeleteSteps {
     public void userConfirmsTheDeleteAction() {
         System.out.println("=== Confirming Delete Action ===");
         plantListPage.confirmDeleteAction();
-        
-        // Wait for page to process the deletion
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+
     }
 
     @Then("the deleted plant {string} should no longer be visible in the plants list")
@@ -73,8 +60,7 @@ public class PlantDeleteSteps {
         System.out.println("=== Verifying Plant Deletion: " + plantName + " ===");
         boolean isDeleted = plantListPage.isPlantDeletedFromList(plantName);
         Assert.assertTrue(
-            isDeleted,
-            "Plant '" + plantName + "' should no longer be visible in the plants list"
-        );
+                isDeleted,
+                "Plant '" + plantName + "' should no longer be visible in the plants list");
     }
 }

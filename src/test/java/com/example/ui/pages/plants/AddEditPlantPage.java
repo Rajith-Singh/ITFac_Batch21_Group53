@@ -63,6 +63,19 @@ public class AddEditPlantPage {
         select.selectByVisibleText(categoryName);
     }
 
+    public java.util.List<String> getAvailableCategories() {
+        WebElement dropdown = wait.until(ExpectedConditions.visibilityOf(categoryDropdown));
+        Select select = new Select(dropdown);
+        java.util.List<String> options = new java.util.ArrayList<>();
+        for (WebElement option : select.getOptions()) {
+            String text = option.getText();
+            if (text != null && !text.trim().isEmpty() && !text.contains("-- Select")) {
+                options.add(text.trim());
+            }
+        }
+        return options;
+    }
+
     public void enterPrice(String price) {
         WebElement priceFld = wait.until(ExpectedConditions.visibilityOf(priceField));
         priceFld.clear();
@@ -98,15 +111,27 @@ public class AddEditPlantPage {
         }
     }
 
+    public String getAlertText() {
+        try {
+            org.openqa.selenium.Alert alert = driver.switchTo().alert();
+            String text = alert.getText();
+            return text;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public String getErrorMessage() {
         try {
             // Try different error message selectors
-            WebElement errorMsg = driver.findElement(By.xpath("//div[contains(@class, 'alert alert-danger')] | //div[contains(@class, 'error')] | //span[@class='error']"));
+            WebElement errorMsg = driver.findElement(By.xpath(
+                    "//div[contains(@class, 'alert alert-danger')] | //div[contains(@class, 'error')] | //span[@class='error']"));
             return "ERROR: " + errorMsg.getText();
         } catch (Exception e) {
             // Check for validation error messages on form fields
             try {
-                WebElement formError = driver.findElement(By.xpath("//*[contains(text(), 'error') or contains(text(), 'Error') or contains(text(), 'required')]"));
+                WebElement formError = driver.findElement(By.xpath(
+                        "//*[contains(text(), 'error') or contains(text(), 'Error') or contains(text(), 'required')]"));
                 return "VALIDATION ERROR: " + formError.getText();
             } catch (Exception ex) {
                 return "No messages found on page";
@@ -117,8 +142,18 @@ public class AddEditPlantPage {
     // Validation helpers
     public String getValidationMessageForField(String fieldId) {
         try {
-            // common patterns for validation messages: small, div.invalid-feedback, span.error
-            String xpath = "(//*[@id='" + fieldId + "']/following::small|//*[@id='" + fieldId + "']/following::div[contains(@class,'invalid-feedback')]|//*[@id='" + fieldId + "']/following::span[contains(@class,'error')])[1]";
+            // Check for HTML5 validation message property (browser native)
+            WebElement element = driver.findElement(By.id(fieldId));
+            String validationMessage = element.getAttribute("validationMessage");
+            if (validationMessage != null && !validationMessage.isEmpty()) {
+                return validationMessage;
+            }
+
+            // common patterns for validation messages: small, div.invalid-feedback,
+            // span.error
+            String xpath = "(//*[@id='" + fieldId + "']/following::small|//*[@id='" + fieldId
+                    + "']/following::div[contains(@class,'invalid-feedback')]|//*[@id='" + fieldId
+                    + "']/following::span[contains(@class,'error')])[1]";
             WebElement msg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             return msg.getText();
         } catch (Exception e) {
@@ -128,8 +163,10 @@ public class AddEditPlantPage {
 
     public boolean hasValidationMessage(String fieldId, String expectedMessage) {
         String actual = getValidationMessageForField(fieldId);
-        if (actual == null) actual = "";
-        return actual.trim().length() > 0 && (actual.contains(expectedMessage) || expectedMessage.contains(actual) || actual.toLowerCase().contains(expectedMessage.toLowerCase()));
+        if (actual == null)
+            actual = "";
+        return actual.trim().length() > 0 && (actual.contains(expectedMessage) || expectedMessage.contains(actual)
+                || actual.toLowerCase().contains(expectedMessage.toLowerCase()));
     }
 
     // Broad page-level message check (fallback)
@@ -147,8 +184,10 @@ public class AddEditPlantPage {
             WebElement el = driver.findElement(By.id(fieldId));
             String req = el.getAttribute("required");
             String aria = el.getAttribute("aria-required");
-            if (req != null && (req.equalsIgnoreCase("true") || req.length() > 0)) return true;
-            if (aria != null && aria.equalsIgnoreCase("true")) return true;
+            if (req != null && (req.equalsIgnoreCase("true") || req.length() > 0))
+                return true;
+            if (aria != null && aria.equalsIgnoreCase("true"))
+                return true;
             return false;
         } catch (Exception e) {
             return false;

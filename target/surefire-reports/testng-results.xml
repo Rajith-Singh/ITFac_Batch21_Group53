@@ -1,28 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="9" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-05T17:51:32 IST" name="Plant Sales Automation Suite" finished-at="2026-02-05T17:54:06 IST" duration-ms="154156">
+  <suite started-at="2026-02-06T17:47:28 IST" name="Plant Sales Automation Suite" finished-at="2026-02-06T17:51:49 IST" duration-ms="260896">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@65e98b1c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-02-05T17:51:32 IST" name="UI Tests" finished-at="2026-02-05T17:54:06 IST" duration-ms="154025">
+    <test started-at="2026-02-06T17:47:28 IST" name="UI Tests" finished-at="2026-02-06T17:51:49 IST" duration-ms="260767">
       <class name="com.example.runners.UiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-05T17:51:32 IST" name="setUpClass" finished-at="2026-02-05T17:51:33 IST" duration-ms="940" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:47:28 IST" name="setUpClass" finished-at="2026-02-06T17:47:29 IST" duration-ms="999" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@26275bef]]>
+                <![CDATA[org.testng.TestRunner@19d481b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-05T17:51:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-05T17:51:53 IST" duration-ms="20329" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:47:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:47:48 IST" duration-ms="18447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Category selection is a sub-category"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant Category Selection"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:47:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:47:58 IST" duration-ms="10075" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -35,10 +51,56 @@
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'newly added plant "Red Rose" should be displayed in the plants list' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("newly added plant {string} should be displayed in the plants list")
+public void newly_added_plant_should_be_displayed_in_the_plants_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'newly added plant "Red Rose" should be displayed in the plants list' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("newly added plant {string} should be displayed in the plants list")
+public void newly_added_plant_should_be_displayed_in_the_plants_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-05T17:51:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-05T17:52:20 IST" duration-ms="27026" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:47:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:48:06 IST" duration-ms="8672" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -54,7 +116,270 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-05T17:52:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-05T17:54:06 IST" duration-ms="105542" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:48:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:48:16 IST" duration-ms="9946" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant search by name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:48:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:48:26 IST" duration-ms="10065" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant search by name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[No plants displayed after searching for: Yellow Rose]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: No plants displayed after searching for: Yellow Rose
+at com.example.ui.stepDefinitions.plants.PlantListSteps.thePlantListShouldDisplayPlantsMatching(PlantListSteps.java:218)
+at ✽.the plant list should display plants matching "Yellow Rose"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:48:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:48:35 IST" duration-ms="8341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify "Low" badge for plants with low stock"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:48:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:48:42 IST" duration-ms="7475" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify "Low" badge for plants with low stock (User)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:48:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:48:51 IST" duration-ms="8449" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant list sorting properties"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[List is NOT sorted by Name in Ascending order.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: List is NOT sorted by Name in Ascending order.
+at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+at ✽.the list should be sorted by "Name" in "Ascending" order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:48:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:48:59 IST" duration-ms="8482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant list sorting properties"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:48:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:49:17 IST" duration-ms="17477" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant list sorting properties"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Could not find sort link for column: Quantity]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Could not find sort link for column: Quantity
+at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+at ✽.user sorts the list by "Quantity"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:49:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:49:25 IST" duration-ms="8473" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant list sorting properties"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:49:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:49:34 IST" duration-ms="8617" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant list sorting properties"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[List is NOT sorted by Price in Descending order.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: List is NOT sorted by Price in Descending order.
+at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+at ✽.the list should be sorted by "Price" in "Descending" order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:49:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:49:51 IST" duration-ms="16945" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify plant list sorting properties"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Could not find sort link for column: Quantity]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Could not find sort link for column: Quantity
+at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+at ✽.user sorts the list by "Quantity"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:49:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:50:00 IST" duration-ms="9123" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify filter plant by category"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:50:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:50:09 IST" duration-ms="9204" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that admin can successfully edit existing plant data with valid input data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Plant List Management"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Plant Rose UK not found in the list after update expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Plant Rose UK not found in the list after update expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.example.ui.stepDefinitions.plants.PlantCRUDSteps.plantShouldBeUpdatedWith(PlantCRUDSteps.java:91)
+at ✽.plant "Rose UK" should be updated with category "Rose", price "3000", and quantity "20"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:66)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:50:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-06T17:51:49 IST" duration-ms="99754" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,26 +395,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-05T17:54:06 IST" name="tearDownClass" finished-at="2026-02-05T17:54:06 IST" duration-ms="130" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@3b69e7d1]" started-at="2026-02-06T17:51:49 IST" name="tearDownClass" finished-at="2026-02-06T17:51:49 IST" duration-ms="141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.example.runners.UiTestRunner -->
     </test> <!-- UI Tests -->
-    <test started-at="2026-02-05T17:54:06 IST" name="API Tests" finished-at="2026-02-05T17:54:06 IST" duration-ms="65">
+    <test started-at="2026-02-06T17:51:49 IST" name="API Tests" finished-at="2026-02-06T17:51:49 IST" duration-ms="48">
       <class name="com.example.runners.ApiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.ApiTestRunner@65e98b1c]" started-at="2026-02-05T17:54:06 IST" name="setUpClass" finished-at="2026-02-05T17:54:06 IST" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.ApiTestRunner@65e98b1c]" started-at="2026-02-06T17:51:49 IST" name="setUpClass" finished-at="2026-02-06T17:51:49 IST" duration-ms="18" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7690781]]>
+                <![CDATA[org.testng.TestRunner@1f97cf0d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.ApiTestRunner@65e98b1c]" started-at="2026-02-05T17:54:06 IST" name="tearDownClass" finished-at="2026-02-05T17:54:06 IST" duration-ms="33" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.ApiTestRunner@65e98b1c]" started-at="2026-02-06T17:51:49 IST" name="tearDownClass" finished-at="2026-02-06T17:51:49 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

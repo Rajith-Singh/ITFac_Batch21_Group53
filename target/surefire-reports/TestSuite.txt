@@ -1,4 +1,72 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 155.2 s -- in TestSuite
+Tests run: 16, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 261.6 s <<< FAILURE! -- in TestSuite
+com.example.runners.UiTestRunner.runScenario["Verify Admin can successfully add a new plant with valid data", "Plant CRUD Operations"](2) -- Time elapsed: 10.08 s <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step 'newly added plant "Red Rose" should be displayed in the plants list' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("newly added plant {string} should be displayed in the plants list")
+public void newly_added_plant_should_be_displayed_in_the_plants_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+com.example.runners.UiTestRunner.runScenario["Verify plant search by name", "Plant List Management"](5) -- Time elapsed: 10.07 s <<< FAILURE!
+java.lang.AssertionError: No plants displayed after searching for: Yellow Rose
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.thePlantListShouldDisplayPlantsMatching(PlantListSteps.java:218)
+	at ✽.the plant list should display plants matching "Yellow Rose"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:9)
+
+com.example.runners.UiTestRunner.runScenario["Verify plant list sorting properties", "Plant List Management"](8) -- Time elapsed: 8.448 s <<< FAILURE!
+java.lang.AssertionError: List is NOT sorted by Name in Ascending order.
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+	at ✽.the list should be sorted by "Name" in "Ascending" order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+
+com.example.runners.UiTestRunner.runScenario["Verify plant list sorting properties", "Plant List Management"](10) -- Time elapsed: 17.48 s <<< FAILURE!
+java.lang.RuntimeException: Could not find sort link for column: Quantity
+	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+	at ✽.user sorts the list by "Quantity"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+
+com.example.runners.UiTestRunner.runScenario["Verify plant list sorting properties", "Plant List Management"](12) -- Time elapsed: 8.617 s <<< FAILURE!
+java.lang.AssertionError: List is NOT sorted by Price in Descending order.
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
+	at ✽.the list should be sorted by "Price" in "Descending" order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
+
+com.example.runners.UiTestRunner.runScenario["Verify plant list sorting properties", "Plant List Management"](13) -- Time elapsed: 16.94 s <<< FAILURE!
+java.lang.RuntimeException: Could not find sort link for column: Quantity
+	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
+	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
+	at ✽.user sorts the list by "Quantity"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
+
+com.example.runners.UiTestRunner.runScenario["Verify that admin can successfully edit existing plant data with valid input data", "Plant List Management"](15) -- Time elapsed: 9.205 s <<< FAILURE!
+java.lang.AssertionError: Plant Rose UK not found in the list after update expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.plants.PlantCRUDSteps.plantShouldBeUpdatedWith(PlantCRUDSteps.java:91)
+	at ✽.plant "Rose UK" should be updated with category "Rose", price "3000", and quantity "20"(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:66)
+

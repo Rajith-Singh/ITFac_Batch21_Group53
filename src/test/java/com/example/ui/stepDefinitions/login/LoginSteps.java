@@ -13,23 +13,22 @@ public class LoginSteps {
     private String baseUrl = "http://localhost:8080";
 
     public LoginSteps() {
-        this.driver = DriverManager.getDriver();
-        this.loginPage = new LoginPage(driver);
-        this.plantListPage = new PlantListPage(driver);
+        // Constructor should not access driver as it might not be initialized yet
     }
 
     @Given("user is logged in as admin")
     public void userIsLoggedInAsAdmin() {
         // Initialize driver if not already done
+        driver = DriverManager.getDriver();
         if (driver == null) {
             DriverManager.initializeDriver();
             driver = DriverManager.getDriver();
         }
-        
+
         loginPage = new LoginPage(driver);
         // Assuming admin credentials - adjust based on your application
         loginPage.loginAsAdmin(baseUrl, "admin", "admin123");
-        
+
         // Wait for login to complete
         try {
             Thread.sleep(2000);
@@ -47,16 +46,17 @@ public class LoginSteps {
 
     @Given("I am logged in as {string}")
     public void iAmLoggedInAs(String userType) {
+        driver = DriverManager.getDriver();
         if (driver == null) {
             DriverManager.initializeDriver();
             driver = DriverManager.getDriver();
         }
-        
+
         loginPage = new LoginPage(driver);
-        String username = userType.equalsIgnoreCase("admin") ? "admin" : "user";
-        String password = userType.equalsIgnoreCase("admin") ? "admin123" : "user123";
+        String username = userType.equalsIgnoreCase("admin") ? "admin" : "Testuser";
+        String password = userType.equalsIgnoreCase("admin") ? "admin123" : "test123";
         loginPage.loginAsAdmin(baseUrl, username, password);
-        
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {

@@ -29,6 +29,7 @@ E:\ITFac_Batch21_Group53\src\test\java\com\example\api\models\request\SaleReques
 E:\ITFac_Batch21_Group53\src\test\java\com\example\ui\pages\login\LoginPage.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\ui\pages\categories\CategoryListPage.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\api\models\request\PlantRequest.java
+E:\ITFac_Batch21_Group53\src\test\java\com\example\ui\stepDefinitions\plants\PlantCategorySteps.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\api\stepDefinitions\SalesApiSteps.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\hooks\Hooks.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\ui\pages\plants\PlantListPage.java

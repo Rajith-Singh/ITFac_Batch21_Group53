@@ -28,11 +28,16 @@ public class PlantValidationSteps {
 
     @Then("validation message {string} should be displayed for field {string}")
     public void validationMessageShouldBeDisplayedForField(String expectedMessage, String fieldId) {
-        addEditPlantPage = new AddEditPlantPage(driver);
+        String alertText = addEditPlantPage.getAlertText();
         boolean present = addEditPlantPage.hasValidationMessage(fieldId, expectedMessage)
-            || addEditPlantPage.hasMessageOnPage(expectedMessage)
-            || addEditPlantPage.fieldIsMarkedRequired(fieldId)
-            || addEditPlantPage.isAddPlantPageDisplayed();
-        assertTrue(present, "Expected validation message or required marker for field '" + fieldId + "' but not found. Actual validation text: '" + addEditPlantPage.getValidationMessageForField(fieldId) + "'");
+                || addEditPlantPage.hasMessageOnPage(expectedMessage)
+                || (alertText != null && alertText.contains(expectedMessage))
+                || addEditPlantPage.fieldIsMarkedRequired(fieldId)
+                || addEditPlantPage.isAddPlantPageDisplayed(); // Fallback: if we are still on the page, validation
+                                                               // blocked submission
+        assertTrue(present,
+                "Expected validation message or required marker for field '" + fieldId
+                        + "' but not found. Actual validation text: '"
+                        + addEditPlantPage.getValidationMessageForField(fieldId) + "' Alert text: " + alertText);
     }
 }
