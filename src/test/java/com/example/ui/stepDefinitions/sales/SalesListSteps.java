@@ -704,4 +704,57 @@ public class SalesListSteps {
         Assert.assertEquals(isVisuallyDescending, isActuallyDescending, 
             "Visual sort indicator should match actual sort direction");
     }
+
+    // TC_UI_SALES_USER_08 - Total Price sorting validation step definitions
+    @And("the first record should show the lowest price")
+    public void theFirstRecordShouldShowTheLowestPrice() {
+        List<Double> totalPrices = salesListPage.getTotalPricesFromTable();
+        Assert.assertFalse(totalPrices.isEmpty(), 
+            "Total prices should be present");
+        
+        Double firstPrice = totalPrices.get(0);
+        Double lowestPrice = salesListPage.getLowestPrice(totalPrices);
+        
+        Assert.assertEquals(firstPrice, lowestPrice, 
+            "First record should show the lowest price");
+    }
+
+    @And("the last record should show the highest price")
+    public void theLastRecordShouldShowTheHighestPrice() {
+        List<Double> totalPrices = salesListPage.getTotalPricesFromTable();
+        Assert.assertTrue(totalPrices.size() >= 2, 
+            "At least two total prices should be present");
+        
+        Double lastPrice = totalPrices.get(totalPrices.size() - 1);
+        Double highestPrice = salesListPage.getHighestPrice(totalPrices);
+        
+        Assert.assertEquals(lastPrice, highestPrice, 
+            "Last record should show the highest price");
+    }
+
+    @And("the first record should show the highest price")
+    public void theFirstRecordShouldShowTheHighestPrice() {
+        List<Double> totalPrices = salesListPage.getTotalPricesFromTable();
+        Assert.assertFalse(totalPrices.isEmpty(), 
+            "Total prices should be present");
+        
+        Double firstPrice = totalPrices.get(0);
+        Double highestPrice = salesListPage.getHighestPrice(totalPrices);
+        
+        Assert.assertEquals(firstPrice, highestPrice, 
+            "First record should show the highest price");
+    }
+
+    @And("the last record should show the lowest price")
+    public void theLastRecordShouldShowTheLowestPrice() {
+        List<Double> totalPrices = salesListPage.getTotalPricesFromTable();
+        Assert.assertTrue(totalPrices.size() >= 2, 
+            "At least two total prices should be present");
+        
+        Double lastPrice = totalPrices.get(totalPrices.size() - 1);
+        Double lowestPrice = salesListPage.getLowestPrice(totalPrices);
+        
+        Assert.assertEquals(lastPrice, lowestPrice, 
+            "Last record should show the lowest price");
+    }
 }

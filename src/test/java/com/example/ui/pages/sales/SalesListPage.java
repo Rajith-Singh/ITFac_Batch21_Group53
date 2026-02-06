@@ -1010,4 +1010,33 @@ public class SalesListPage {
             return null;
         }
     }
+
+    // TC_UI_SALES_USER_08 - Total Price helper methods
+    public Double getLowestPrice(List<Double> prices) {
+        if (prices.isEmpty()) {
+            return null;
+        }
+        
+        Double lowest = prices.get(0);
+        for (Double price : prices) {
+            if (price < lowest) {
+                lowest = price;
+            }
+        }
+        return lowest;
+    }
+
+    public Double getHighestPrice(List<Double> prices) {
+        if (prices.isEmpty()) {
+            return null;
+        }
+        
+        Double highest = prices.get(0);
+        for (Double price : prices) {
+            if (price > highest) {
+                highest = price;
+            }
+        }
+        return highest;
+    }
 }

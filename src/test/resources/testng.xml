@@ -58,4 +58,20 @@
         </classes>
     </test>
     
+    <!-- Run Sales List Total Price Sorting User Test -->
+    <test name="Sales List Total Price Sorting User Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SALES_USER_08"/>
+        <classes>
+            <class name="com.example.runners.SalesListTotalPriceSortingUserTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Admin Only Page Restriction Test -->
+    <test name="Admin Only Page Restriction Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_PLANTS_USER_10"/>
+        <classes>
+            <class name="com.example.runners.AdminOnlyPageRestrictionTestRunner"/>
+        </classes>
+    </test>
+    
 </suite>
