@@ -18,6 +18,9 @@ public class SellPlantSteps {
     // Tab management
     private String tab1Handle;
     private String tab2Handle;
+    
+    // Stock tracking
+    private int initialMangoTreeStock;
 
     public SellPlantSteps() {
         this.driver = DriverManager.getDriver();
@@ -180,7 +183,10 @@ public class SellPlantSteps {
                 int currentStock = Integer.parseInt(actualStock.trim());
                 System.out.println("Mango Tree initial stock: " + currentStock);
                 
-                // Note: We don't assert here because stock might have been depleted by previous tests
+                // Store the actual current stock for later use
+                this.initialMangoTreeStock = currentStock;
+                
+                // Check if we have enough stock for the test
                 if (currentStock < 3) {
                     System.out.println("WARNING: Mango Tree stock is only " + currentStock + ". Test might fail because we need to sell 3 units.");
                 }
@@ -246,8 +252,17 @@ public class SellPlantSteps {
         Assert.assertNotNull(actualStock, "Stock information should be available for " + plantName);
         
         int actualStockValue = Integer.parseInt(actualStock.trim());
-        Assert.assertEquals(actualStockValue, expectedStock.intValue(), 
-            "Stock for " + plantName + " should be " + expectedStock + " in Tab1. Actual: " + actualStockValue);
+        
+        // For Mango Tree, calculate expected stock based on actual initial stock
+        if (plantName.equals("Mango Tree") && initialMangoTreeStock > 0) {
+            int calculatedExpectedStock = initialMangoTreeStock - 3; // We sold 3 units
+            System.out.println("Using calculated expected stock for Mango Tree: " + calculatedExpectedStock + " (initial: " + initialMangoTreeStock + " - 3 sold)");
+            Assert.assertEquals(actualStockValue, calculatedExpectedStock, 
+                "Stock for " + plantName + " should be " + calculatedExpectedStock + " in Tab1. Actual: " + actualStockValue);
+        } else {
+            Assert.assertEquals(actualStockValue, expectedStock.intValue(), 
+                "Stock for " + plantName + " should be " + expectedStock + " in Tab1. Actual: " + actualStockValue);
+        }
         
         System.out.println("Verified in Tab1: " + plantName + " stock is " + actualStockValue);
     }
@@ -265,8 +280,17 @@ public class SellPlantSteps {
         Assert.assertNotNull(actualStock, "Stock information should be available for " + plantName);
         
         int actualStockValue = Integer.parseInt(actualStock.trim());
-        Assert.assertEquals(actualStockValue, expectedStock.intValue(), 
-            "Stock for " + plantName + " should be " + expectedStock + " in Tab2. Actual: " + actualStockValue);
+        
+        // For Mango Tree, calculate expected stock based on actual initial stock
+        if (plantName.equals("Mango Tree") && initialMangoTreeStock > 0) {
+            int calculatedExpectedStock = initialMangoTreeStock - 3; // We sold 3 units
+            System.out.println("Using calculated expected stock for Mango Tree: " + calculatedExpectedStock + " (initial: " + initialMangoTreeStock + " - 3 sold)");
+            Assert.assertEquals(actualStockValue, calculatedExpectedStock, 
+                "Stock for " + plantName + " should be " + calculatedExpectedStock + " in Tab2. Actual: " + actualStockValue);
+        } else {
+            Assert.assertEquals(actualStockValue, expectedStock.intValue(), 
+                "Stock for " + plantName + " should be " + expectedStock + " in Tab2. Actual: " + actualStockValue);
+        }
         
         System.out.println("Verified in Tab2: " + plantName + " stock is " + actualStockValue);
     }
