@@ -4,6 +4,7 @@ com/example/api/tests/PlantApiTest.class
 com/example/api/stepDefinitions/AuthApiSteps.class
 com/example/api/models/request/PlantRequest.class
 com/example/runners/SalesTestRunner.class
+com/example/runners/DUiTestRunner.class
 com/example/api/models/response/PlantResponse$Category.class
 com/example/api/tests/SalesApiTest.class
 com/example/api/hooks/ApiHooks.class
@@ -12,11 +13,13 @@ com/example/ui/stepDefinitions/sales/SellPlantSteps.class
 com/example/api/clients/PlantClient.class
 com/example/api/models/response/PlantResponse.class
 com/example/runners/UiTestRunner.class
+com/example/api/stepDefinitions/Auth_ApiSteps.class
 com/example/api/models/response/PlantPaginatedResponse$Pageable.class
 com/example/api/models/request/LoginRequest.class
 com/example/api/models/response/SaleResponse.class
 com/example/api/stepDefinitions/PlantsUserApiStepDefinitions.class
 com/example/api/clients/SalesClient.class
+com/example/api/models/response/Login_Response.class
 com/example/api/stepDefinitions/SalesAdminApiStepDefinitions.class
 com/example/api/stepDefinitions/PlantApiStepDefinitions.class
 com/example/ui/stepDefinitions/sales/SalesListSteps.class
@@ -26,6 +29,7 @@ com/example/api/tests/CategoryApiTest.class
 com/example/debug/QuantityExtractionDebugTest.class
 com/example/ui/pages/sales/SalesPage.class
 com/example/ui/stepDefinitions/categories/CategoryCRUDSteps.class
+com/example/runners/DApiTestRunner.class
 com/example/ui/stepDefinitions/sales/UserSalesStepDefinitions.class
 com/example/api/models/response/PlantPaginatedResponse.class
 com/example/ui/stepDefinitions/categories/CategoryStepDefinitions.class
@@ -53,6 +57,7 @@ com/example/debug/QuantityColumnDebugTest.class
 com/example/api/context/ApiTestContext.class
 com/example/debug/SalesTableDebugTest.class
 com/example/api/stepDefinitions/CategoryApiStepDefinitions.class
+com/example/ui/pages/dashboard/DashboardPage.class
 com/example/api/models/response/LoginResponse.class
 com/example/ui/stepDefinitions/categories/CategoryListSteps.class
 com/example/api/clients/CategoryClient.class
@@ -70,9 +75,11 @@ com/example/debug/FormValidationDebugTest.class
 com/example/ui/pages/categories/CategoryListPage.class
 com/example/api/models/request/CategoryRequest.class
 com/example/api/models/response/CategoryResponse.class
+com/example/api/clients/Auth_Client.class
 com/example/runners/SalesSortingTestRunner.class
 com/example/api/stepDefinitions/PlantApiSteps.class
 com/example/runners/SalesUiTestRunner.class
 com/example/api/stepDefinitions/CategoryApiSteps.class
 com/example/api/clients/AuthClient.class
 com/example/ui/pages/sales/UserSalesPage.class
+com/example/ui/stepDefinitions/dashboard/DashboardSteps.class

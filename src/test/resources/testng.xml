@@ -2,6 +2,33 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Plant Sales Automation Suite" verbose="1" parallel="false" preserve-order="true">
 
+    <!-- ============================== Anupama's Tests ============================== -->
+
+    <!-- Run Admin Tests -->
+    <test name="Admin Tests">
+        <parameter name="cucumber.filter.tags" value="@ui and @admin"/>
+        <classes>
+            <class name="com.example.runners.DUiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run User Tests -->
+    <test name="User Tests">
+        <parameter name="cucumber.filter.tags" value="@ui and @user"/>
+        <classes>
+            <class name="com.example.runners.DUiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run API Tests (Cucumber feature files under features/api/category) -->
+    <test name="Category API Tests">
+        <parameter name="cucumber.filter.tags" value="@api and @Categories"/>
+        <classes>
+            <class name="com.example.runners.DApiTestRunner"/>
+        </classes>
+    </test>
+
+
     <!-- ============================== Irushi's Tests ============================== -->
 
     <test name="User - Category API Regression Tests(TC_API_USER_CAT_01 to TC_API_USER_CAT_05)">
