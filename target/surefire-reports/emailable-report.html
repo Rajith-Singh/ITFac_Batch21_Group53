@@ -8,69 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Plant Sales Automation Suite</th></tr>
-<tr><td><a href="#t0">UI Tests</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">7</td><td class="num">260,767</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">API Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">48</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">9</th><th class="num">0</th><th class="num">0</th><th class="num attn">7</th><th class="num">260,815</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">35,489</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Plant Sales Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">UI Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="7">com.example.runners.UiTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="7">1770380339623</td><td rowspan="7">17477</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m6">runScenario</a></td></tr><tr><th colspan="4">UI Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">com.example.runners.UiTestRunner</td><td><a href="#m7">runScenario</a></td><td rowspan="9">1770380286857</td><td rowspan="9">9946</td></tr><tr class="passedeven"><td><a href="#m8">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m9">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m10">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m11">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m12">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m13">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m14">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m15">runScenario</a></td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.example.runners.UiTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1770436177786</td><td rowspan="1">34411</td></tr></tbody>
 </table>
-<h2>UI Tests</h2><h3 id="m0">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant list sorting properties&quot;</td><td>&quot;Plant List Management&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.RuntimeException: Could not find sort link for column: Quantity
-	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
-	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
-	at ✽.user sorts the list by &quot;Quantity&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Admin can successfully add a new plant with valid data&quot;</td><td>&quot;Plant CRUD Operations&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;newly added plant &quot;Red Rose&quot; should be displayed in the plants list&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;newly added plant {string} should be displayed in the plants list&quot;)
-public void newly_added_plant_should_be_displayed_in_the_plants_list(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant search by name&quot;</td><td>&quot;Plant List Management&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: No plants displayed after searching for: Yellow Rose
-	at com.example.ui.stepDefinitions.plants.PlantListSteps.thePlantListShouldDisplayPlantsMatching(PlantListSteps.java:218)
-	at ✽.the plant list should display plants matching &quot;Yellow Rose&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:9)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant list sorting properties&quot;</td><td>&quot;Plant List Management&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.RuntimeException: Could not find sort link for column: Quantity
-	at com.example.ui.pages.plants.PlantListPage.clickSortByColumn(PlantListPage.java:218)
-	at com.example.ui.stepDefinitions.plants.PlantListSteps.userSortsTheListBy(PlantListSteps.java:108)
-	at ✽.user sorts the list by &quot;Quantity&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:36)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify that admin can successfully edit existing plant data with valid input data&quot;</td><td>&quot;Plant List Management&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Plant Rose UK not found in the list after update expected [true] but found [false]
-	at com.example.ui.stepDefinitions.plants.PlantCRUDSteps.plantShouldBeUpdatedWith(PlantCRUDSteps.java:91)
-	at ✽.plant &quot;Rose UK&quot; should be updated with category &quot;Rose&quot;, price &quot;3000&quot;, and quantity &quot;20&quot;(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:66)
-... Removed 3 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant list sorting properties&quot;</td><td>&quot;Plant List Management&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: List is NOT sorted by Name in Ascending order.
-	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
-	at ✽.the list should be sorted by &quot;Name&quot; in &quot;Ascending&quot; order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant list sorting properties&quot;</td><td>&quot;Plant List Management&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: List is NOT sorted by Price in Descending order.
-	at com.example.ui.stepDefinitions.plants.PlantListSteps.theListShouldBeSortedByInOrder(PlantListSteps.java:142)
-	at ✽.the list should be sorted by &quot;Price&quot; in &quot;Descending&quot; order(file:///E:/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/plant_list.feature:37)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant search by name&quot;</td><td>&quot;Plant List Management&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Admin can successfully delete a plant record from plant list&quot;</td><td>&quot;Plant Deletion&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant list sorting properties&quot;</td><td>&quot;Plant List Management&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify &quot;Low&quot; badge for plants with low stock&quot;</td><td>&quot;Plant List Management&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify &quot;Low&quot; badge for plants with low stock (User)&quot;</td><td>&quot;Plant List Management&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify plant list sorting properties&quot;</td><td>&quot;Plant List Management&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify filter plant by category&quot;</td><td>&quot;Plant List Management&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify that Plant Name, Sub category, Price, Quantity are mandatory&quot;</td><td>&quot;Plant form validation&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Category selection is a sub-category&quot;</td><td>&quot;Plant Category Selection&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>API Tests</h2></body>
+<h2>Surefire test</h2><h3 id="m0">com.example.runners.UiTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Admin can successfully add a new plant with valid data&quot;</td><td>&quot;Plant CRUD Operations&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
 </html>

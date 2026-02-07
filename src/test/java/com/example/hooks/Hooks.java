@@ -23,7 +23,7 @@ public class Hooks {
         System.out.println("=== Starting UI Test: " + scenario.getName() + " ===");
         // Initialize WebDriver for UI tests
         DriverManager.initializeDriver();
-        
+
         // Clean up any existing test data before running the test
         if (scenario.getName().contains("plant") || scenario.getName().contains("Plant")) {
             cleanupTestPlants(DriverManager.getDriver());
@@ -33,11 +33,11 @@ public class Hooks {
     @After("@ui")
     public void teardownUi(Scenario scenario) {
         WebDriver driver = DriverManager.getDriver();
-        
+
         // Clean up test plants before closing driver
         if (driver != null) {
             cleanupTestPlants(driver);
-            
+
             if (scenario.isFailed()) {
                 System.out.println("Test FAILED: " + scenario.getName());
                 if (driver instanceof TakesScreenshot) {
@@ -50,126 +50,132 @@ public class Hooks {
                 }
             }
         }
-        
+
         System.out.println("=== Finished UI Test: " + scenario.getName() + " ===\n");
+
         // Quit WebDriver
         DriverManager.quitDriver();
     }
 
-     private void cleanupTestPlants(WebDriver driver) {
-    try {
-        String baseUrl = System.getProperty("base.url", "http://localhost:8080");
-        driver.navigate().to(baseUrl + "/ui/plants");
+    private void cleanupTestPlants(WebDriver driver) {
+        try {
+            String baseUrl = System.getProperty("base.url", "http://localhost:8080");
+            driver.navigate().to(baseUrl + "/ui/plants");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
 
-        String[] testPlantNames = {"Red Rose", "Test Delete Plant", "Test Plant", "Sample Plant"};
+            String[] testPlantNames = { "Red Rose", "Test Delete Plant", "Test Plant", "Sample Plant" };
 
-        for (String plantName : testPlantNames) {
+            for (String plantName : testPlantNames) {
 
-            // ✔ Check if plant row exists FIRST
-            String rowXpath = "//table//tr[td[contains(text(),'" + plantName + "')]]";
-            var rows = driver.findElements(By.xpath(rowXpath));
+                // ✔ Check if plant row exists FIRST
+                String rowXpath = "//table//tr[td[contains(text(),'" + plantName + "')]]";
+                var rows = driver.findElements(By.xpath(rowXpath));
 
-            if (rows.isEmpty()) {
-                continue; // Already deleted → skip safely
+                if (rows.isEmpty()) {
+                    continue; // Already deleted → skip safely
+                }
+
+                try {
+                    // ✔ Find delete button INSIDE SAME ROW ONLY
+                    By deleteBtnBy = By.xpath(
+                            "//tr[td[contains(text(),'" + plantName
+                                    + "')]]//button[contains(@class,'btn-danger') or contains(@title,'Delete')]");
+
+                    WebElement deleteBtn = wait.until(ExpectedConditions.elementToBeClickable(deleteBtnBy));
+
+                    // Scroll to button
+                    ((org.openqa.selenium.JavascriptExecutor) driver)
+                            .executeScript("arguments[0].scrollIntoView({block:'center'});", deleteBtn);
+
+                    wait.until(ExpectedConditions.elementToBeClickable(deleteBtn)).click();
+
+                    // ✔ Handle JS alert confirm
+                    wait.until(ExpectedConditions.alertIsPresent()).accept();
+
+                    // ✔ Wait until row disappears
+                    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(rowXpath)));
+
+                    System.out.println("✔ Cleaned up plant: " + plantName);
+
+                } catch (Exception e) {
+                    System.out.println("Cleanup skipped for plant: " + plantName);
+                }
             }
 
-            try {
-                // ✔ Find delete button INSIDE SAME ROW ONLY
-                By deleteBtnBy = By.xpath(
-                        "//tr[td[contains(text(),'" + plantName + "')]]//button[contains(@class,'btn-danger') or contains(@title,'Delete')]"
-                );
-
-                WebElement deleteBtn = wait.until(ExpectedConditions.elementToBeClickable(deleteBtnBy));
-
-                // Scroll to button
-                ((org.openqa.selenium.JavascriptExecutor) driver)
-                        .executeScript("arguments[0].scrollIntoView({block:'center'});", deleteBtn);
-
-                wait.until(ExpectedConditions.elementToBeClickable(deleteBtn)).click();
-
-                // ✔ Handle JS alert confirm
-                wait.until(ExpectedConditions.alertIsPresent()).accept();
-
-                // ✔ Wait until row disappears
-                wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(rowXpath)));
-
-                System.out.println("✔ Cleaned up plant: " + plantName);
-
-            } catch (Exception e) {
-                System.out.println("Cleanup skipped for plant: " + plantName);
-            }
+        } catch (Exception e) {
+            System.out.println("Cleanup process failed safely: " + e.getMessage());
         }
-
-    } catch (Exception e) {
-        System.out.println("Cleanup process failed safely: " + e.getMessage());
     }
-}
-
 
     // private void cleanupTestPlants(WebDriver driver) {
-    //     try {
-    //         // Navigate to plants list page
-    //         String baseUrl = System.getProperty("base.url", "http://localhost:8080");
-    //         driver.navigate().to(baseUrl + "/ui/plants");
-            
-    //         // Wait for page to load
-    //         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-    //         Thread.sleep(2000); // Extra wait for page to fully load
-            
-    //         // Try to find and delete test plants
-    //         String[] testPlantNames = {"Red Rose", "Test Plant", "Sample Plant"};
-            
-    //         for (String plantName : testPlantNames) {
-    //             try {
-    //                 // Strategy 1: Look for row with plant name and delete button
-    //                 String deleteXpath = "//td[contains(text(), '" + plantName + "')]//following::button[contains(@class, 'btn-danger') or contains(text(), 'Delete')]";
-    //                 var deleteElements = driver.findElements(By.xpath(deleteXpath));
-                    
-    //                 if (deleteElements.isEmpty()) {
-    //                     // Strategy 2: Look for action menu or dropdown
-    //                     String actionXpath = "//td[contains(text(), '" + plantName + "')]//following::button[contains(@class, 'dropdown') or contains(@class, 'menu')]";
-    //                     deleteElements = driver.findElements(By.xpath(actionXpath));
-    //                 }
-                    
-    //                 if (deleteElements.isEmpty()) {
-    //                     // Strategy 3: Look for any button in the same row
-    //                     String rowXpath = "//tr[contains(., '" + plantName + "')]//button";
-    //                     deleteElements = driver.findElements(By.xpath(rowXpath));
-    //                 }
-                    
-    //                 for (var deleteBtn : deleteElements) {
-    //                     try {
-    //                         // Scroll to element if needed
-    //                         ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
-    //                             "arguments[0].scrollIntoView(true);", deleteBtn);
-    //                         Thread.sleep(500);
-    //                         deleteBtn.click();
-                            
-    //                         // Handle any confirmation dialogs
-    //                         try {
-    //                             Thread.sleep(500);
-    //                             var confirmBtn = wait.until(ExpectedConditions.elementToBeClickable(
-    //                                 By.xpath("//button[contains(text(), 'Confirm') or contains(text(), 'Yes') or contains(text(), 'OK') or contains(text(), 'Delete')]")));
-    //                             confirmBtn.click();
-    //                             System.out.println("Cleaned up test plant: " + plantName);
-    //                             Thread.sleep(1000); // Wait for deletion to complete
-    //                             break; // Plant deleted, move to next plant name
-    //                         } catch (TimeoutException e) {
-    //                             System.out.println("No confirmation dialog found for: " + plantName);
-    //                         }
-    //                     } catch (Exception e) {
-    //                         System.out.println("Could not delete plant: " + plantName + " - " + e.getMessage());
-    //                     }
-    //                 }
-    //             } catch (Exception e) {
-    //                 // Plant not found or error occurred, continue with next plant
-    //             }
-    //         }
-    //     } catch (Exception e) {
-    //         System.out.println("Could not cleanup test plants: " + e.getMessage());
-    //     }
+    // try {
+    // // Navigate to plants list page
+    // String baseUrl = System.getProperty("base.url", "http://localhost:8080");
+    // driver.navigate().to(baseUrl + "/ui/plants");
+
+    // // Wait for page to load
+    // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    // Thread.sleep(2000); // Extra wait for page to fully load
+
+    // // Try to find and delete test plants
+    // String[] testPlantNames = {"Red Rose", "Test Plant", "Sample Plant"};
+
+    // for (String plantName : testPlantNames) {
+    // try {
+    // // Strategy 1: Look for row with plant name and delete button
+    // String deleteXpath = "//td[contains(text(), '" + plantName +
+    // "')]//following::button[contains(@class, 'btn-danger') or contains(text(),
+    // 'Delete')]";
+    // var deleteElements = driver.findElements(By.xpath(deleteXpath));
+
+    // if (deleteElements.isEmpty()) {
+    // // Strategy 2: Look for action menu or dropdown
+    // String actionXpath = "//td[contains(text(), '" + plantName +
+    // "')]//following::button[contains(@class, 'dropdown') or contains(@class,
+    // 'menu')]";
+    // deleteElements = driver.findElements(By.xpath(actionXpath));
+    // }
+
+    // if (deleteElements.isEmpty()) {
+    // // Strategy 3: Look for any button in the same row
+    // String rowXpath = "//tr[contains(., '" + plantName + "')]//button";
+    // deleteElements = driver.findElements(By.xpath(rowXpath));
+    // }
+
+    // for (var deleteBtn : deleteElements) {
+    // try {
+    // // Scroll to element if needed
+    // ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+    // "arguments[0].scrollIntoView(true);", deleteBtn);
+    // Thread.sleep(500);
+    // deleteBtn.click();
+
+    // // Handle any confirmation dialogs
+    // try {
+    // Thread.sleep(500);
+    // var confirmBtn = wait.until(ExpectedConditions.elementToBeClickable(
+    // By.xpath("//button[contains(text(), 'Confirm') or contains(text(), 'Yes') or
+    // contains(text(), 'OK') or contains(text(), 'Delete')]")));
+    // confirmBtn.click();
+    // System.out.println("Cleaned up test plant: " + plantName);
+    // Thread.sleep(1000); // Wait for deletion to complete
+    // break; // Plant deleted, move to next plant name
+    // } catch (TimeoutException e) {
+    // System.out.println("No confirmation dialog found for: " + plantName);
+    // }
+    // } catch (Exception e) {
+    // System.out.println("Could not delete plant: " + plantName + " - " +
+    // e.getMessage());
+    // }
+    // }
+    // } catch (Exception e) {
+    // // Plant not found or error occurred, continue with next plant
+    // }
+    // }
+    // } catch (Exception e) {
+    // System.out.println("Could not cleanup test plants: " + e.getMessage());
+    // }
     // }
 
     @Before("@api")

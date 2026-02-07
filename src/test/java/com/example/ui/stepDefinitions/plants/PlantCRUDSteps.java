@@ -90,4 +90,11 @@ public class PlantCRUDSteps {
         }
         assertTrue(found, "Plant " + plantName + " not found in the list after update");
     }
+
+    @Then("newly added plant {string} should be displayed in the plants list")
+    public void newlyAddedPlantShouldBeDisplayedInTheList(String plantName) {
+        com.example.ui.pages.plants.PlantListPage plantListPage = new com.example.ui.pages.plants.PlantListPage(driver);
+        assertTrue(plantListPage.isPlantDisplayedInList(plantName),
+                "Newly added plant '" + plantName + "' is not displayed in the plants list.");
+    }
 }
