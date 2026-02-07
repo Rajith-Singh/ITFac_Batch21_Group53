@@ -1,4 +1,4 @@
-@API @Sales
+@API @Sales @Admin
 Feature: Admin Sales API
   
   As an Admin user
@@ -76,8 +76,8 @@ Feature: Admin Sales API
   
     Examples:
       | sale_id |
-      | 25      |
-      | 30      |
+      | 40      |
+      | 38      |
     
   
     @TC_API_SALES_ADM_05
@@ -89,5 +89,5 @@ Feature: Admin Sales API
 
     Examples:
       | sale_id |
-      | 25      |
+      | 50      |
       

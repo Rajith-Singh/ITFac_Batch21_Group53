@@ -2,28 +2,40 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Plant Sales Automation Suite" verbose="1">
     
-    <!-- Run Admin Tests -->
-    <test name="Admin Tests">
-        <parameter name="cucumber.filter.tags" value="@ui or @Sales or @admin "/>
-        <classes>
-            <class name="com.example.runners.UiTestRunner"/>
-        </classes>
-    </test>
-
-    <!-- Run Admin Tests -->
-    <test name="Admin API Tests">
-        <parameter name="cucumber.filter.tags" value="@ui or @Sales or @admin or @API"/>
-        <classes>
-            <class name="com.example.runners.ApiTestRunner"/>
-        </classes>
-    </test>
     
     <!-- Run User Tests -->
-    <test name="User Tests">
+    <test name="A User Ui Tests">
         <parameter name="cucumber.filter.tags" value="@ui and @user"/>
         <classes>
             <class name="com.example.runners.UiTestRunner"/>
         </classes>
     </test>
+
+    <!-- Run User Api Tests -->
+    <test name="B User API Tests">
+        <parameter name="cucumber.filter.tags" value="@Plants"/>
+        <classes>
+            <class name="com.example.runners.PlantsApiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run Admin  Api Tests -->
+    <test name="C Admin API Tests">
+        <parameter name="cucumber.filter.tags" value=" @Sales and @API"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run Admin Tests -->
+    <test name="D Admin Ui Tests">
+        <parameter name="cucumber.filter.tags" value="@ui and @admin "/>
+        <classes>
+            <class name="com.example.runners.SalesTestRunner"/>
+        </classes>
+    </test>
+
+    
+      
     
 </suite>

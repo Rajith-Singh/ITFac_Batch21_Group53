@@ -1,9 +1,10 @@
-@Sales @TC_UI_SALES_ADM_01 @ui
+@Sales  @ui @admin
 Feature: Sales Management
   As an Admin
   I want to manage plant sales
   So that I can track inventory and transactions
 
+  @TC_UI_SALES_ADM_01
   Scenario: Verify Admin can sell a plant with sufficient stock quantity
     Given the Admin user is logged in 
     And the user is on the Sales List page
