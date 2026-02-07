@@ -9,10 +9,33 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Plant Sales UI Automation Suite</th></tr>
-<tr><td><a href="#t0">Cucumber Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12,955</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Cucumber Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">4,607</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Plant Sales UI Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Cucumber Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.example.runners.CucumberRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1770219542027</td><td rowspan="1">11726</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Plant Sales UI Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Cucumber Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.example.runners.CucumberRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1770446639306</td><td rowspan="1">3509</td></tr></tbody>
 </table>
-<h2>Cucumber Tests</h2><h3 id="m0">com.example.runners.CucumberRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Admin can successfully add a new Main Category&quot;</td><td>&quot;Category Management&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Cucumber Tests</h2><h3 id="m0">com.example.runners.CucumberRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify successful creation of a Sub-Category&quot;</td><td>&quot;Admin Category Management API&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+JSON path $ doesn&apos;t match.
+Expected: map containing [&quot;parent&quot;-&gt;ANYTHING]
+  Actual: &lt;{id=169, name=Flower_99, subCategories=[]}&gt;
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_has_field(CategoryApiStepDefinitions.java:73)
+	at ✽.the response body should contain the field &quot;parent&quot;(file:///C:/Users/USER/OneDrive/Pictures/Desktop/IrushI_QA_Automation_Plant/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:24)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
