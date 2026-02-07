@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Plant API Tests" parallel="tests" thread-count="2">
+    <test name="Plant Pagination API Test Cases">
+        <classes>
+            <class name="com.example.api.tests.PlantApiTest">
+                <methods>
+                    <include name="testTC_API_PLANTS_USER_06" />
+                    <include name="testTC_API_PLANTS_USER_07" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Plant Sorting API Test Cases">
+        <classes>
+            <class name="com.example.api.tests.PlantApiTest">
+                <methods>
+                    <include name="testTC_API_PLANTS_USER_08" />
+                    <include name="testTC_API_PLANTS_USER_09" />
+                    <include name="testTC_API_PLANTS_USER_10" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Plant Search API Test Cases">
+        <classes>
+            <class name="com.example.api.tests.PlantApiTest">
+                <methods>
+                    <include name="testTC_API_PLANTS_USER_11" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Plant Filter API Test Cases">
+        <classes>
+            <class name="com.example.api.tests.PlantApiTest">
+                <methods>
+                    <include name="testTC_API_PLANTS_USER_12" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,307 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-07T03:25:11 IST" name="Sales Sorting Test Suite" finished-at="2026-02-07T03:27:07 IST" duration-ms="116937">
+  <suite started-at="2026-02-07T14:27:48 IST" name="Surefire suite" finished-at="2026-02-07T14:27:50 IST" duration-ms="1534">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@c730b35]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@22555ebf]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@34e9fd99]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.SalesListDateSortingTestRunner@43bc63a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.SalesListSoldDateSortIndicatorTestRunner@6025e1b6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.SalesListTotalPriceSortingUserTestRunner@327514f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.AdminOnlyPageRestrictionTestRunner@7586beff]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.EditPlantPageRestrictionTestRunner@1573f9fc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-02-07T03:25:11 IST" name="Sales Sorting Tests" finished-at="2026-02-07T03:25:32 IST" duration-ms="21631">
-      <class name="com.example.runners.UiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-07T03:25:11 IST" name="setUpClass" finished-at="2026-02-07T03:25:11 IST" duration-ms="368" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@671a5887]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2026-02-07T14:27:48 IST" name="Surefire test" finished-at="2026-02-07T14:27:50 IST" duration-ms="1534">
+      <class name="com.example.api.tests.PlantApiTest">
+        <test-method signature="testTC_API_PLANTS_USER_12()[pri:0, instance:com.example.api.tests.PlantApiTest@3c22fc4c]" started-at="2026-02-07T14:27:48 IST" name="testTC_API_PLANTS_USER_12" description="Verify User can filter plants by category via API" finished-at="2026-02-07T14:27:50 IST" duration-ms="1514" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Indoor filter should only return Indoor plants expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Indoor filter should only return Indoor plants expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.example.api.tests.PlantApiTest.testTC_API_PLANTS_USER_12(PlantApiTest.java:387)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-07T03:25:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T03:25:32 IST" duration-ms="21037" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Edit Plant Page Restriction for Regular User"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@689604d9]" started-at="2026-02-07T03:25:32 IST" name="tearDownClass" finished-at="2026-02-07T03:25:32 IST" duration-ms="139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.UiTestRunner -->
-    </test> <!-- Sales Sorting Tests -->
-    <test started-at="2026-02-07T03:25:32 IST" name="Sell Plant Navigation Test" finished-at="2026-02-07T03:25:52 IST" duration-ms="19450">
-      <class name="com.example.runners.UiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" started-at="2026-02-07T03:25:32 IST" name="setUpClass" finished-at="2026-02-07T03:25:32 IST" duration-ms="46" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@5552768b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" started-at="2026-02-07T03:25:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T03:25:52 IST" duration-ms="19377" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Edit Plant Page Restriction for Regular User"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@6c6cb480]" started-at="2026-02-07T03:25:52 IST" name="tearDownClass" finished-at="2026-02-07T03:25:52 IST" duration-ms="25" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.UiTestRunner -->
-    </test> <!-- Sell Plant Navigation Test -->
-    <test started-at="2026-02-07T03:25:52 IST" name="Sell Plant Validation Test" finished-at="2026-02-07T03:26:11 IST" duration-ms="19153">
-      <class name="com.example.runners.UiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@c730b35]" started-at="2026-02-07T03:25:52 IST" name="setUpClass" finished-at="2026-02-07T03:25:52 IST" duration-ms="26" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@3c947bc5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@c730b35]" started-at="2026-02-07T03:25:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T03:26:11 IST" duration-ms="19101" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Edit Plant Page Restriction for Regular User"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@c730b35]" started-at="2026-02-07T03:26:11 IST" name="tearDownClass" finished-at="2026-02-07T03:26:11 IST" duration-ms="22" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.UiTestRunner -->
-    </test> <!-- Sell Plant Validation Test -->
-    <test started-at="2026-02-07T03:26:11 IST" name="Multi-tab Stock Update Test" finished-at="2026-02-07T03:26:30 IST" duration-ms="18782">
-      <class name="com.example.runners.UiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@22555ebf]" started-at="2026-02-07T03:26:11 IST" name="setUpClass" finished-at="2026-02-07T03:26:11 IST" duration-ms="25" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@609db43b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@22555ebf]" started-at="2026-02-07T03:26:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T03:26:30 IST" duration-ms="18735" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Edit Plant Page Restriction for Regular User"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@22555ebf]" started-at="2026-02-07T03:26:30 IST" name="tearDownClass" finished-at="2026-02-07T03:26:30 IST" duration-ms="20" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.UiTestRunner -->
-    </test> <!-- Multi-tab Stock Update Test -->
-    <test started-at="2026-02-07T03:26:30 IST" name="Form Retention Test" finished-at="2026-02-07T03:26:49 IST" duration-ms="18750">
-      <class name="com.example.runners.UiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.UiTestRunner@34e9fd99]" started-at="2026-02-07T03:26:30 IST" name="setUpClass" finished-at="2026-02-07T03:26:30 IST" duration-ms="26" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@55f616cf]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.UiTestRunner@34e9fd99]" started-at="2026-02-07T03:26:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T03:26:49 IST" duration-ms="18699" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Edit Plant Page Restriction for Regular User"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.UiTestRunner@34e9fd99]" started-at="2026-02-07T03:26:49 IST" name="tearDownClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="22" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.UiTestRunner -->
-    </test> <!-- Form Retention Test -->
-    <test started-at="2026-02-07T03:26:49 IST" name="Sales List Date Sorting Test" finished-at="2026-02-07T03:26:49 IST" duration-ms="25">
-      <class name="com.example.runners.SalesListDateSortingTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.SalesListDateSortingTestRunner@43bc63a3]" started-at="2026-02-07T03:26:49 IST" name="setUpClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@1356d4d4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.SalesListDateSortingTestRunner@43bc63a3]" started-at="2026-02-07T03:26:49 IST" name="tearDownClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.SalesListDateSortingTestRunner -->
-    </test> <!-- Sales List Date Sorting Test -->
-    <test started-at="2026-02-07T03:26:49 IST" name="Sales List Sold Date Sort Indicator Test" finished-at="2026-02-07T03:26:49 IST" duration-ms="20">
-      <class name="com.example.runners.SalesListSoldDateSortIndicatorTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.SalesListSoldDateSortIndicatorTestRunner@6025e1b6]" started-at="2026-02-07T03:26:49 IST" name="setUpClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@c03cf28]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.SalesListSoldDateSortIndicatorTestRunner@6025e1b6]" started-at="2026-02-07T03:26:49 IST" name="tearDownClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.SalesListSoldDateSortIndicatorTestRunner -->
-    </test> <!-- Sales List Sold Date Sort Indicator Test -->
-    <test started-at="2026-02-07T03:26:49 IST" name="Sales List Total Price Sorting User Test" finished-at="2026-02-07T03:26:49 IST" duration-ms="99">
-      <class name="com.example.runners.SalesListTotalPriceSortingUserTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.SalesListTotalPriceSortingUserTestRunner@327514f]" started-at="2026-02-07T03:26:49 IST" name="setUpClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@1329eff]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.SalesListTotalPriceSortingUserTestRunner@327514f]" started-at="2026-02-07T03:26:49 IST" name="tearDownClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="93" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.SalesListTotalPriceSortingUserTestRunner -->
-    </test> <!-- Sales List Total Price Sorting User Test -->
-    <test started-at="2026-02-07T03:26:49 IST" name="Admin Only Page Restriction Test" finished-at="2026-02-07T03:26:49 IST" duration-ms="32">
-      <class name="com.example.runners.AdminOnlyPageRestrictionTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.AdminOnlyPageRestrictionTestRunner@7586beff]" started-at="2026-02-07T03:26:49 IST" name="setUpClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6497b078]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.AdminOnlyPageRestrictionTestRunner@7586beff]" started-at="2026-02-07T03:26:49 IST" name="tearDownClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.AdminOnlyPageRestrictionTestRunner -->
-    </test> <!-- Admin Only Page Restriction Test -->
-    <test started-at="2026-02-07T03:26:49 IST" name="Edit Plant Page Restriction Test" finished-at="2026-02-07T03:27:07 IST" duration-ms="18531">
-      <class name="com.example.runners.EditPlantPageRestrictionTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.EditPlantPageRestrictionTestRunner@1573f9fc]" started-at="2026-02-07T03:26:49 IST" name="setUpClass" finished-at="2026-02-07T03:26:49 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@41c2284a]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.EditPlantPageRestrictionTestRunner@1573f9fc]" started-at="2026-02-07T03:26:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T03:27:07 IST" duration-ms="18495" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Edit Plant Page Restriction for Regular User"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.EditPlantPageRestrictionTestRunner@1573f9fc]" started-at="2026-02-07T03:27:07 IST" name="tearDownClass" finished-at="2026-02-07T03:27:07 IST" duration-ms="26" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.example.runners.EditPlantPageRestrictionTestRunner -->
-    </test> <!-- Edit Plant Page Restriction Test -->
-  </suite> <!-- Sales Sorting Test Suite -->
+        </test-method> <!-- testTC_API_PLANTS_USER_12 -->
+      </class> <!-- com.example.api.tests.PlantApiTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>

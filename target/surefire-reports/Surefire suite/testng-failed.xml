@@ -3,13 +3,11 @@
 <suite thread-count="3" parallel="methods" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="3" parallel="methods" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.example.runners.AdminOnlyPageRestrictionTestRunner">
+      <class name="com.example.api.tests.PlantApiTest">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
+          <include name="testTC_API_PLANTS_USER_12"/>
         </methods>
-      </class> <!-- com.example.runners.AdminOnlyPageRestrictionTestRunner -->
+      </class> <!-- com.example.api.tests.PlantApiTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
