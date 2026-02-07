@@ -144,4 +144,86 @@ public class CategoryClient {
                     .extract()
                     .response();
     }
+    
+    /**
+     * Get paginated categories with default parameters
+     * @param token JWT authentication token
+     * @return Response object containing paginated categories
+     */
+    public Response getCategoriesPageDefault(String token) {
+        return RestAssured
+                .given()
+                    .baseUri(BASE_URL)
+                    .header("Authorization", "Bearer " + token)
+                    .accept(ContentType.JSON)
+                .when()
+                    .get(CATEGORIES_ENDPOINT + "/page")
+                .then()
+                    .extract()
+                    .response();
+    }
+    
+    /**
+     * Get paginated categories with custom parameters
+     * @param token JWT authentication token
+     * @param page Page number (0-indexed)
+     * @param size Page size
+     * @param sort Sort parameter (e.g., "name", "id")
+     * @return Response object containing paginated categories
+     */
+    public Response getCategoriesPage(String token, Integer page, Integer size, String sort) {
+        return RestAssured
+                .given()
+                    .baseUri(BASE_URL)
+                    .header("Authorization", "Bearer " + token)
+                    .accept(ContentType.JSON)
+                    .queryParam("page", page)
+                    .queryParam("size", size)
+                    .queryParam("sort", sort)
+                .when()
+                    .get(CATEGORIES_ENDPOINT + "/page")
+                .then()
+                    .extract()
+                    .response();
+    }
+    
+    /**
+     * Search categories by name
+     * @param token JWT authentication token
+     * @param searchTerm Search term for category name
+     * @return Response object containing matching categories
+     */
+    public Response searchCategoriesByName(String token, String searchTerm) {
+        return RestAssured
+                .given()
+                    .baseUri(BASE_URL)
+                    .header("Authorization", "Bearer " + token)
+                    .accept(ContentType.JSON)
+                    .queryParam("search", searchTerm)
+                .when()
+                    .get(CATEGORIES_ENDPOINT + "/page")
+                .then()
+                    .extract()
+                    .response();
+    }
+    
+    /**
+     * Get categories by parent ID
+     * @param token JWT authentication token
+     * @param parentId Parent category ID
+     * @return Response object containing child categories
+     */
+    public Response getCategoriesByParentId(String token, Long parentId) {
+        return RestAssured
+                .given()
+                    .baseUri(BASE_URL)
+                    .header("Authorization", "Bearer " + token)
+                    .accept(ContentType.JSON)
+                    .queryParam("parentId", parentId)
+                .when()
+                    .get(CATEGORIES_ENDPOINT + "/page")
+                .then()
+                    .extract()
+                    .response();
+    }
 }

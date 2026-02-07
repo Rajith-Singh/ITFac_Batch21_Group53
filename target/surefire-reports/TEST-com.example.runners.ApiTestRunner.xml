@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.runners.ApiTestRunner" time="1.27" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.runners.ApiTestRunner" time="1.444" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/anupamagunasekara/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206235410290_3.jar /Users/anupamagunasekara/ITFac_Batch21_Group53/target/surefire 2026-02-06T23-54-10_260-jvmRun1 surefire-20260206235410290_1tmp surefire_0-20260206235410290_2tmp"/>
+    <property name="sun.java.command" value="/Users/anupamagunasekara/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207114122247_3.jar /Users/anupamagunasekara/ITFac_Batch21_Group53/target/surefire 2026-02-07T11-41-22_220-jvmRun1 surefire-20260207114122247_1tmp surefire_0-20260207114122247_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ApiTestRunner"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/anupamagunasekara/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260206235410290_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/anupamagunasekara/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207114122247_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -47,7 +47,6 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/j3/vmw2p_jj7rn9sdq_1t9bd6c00000gn/T/"/>
     <property name="java.version" value="21.0.10"/>
-    <property name="cucumber.filter.tags" value="@Categories and not @Manual"/>
     <property name="user.dir" value="/Users/anupamagunasekara/ITFac_Batch21_Group53"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
@@ -61,7 +60,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;TC_API_CAT_USER_01 - Verify User can retrieve all categories via API&quot;, &quot;Category API Testing&quot;](1)" classname="com.example.runners.ApiTestRunner" time="0.636">
+  <testcase name="runScenario[&quot;TC_API_CAT_USER_01 - Verify User can retrieve all categories via API&quot;, &quot;Category API Testing&quot;](1)" classname="com.example.runners.ApiTestRunner" time="0.626">
     <system-out><![CDATA[
 @api @API @Categories @TC_API_CAT_USER_01 @Smoke @User
 Scenario: TC_API_CAT_USER_01 - Verify User can retrieve all categories via API # src/test/resources/features/api/categories_api.feature:11
@@ -78,16 +77,16 @@ Scenario: TC_API_CAT_USER_01 - Verify User can retrieve all categories via API #
   And each category should contain field "isMainCategory"                      # com.example.api.stepDefinitions.CategoryApiSteps.each_category_should_contain_field(java.lang.String)
   And the response should include both main and sub-categories                 # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_include_main_and_sub_categories()
   And no admin-only fields should be present                                   # com.example.api.stepDefinitions.CategoryApiSteps.no_admin_only_fields_should_be_present()
-Total categories returned: 0
+Total categories returned: 1
   And I should be able to count the categories returned                        # com.example.api.stepDefinitions.CategoryApiSteps.i_should_be_able_to_count_categories()
 === Finished API Test: TC_API_CAT_USER_01 - Verify User can retrieve all categories via API ===
 
 ]]></system-out>
-    <system-err><![CDATA[Feb 06, 2026 11:54:10 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+    <system-err><![CDATA[Feb 07, 2026 11:41:22 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
 WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Verify Admin can retrieve all categories via API&quot;, &quot;Category API Testing&quot;](2)" classname="com.example.runners.ApiTestRunner" time="0.076">
+  <testcase name="runScenario[&quot;Verify Admin can retrieve all categories via API&quot;, &quot;Category API Testing&quot;](2)" classname="com.example.runners.ApiTestRunner" time="0.086">
     <system-out><![CDATA[
 @api @API @Categories @TC_API_CAT_ADMIN_01 @Admin
 Scenario: Verify Admin can retrieve all categories via API              # src/test/resources/features/api/categories_api.feature:26
@@ -103,7 +102,7 @@ Scenario: Verify Admin can retrieve all categories via API              # src/te
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;Verify retrieving categories without authentication fails&quot;, &quot;Category API Testing&quot;](3)" classname="com.example.runners.ApiTestRunner" time="0.006">
+  <testcase name="runScenario[&quot;Verify retrieving categories without authentication fails&quot;, &quot;Category API Testing&quot;](3)" classname="com.example.runners.ApiTestRunner" time="0.009">
     <system-out><![CDATA[
 @api @API @Categories @TC_API_CAT_USER_02 @Negative
 Scenario: Verify retrieving categories without authentication fails # src/test/resources/features/api/categories_api.feature:35
@@ -115,7 +114,7 @@ Scenario: Verify retrieving categories without authentication fails # src/test/r
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;TC_API_CAT_USER_03 - Verify API handles non-existent category IDs for User&quot;, &quot;Category API Testing&quot;](4)" classname="com.example.runners.ApiTestRunner" time="0.072">
+  <testcase name="runScenario[&quot;TC_API_CAT_USER_03 - Verify API handles non-existent category IDs for User&quot;, &quot;Category API Testing&quot;](4)" classname="com.example.runners.ApiTestRunner" time="0.079">
     <system-out><![CDATA[
 @api @API @Categories @TC_API_CAT_USER_03 @Negative @User
 Scenario: TC_API_CAT_USER_03 - Verify API handles non-existent category IDs for User # src/test/resources/features/api/categories_api.feature:52
@@ -130,7 +129,7 @@ Scenario: TC_API_CAT_USER_03 - Verify API handles non-existent category IDs for 
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;TC_API_CAT_USER_04 - Verify User can retrieve only main categories&quot;, &quot;Category API Testing&quot;](5)" classname="com.example.runners.ApiTestRunner" time="0.072">
+  <testcase name="runScenario[&quot;TC_API_CAT_USER_04 - Verify User can retrieve only main categories&quot;, &quot;Category API Testing&quot;](5)" classname="com.example.runners.ApiTestRunner" time="0.076">
     <system-out><![CDATA[
 @api @API @Categories @TC_API_CAT_USER_04 @User
 Scenario: TC_API_CAT_USER_04 - Verify User can retrieve only main categories # src/test/resources/features/api/categories_api.feature:60
@@ -146,7 +145,7 @@ Scenario: TC_API_CAT_USER_04 - Verify User can retrieve only main categories # s
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;TC_API_CAT_USER_05 - Verify User can retrieve only sub-categories&quot;, &quot;Category API Testing&quot;](6)" classname="com.example.runners.ApiTestRunner" time="0.077">
+  <testcase name="runScenario[&quot;TC_API_CAT_USER_05 - Verify User can retrieve only sub-categories&quot;, &quot;Category API Testing&quot;](6)" classname="com.example.runners.ApiTestRunner" time="0.076">
     <system-out><![CDATA[
 @api @API @Categories @TC_API_CAT_USER_05 @User
 Scenario: TC_API_CAT_USER_05 - Verify User can retrieve only sub-categories        # src/test/resources/features/api/categories_api.feature:69
@@ -159,6 +158,43 @@ Scenario: TC_API_CAT_USER_05 - Verify User can retrieve only sub-categories     
   And the response should contain category objects                                 # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_contain_category_objects()
   And all categories should have populated parent category                         # com.example.api.stepDefinitions.CategoryApiSteps.all_categories_should_have_populated_parent()
 === Finished API Test: TC_API_CAT_USER_05 - Verify User can retrieve only sub-categories ===
+
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_API_CAT_USER_06 - Verify User can access paginated categories with default parameters&quot;, &quot;Category API Testing&quot;](7)" classname="com.example.runners.ApiTestRunner" time="0.097">
+    <system-out><![CDATA[
+@api @API @Categories @TC_API_CAT_USER_06 @User @Pagination
+Scenario: TC_API_CAT_USER_06 - Verify User can access paginated categories with default parameters # src/test/resources/features/api/categories_api.feature:78
+=== Starting API Test: TC_API_CAT_USER_06 - Verify User can access paginated categories with default parameters ===
+  Given multiple categories exist in the system                                                    # com.example.api.stepDefinitions.CategoryApiSteps.multiple_categories_exist_in_system()
+  Given I am authenticated as a regular user                                                       # com.example.api.stepDefinitions.CategoryApiSteps.i_am_authenticated_as_regular_user()
+  When I send a GET request to "/api/categories/page" with default pagination                      # com.example.api.stepDefinitions.CategoryApiSteps.i_send_get_request_with_default_pagination(java.lang.String)
+  Then the response status code should be 200                                                      # com.example.api.stepDefinitions.CategoryApiSteps.the_response_status_code_should_be(int)
+  And the response should include pagination metadata                                              # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_include_pagination_metadata()
+  And the response should have content array                                                       # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_have_content_array()
+  And the response should have field "totalElements"                                               # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_have_field(java.lang.String)
+  And the response should have field "totalPages"                                                  # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_have_field(java.lang.String)
+  And the response should have field "pageable"                                                    # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_have_field(java.lang.String)
+  And the default page number should be 0                                                          # com.example.api.stepDefinitions.CategoryApiSteps.the_default_page_number_should_be(int)
+  And the page size should be 20 or system default                                                 # com.example.api.stepDefinitions.CategoryApiSteps.the_page_size_should_be_or_default(int)
+  And the content array should contain categories                                                  # com.example.api.stepDefinitions.CategoryApiSteps.the_content_array_should_contain_categories()
+=== Finished API Test: TC_API_CAT_USER_06 - Verify User can access paginated categories with default parameters ===
+
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;TC_API_CAT_USER_07 - Search Categories by Name&quot;, &quot;Category API Testing&quot;](8)" classname="com.example.runners.ApiTestRunner" time="0.076">
+    <system-out><![CDATA[
+@api @API @Categories @TC_API_CAT_USER_07 @User @Search
+Scenario: TC_API_CAT_USER_07 - Search Categories by Name                        # src/test/resources/features/api/categories_api.feature:92
+=== Starting API Test: TC_API_CAT_USER_07 - Search Categories by Name ===
+  Given multiple categories exist in the system                                 # com.example.api.stepDefinitions.CategoryApiSteps.multiple_categories_exist_in_system()
+  Given I am authenticated as a regular user                                    # com.example.api.stepDefinitions.CategoryApiSteps.i_am_authenticated_as_regular_user()
+  When I send a GET request to "/api/categories/page" with search term "indoor" # com.example.api.stepDefinitions.CategoryApiSteps.i_send_get_request_with_search_term(java.lang.String,java.lang.String)
+  Then the response status code should be 200                                   # com.example.api.stepDefinitions.CategoryApiSteps.the_response_status_code_should_be(int)
+  And the response should include pagination metadata                           # com.example.api.stepDefinitions.CategoryApiSteps.the_response_should_include_pagination_metadata()
+  And the search should be case-insensitive                                     # com.example.api.stepDefinitions.CategoryApiSteps.the_search_should_be_case_insensitive()
+  And partial name matching should be supported                                 # com.example.api.stepDefinitions.CategoryApiSteps.partial_name_matching_should_be_supported()
+=== Finished API Test: TC_API_CAT_USER_07 - Search Categories by Name ===
 
 ]]></system-out>
   </testcase>

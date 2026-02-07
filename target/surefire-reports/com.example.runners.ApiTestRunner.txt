@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.runners.ApiTestRunner
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.270 s -- in com.example.runners.ApiTestRunner
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.444 s -- in com.example.runners.ApiTestRunner

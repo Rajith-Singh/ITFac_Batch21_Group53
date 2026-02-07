@@ -73,3 +73,37 @@ Feature: Category API Testing
     And the response should be a JSON array
     And the response should contain category objects
     And all categories should have populated parent category
+
+  @TC_API_CAT_USER_06 @User @Pagination
+  Scenario: TC_API_CAT_USER_06 - Verify User can access paginated categories with default parameters
+    Given I am authenticated as a regular user
+    When I send a GET request to "/api/categories/page" with default pagination
+    Then the response status code should be 200
+    And the response should include pagination metadata
+    And the response should have content array
+    And the response should have field "totalElements"
+    And the response should have field "totalPages"
+    And the response should have field "pageable"
+    And the default page number should be 0
+    And the page size should be 20 or system default
+    And the content array should contain categories
+
+  @TC_API_CAT_USER_07 @User @Search
+  Scenario: TC_API_CAT_USER_07 - Search Categories by Name
+    Given I am authenticated as a regular user
+    When I send a GET request to "/api/categories/page" with search term "indoor"
+    Then the response status code should be 200
+    And the response should include pagination metadata
+    And the search should be case-insensitive
+    And partial name matching should be supported
+
+  @TC_API_CAT_USER_08 @User @Search @Manual
+  Scenario: TC_API_CAT_USER_08 - Search Categories by Parent ID
+    # NOTE: This test requires a parent category with ID 1 to exist with child categories
+    # Update the parent ID based on your test data
+    Given I am authenticated as a regular user
+    When I send a GET request to "/api/categories/page" with parentId 1
+    Then the response status code should be 200
+    And the response should include pagination metadata
+    And the response should contain only child categories
+    And the response should return at least 1 category

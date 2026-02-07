@@ -11,6 +11,6 @@ import io.cucumber.testng.CucumberOptions;
         "pretty",
         "html:target/cucumber-reports/api/cucumber.html",
         "json:target/cucumber-reports/api/cucumber.json"
-}, monochrome = true, tags = "@api")
+}, monochrome = true, tags = "@api and not @Manual")
 public class ApiTestRunner extends AbstractTestNGCucumberTests {
 }
