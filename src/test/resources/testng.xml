@@ -81,5 +81,13 @@
             <class name="com.example.runners.EditPlantPageRestrictionTestRunner"/>
         </classes>
     </test>
-    
+
+    <!-- Run API Tests (Cucumber feature files under features/api/) -->
+    <test name="API Tests">
+        <parameter name="cucumber.filter.tags" value="@api"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+
 </suite>

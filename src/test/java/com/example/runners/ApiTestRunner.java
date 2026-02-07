@@ -6,6 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/resources/features/api", glue = {
         "com.example.api.stepDefinitions",
+        "com.example.api.context",
+        "com.example.api.hooks",
         "com.example.hooks"
 }, plugin = {
         "pretty",
