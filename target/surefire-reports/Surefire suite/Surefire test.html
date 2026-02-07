@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Feb 07 20:45:24 IST 2026</td>
+<td>Started on:</td><td>Sat Feb 07 21:12:01 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7721 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1878 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,75 +76,22 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can filter plants by category via API", "Plants API"</td>
-<td><div><pre>java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
-	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:275)
-	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
-... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1496903278", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1496903278'><pre>java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify price validation during plant creation", "Plants API"</td>
+<td><div><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;Price Test Min&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-07T21:12:03.174417&quot;} expected [201] but found [400]
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:130)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace796896058", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace796896058'><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;Price Test Min&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-07T21:12:03.174417&quot;} expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:275)
-	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:130)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
 </pre></div></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API validates all required fields for plant creation", "Plants API"</td>
-<td></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API validates plant name length (3-25 characters)", "Plants API"</td>
-<td></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can sort plants by price via API", "Plants API"</td>
-<td></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can sort plants by stock quantity via API", "Plants API"</td>
-<td></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can access paginated plants with default parameters", "Plants API"</td>
-<td></td>
-<td>3</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can control pagination parameters", "Plants API"</td>
-<td></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can sort plants by name via API", "Plants API"</td>
-<td></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can search plants by name via API", "Plants API"</td>
-<td></td>
-<td>0</td>
-<td>com.example.runners.ApiTestRunner@3c407114</td></tr>
-<tr>
-<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin can create a plant with valid data under a sub-category", "Plants API"</td>
-<td></td>
-<td>0</td>
+<td>1</td>
 <td>com.example.runners.ApiTestRunner@3c407114</td></tr>
 </table><p>
 </body>

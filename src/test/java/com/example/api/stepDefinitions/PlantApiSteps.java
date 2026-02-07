@@ -122,9 +122,15 @@ public class PlantApiSteps {
 
     @Then("response status should be {int}")
     public void response_status_should_be(int expected) {
-        Assert.assertNotNull(context.getLastResponse(), "No response stored");
-        Assert.assertEquals(context.getLastResponse().getStatusCode(), expected,
-                "Response status");
+        Response response = context.getLastResponse();
+        Assert.assertNotNull(response, "No response stored");
+        int actual = response.getStatusCode();
+        if (actual != expected) {
+            String body = response.getBody().asString();
+            Assert.assertEquals(actual, expected,
+                    "Response status. When expected " + expected + " but got " + actual
+                            + ", response body: " + (body != null && body.length() > 500 ? body.substring(0, 500) + "..." : body));
+        }
     }
 
     @Then("response should contain content array")
@@ -367,6 +373,25 @@ public class PlantApiSteps {
         }
         Response response = plantClient.createPlantWithEmptyName(context.getToken(), price, quantity, categoryId);
         context.setLastResponse(response);
+    }
+
+    @When("admin sends create plant request with name {string} price {string} quantity {int} category {int}")
+    public void admin_sends_create_plant_request_with_exact_price(String name, String priceInRequest, int quantity, int categoryId) {
+        if (context.getToken() == null) {
+            context.setLastResponse(null);
+            return;
+        }
+        Response response = plantClient.createPlantWithExactPrice(context.getToken(), name, priceInRequest, quantity, categoryId);
+        context.setLastResponse(response);
+    }
+
+    @Then("response status for price decimal edge case should be 400 or 201")
+    public void response_status_for_price_decimal_edge_case_should_be_400_or_201() {
+        Response response = context.getLastResponse();
+        Assert.assertNotNull(response, "No response stored");
+        int status = response.getStatusCode();
+        Assert.assertTrue(status == 400 || status == 201,
+                "Price 0.001 (3 decimals): expected HTTP 400 if decimals restricted, or 201 if rounded. Actual: " + status);
     }
 
     @Then("error message should contain {string}")

@@ -6,7 +6,7 @@
       <class name="com.example.runners.ApiTestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="6"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.example.runners.ApiTestRunner -->

@@ -102,6 +102,23 @@ Feature: Plants API
     Then create response status should be 201 or backend unavailable
     And if created response should have id name price quantity category id 8
 
+  # --- Admin price validation (required, > 0) ---
+  @TC_API_PLANTS_ADM_04
+  Scenario: Verify price validation during plant creation
+    Given admin is authenticated
+    When admin sends create plant request with name "Price Test Zero" price "0" quantity 25 category 8
+    Then response status should be 400
+    And error message should contain "Price must be greater than 0"
+    When admin sends create plant request with name "Price Test Neg" price "-10.50" quantity 25 category 8
+    Then response status should be 400
+    And error message should contain "Price must be greater than 0"
+    When admin sends create plant request with name "Price Test Min" price "0.01" quantity 25 category 8
+    Then response status should be 201
+    When admin sends create plant request with name "Price Test Large" price "9999.99" quantity 25 category 8
+    Then response status should be 201
+    When admin sends create plant request with name "Price Test 3dec" price "0.001" quantity 25 category 8
+    Then response status for price decimal edge case should be 400 or 201
+
   # --- Admin create plant validation ---
   @TC_API_PLANTS_ADM_02
   Scenario: API validates all required fields for plant creation

@@ -1,14 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: com.example.runners.ApiTestRunner
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.340 s <<< FAILURE! -- in com.example.runners.ApiTestRunner
-com.example.runners.ApiTestRunner.runScenario["User can filter plants by category via API", "Plants API"](7) -- Time elapsed: 0.379 s <<< FAILURE!
-java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.135 s <<< FAILURE! -- in com.example.runners.ApiTestRunner
+com.example.runners.ApiTestRunner.runScenario["Verify price validation during plant creation", "Plants API"](1) -- Time elapsed: 1.486 s <<< FAILURE!
+java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Price Test Min' already exists in this category","timestamp":"2026-02-07T21:12:03.174417"} expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:275)
-	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:130)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
 

@@ -1,127 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-07T20:45:24 IST" name="Surefire suite" finished-at="2026-02-07T20:45:31 IST" duration-ms="7721">
+  <suite started-at="2026-02-07T21:12:01 IST" name="Surefire suite" finished-at="2026-02-07T21:12:03 IST" duration-ms="1878">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-02-07T20:45:24 IST" name="Surefire test" finished-at="2026-02-07T20:45:31 IST" duration-ms="7721">
+    <test started-at="2026-02-07T21:12:01 IST" name="Surefire test" finished-at="2026-02-07T21:12:03 IST" duration-ms="1878">
       <class name="com.example.runners.ApiTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:24 IST" name="setUpClass" finished-at="2026-02-07T20:45:24 IST" duration-ms="803" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T21:12:01 IST" name="setUpClass" finished-at="2026-02-07T21:12:01 IST" duration-ms="332" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@198b6731]]>
+                <![CDATA[org.testng.TestRunner@7c6908d7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:28 IST" duration-ms="3297" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T21:12:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T21:12:03 IST" duration-ms="1483" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User can access paginated plants with default parameters"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:28 IST" duration-ms="425" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User can control pagination parameters"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:28 IST" duration-ms="322" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User can sort plants by name via API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:29 IST" duration-ms="350" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User can sort plants by price via API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:29 IST" duration-ms="300" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User can sort plants by stock quantity via API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:29 IST" duration-ms="301" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User can search plants by name via API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:30 IST" duration-ms="373" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User can filter plants by category via API"]]>
+                <![CDATA["Verify price validation during plant creation"]]>
               </value>
             </param>
             <param index="1">
@@ -132,72 +36,25 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]]]>
+              <![CDATA[Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Price Test Min' already exists in this category","timestamp":"2026-02-07T21:12:03.174417"} expected [201] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+              <![CDATA[java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Price Test Min' already exists in this category","timestamp":"2026-02-07T21:12:03.174417"} expected [201] but found [400]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:275)
-at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:130)
+at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:30 IST" duration-ms="386" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin can create a plant with valid data under a sub-category"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:31 IST" duration-ms="474" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["API validates all required fields for plant creation"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-07T20:45:31 IST" duration-ms="560" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["API validates plant name length (3-25 characters)"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Plants API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T20:45:31 IST" name="tearDownClass" finished-at="2026-02-07T20:45:31 IST" duration-ms="71" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runners.ApiTestRunner@3c407114]" started-at="2026-02-07T21:12:03 IST" name="tearDownClass" finished-at="2026-02-07T21:12:03 IST" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

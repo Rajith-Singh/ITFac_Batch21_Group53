@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.runners.ApiTestRunner" time="8.34" tests="10" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.runners.ApiTestRunner" time="2.135" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="LK"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207204522895_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-07T20-45-22_769-jvmRun1 surefire-20260207204522895_1tmp surefire_0-20260207204522895_2tmp"/>
+    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207211200871_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-07T21-12-00_820-jvmRun1 surefire-20260207211200871_1tmp surefire_0-20260207211200871_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ApiTestRunner"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207204522895_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207211200871_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -47,6 +47,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/xk/cpvhm0_x78v4j7xkwszzys8h0000gn/T/"/>
     <property name="java.version" value="21.0.10"/>
+    <property name="cucumber.filter.tags" value="@TC_API_PLANTS_ADM_04"/>
     <property name="user.dir" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
@@ -60,212 +61,49 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;User can access paginated plants with default parameters&quot;, &quot;Plants API&quot;](1)" classname="com.example.runners.ApiTestRunner" time="3.3">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_USER_06
-Scenario: User can access paginated plants with default parameters # src/test/resources/features/api/plants.feature:9
-=== Starting API Test: User can access paginated plants with default parameters ===
-  Given user is authenticated                                      # com.example.api.stepDefinitions.AuthApiSteps.user_is_authenticated()
-  When user requests paged plants with default parameters          # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_with_default_parameters()
-  Then response status should be 200                               # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain content array                        # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_content_array()
-  And totalElements should be at least 25                          # com.example.api.stepDefinitions.PlantApiSteps.totalElements_should_be_at_least(int)
-  And totalPages should be greater than 0                          # com.example.api.stepDefinitions.PlantApiSteps.totalPages_should_be_greater_than(int)
-  And response should contain pageable                             # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_pageable()
-  And page number should be 0                                      # com.example.api.stepDefinitions.PlantApiSteps.page_number_should_be(int)
-  And page size should be greater than 0                           # com.example.api.stepDefinitions.PlantApiSteps.page_size_should_be_greater_than(int)
-=== Finished API Test: User can access paginated plants with default parameters ===
-
-]]></system-out>
-    <system-err><![CDATA[Feb 07, 2026 8:45:24 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
-WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;User can control pagination parameters&quot;, &quot;Plants API&quot;](2)" classname="com.example.runners.ApiTestRunner" time="0.421">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_USER_07
-Scenario: User can control pagination parameters          # src/test/resources/features/api/plants.feature:21
-=== Starting API Test: User can control pagination parameters ===
-  Given user is authenticated                             # com.example.api.stepDefinitions.AuthApiSteps.user_is_authenticated()
-  When user requests paged plants with page 1 and size 10 # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_with_page_and_size(int,int)
-  Then response status should be 200                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain content array               # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_content_array()
-  And content size should be at most 10                   # com.example.api.stepDefinitions.PlantApiSteps.content_size_should_be_at_most(int)
-  And page number should be 1                             # com.example.api.stepDefinitions.PlantApiSteps.page_number_should_be(int)
-  And page size should be 10                              # com.example.api.stepDefinitions.PlantApiSteps.page_size_should_be(int)
-  When user requests paged plants with page 2 and size 5  # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_with_page_and_size(int,int)
-  Then response status should be 200                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And content size should be at most 5                    # com.example.api.stepDefinitions.PlantApiSteps.content_size_should_be_at_most(int)
-  And page number should be 2                             # com.example.api.stepDefinitions.PlantApiSteps.page_number_should_be(int)
-  And page size should be 5                               # com.example.api.stepDefinitions.PlantApiSteps.page_size_should_be(int)
-  And totalElements should match between both requests    # com.example.api.stepDefinitions.PlantApiSteps.totalElements_should_match_between_both_requests()
-=== Finished API Test: User can control pagination parameters ===
-
-]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;User can sort plants by name via API&quot;, &quot;Plants API&quot;](3)" classname="com.example.runners.ApiTestRunner" time="0.321">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_USER_08
-Scenario: User can sort plants by name via API                       # src/test/resources/features/api/plants.feature:38
-=== Starting API Test: User can sort plants by name via API ===
-  Given user is authenticated                                        # com.example.api.stepDefinitions.AuthApiSteps.user_is_authenticated()
-  When user requests paged plants sorted by name ascending           # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_sorted_by_name_ascending()
-  Then response status should be 200                                 # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain content array                          # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_content_array()
-  When user requests paged plants sorted by name descending          # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_sorted_by_name_descending()
-  Then response status should be 200                                 # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain content array                          # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_content_array()
-  And first item in ascending should differ from first in descending # com.example.api.stepDefinitions.PlantApiSteps.first_item_ascending_differ_from_descending()
-=== Finished API Test: User can sort plants by name via API ===
-
-]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;User can sort plants by price via API&quot;, &quot;Plants API&quot;](4)" classname="com.example.runners.ApiTestRunner" time="0.35">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_USER_09
-Scenario: User can sort plants by price via API                               # src/test/resources/features/api/plants.feature:50
-=== Starting API Test: User can sort plants by price via API ===
-  Given user is authenticated                                                 # com.example.api.stepDefinitions.AuthApiSteps.user_is_authenticated()
-  When user requests paged plants sorted by price ascending                   # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_sorted_by_price_ascending()
-  Then response status should be 200                                          # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And content should be ordered by price ascending                            # com.example.api.stepDefinitions.PlantApiSteps.content_should_be_ordered_by_price_ascending()
-  When user requests paged plants sorted by price descending                  # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_sorted_by_price_descending()
-  Then response status should be 200                                          # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And content should be ordered by price descending                           # com.example.api.stepDefinitions.PlantApiSteps.content_should_be_ordered_by_price_descending()
-  And first ascending price should be less or equal to first descending price # com.example.api.stepDefinitions.PlantApiSteps.first_ascending_price_le_first_descending()
-=== Finished API Test: User can sort plants by price via API ===
-
-]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;User can sort plants by stock quantity via API&quot;, &quot;Plants API&quot;](5)" classname="com.example.runners.ApiTestRunner" time="0.301">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_USER_10
-Scenario: User can sort plants by stock quantity via API                            # src/test/resources/features/api/plants.feature:62
-=== Starting API Test: User can sort plants by stock quantity via API ===
-  Given user is authenticated                                                       # com.example.api.stepDefinitions.AuthApiSteps.user_is_authenticated()
-  When user requests paged plants sorted by quantity ascending                      # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_sorted_by_quantity_ascending()
-  Then response status should be 200                                                # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And content should be ordered by quantity ascending                               # com.example.api.stepDefinitions.PlantApiSteps.content_should_be_ordered_by_quantity_ascending()
-  When user requests paged plants sorted by quantity descending                     # com.example.api.stepDefinitions.PlantApiSteps.user_requests_paged_plants_sorted_by_quantity_descending()
-  Then response status should be 200                                                # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And content should be ordered by quantity descending                              # com.example.api.stepDefinitions.PlantApiSteps.content_should_be_ordered_by_quantity_descending()
-  And first ascending quantity should be less or equal to first descending quantity # com.example.api.stepDefinitions.PlantApiSteps.first_ascending_quantity_le_first_descending()
-=== Finished API Test: User can sort plants by stock quantity via API ===
-
-]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;User can search plants by name via API&quot;, &quot;Plants API&quot;](6)" classname="com.example.runners.ApiTestRunner" time="0.301">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_USER_11
-Scenario: User can search plants by name via API     # src/test/resources/features/api/plants.feature:74
-=== Starting API Test: User can search plants by name via API ===
-  Given user is authenticated                        # com.example.api.stepDefinitions.AuthApiSteps.user_is_authenticated()
-  When user searches plants by name "monstera"       # com.example.api.stepDefinitions.PlantApiSteps.user_searches_plants_by_name(java.lang.String)
-  Then response status should be 200                 # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain content array          # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_content_array()
-  And all content names should contain "monstera"    # com.example.api.stepDefinitions.PlantApiSteps.all_content_names_should_contain(java.lang.String)
-  When user searches plants by name "xyznonexistent" # com.example.api.stepDefinitions.PlantApiSteps.user_searches_plants_by_name(java.lang.String)
-  Then response status should be 200                 # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And totalElements should be 0                      # com.example.api.stepDefinitions.PlantApiSteps.totalElements_should_be(int)
-=== Finished API Test: User can search plants by name via API ===
-
-]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;User can filter plants by category via API&quot;, &quot;Plants API&quot;](7)" classname="com.example.runners.ApiTestRunner" time="0.379">
-    <failure message="Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+  <testcase name="runScenario[&quot;Verify price validation during plant creation&quot;, &quot;Plants API&quot;](1)" classname="com.example.runners.ApiTestRunner" time="1.486">
+    <failure message="Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;Price Test Min&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-07T21:12:03.174417&quot;} expected [201] but found [400]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Price Test Min' already exists in this category","timestamp":"2026-02-07T21:12:03.174417"} expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:275)
-	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:130)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
 ]]></failure>
     <system-out><![CDATA[
-@api @TC_API_PLANTS_USER_12
-Scenario: User can filter plants by category via API    # src/test/resources/features/api/plants.feature:86
-=== Starting API Test: User can filter plants by category via API ===
-  Given user is authenticated                           # com.example.api.stepDefinitions.AuthApiSteps.user_is_authenticated()
-  When user filters plants by category "Indoor"         # com.example.api.stepDefinitions.PlantApiSteps.user_filters_plants_by_category(java.lang.String)
-  Then response status should be 200                    # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain content and totalElements # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_content_and_totalElements()
-  When user filters plants by category "Outdoor"        # com.example.api.stepDefinitions.PlantApiSteps.user_filters_plants_by_category(java.lang.String)
-  Then response status should be 200                    # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain content and totalElements # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_content_and_totalElements()
-  And Indoor filter should return only Indoor plants    # com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants()
-      java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+@api @TC_API_PLANTS_ADM_04
+Scenario: Verify price validation during plant creation                                                     # src/test/resources/features/api/plants.feature:107
+=== Starting API Test: Verify price validation during plant creation ===
+  Given admin is authenticated                                                                              # com.example.api.stepDefinitions.AuthApiSteps.admin_is_authenticated()
+  When admin sends create plant request with name "Price Test Zero" price "0" quantity 25 category 8        # com.example.api.stepDefinitions.PlantApiSteps.admin_sends_create_plant_request_with_exact_price(java.lang.String,java.lang.String,int,int)
+  Then response status should be 400                                                                        # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+  And error message should contain "Price must be greater than 0"                                           # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
+  When admin sends create plant request with name "Price Test Neg" price "-10.50" quantity 25 category 8    # com.example.api.stepDefinitions.PlantApiSteps.admin_sends_create_plant_request_with_exact_price(java.lang.String,java.lang.String,int,int)
+  Then response status should be 400                                                                        # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+  And error message should contain "Price must be greater than 0"                                           # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
+  When admin sends create plant request with name "Price Test Min" price "0.01" quantity 25 category 8      # com.example.api.stepDefinitions.PlantApiSteps.admin_sends_create_plant_request_with_exact_price(java.lang.String,java.lang.String,int,int)
+  Then response status should be 201                                                                        # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+      java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Price Test Min' already exists in this category","timestamp":"2026-02-07T21:12:03.174417"} expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:275)
-	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:130)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
 
-  And Outdoor filter should return only Outdoor plants  # com.example.api.stepDefinitions.PlantApiSteps.outdoor_filter_should_return_only_outdoor_plants()
-=== Finished API Test: User can filter plants by category via API ===
-
-]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;Admin can create a plant with valid data under a sub-category&quot;, &quot;Plants API&quot;](8)" classname="com.example.runners.ApiTestRunner" time="0.385">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_ADM_01
-Scenario: Admin can create a plant with valid data under a sub-category               # src/test/resources/features/api/plants.feature:99
-=== Starting API Test: Admin can create a plant with valid data under a sub-category ===
-  Given admin is authenticated                                                        # com.example.api.stepDefinitions.AuthApiSteps.admin_is_authenticated()
-  When admin creates a plant with name "ABC Plant" price 150.0 quantity 25 category 8 # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant(java.lang.String,double,int,int)
-  Then create response status should be 201 or backend unavailable                    # com.example.api.stepDefinitions.PlantApiSteps.create_response_status_201_or_backend_unavailable()
-  And if created response should have id name price quantity category id 8            # com.example.api.stepDefinitions.PlantApiSteps.if_created_response_should_have_structure(int)
-=== Finished API Test: Admin can create a plant with valid data under a sub-category ===
+  When admin sends create plant request with name "Price Test Large" price "9999.99" quantity 25 category 8 # com.example.api.stepDefinitions.PlantApiSteps.admin_sends_create_plant_request_with_exact_price(java.lang.String,java.lang.String,int,int)
+  Then response status should be 201                                                                        # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+  When admin sends create plant request with name "Price Test 3dec" price "0.001" quantity 25 category 8    # com.example.api.stepDefinitions.PlantApiSteps.admin_sends_create_plant_request_with_exact_price(java.lang.String,java.lang.String,int,int)
+  Then response status for price decimal edge case should be 400 or 201                                     # com.example.api.stepDefinitions.PlantApiSteps.response_status_for_price_decimal_edge_case_should_be_400_or_201()
+=== Finished API Test: Verify price validation during plant creation ===
 
 ]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;API validates all required fields for plant creation&quot;, &quot;Plants API&quot;](9)" classname="com.example.runners.ApiTestRunner" time="0.479">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_ADM_02
-Scenario: API validates all required fields for plant creation                            # src/test/resources/features/api/plants.feature:107
-=== Starting API Test: API validates all required fields for plant creation ===
-  Given admin is authenticated                                                            # com.example.api.stepDefinitions.AuthApiSteps.admin_is_authenticated()
-  When admin creates a plant without name field price 100.0 quantity 10 category 5        # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_without_name_field(double,int,int)
-  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And error message should contain "Plant name is required"                               # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
-  When admin creates a plant without price field name "Test Plant" quantity 10 category 5 # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_without_price_field(java.lang.String,int,int)
-  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And error message should contain "Price is required"                                    # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
-  When admin creates a plant without stock field name "Test Plant" price 100.0 category 5 # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_without_stock_field(java.lang.String,double,int)
-  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And error message should contain "Quantity is required"                                 # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
-  When admin creates a plant with empty name price 100.0 quantity 10 category 5           # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_with_empty_name(double,int,int)
-  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And error message should contain "Plant name is required"                               # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
-  And no plants should be created in database                                             # com.example.api.stepDefinitions.PlantApiSteps.no_plants_should_be_created_in_database()
-=== Finished API Test: API validates all required fields for plant creation ===
-
-]]></system-out>
-  </testcase>
-  <testcase name="runScenario[&quot;API validates plant name length (3-25 characters)&quot;, &quot;Plants API&quot;](10)" classname="com.example.runners.ApiTestRunner" time="0.557">
-    <system-out><![CDATA[
-@api @TC_API_PLANTS_ADM_03
-Scenario: API validates plant name length (3-25 characters)                                                           # src/test/resources/features/api/plants.feature:125
-=== Starting API Test: API validates plant name length (3-25 characters) ===
-  Given admin is authenticated                                                                                        # com.example.api.stepDefinitions.AuthApiSteps.admin_is_authenticated()
-  When admin creates a plant with name "AB" price 100.0 quantity 10 category 8                                        # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant(java.lang.String,double,int,int)
-  Then response status should be 400                                                                                  # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And error message should contain "Plant name must be between 3 and 25 characters"                                   # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
-  When admin creates a plant with name "ValidTestName" price 100.0 quantity 10 category 8                             # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant(java.lang.String,double,int,int)
-  Then response status should be 201                                                                                  # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain created plant with name "ValidTestName"                                                 # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_created_plant_with_name(java.lang.String)
-  When admin creates a plant with name "A very long plant name that exceeds limit" price 100.0 quantity 10 category 8 # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant(java.lang.String,double,int,int)
-  Then response status should be 400                                                                                  # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And error message should contain "Plant name must be between 3 and 25 characters"                                   # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
-  When admin creates a plant with name "ZZZ" price 100.0 quantity 10 category 8                                       # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant(java.lang.String,double,int,int)
-  Then response status should be 201                                                                                  # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain created plant with name "ZZZ"                                                           # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_created_plant_with_name(java.lang.String)
-  When admin creates a plant with name "Exactly25CharsHere" price 100.0 quantity 10 category 8                        # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant(java.lang.String,double,int,int)
-  Then response status should be 201                                                                                  # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
-  And response should contain created plant with name "Exactly25CharsHere"                                            # com.example.api.stepDefinitions.PlantApiSteps.response_should_contain_created_plant_with_name(java.lang.String)
-=== Finished API Test: API validates plant name length (3-25 characters) ===
-
-]]></system-out>
+    <system-err><![CDATA[Feb 07, 2026 9:12:01 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
+]]></system-err>
   </testcase>
 </testsuite>

@@ -152,4 +152,21 @@ public class PlantClient {
                 .when()
                 .post(BASE_URL + "/category/" + categoryId);
     }
+
+    /**
+     * Create plant with exact price value in request body (for validation tests).
+     * Use this when the exact payload matters (e.g. price=0, -10.5, 0.001).
+     */
+    public Response createPlantWithExactPrice(String token, String name, String priceInRequest, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"%s\", \"price\": %s, \"quantity\": %d}",
+            name.replace("\"", "\\\""), priceInRequest, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
 }
