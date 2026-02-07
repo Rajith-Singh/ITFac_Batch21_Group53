@@ -1,0 +1,7 @@
+com\example\runners\CucumberRunner.class
+com\example\hooks\Hooks.class
+com\example\utils\ConfigReader.class
+com\example\ui\stepDefinitions\categories\CategoryStepDefinitions.class
+com\example\ui\pages\login\LoginPage.class
+com\example\ui\pages\categories\AddCategoryPage.class
+com\example\ui\pages\categories\CategoryPage.class
