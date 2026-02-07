@@ -1,5 +1,7 @@
 package com.example.runners;
 
+import org.testng.annotations.DataProvider;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -11,6 +13,11 @@ import io.cucumber.testng.CucumberOptions;
         "pretty",
         "html:target/cucumber-reports/sales/cucumber.html",
         "json:target/cucumber-reports/sales/cucumber.json"
-}, monochrome = true, tags = "@Sales")
+}, monochrome = true)
 public class SalesTestRunner extends AbstractTestNGCucumberTests {
+            @Override
+    @DataProvider(parallel = false)  // This forces sequential execution
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }

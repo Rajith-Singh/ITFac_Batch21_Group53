@@ -7,9 +7,12 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/clients/PlantClient.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/categories/CategoryListPage.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/utils/DriverManager.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/categories/AddCategoryPage.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/request/LoginRequest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/ApiTestRunner.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/hooks/Hooks.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/stepDefinitions/CategoryApiStepDefinitions.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/login/Login_Page.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/tests/AuthApiTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/tests/PlantApiTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/TestRunner.java
@@ -30,6 +33,7 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/QuantityColumnDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/request/CategoryRequest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/categories/CategoryCRUDSteps.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/categories/CategoryStepDefinitions.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/sales/SellPlantSteps.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/stepDefinitions/PlantApiSteps.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/categories/AddEditCategoryPage.java
@@ -50,6 +54,8 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/SalesTableDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/tests/SalesApiTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/SalesListSortingTestRunner.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/stepDefinitions/PlantApiStepDefinitions.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/CucumberRunner.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/sales/SalesListSteps.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/SalesListDateSortingTestRunner.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/response/CategoryResponse.java
@@ -63,6 +69,7 @@
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/response/PlantResponse.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/hooks/ApiHooks.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/api/models/request/SaleRequest.java
+/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/pages/categories/CategoryPage.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/ui/stepDefinitions/categories/CategoryListSteps.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/debug/QuantityExtractionDebugTest.java
 /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/java/com/example/runners/EditPlantPageRestrictionTestRunner.java

@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
 public class SalesListDateSortingTestRunner extends AbstractTestNGCucumberTests {
 
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = false)  // This forces sequential execution
     public Object[][] scenarios() {
         return super.scenarios();
     }

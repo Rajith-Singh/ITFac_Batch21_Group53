@@ -18,6 +18,7 @@ com/example/api/models/response/SaleResponse.class
 com/example/api/stepDefinitions/PlantsUserApiStepDefinitions.class
 com/example/api/clients/SalesClient.class
 com/example/api/stepDefinitions/SalesAdminApiStepDefinitions.class
+com/example/api/stepDefinitions/PlantApiStepDefinitions.class
 com/example/ui/stepDefinitions/sales/SalesListSteps.class
 com/example/ui/pages/categories/AddEditCategoryPage.class
 com/example/utils/ElementLocatorVerifier.class
@@ -27,7 +28,9 @@ com/example/ui/pages/sales/SalesPage.class
 com/example/ui/stepDefinitions/categories/CategoryCRUDSteps.class
 com/example/ui/stepDefinitions/sales/UserSalesStepDefinitions.class
 com/example/api/models/response/PlantPaginatedResponse.class
+com/example/ui/stepDefinitions/categories/CategoryStepDefinitions.class
 com/example/ui/pages/sales/Sell_Plant_Page.class
+com/example/ui/pages/categories/AddCategoryPage.class
 com/example/ui/pages/sales/SalesListPage.class
 com/example/runners/EditPlantPageRestrictionTestRunner.class
 com/example/runners/AdminOnlyPageRestrictionTestRunner.class
@@ -40,6 +43,7 @@ com/example/ui/pages/login/LoginPage.class
 com/example/runners/ApiTestRunner.class
 com/example/hooks/Hooks.class
 com/example/utils/DriverManager.class
+com/example/ui/pages/login/Login_Page.class
 com/example/runners/TestRunner.class
 com/example/runners/PlantsApiTestRunner.class
 com/example/debug/SalesPageDebugTest.class
@@ -47,6 +51,7 @@ com/example/ui/stepDefinitions/plants/PlantListSteps.class
 com/example/debug/QuantityColumnDebugTest.class
 com/example/api/context/ApiTestContext.class
 com/example/debug/SalesTableDebugTest.class
+com/example/api/stepDefinitions/CategoryApiStepDefinitions.class
 com/example/api/models/response/LoginResponse.class
 com/example/ui/stepDefinitions/categories/CategoryListSteps.class
 com/example/api/clients/CategoryClient.class
@@ -54,6 +59,8 @@ com/example/api/models/request/SaleRequest.class
 com/example/runners/SalesListSortingTestRunner.class
 com/example/runners/SalesListSoldDateSortIndicatorTestRunner.class
 com/example/ui/pages/plants/PlantListPage.class
+com/example/runners/CucumberRunner.class
+com/example/ui/pages/categories/CategoryPage.class
 com/example/ui/stepDefinitions/sales/SalesStepDefinitions.class
 com/example/ui/stepDefinitions/plants/PlantCRUDSteps.class
 com/example/ui/stepDefinitions/login/LoginSteps.class
@@ -65,6 +72,7 @@ com/example/api/models/request/CategoryRequest.class
 com/example/api/models/response/CategoryResponse.class
 com/example/runners/SalesSortingTestRunner.class
 com/example/api/stepDefinitions/PlantApiSteps.class
+com/example/runners/SalesUiTestRunner.class
 com/example/api/stepDefinitions/CategoryApiSteps.class
 com/example/api/clients/AuthClient.class
 com/example/ui/pages/sales/UserSalesPage.class
