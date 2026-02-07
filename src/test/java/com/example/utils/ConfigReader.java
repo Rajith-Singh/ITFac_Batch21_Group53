@@ -12,6 +12,7 @@ public class ConfigReader {
     static {
         properties = new Properties();
         loadProperties();
+        resolveVariables();
     }
 
     private static void loadProperties() {
@@ -29,8 +30,31 @@ public class ConfigReader {
         }
     }
 
+    private static void resolveVariables() {
+        for (String key : properties.stringPropertyNames()) {
+            String value = properties.getProperty(key);
+            if (value != null && value.contains("${")) {
+                // Replace ${variable} with actual values
+                for (String varKey : properties.stringPropertyNames()) {
+                    String varPattern = "${" + varKey + "}";
+                    if (value.contains(varPattern)) {
+                        String varValue = properties.getProperty(varKey);
+                        if (varValue != null) {
+                            value = value.replace(varPattern, varValue);
+                        }
+                    }
+                }
+                properties.setProperty(key, value);
+            }
+        }
+    }
+
     public static String getProperty(String key) {
-        return properties.getProperty(key);
+        String value = properties.getProperty(key);
+        if (value == null) {
+            throw new RuntimeException("Property '" + key + "' not found in configuration files");
+        }
+        return value;
     }
 
     public static String getProperty(String key, String defaultValue) {

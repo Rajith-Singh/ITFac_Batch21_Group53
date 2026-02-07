@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Sales Sorting Test Suite" verbose="1">
+<suite name="Plant Sales Automation Suite" verbose="1">
+    
+    <!-- ============================== Rajith's Tests ============================== -->
     
     <!-- Run Sales Sorting Tests Only -->
     <test name="Sales Sorting Tests">
@@ -87,6 +89,40 @@
         <parameter name="cucumber.filter.tags" value="@api"/>
         <classes>
             <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- ============================== Thiruni's Tests ============================== -->
+
+    <!-- Run User Tests -->
+    <test name="A User Ui Tests">
+        <parameter name="cucumber.filter.tags" value="@ui and @user"/>
+        <classes>
+            <class name="com.example.runners.SalesUiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run User Api Tests -->
+    <test name="B User API Tests">
+        <parameter name="cucumber.filter.tags" value="@Plants"/>
+        <classes>
+            <class name="com.example.runners.PlantsApiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run Admin Api Tests -->
+    <test name="C Admin API Tests">
+        <parameter name="cucumber.filter.tags" value="@Sales and @API"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run Admin Tests -->
+    <test name="D Admin Ui Tests">
+        <parameter name="cucumber.filter.tags" value="@ui and @admin"/>
+        <classes>
+            <class name="com.example.runners.SalesTestRunner"/>
         </classes>
     </test>
 
