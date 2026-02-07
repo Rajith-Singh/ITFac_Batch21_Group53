@@ -1,0 +1,223 @@
+<html>
+<head>
+<title>TestNG:  C2 Admin API Tests - Specific TCs</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>C2 Admin API Tests - Specific TCs</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Feb 08 03:06:31 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>11 seconds (11939 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can delete sale via API", "Admin Sales API"</td>
+<td><div><pre>java.lang.AssertionError: Response status code should be 200 or 204 but was 404
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be_200_or_204(SalesAdminApiStepDefinitions.java:423)
+	at ✽.the response status code should be 200 or 204(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:87)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1393703171", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1393703171'><pre>java.lang.AssertionError: Response status code should be 200 or 204 but was 404
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be_200_or_204(SalesAdminApiStepDefinitions.java:423)
+	at ✽.the response status code should be 200 or 204(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:87)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify API validates quantity must be ≥ 1", "Admin Sales API"</td>
+<td><div><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1289915873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1289915873'><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify API validates quantity must be ≥ 1", "Admin Sales API"</td>
+<td><div><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div><a href='#' onClick='toggleBox("stack-trace759823949", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace759823949'><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify API prevents sale when quantity exceeds available stock", "Admin Sales API"</td>
+<td><div><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:42)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1933307203", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1933307203'><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:42)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify API validates quantity must be ≥ 1", "Admin Sales API"</td>
+<td><div><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1100927639", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1100927639'><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can create a sale via API with valid data", "Admin Sales API"</td>
+<td><div><pre>java.lang.AssertionError: Response status code should be 200 expected:&lt;200&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 200(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:21)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2048784518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2048784518'><pre>java.lang.AssertionError: Response status code should be 200 expected:&lt;200&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 200(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:21)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify API validates quantity must be ≥ 1", "Admin Sales API"</td>
+<td><div><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1444454631", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1444454631'><pre>java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can retrieve specific sale by ID", "Admin Sales API"</td>
+<td></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can retrieve specific sale by ID", "Admin Sales API"</td>
+<td></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@179ece50</td></tr>
+</table><p>
+</body>
+</html>

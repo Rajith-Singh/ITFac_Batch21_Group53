@@ -1,0 +1,415 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 58, Failures: 28, Errors: 0, Skipped: 0, Time elapsed: 827.2 s <<< FAILURE! -- in TestSuite
+com.example.runners.UiTestRunner.runScenario["TC_UI_SAL_12 - Verify sorting by Quantity column", "Sales List Quantity Sorting Functionality"](1) -- Time elapsed: 9.267 s <<< FAILURE!
+java.lang.AssertionError: Expected quantity '5' should be found in the table expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialQuantitiesAreDisplayed(SalesListSteps.java:351)
+	at ✽.verify initial quantities are displayed(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_quantity_sorting.feature:18)
+
+com.example.runners.UiTestRunner.runScenario["TC_UI_SAL_11 - Verify sorting by Plant Name column", "Sales List Sorting Functionality"](2) -- Time elapsed: 5.863 s <<< FAILURE!
+java.lang.AssertionError: Expected plant 'Aloe Vera' should be found in the table expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialPlantNamesAreDisplayed(SalesListSteps.java:157)
+	at ✽.verify initial plant names are displayed(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sorting.feature:18)
+
+com.example.runners.SalesListSoldDateSortIndicatorTestRunner.runScenario["TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator", "Sales List Sold Date Sort Indicator"](1) -- Time elapsed: 29.62 s <<< FAILURE!
+java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+
+com.example.runners.ApiTestRunner.runScenario["Verify Admin can successfully create a new Main Category", "Admin Category Management API"](1) -- Time elapsed: 1.270 s <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <400>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:9)
+
+com.example.runners.ApiTestRunner.runScenario["Verify successful creation of a Sub-Category", "Admin Category Management API"](2) -- Time elapsed: 0.300 s <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:20)
+
+com.example.runners.ApiTestRunner.runScenario["Verify successful retrieval of a specific category with a valid ID", "Category API Management"](6) -- Time elapsed: 0.222 s <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path $ doesn't match.
+Expected: map containing ["subCategories"->ANYTHING]
+  Actual: <{id=10, name=Outdoor, parentId=7}>
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_has_field(CategoryApiStepDefinitions.java:76)
+	at ✽.the response body should contain the field "subCategories"(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:11)
+
+com.example.runners.ApiTestRunner.runScenario["Verify validation for Invalid Data Type in ID parameter", "Category API Management"](8) -- Time elapsed: 0.152 s <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <500>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:31)
+
+com.example.runners.ApiTestRunner.runScenario["Verify successful retrieval of a Sub-category and its Parent linkage", "Category API Management"](10) -- Time elapsed: 0.174 s <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path name doesn't match.
+Expected: Flower_Ind
+  Actual: Outdoor
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_field_string_value(CategoryApiStepDefinitions.java:81)
+	at ✽.the response body should contain the field "name" with string value "Flower_Ind"(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:55)
+
+com.example.runners.ApiTestRunner.runScenario["User can filter plants by category via API", "Plants API"](17) -- Time elapsed: 0.206 s <<< FAILURE!
+java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:302)
+	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+
+com.example.runners.ApiTestRunner.runScenario["Verify price validation during plant creation", "Plants API"](19) -- Time elapsed: 0.209 s <<< FAILURE!
+java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Price Test Min' already exists in this category","timestamp":"2026-02-08T03:04:49.725036"} expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
+
+com.example.runners.ApiTestRunner.runScenario["Verify duplicate plant name prevention within same category", "Plants API"](20) -- Time elapsed: 0.185 s <<< FAILURE!
+java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'New Unique Plant' already exists in this category","timestamp":"2026-02-08T03:04:49.913964"} expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:131)
+
+com.example.runners.ApiTestRunner.runScenario["API validates plant name length (3-25 characters)", "Plants API"](22) -- Time elapsed: 0.162 s <<< FAILURE!
+java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'ValidTestName' already exists in this category","timestamp":"2026-02-08T03:04:50.294515"} expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:160)
+
+com.example.runners.UiTestRunner.runScenario["Verify user can navigate through paginated sales records", "User Sales View"](1) -- Time elapsed: 87.87 s <<< FAILURE!
+java.lang.AssertionError: Records should be displayed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_next_set_of_records_should_be_loaded(UserSalesStepDefinitions.java:253)
+	at ✽.the next set of records should be loaded(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:20)
+
+com.example.runners.UiTestRunner.runScenario["Verify "Sell Plant" button is hidden from Regular User", "User Sales View"](2) -- Time elapsed: 1.525 s <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+
+com.example.runners.UiTestRunner.runScenario["Verify delete icon not visible to User", "User Sales View"](3) -- Time elapsed: 1.177 s <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+
+com.example.runners.UiTestRunner.runScenario["Verify User can sort sales by Plant Name", "User Sales View"](4) -- Time elapsed: 1.442 s <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+
+com.example.runners.UiTestRunner.runScenario["Verify User can sort sales by Quantity", "User Sales View"](5) -- Time elapsed: 1.229 s <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+
+com.example.runners.PlantsApiTestRunner.runScenario["Verify User can filter plants by category", "User Plants API"](4) -- Time elapsed: 1.468 s <<< FAILURE!
+java.lang.AssertionError: Response should contain exactly 3 plants, but found 23 expected:<3> but was:<23>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.PlantsUserApiStepDefinitions.the_response_should_contain_exactly_plants(PlantsUserApiStepDefinitions.java:590)
+	at ✽.the response should contain exactly 3 plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants/PlantsUser.feature:45)
+
+com.example.runners.PlantsApiTestRunner.runScenario["Verify API handles non-existent category IDs", "User Plants API"](5) -- Time elapsed: 1.412 s <<< FAILURE!
+java.lang.AssertionError: Plants response status code should be 404 expected:<404> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.PlantsUserApiStepDefinitions.the_plants_response_status_code_should_be(PlantsUserApiStepDefinitions.java:309)
+	at ✽.the plants response status code should be 404(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants/PlantsUser.feature:54)
+
+com.example.runners.ApiTestRunner.runScenario["Verify Admin can create a sale via API with valid data", "Admin Sales API"](1) -- Time elapsed: 1.321 s <<< FAILURE!
+java.lang.AssertionError: Response status code should be 200 expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 200(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:21)
+
+com.example.runners.ApiTestRunner.runScenario["Verify API prevents sale when quantity exceeds available stock", "Admin Sales API"](2) -- Time elapsed: 1.470 s <<< FAILURE!
+java.lang.AssertionError: Response status code should be 400 expected:<400> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:42)
+
+com.example.runners.ApiTestRunner.runScenario["Verify API validates quantity must be ≥ 1", "Admin Sales API"](3) -- Time elapsed: 1.300 s <<< FAILURE!
+java.lang.AssertionError: Response status code should be 400 expected:<400> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+com.example.runners.ApiTestRunner.runScenario["Verify API validates quantity must be ≥ 1", "Admin Sales API"](4) -- Time elapsed: 1.267 s <<< FAILURE!
+java.lang.AssertionError: Response status code should be 400 expected:<400> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+com.example.runners.ApiTestRunner.runScenario["Verify API validates quantity must be ≥ 1", "Admin Sales API"](5) -- Time elapsed: 1.298 s <<< FAILURE!
+java.lang.AssertionError: Response status code should be 400 expected:<400> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+com.example.runners.ApiTestRunner.runScenario["Verify API validates quantity must be ≥ 1", "Admin Sales API"](6) -- Time elapsed: 1.325 s <<< FAILURE!
+java.lang.AssertionError: Response status code should be 400 expected:<400> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+com.example.runners.ApiTestRunner.runScenario["Verify Admin can delete sale via API", "Admin Sales API"](9) -- Time elapsed: 1.278 s <<< FAILURE!
+java.lang.AssertionError: Response status code should be 200 or 204 but was 404
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be_200_or_204(SalesAdminApiStepDefinitions.java:423)
+	at ✽.the response status code should be 200 or 204(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:87)
+
+com.example.runners.SalesTestRunner.runScenario["Verify Admin can sell a plant with sufficient stock quantity", "Sales Management"](1) -- Time elapsed: 12.01 s <<< FAILURE!
+java.lang.AssertionError: 
+Success message 'Sale created successfully' was not displayed on any page.
+Current URL: http://localhost:8081/ui/sales
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.example.ui.stepDefinitions.sales.SalesStepDefinitions.the_success_message_should_be_displayed(SalesStepDefinitions.java:292)
+	at ✽.the success message "Sale created successfully" should be displayed(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-admin.feature:18)
+
+com.example.runners.SalesTestRunner.runScenario["Verify error occurs when quantity exceeds available stock", "Sales Management"](2) -- Time elapsed: 3.893 s <<< FAILURE!
+java.lang.AssertionError: 
+Expected error message 'Peace Lily has only 5 items available in stock' was not found.
+Current URL: http://localhost:8081/ui/sales
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.example.ui.stepDefinitions.sales.SalesStepDefinitions.the_system_should_show_an_error_message(SalesStepDefinitions.java:382)
+	at ✽.the system should show an error message "Peace Lily has only 5 items available in stock"(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-admin.feature:32)
+

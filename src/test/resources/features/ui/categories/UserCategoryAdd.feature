@@ -76,13 +76,13 @@ Feature: Category Management (Standard User)
     Given the user opens the Category Management page
     
     # 1. Check ID Sort (Numeric)
-    When the user clicks the "ID" column header
+    When the user clicks the "ID" column header on the category list
     Then the category list should be sorted by "ID" in ascending order
     
     # 2. Check Name Sort (Alphabetical)
-    When the user clicks the "Category Name" column header
+    When the user clicks the "Category Name" column header on the category list
     Then the category list should be sorted by "Category Name" in ascending order
     
     # 3. Check Parent Sort (Alphabetical)
-    When the user clicks the "Parent Category" column header
+    When the user clicks the "Parent Category" column header on the category list
     Then the category list should be sorted by "Parent Category" in ascending order

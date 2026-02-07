@@ -1,0 +1,2320 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 28 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Plant Sales Automation Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Plant_Sales_Automation_Suite" class="navigator-link ">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Plant_Sales_Automation_Suite" class="navigator-link ">
+                    <span class="test-stats">15 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Plant_Sales_Automation_Suite" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Plant_Sales_Automation_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Plant_Sales_Automation_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Plant_Sales_Automation_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Plant_Sales_Automation_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">58 methods, 28 failed,   30 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" class="hide-methods failed suite-Plant_Sales_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Plant_Sales_Automation_Suite -->
+                      <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" class="show-methods failed suite-Plant_Sales_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Plant_Sales_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Plant_Sales_Automation_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SAL_11 - Verify sorting by Plant Name column&quot;, &quot;Sales List Sorting Functionality&quot;)">runScenario("TC_UI_SAL_11 - Verify sorting by Plant Name column", "Sales List Sorting Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SAL_12 - Verify sorting by Quantity column&quot;, &quot;Sales List Quantity Sorting Functionality&quot;)">runScenario("TC_UI_SAL_12 - Verify sorting by Quantity column", "Sales List Quantity Sorting Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesListSoldDateSortIndicatorTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator&quot;, &quot;Sales List Sold Da...)">runScenario("TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator", "Sales List Sold Da...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify successful retrieval of a specific category with a valid ID&quot;, &quot;Category API Management&quot;)">runScenario("Verify successful retrieval of a specific category with a valid ID", "Category API Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify duplicate plant name prevention within same category&quot;, &quot;Plants API&quot;)">runScenario("Verify duplicate plant name prevention within same category", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify validation for Invalid Data Type in ID parameter&quot;, &quot;Category API Management&quot;)">runScenario("Verify validation for Invalid Data Type in ID parameter", "Category API Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API validates plant name length (3-25 characters)&quot;, &quot;Plants API&quot;)">runScenario("API validates plant name length (3-25 characters)", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Admin can successfully create a new Main Category&quot;, &quot;Admin Category Management API&quot;)">runScenario("Verify Admin can successfully create a new Main Category", "Admin Category Management API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify price validation during plant creation&quot;, &quot;Plants API&quot;)">runScenario("Verify price validation during plant creation", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify successful creation of a Sub-Category&quot;, &quot;Admin Category Management API&quot;)">runScenario("Verify successful creation of a Sub-Category", "Admin Category Management API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can filter plants by category via API&quot;, &quot;Plants API&quot;)">runScenario("User can filter plants by category via API", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify successful retrieval of a Sub-category and its Parent linkage&quot;, &quot;Category API Management&quot;)">runScenario("Verify successful retrieval of a Sub-category and its Parent linkage", "Category API Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify User can sort sales by Plant Name&quot;, &quot;User Sales View&quot;)">runScenario("Verify User can sort sales by Plant Name", "User Sales View")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify delete icon not visible to User&quot;, &quot;User Sales View&quot;)">runScenario("Verify delete icon not visible to User", "User Sales View")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify user can navigate through paginated sales records&quot;, &quot;User Sales View&quot;)">runScenario("Verify user can navigate through paginated sales records", "User Sales View")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify &quot;Sell Plant&quot; button is hidden from Regular User&quot;, &quot;User Sales View&quot;)">runScenario("Verify "Sell Plant" button is hidden from Regular User", "User Sales View")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify User can sort sales by Quantity&quot;, &quot;User Sales View&quot;)">runScenario("Verify User can sort sales by Quantity", "User Sales View")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.PlantsApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify API handles non-existent category IDs&quot;, &quot;User Plants API&quot;)">runScenario("Verify API handles non-existent category IDs", "User Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.PlantsApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify User can filter plants by category&quot;, &quot;User Plants API&quot;)">runScenario("Verify User can filter plants by category", "User Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Admin can delete sale via API&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify Admin can delete sale via API", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify API prevents sale when quantity exceeds available stock&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify API prevents sale when quantity exceeds available stock", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Admin can create a sale via API with valid data&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify Admin can create a sale via API with valid data", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify error occurs when quantity exceeds available stock&quot;, &quot;Sales Management&quot;)">runScenario("Verify error occurs when quantity exceeds available stock", "Sales Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Admin can sell a plant with sufficient stock quantity&quot;, &quot;Sales Management&quot;)">runScenario("Verify Admin can sell a plant with sufficient stock quantity", "Sales Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Plant_Sales_Automation_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" class="hide-methods passed suite-Plant_Sales_Automation_Suite"> (hide)</a> <!-- hide-methods passed suite-Plant_Sales_Automation_Suite -->
+                      <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" class="show-methods passed suite-Plant_Sales_Automation_Suite"> (show)</a> <!-- show-methods passed suite-Plant_Sales_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Plant_Sales_Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SAL_13 - Verify sorting by Total Price column&quot;, &quot;Sales List Total Price Sorting Functionality...)">runScenario("TC_UI_SAL_13 - Verify sorting by Total Price column", "Sales List Total Price Sorting Functionality...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SAL_14 - Verify &quot;Sell Plant&quot; button navigation&quot;, &quot;Sales Navigation Functionality&quot;)">runScenario("TC_UI_SAL_14 - Verify "Sell Plant" button navigation", "Sales Navigation Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SAL_15 - Verify error when Plant not selected&quot;, &quot;Sales Navigation Functionality&quot;)">runScenario("TC_UI_SAL_15 - Verify error when Plant not selected", "Sales Navigation Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)&quot;, &quot;Sales Navigation F...)">runScenario("TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)", "Sales Navigation F...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.UiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SAL_17 - Verify form retains data after validation error&quot;, &quot;Sales Navigation Functionality&quot;)">runScenario("TC_UI_SAL_17 - Verify form retains data after validation error", "Sales Navigation Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesListDateSortingTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order&quot;, &quot;Sales List Default Date S...)">runScenario("TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order", "Sales List Default Date S...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesListTotalPriceSortingUserTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_SALES_USER_08 - Verify User can sort sales by Total Price&quot;, &quot;Sales List Total Price Sorting f...)">runScenario("TC_UI_SALES_USER_08 - Verify User can sort sales by Total Price", "Sales List Total Price Sorting f...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.AdminOnlyPageRestrictionTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_PLANTS_USER_10 - Test Admin-only page restriction&quot;, &quot;Admin-only Page Restriction for Regular ...)">runScenario("TC_UI_PLANTS_USER_10 - Test Admin-only page restriction", "Admin-only Page Restriction for Regular ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.EditPlantPageRestrictionTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page&quot;, &quot;Edit Plant Page Restriction for...)">runScenario("TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page", "Edit Plant Page Restriction for...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Unauthorized Access protection for the endpoint&quot;, &quot;Category API Management&quot;)">runScenario("Verify Unauthorized Access protection for the endpoint", "Category API Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify validation for Category Name Length (Min 3 chars)&quot;, &quot;Admin Category Management API&quot;)">runScenario("Verify validation for Category Name Length (Min 3 chars)", "Admin Category Management API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can access paginated plants with default parameters&quot;, &quot;Plants API&quot;)">runScenario("User can access paginated plants with default parameters", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can sort plants by price via API&quot;, &quot;Plants API&quot;)">runScenario("User can sort plants by price via API", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify system behavior when searching for a Non-Existent Category ID&quot;, &quot;Category API Management&quot;)">runScenario("Verify system behavior when searching for a Non-Existent Category ID", "Category API Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can sort plants by name via API&quot;, &quot;Plants API&quot;)">runScenario("User can sort plants by name via API", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Admin can create a plant with valid data under a sub-category&quot;, &quot;Plants API&quot;)">runScenario("Admin can create a plant with valid data under a sub-category", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Role-Based Access Control (User Restriction)&quot;, &quot;Admin Category Management API&quot;)">runScenario("Verify Role-Based Access Control (User Restriction)", "Admin Category Management API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API validates all required fields for plant creation&quot;, &quot;Plants API&quot;)">runScenario("API validates all required fields for plant creation", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Unique Name Constraint (Prevent Duplicate Categories)&quot;, &quot;Admin Category Management API&quot;)">runScenario("Verify Unique Name Constraint (Prevent Duplicate Categories)", "Admin Category Management API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can control pagination parameters&quot;, &quot;Plants API&quot;)">runScenario("User can control pagination parameters", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can sort plants by stock quantity via API&quot;, &quot;Plants API&quot;)">runScenario("User can sort plants by stock quantity via API", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User can search plants by name via API&quot;, &quot;Plants API&quot;)">runScenario("User can search plants by name via API", "Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.PlantsApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify User can retrieve specific plant by ID&quot;, &quot;User Plants API&quot;)">runScenario("Verify User can retrieve specific plant by ID", "User Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.PlantsApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify User can retrieve all plants via API&quot;, &quot;User Plants API&quot;)">runScenario("Verify User can retrieve all plants via API", "User Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.PlantsApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify API handles non-existent plant IDs for User&quot;, &quot;User Plants API&quot;)">runScenario("Verify API handles non-existent plant IDs for User", "User Plants API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Admin can retrieve specific sale by ID&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify Admin can retrieve specific sale by ID", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.ApiTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Admin can retrieve specific sale by ID&quot;, &quot;Admin Sales API&quot;)">runScenario("Verify Admin can retrieve specific sale by ID", "Admin Sales API")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify sales data defaults to newest-first order&quot;, &quot;Sales Management&quot;)">runScenario("Verify sales data defaults to newest-first order", "Sales Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Admin can delete sale&quot;, &quot;Sales Management&quot;)">runScenario("Verify Admin can delete sale", "Sales Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Plant_Sales_Automation_Suite" title="com.example.runners.SalesTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify empty state message when no sales exist&quot;, &quot;Sales Management&quot;)">runScenario("Verify empty state message when no sales exist", "Sales Management")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Plant_Sales_Automation_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Plant_Sales_Automation_Suite" class="panel Plant_Sales_Automation_Suite">
+          <div class="suite-Plant_Sales_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.example.runners.SalesTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify error occurs when quantity exceeds available stock&quot;, &quot;Sales Management&quot;)">
+                  </a> <!-- runScenario("Verify error occurs when quantity exceeds available stock", "Sales Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify error occurs when quantity exceeds available stock","Sales Management")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected error message &apos;Peace Lily has only 5 items available in stock&apos; was not found.
+Current URL: http://localhost:8081/ui/sales
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.example.ui.stepDefinitions.sales.SalesStepDefinitions.the_system_should_show_an_error_message(SalesStepDefinitions.java:382)
+	at ✽.the system should show an error message &quot;Peace Lily has only 5 items available in stock&quot;(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-admin.feature:32)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Admin can sell a plant with sufficient stock quantity&quot;, &quot;Sales Management&quot;)">
+                  </a> <!-- runScenario("Verify Admin can sell a plant with sufficient stock quantity", "Sales Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Admin can sell a plant with sufficient stock quantity","Sales Management")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Success message &apos;Sale created successfully&apos; was not displayed on any page.
+Current URL: http://localhost:8081/ui/sales
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.example.ui.stepDefinitions.sales.SalesStepDefinitions.the_success_message_should_be_displayed(SalesStepDefinitions.java:292)
+	at ✽.the success message &quot;Sale created successfully&quot; should be displayed(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-admin.feature:18)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-failed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.example.runners.UiTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SAL_11 - Verify sorting by Plant Name column&quot;, &quot;Sales List Sorting Functionality&quot;)">
+                  </a> <!-- runScenario("TC_UI_SAL_11 - Verify sorting by Plant Name column", "Sales List Sorting Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SAL_11 - Verify sorting by Plant Name column","Sales List Sorting Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected plant &apos;Aloe Vera&apos; should be found in the table expected [true] but found [false]
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialPlantNamesAreDisplayed(SalesListSteps.java:157)
+	at ✽.verify initial plant names are displayed(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sorting.feature:18)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SAL_12 - Verify sorting by Quantity column&quot;, &quot;Sales List Quantity Sorting Functionality&quot;)">
+                  </a> <!-- runScenario("TC_UI_SAL_12 - Verify sorting by Quantity column", "Sales List Quantity Sorting Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SAL_12 - Verify sorting by Quantity column","Sales List Quantity Sorting Functionality")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected quantity &apos;5&apos; should be found in the table expected [true] but found [false]
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.verifyInitialQuantitiesAreDisplayed(SalesListSteps.java:351)
+	at ✽.verify initial quantities are displayed(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_quantity_sorting.feature:18)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify User can sort sales by Plant Name&quot;, &quot;User Sales View&quot;)">
+                  </a> <!-- runScenario("Verify User can sort sales by Plant Name", "User Sales View") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify User can sort sales by Plant Name","User Sales View")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.2.1&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify delete icon not visible to User&quot;, &quot;User Sales View&quot;)">
+                  </a> <!-- runScenario("Verify delete icon not visible to User", "User Sales View") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify delete icon not visible to User","User Sales View")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.2.1&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify user can navigate through paginated sales records&quot;, &quot;User Sales View&quot;)">
+                  </a> <!-- runScenario("Verify user can navigate through paginated sales records", "User Sales View") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify user can navigate through paginated sales records","User Sales View")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Records should be displayed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_next_set_of_records_should_be_loaded(UserSalesStepDefinitions.java:253)
+	at ✽.the next set of records should be loaded(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:20)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify &quot;Sell Plant&quot; button is hidden from Regular User&quot;, &quot;User Sales View&quot;)">
+                  </a> <!-- runScenario("Verify "Sell Plant" button is hidden from Regular User", "User Sales View") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify "Sell Plant" button is hidden from Regular User","User Sales View")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.2.1&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify User can sort sales by Quantity&quot;, &quot;User Sales View&quot;)">
+                  </a> <!-- runScenario("Verify User can sort sales by Quantity", "User Sales View") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify User can sort sales by Quantity","User Sales View")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.2.1&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e202a339e350a5faa0b5b88b084b4f3f, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: /var/folders/xk/cpvhm0_x78v...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60583}, goog:processID: 34871, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:60583/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e202a339e350a5faa0b5b88b084b4f3f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
+	at com.example.ui.pages.login.LoginPage.navigateToLoginPage(LoginPage.java:43)
+	at com.example.ui.stepDefinitions.sales.UserSalesStepDefinitions.the_user_is_logged_into_the_system(UserSalesStepDefinitions.java:66)
+	at ✽.the User is logged into the system(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales-user.feature:10)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-failed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.example.runners.ApiTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify successful retrieval of a specific category with a valid ID&quot;, &quot;Category API Management&quot;)">
+                  </a> <!-- runScenario("Verify successful retrieval of a specific category with a valid ID", "Category API Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify successful retrieval of a specific category with a valid ID","Category API Management")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+JSON path $ doesn&apos;t match.
+Expected: map containing [&quot;subCategories&quot;-&gt;ANYTHING]
+  Actual: &lt;{id=10, name=Outdoor, parentId=7}&gt;
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_has_field(CategoryApiStepDefinitions.java:76)
+	at ✽.the response body should contain the field &quot;subCategories&quot;(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:11)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify duplicate plant name prevention within same category&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("Verify duplicate plant name prevention within same category", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify duplicate plant name prevention within same category","Plants API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;New Unique Plant&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:49.913964&quot;} expected [201] but found [400]
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:131)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify validation for Invalid Data Type in ID parameter&quot;, &quot;Category API Management&quot;)">
+                  </a> <!-- runScenario("Verify validation for Invalid Data Type in ID parameter", "Category API Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify validation for Invalid Data Type in ID parameter","Category API Management")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:31)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;API validates plant name length (3-25 characters)&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("API validates plant name length (3-25 characters)", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("API validates plant name length (3-25 characters)","Plants API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;ValidTestName&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:50.294515&quot;} expected [201] but found [400]
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:160)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Admin can successfully create a new Main Category&quot;, &quot;Admin Category Management API&quot;)">
+                  </a> <!-- runScenario("Verify Admin can successfully create a new Main Category", "Admin Category Management API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Admin can successfully create a new Main Category","Admin Category Management API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:9)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify price validation during plant creation&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("Verify price validation during plant creation", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify price validation during plant creation","Plants API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;Price Test Min&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:49.725036&quot;} expected [201] but found [400]
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify successful creation of a Sub-Category&quot;, &quot;Admin Category Management API&quot;)">
+                  </a> <!-- runScenario("Verify successful creation of a Sub-Category", "Admin Category Management API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify successful creation of a Sub-Category","Admin Category Management API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:20)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can filter plants by category via API&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("User can filter plants by category via API", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can filter plants by category via API","Plants API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:302)
+	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify successful retrieval of a Sub-category and its Parent linkage&quot;, &quot;Category API Management&quot;)">
+                  </a> <!-- runScenario("Verify successful retrieval of a Sub-category and its Parent linkage", "Category API Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify successful retrieval of a Sub-category and its Parent linkage","Category API Management")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+JSON path name doesn&apos;t match.
+Expected: Flower_Ind
+  Actual: Outdoor
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_field_string_value(CategoryApiStepDefinitions.java:81)
+	at ✽.the response body should contain the field &quot;name&quot; with string value &quot;Flower_Ind&quot;(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:55)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Admin can delete sale via API&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify Admin can delete sale via API", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Admin can delete sale via API","Admin Sales API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status code should be 200 or 204 but was 404
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be_200_or_204(SalesAdminApiStepDefinitions.java:423)
+	at ✽.the response status code should be 200 or 204(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:87)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify API validates quantity must be ≥ 1","Admin Sales API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify API validates quantity must be ≥ 1","Admin Sales API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify API prevents sale when quantity exceeds available stock&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify API prevents sale when quantity exceeds available stock", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify API prevents sale when quantity exceeds available stock","Admin Sales API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:42)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify API validates quantity must be ≥ 1","Admin Sales API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Admin can create a sale via API with valid data&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify Admin can create a sale via API with valid data", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Admin can create a sale via API with valid data","Admin Sales API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status code should be 200 expected:&lt;200&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 200(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:21)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify API validates quantity must be ≥ 1&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify API validates quantity must be ≥ 1","Admin Sales API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response status code should be 400 expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.SalesAdminApiStepDefinitions.the_response_status_code_should_be(SalesAdminApiStepDefinitions.java:403)
+	at ✽.the response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/sales/Sales.feature:56)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-failed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.example.runners.SalesListSoldDateSortIndicatorTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator&quot;, &quot;Sales List Sold Da...)">
+                  </a> <!-- runScenario("TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator", "Sales List Sold Da...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator","Sales List Sold Date Sort Indicator")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the &quot;Sold Date&quot; column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-failed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.example.runners.PlantsApiTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify API handles non-existent category IDs&quot;, &quot;User Plants API&quot;)">
+                  </a> <!-- runScenario("Verify API handles non-existent category IDs", "User Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify API handles non-existent category IDs","User Plants API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Plants response status code should be 404 expected:&lt;404&gt; but was:&lt;200&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.PlantsUserApiStepDefinitions.the_plants_response_status_code_should_be(PlantsUserApiStepDefinitions.java:309)
+	at ✽.the plants response status code should be 404(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants/PlantsUser.feature:54)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify User can filter plants by category&quot;, &quot;User Plants API&quot;)">
+                  </a> <!-- runScenario("Verify User can filter plants by category", "User Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify User can filter plants by category","User Plants API")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Response should contain exactly 3 plants, but found 23 expected:&lt;3&gt; but was:&lt;23&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.PlantsUserApiStepDefinitions.the_response_should_contain_exactly_plants(PlantsUserApiStepDefinitions.java:590)
+	at ✽.the response should contain exactly 3 plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants/PlantsUser.feature:45)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-failed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.EditPlantPageRestrictionTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page&quot;, &quot;Edit Plant Page Restriction for...)">
+                  </a> <!-- runScenario("TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page", "Edit Plant Page Restriction for...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page","Edit Plant Page Restriction for Regular User")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.SalesTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify sales data defaults to newest-first order&quot;, &quot;Sales Management&quot;)">
+                  </a> <!-- runScenario("Verify sales data defaults to newest-first order", "Sales Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify sales data defaults to newest-first order","Sales Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Admin can delete sale&quot;, &quot;Sales Management&quot;)">
+                  </a> <!-- runScenario("Verify Admin can delete sale", "Sales Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Admin can delete sale","Sales Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify empty state message when no sales exist&quot;, &quot;Sales Management&quot;)">
+                  </a> <!-- runScenario("Verify empty state message when no sales exist", "Sales Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify empty state message when no sales exist","Sales Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.UiTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SAL_13 - Verify sorting by Total Price column&quot;, &quot;Sales List Total Price Sorting Functionality...)">
+                  </a> <!-- runScenario("TC_UI_SAL_13 - Verify sorting by Total Price column", "Sales List Total Price Sorting Functionality...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SAL_13 - Verify sorting by Total Price column","Sales List Total Price Sorting Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SAL_14 - Verify &quot;Sell Plant&quot; button navigation&quot;, &quot;Sales Navigation Functionality&quot;)">
+                  </a> <!-- runScenario("TC_UI_SAL_14 - Verify "Sell Plant" button navigation", "Sales Navigation Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SAL_14 - Verify "Sell Plant" button navigation","Sales Navigation Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SAL_15 - Verify error when Plant not selected&quot;, &quot;Sales Navigation Functionality&quot;)">
+                  </a> <!-- runScenario("TC_UI_SAL_15 - Verify error when Plant not selected", "Sales Navigation Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SAL_15 - Verify error when Plant not selected","Sales Navigation Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)&quot;, &quot;Sales Navigation F...)">
+                  </a> <!-- runScenario("TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)", "Sales Navigation F...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)","Sales Navigation Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SAL_17 - Verify form retains data after validation error&quot;, &quot;Sales Navigation Functionality&quot;)">
+                  </a> <!-- runScenario("TC_UI_SAL_17 - Verify form retains data after validation error", "Sales Navigation Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SAL_17 - Verify form retains data after validation error","Sales Navigation Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.AdminOnlyPageRestrictionTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_PLANTS_USER_10 - Test Admin-only page restriction&quot;, &quot;Admin-only Page Restriction for Regular ...)">
+                  </a> <!-- runScenario("TC_UI_PLANTS_USER_10 - Test Admin-only page restriction", "Admin-only Page Restriction for Regular ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_PLANTS_USER_10 - Test Admin-only page restriction","Admin-only Page Restriction for Regular User")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.ApiTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Unauthorized Access protection for the endpoint&quot;, &quot;Category API Management&quot;)">
+                  </a> <!-- runScenario("Verify Unauthorized Access protection for the endpoint", "Category API Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Unauthorized Access protection for the endpoint","Category API Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify validation for Category Name Length (Min 3 chars)&quot;, &quot;Admin Category Management API&quot;)">
+                  </a> <!-- runScenario("Verify validation for Category Name Length (Min 3 chars)", "Admin Category Management API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify validation for Category Name Length (Min 3 chars)","Admin Category Management API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can access paginated plants with default parameters&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("User can access paginated plants with default parameters", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can access paginated plants with default parameters","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can sort plants by price via API&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("User can sort plants by price via API", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can sort plants by price via API","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify system behavior when searching for a Non-Existent Category ID&quot;, &quot;Category API Management&quot;)">
+                  </a> <!-- runScenario("Verify system behavior when searching for a Non-Existent Category ID", "Category API Management") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify system behavior when searching for a Non-Existent Category ID","Category API Management")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can sort plants by name via API&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("User can sort plants by name via API", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can sort plants by name via API","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Admin can create a plant with valid data under a sub-category&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("Admin can create a plant with valid data under a sub-category", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Admin can create a plant with valid data under a sub-category","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Role-Based Access Control (User Restriction)&quot;, &quot;Admin Category Management API&quot;)">
+                  </a> <!-- runScenario("Verify Role-Based Access Control (User Restriction)", "Admin Category Management API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Role-Based Access Control (User Restriction)","Admin Category Management API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;API validates all required fields for plant creation&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("API validates all required fields for plant creation", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("API validates all required fields for plant creation","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Unique Name Constraint (Prevent Duplicate Categories)&quot;, &quot;Admin Category Management API&quot;)">
+                  </a> <!-- runScenario("Verify Unique Name Constraint (Prevent Duplicate Categories)", "Admin Category Management API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Unique Name Constraint (Prevent Duplicate Categories)","Admin Category Management API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can control pagination parameters&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("User can control pagination parameters", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can control pagination parameters","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can sort plants by stock quantity via API&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("User can sort plants by stock quantity via API", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can sort plants by stock quantity via API","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User can search plants by name via API&quot;, &quot;Plants API&quot;)">
+                  </a> <!-- runScenario("User can search plants by name via API", "Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User can search plants by name via API","Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Admin can retrieve specific sale by ID&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify Admin can retrieve specific sale by ID", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Admin can retrieve specific sale by ID","Admin Sales API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Admin can retrieve specific sale by ID&quot;, &quot;Admin Sales API&quot;)">
+                  </a> <!-- runScenario("Verify Admin can retrieve specific sale by ID", "Admin Sales API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Admin can retrieve specific sale by ID","Admin Sales API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.PlantsApiTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify User can retrieve specific plant by ID&quot;, &quot;User Plants API&quot;)">
+                  </a> <!-- runScenario("Verify User can retrieve specific plant by ID", "User Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify User can retrieve specific plant by ID","User Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify User can retrieve all plants via API&quot;, &quot;User Plants API&quot;)">
+                  </a> <!-- runScenario("Verify User can retrieve all plants via API", "User Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify User can retrieve all plants via API","User Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify API handles non-existent plant IDs for User&quot;, &quot;User Plants API&quot;)">
+                  </a> <!-- runScenario("Verify API handles non-existent plant IDs for User", "User Plants API") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify API handles non-existent plant IDs for User","User Plants API")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.SalesListDateSortingTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order&quot;, &quot;Sales List Default Date S...)">
+                  </a> <!-- runScenario("TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order", "Sales List Default Date S...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order","Sales List Default Date Sorting")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+          <div class="suite-Plant_Sales_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.runners.SalesListTotalPriceSortingUserTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TC_UI_SALES_USER_08 - Verify User can sort sales by Total Price&quot;, &quot;Sales List Total Price Sorting f...)">
+                  </a> <!-- runScenario("TC_UI_SALES_USER_08 - Verify User can sort sales by Total Price", "Sales List Total Price Sorting f...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TC_UI_SALES_USER_08 - Verify User can sort sales by Total Price","Sales List Total Price Sorting for Regular User")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Plant_Sales_Automation_Suite-class-passed -->
+        </div> <!-- panel Plant_Sales_Automation_Suite -->
+        <div panel-name="test-xml-Plant_Sales_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Plant Sales Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Sales Sorting Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SAL_11 or @TC_UI_SAL_12 or @TC_UI_SAL_13&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.UiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sales Sorting Tests --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Sell Plant Navigation Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SAL_14&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.UiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sell Plant Navigation Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Sell Plant Validation Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SAL_15&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.UiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sell Plant Validation Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Multi-tab Stock Update Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SAL_16&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.UiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Multi-tab Stock Update Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Form Retention Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SAL_17&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.UiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Form Retention Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Sales List Date Sorting Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SALES_USER_06&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.SalesListDateSortingTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sales List Date Sorting Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Sales List Sold Date Sort Indicator Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SALES_USER_07&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.SalesListSoldDateSortIndicatorTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sales List Sold Date Sort Indicator Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Sales List Total Price Sorting User Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SALES_USER_08&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.SalesListTotalPriceSortingUserTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sales List Total Price Sorting User Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Admin Only Page Restriction Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_PLANTS_USER_10&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.AdminOnlyPageRestrictionTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Admin Only Page Restriction Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Edit Plant Page Restriction Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_PLANTS_USER_11&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.EditPlantPageRestrictionTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Edit Plant Page Restriction Test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;API Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@api&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.ApiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- API Tests --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;A2 User Ui Tests - Specific TCs&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SALES_USER_01 or @TC_UI_SALES_USER_02 or @TC_UI_SALES_USER_03 or @TC_UI_SALES_USER_04 or @TC_UI_SALES_USER_05&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.UiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- A2 User Ui Tests - Specific TCs --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;B2 User API Tests - Specific TCs&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_API_PLANTS_USER_01 or @TC_API_PLANTS_USER_02 or @TC_API_PLANTS_USER_03 or @TC_API_PLANTS_USER_04 or @TC_API_PLANTS_USER_05&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.PlantsApiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- B2 User API Tests - Specific TCs --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;C2 Admin API Tests - Specific TCs&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_API_SALES_ADM_01 or @TC_API_SALES_ADM_02 or @TC_API_SALES_ADM_03 or @TC_API_SALES_ADM_04 or @TC_API_SALES_ADM_05&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.ApiTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- C2 Admin API Tests - Specific TCs --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;D2 Admin Ui Tests - Specific TCs&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TC_UI_SALES_ADM_01 or @TC_UI_SALES_ADM_02 or @TC_UI_SALES_ADM_03 or @TC_UI_SALES_ADM_04 or @TC_UI_SALES_ADM_05&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runners.SalesTestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- D2 Admin Ui Tests - Specific TCs --&gt;
+&lt;/suite&gt; &lt;!-- Plant Sales Automation Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Plant_Sales_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Plant Sales Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Sales Sorting Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Sell Plant Navigation Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Sell Plant Validation Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Multi-tab Stock Update Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Form Retention Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Sales List Date Sorting Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Sales List Sold Date Sort Indicator Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Sales List Total Price Sorting User Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Admin Only Page Restriction Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Edit Plant Page Restriction Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">API Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">A2 User Ui Tests - Specific TCs (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">B2 User API Tests - Specific TCs (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">C2 Admin API Tests - Specific TCs (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">D2 Admin Ui Tests - Specific TCs (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Plant_Sales_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Plant Sales Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Plant_Sales_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Plant Sales Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Plant_Sales_Automation_Suite');
+function tableData_Plant_Sales_Automation_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(58);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'com.example.runners.SalesTestRunner')
+data.setCell(0, 3, 428593);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'com.example.runners.UiTestRunner')
+data.setCell(1, 3, 87868);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'com.example.runners.UiTestRunner')
+data.setCell(2, 3, 45750);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.example.runners.UiTestRunner')
+data.setCell(3, 3, 38406);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'com.example.runners.SalesListSoldDateSortIndicatorTestRunner')
+data.setCell(4, 3, 29614);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'com.example.runners.SalesTestRunner')
+data.setCell(5, 3, 20289);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'com.example.runners.EditPlantPageRestrictionTestRunner')
+data.setCell(6, 3, 19528);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'com.example.runners.AdminOnlyPageRestrictionTestRunner')
+data.setCell(7, 3, 18841);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'com.example.runners.UiTestRunner')
+data.setCell(8, 3, 16842);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'com.example.runners.SalesListTotalPriceSortingUserTestRunner')
+data.setCell(9, 3, 12679);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'com.example.runners.UiTestRunner')
+data.setCell(10, 3, 12636);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'com.example.runners.SalesListDateSortingTestRunner')
+data.setCell(11, 3, 12263);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'com.example.runners.SalesTestRunner')
+data.setCell(12, 3, 12011);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'com.example.runners.UiTestRunner')
+data.setCell(13, 3, 10726);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'com.example.runners.SalesTestRunner')
+data.setCell(14, 3, 9458);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'com.example.runners.UiTestRunner')
+data.setCell(15, 3, 9263);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'com.example.runners.UiTestRunner')
+data.setCell(16, 3, 5866);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'com.example.runners.SalesTestRunner')
+data.setCell(17, 3, 3893);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'com.example.runners.PlantsApiTestRunner')
+data.setCell(18, 3, 1683);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'com.example.runners.PlantsApiTestRunner')
+data.setCell(19, 3, 1590);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'runScenario')
+data.setCell(20, 2, 'com.example.runners.UiTestRunner')
+data.setCell(20, 3, 1526);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(21, 3, 1470);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'com.example.runners.PlantsApiTestRunner')
+data.setCell(22, 3, 1468);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'com.example.runners.UiTestRunner')
+data.setCell(23, 3, 1444);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'runScenario')
+data.setCell(24, 2, 'com.example.runners.PlantsApiTestRunner')
+data.setCell(24, 3, 1412);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'runScenario')
+data.setCell(25, 2, 'com.example.runners.PlantsApiTestRunner')
+data.setCell(25, 3, 1408);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'runScenario')
+data.setCell(26, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(26, 3, 1325);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'runScenario')
+data.setCell(27, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(27, 3, 1325);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'runScenario')
+data.setCell(28, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(28, 3, 1323);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'runScenario')
+data.setCell(29, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(29, 3, 1299);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'runScenario')
+data.setCell(30, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(30, 3, 1299);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'runScenario')
+data.setCell(31, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(31, 3, 1277);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'runScenario')
+data.setCell(32, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(32, 3, 1268);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'runScenario')
+data.setCell(33, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(33, 3, 1268);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'runScenario')
+data.setCell(34, 2, 'com.example.runners.UiTestRunner')
+data.setCell(34, 3, 1229);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'runScenario')
+data.setCell(35, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(35, 3, 1229);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'runScenario')
+data.setCell(36, 2, 'com.example.runners.UiTestRunner')
+data.setCell(36, 3, 1175);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'runScenario')
+data.setCell(37, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(37, 3, 474);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'runScenario')
+data.setCell(38, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(38, 3, 301);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'runScenario')
+data.setCell(39, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(39, 3, 271);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'runScenario')
+data.setCell(40, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(40, 3, 220);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'runScenario')
+data.setCell(41, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(41, 3, 218);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'runScenario')
+data.setCell(42, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(42, 3, 211);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'runScenario')
+data.setCell(43, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(43, 3, 209);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'runScenario')
+data.setCell(44, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(44, 3, 208);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'runScenario')
+data.setCell(45, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(45, 3, 207);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'runScenario')
+data.setCell(46, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(46, 3, 196);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'runScenario')
+data.setCell(47, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(47, 3, 194);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'runScenario')
+data.setCell(48, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(48, 3, 186);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'runScenario')
+data.setCell(49, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(49, 3, 184);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'runScenario')
+data.setCell(50, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(50, 3, 182);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'runScenario')
+data.setCell(51, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(51, 3, 172);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'runScenario')
+data.setCell(52, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(52, 3, 172);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'runScenario')
+data.setCell(53, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(53, 3, 164);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'runScenario')
+data.setCell(54, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(54, 3, 162);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'runScenario')
+data.setCell(55, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(55, 3, 152);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'runScenario')
+data.setCell(56, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(56, 3, 146);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'runScenario')
+data.setCell(57, 2, 'com.example.runners.ApiTestRunner')
+data.setCell(57, 3, 25);
+window.suiteTableData['Plant_Sales_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Plant_Sales_Automation_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 13 minutes</span>
+              <div id="times-div-Plant_Sales_Automation_Suite">
+              </div> <!-- times-div-Plant_Sales_Automation_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Plant_Sales_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Plant Sales Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Plant_Sales_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Plant_Sales_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.UiTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@29647f75)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("TC_UI_SAL_12 - Verify sorting by Quantity column", "Sales List Quantity Sorting Functionality")</span>
+                <span class="method-start">456 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("TC_UI_SAL_11 - Verify sorting by Plant Name column", "Sales List Sorting Functionality")</span>
+                <span class="method-start">9722 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_SAL_13 - Verify sorting by Total Price column", "Sales List Total Price Sorting Functionality...)</span>
+                <span class="method-start">15589 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">26316 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@3315d2d7)</span>
+                <span class="method-start">26575 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_SAL_14 - Verify "Sell Plant" button navigation", "Sales Navigation Functionality")</span>
+                <span class="method-start">26612 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">39249 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@d6e7bab)</span>
+                <span class="method-start">39272 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_SAL_15 - Verify error when Plant not selected", "Sales Navigation Functionality")</span>
+                <span class="method-start">39299 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">56142 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@5fa07e12)</span>
+                <span class="method-start">56178 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_SAL_16 - Verify dropdown updates after sales (if multiple tabs/windows)", "Sales Navigation F...)</span>
+                <span class="method-start">56204 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">101955 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@55b53d44)</span>
+                <span class="method-start">101981 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_SAL_17 - Verify form retains data after validation error", "Sales Navigation Functionality")</span>
+                <span class="method-start">102011 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">140418 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.SalesListDateSortingTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@482bce4f)</span>
+                <span class="method-start">140444 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_SALES_USER_06 - Verify sales data defaults to newest-first order", "Sales List Default Date S...)</span>
+                <span class="method-start">140456 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">152719 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.SalesListSoldDateSortIndicatorTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@366647c2)</span>
+                <span class="method-start">152739 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator", "Sales List Sold Da...)</span>
+                <span class="method-start">152746 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">182362 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.SalesListTotalPriceSortingUserTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@6a6afff2)</span>
+                <span class="method-start">182395 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_SALES_USER_08 - Verify User can sort sales by Total Price", "Sales List Total Price Sorting f...)</span>
+                <span class="method-start">182414 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">195094 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.AdminOnlyPageRestrictionTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@1649b0e6)</span>
+                <span class="method-start">195113 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_PLANTS_USER_10 - Test Admin-only page restriction", "Admin-only Page Restriction for Regular ...)</span>
+                <span class="method-start">195124 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">213967 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.EditPlantPageRestrictionTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@865dd6)</span>
+                <span class="method-start">214062 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page", "Edit Plant Page Restriction for...)</span>
+                <span class="method-start">214072 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">233602 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.ApiTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@4da4253)</span>
+                <span class="method-start">233707 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify Admin can successfully create a new Main Category", "Admin Category Management API")</span>
+                <span class="method-start">233747 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify successful creation of a Sub-Category", "Admin Category Management API")</span>
+                <span class="method-start">235016 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify validation for Category Name Length (Min 3 chars)", "Admin Category Management API")</span>
+                <span class="method-start">235317 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Unique Name Constraint (Prevent Duplicate Categories)", "Admin Category Management API")</span>
+                <span class="method-start">235501 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Role-Based Access Control (User Restriction)", "Admin Category Management API")</span>
+                <span class="method-start">235696 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify successful retrieval of a specific category with a valid ID", "Category API Management")</span>
+                <span class="method-start">235868 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify system behavior when searching for a Non-Existent Category ID", "Category API Management")</span>
+                <span class="method-start">236089 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify validation for Invalid Data Type in ID parameter", "Category API Management")</span>
+                <span class="method-start">236285 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Unauthorized Access protection for the endpoint", "Category API Management")</span>
+                <span class="method-start">236437 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify successful retrieval of a Sub-category and its Parent linkage", "Category API Management")</span>
+                <span class="method-start">236462 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User can access paginated plants with default parameters", "Plants API")</span>
+                <span class="method-start">236635 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User can control pagination parameters", "Plants API")</span>
+                <span class="method-start">237109 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User can sort plants by name via API", "Plants API")</span>
+                <span class="method-start">237380 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User can sort plants by price via API", "Plants API")</span>
+                <span class="method-start">237589 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User can sort plants by stock quantity via API", "Plants API")</span>
+                <span class="method-start">237800 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User can search plants by name via API", "Plants API")</span>
+                <span class="method-start">237983 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User can filter plants by category via API", "Plants API")</span>
+                <span class="method-start">238147 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Admin can create a plant with valid data under a sub-category", "Plants API")</span>
+                <span class="method-start">238354 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify price validation during plant creation", "Plants API")</span>
+                <span class="method-start">238501 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify duplicate plant name prevention within same category", "Plants API")</span>
+                <span class="method-start">238709 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("API validates all required fields for plant creation", "Plants API")</span>
+                <span class="method-start">238895 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("API validates plant name length (3-25 characters)", "Plants API")</span>
+                <span class="method-start">239114 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">239276 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.UiTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@3972a855)</span>
+                <span class="method-start">239312 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify user can navigate through paginated sales records", "User Sales View")</span>
+                <span class="method-start">239337 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify "Sell Plant" button is hidden from Regular User", "User Sales View")</span>
+                <span class="method-start">327207 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify delete icon not visible to User", "User Sales View")</span>
+                <span class="method-start">328733 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify User can sort sales by Plant Name", "User Sales View")</span>
+                <span class="method-start">329909 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify User can sort sales by Quantity", "User Sales View")</span>
+                <span class="method-start">331354 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">332584 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.PlantsApiTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@62e7f11d)</span>
+                <span class="method-start">332691 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify User can retrieve all plants via API", "User Plants API")</span>
+                <span class="method-start">332722 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify User can retrieve specific plant by ID", "User Plants API")</span>
+                <span class="method-start">334405 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify API handles non-existent plant IDs for User", "User Plants API")</span>
+                <span class="method-start">335995 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify User can filter plants by category", "User Plants API")</span>
+                <span class="method-start">337403 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify API handles non-existent category IDs", "User Plants API")</span>
+                <span class="method-start">338871 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">340284 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.ApiTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@503d687a)</span>
+                <span class="method-start">340452 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify Admin can create a sale via API with valid data", "Admin Sales API")</span>
+                <span class="method-start">340545 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify API prevents sale when quantity exceeds available stock", "Admin Sales API")</span>
+                <span class="method-start">341868 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</span>
+                <span class="method-start">343340 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</span>
+                <span class="method-start">344640 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</span>
+                <span class="method-start">345908 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify API validates quantity must be ≥ 1", "Admin Sales API")</span>
+                <span class="method-start">347207 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Admin can retrieve specific sale by ID", "Admin Sales API")</span>
+                <span class="method-start">348533 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Admin can retrieve specific sale by ID", "Admin Sales API")</span>
+                <span class="method-start">349858 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify Admin can delete sale via API", "Admin Sales API")</span>
+                <span class="method-start">351088 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">352366 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runners.SalesTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@6a370f4)</span>
+                <span class="method-start">352407 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify Admin can sell a plant with sufficient stock quantity", "Sales Management")</span>
+                <span class="method-start">352446 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify error occurs when quantity exceeds available stock", "Sales Management")</span>
+                <span class="method-start">364458 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Admin can delete sale", "Sales Management")</span>
+                <span class="method-start">368351 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify sales data defaults to newest-first order", "Sales Management")</span>
+                <span class="method-start">377810 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify empty state message when no sales exist", "Sales Management")</span>
+                <span class="method-start">398100 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">826693 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

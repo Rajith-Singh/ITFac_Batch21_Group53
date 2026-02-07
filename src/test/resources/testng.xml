@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Plant Sales Automation Suite" verbose="1" parallel="false" preserve-order="true">
+
+    <!-- ============================== Irushi's Tests ============================== -->
+
+    <test name="User - Category API Regression Tests(TC_API_USER_CAT_01 to TC_API_USER_CAT_05)">
+        <parameter name="cucumber.filter.tags" value="@tc_api_01 or @tc_api_02 or @tc_api_03 or @tc_api_04 or @tc_api_05"/>
+        <classes>
+            <class name="com.example.runners.CucumberRunners"/>
+        </classes>
+    </test>
+
+    <test name="Admin - Category Creation API Tests (TC_API_ADMIN_ADD_CAT_01 to TC_API_ADMIN_ADD_CAT_05)">
+        <parameter name="cucumber.filter.tags" value="@tc_admin_create_01 or @tc_admin_create_02 or @tc_admin_create_03 or @tc_admin_create_04 or @tc_admin_create_05"/>
+        <classes>
+            <class name="com.example.runners.CucumberRunners"/>
+        </classes>
+    </test>
+
+    <test name="Admin - Category Management UI Tests(TC_UI_ADMIN_CAT_01 to TC_UI_ADMIN_CAT_05)">
+        <parameter name="cucumber.filter.tags" value="@tc01 or @tc02 or @tc03 or @tc04 or @tc05"/>
+        <classes>
+            <class name="com.example.runners.CucumberRunners"/>
+        </classes>
+    </test>
+
+    <test name="Standard User - Category UI Tests(TC_UI_USER_CAT_01 to TC_UI_USER_CAT_05)">
+        <parameter name="cucumber.filter.tags" value="@tc_user_01 or @tc_user_02 or @tc_user_03 or @tc_user_04 or @tc_user_05"/>
+        <classes>
+            <class name="com.example.runners.CucumberRunners"/>
+        </classes>
+    </test>
+
     
     <!-- ============================== Rajith's Tests ============================== -->
     
@@ -93,38 +124,6 @@
     </test>
 
     <!-- ============================== Thiruni's Tests ============================== -->
-
-    <!-- Run User Tests with generic tags -->
-    <test name="A1 User Ui Tests - Generic">
-        <parameter name="cucumber.filter.tags" value="@ui and @user"/>
-        <classes>
-            <class name="com.example.runners.SalesUiTestRunner"/>
-        </classes>
-    </test>
-
-    <!-- Run User Api Tests with generic tags -->
-    <test name="B1 User API Tests - Generic">
-        <parameter name="cucumber.filter.tags" value="@Plants"/>
-        <classes>
-            <class name="com.example.runners.PlantsApiTestRunner"/>
-        </classes>
-    </test>
-
-    <!-- Run Admin Api Tests with generic tags -->
-    <test name="C1 Admin API Tests - Generic">
-        <parameter name="cucumber.filter.tags" value="@Sales and @API"/>
-        <classes>
-            <class name="com.example.runners.ApiTestRunner"/>
-        </classes>
-    </test>
-
-    <!-- Run Admin Tests with generic tags -->
-    <test name="D1 Admin Ui Tests - Generic">
-        <parameter name="cucumber.filter.tags" value="@ui and @admin"/>
-        <classes>
-            <class name="com.example.runners.SalesTestRunner"/>
-        </classes>
-    </test>
 
     <!-- Run User Tests with specific TC tags -->
     <test name="A2 User Ui Tests - Specific TCs">

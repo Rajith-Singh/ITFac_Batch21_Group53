@@ -1,0 +1,503 @@
+<html>
+<head>
+<title>TestNG:  API Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>API Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Feb 08 03:04:44 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>5 seconds (5592 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify successful retrieval of a specific category with a valid ID", "Category API Management"</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path $ doesn&apos;t match.
+Expected: map containing [&quot;subCategories&quot;-&gt;ANYTHING]
+  Actual: &lt;{id=10, name=Outdoor, parentId=7}&gt;
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_has_field(CategoryApiStepDefinitions.java:76)
+	at ✽.the response body should contain the field &quot;subCategories&quot;(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:11)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1117147398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1117147398'><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path $ doesn&apos;t match.
+Expected: map containing [&quot;subCategories&quot;-&gt;ANYTHING]
+  Actual: &lt;{id=10, name=Outdoor, parentId=7}&gt;
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_has_field(CategoryApiStepDefinitions.java:76)
+	at ✽.the response body should contain the field &quot;subCategories&quot;(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:11)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify duplicate plant name prevention within same category", "Plants API"</td>
+<td><div><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;New Unique Plant&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:49.913964&quot;} expected [201] but found [400]
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:131)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2046089110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2046089110'><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;New Unique Plant&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:49.913964&quot;} expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:131)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify validation for Invalid Data Type in ID parameter", "Category API Management"</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:31)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1304044873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1304044873'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;500&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 400(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:31)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API validates plant name length (3-25 characters)", "Plants API"</td>
+<td><div><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;ValidTestName&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:50.294515&quot;} expected [201] but found [400]
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:160)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1730132252", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1730132252'><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;ValidTestName&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:50.294515&quot;} expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:160)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Admin can successfully create a new Main Category", "Admin Category Management API"</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:9)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace16635353", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace16635353'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:9)
+</pre></div></td>
+<td>1</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify price validation during plant creation", "Plants API"</td>
+<td><div><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;Price Test Min&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:49.725036&quot;} expected [201] but found [400]
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1972261402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1972261402'><pre>java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {&quot;status&quot;:400,&quot;error&quot;:&quot;DUPLICATE_RESOURCE&quot;,&quot;message&quot;:&quot;Plant &apos;Price Test Min&apos; already exists in this category&quot;,&quot;timestamp&quot;:&quot;2026-02-08T03:04:49.725036&quot;} expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify successful creation of a Sub-Category", "Admin Category Management API"</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:20)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1590148530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1590148530'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;500&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_status_code(CategoryApiStepDefinitions.java:65)
+	at ✽.the API response status code should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/AdminCategoryApi.feature:20)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can filter plants by category via API", "Plants API"</td>
+<td><div><pre>java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:302)
+	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace886590094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace886590094'><pre>java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:302)
+	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify successful retrieval of a Sub-category and its Parent linkage", "Category API Management"</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path name doesn&apos;t match.
+Expected: Flower_Ind
+  Actual: Outdoor
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_field_string_value(CategoryApiStepDefinitions.java:81)
+	at ✽.the response body should contain the field &quot;name&quot; with string value &quot;Flower_Ind&quot;(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:55)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace982073494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace982073494'><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path name doesn&apos;t match.
+Expected: Flower_Ind
+  Actual: Outdoor
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.example.api.stepDefinitions.CategoryApiStepDefinitions.verify_body_field_string_value(CategoryApiStepDefinitions.java:81)
+	at ✽.the response body should contain the field &quot;name&quot; with string value &quot;Flower_Ind&quot;(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/CategoryApi.feature:55)
+</pre></div></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Unauthorized Access protection for the endpoint", "Category API Management"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify validation for Category Name Length (Min 3 chars)", "Admin Category Management API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can access paginated plants with default parameters", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can sort plants by price via API", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify system behavior when searching for a Non-Existent Category ID", "Category API Management"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can sort plants by name via API", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin can create a plant with valid data under a sub-category", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Role-Based Access Control (User Restriction)", "Admin Category Management API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API validates all required fields for plant creation", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Unique Name Constraint (Prevent Duplicate Categories)", "Admin Category Management API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can control pagination parameters", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can sort plants by stock quantity via API", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+<tr>
+<td title='com.example.runners.ApiTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.ApiTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can search plants by name via API", "Plants API"</td>
+<td></td>
+<td>0</td>
+<td>com.example.runners.ApiTestRunner@477b4cdf</td></tr>
+</table><p>
+</body>
+</html>

@@ -248,7 +248,7 @@ public class CategoryStepDefinitions {
 
     // --- NEW STEPS FOR TC_UI_USER_CAT_05 (SEQUENTIAL SORT) ---
 
-    @When("the user clicks the {string} column header")
+    @When("the user clicks the {string} column header on the category list")
     public void user_clicks_column_header(String columnName) {
         categoryPage.clickColumnHeader(columnName);
         try { Thread.sleep(1500); } catch (InterruptedException e) {}
