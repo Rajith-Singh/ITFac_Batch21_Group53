@@ -101,3 +101,21 @@ Feature: Plants API
     When admin creates a plant with name "ABC Plant" price 150.0 quantity 25 category 8
     Then create response status should be 201 or backend unavailable
     And if created response should have id name price quantity category id 8
+
+  # --- Admin create plant validation ---
+  @TC_API_PLANTS_ADM_02
+  Scenario: API validates all required fields for plant creation
+    Given admin is authenticated
+    When admin creates a plant without name field price 100.0 quantity 10 category 5
+    Then response status should be 400
+    And error message should contain "Plant name is required"
+    When admin creates a plant without price field name "Test Plant" quantity 10 category 5
+    Then response status should be 400
+    And error message should contain "Price is required"
+    When admin creates a plant without stock field name "Test Plant" price 100.0 category 5
+    Then response status should be 400
+    And error message should contain "Quantity is required"
+    When admin creates a plant with empty name price 100.0 quantity 10 category 5
+    Then response status should be 400
+    And error message should contain "Plant name is required"
+    And no plants should be created in database

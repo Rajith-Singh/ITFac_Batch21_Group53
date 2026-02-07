@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.runners.ApiTestRunner
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.874 s <<< FAILURE! -- in com.example.runners.ApiTestRunner
-com.example.runners.ApiTestRunner.runScenario["User can filter plants by category via API", "Plants API"](7) -- Time elapsed: 0.372 s <<< FAILURE!
+Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.776 s <<< FAILURE! -- in com.example.runners.ApiTestRunner
+com.example.runners.ApiTestRunner.runScenario["User can filter plants by category via API", "Plants API"](7) -- Time elapsed: 0.333 s <<< FAILURE!
 java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)

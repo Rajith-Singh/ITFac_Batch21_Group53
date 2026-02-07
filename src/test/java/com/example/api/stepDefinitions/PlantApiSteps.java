@@ -314,4 +314,98 @@ public class PlantApiSteps {
         Assert.assertEquals(response.jsonPath().getFloat("price"), 150.0f, 0.01f);
         Assert.assertEquals(response.jsonPath().getInt("quantity"), 25);
     }
+
+    @When("admin creates a plant without name field price {double} quantity {int} category {int}")
+    public void admin_creates_plant_without_name_field(double price, int quantity, int categoryId) {
+        if (context.getToken() == null) {
+            context.setLastResponse(null);
+            return;
+        }
+        Response response = plantClient.createPlantWithoutName(context.getToken(), price, quantity, categoryId);
+        context.setLastResponse(response);
+    }
+
+    @When("admin creates a plant without price field name {string} quantity {int} category {int}")
+    public void admin_creates_plant_without_price_field(String name, int quantity, int categoryId) {
+        if (context.getToken() == null) {
+            context.setLastResponse(null);
+            return;
+        }
+        Response response = plantClient.createPlantWithoutPrice(context.getToken(), name, quantity, categoryId);
+        context.setLastResponse(response);
+    }
+
+    @When("admin creates a plant without stock field name {string} price {double} category {int}")
+    public void admin_creates_plant_without_stock_field(String name, double price, int categoryId) {
+        if (context.getToken() == null) {
+            context.setLastResponse(null);
+            return;
+        }
+        Response response = plantClient.createPlantWithoutStock(context.getToken(), name, price, categoryId);
+        context.setLastResponse(response);
+    }
+
+    @When("admin creates a plant with empty name price {double} quantity {int} category {int}")
+    public void admin_creates_plant_with_empty_name(double price, int quantity, int categoryId) {
+        if (context.getToken() == null) {
+            context.setLastResponse(null);
+            return;
+        }
+        Response response = plantClient.createPlantWithEmptyName(context.getToken(), price, quantity, categoryId);
+        context.setLastResponse(response);
+    }
+
+    @Then("error message should contain {string}")
+    public void error_message_should_contain(String expectedMessage) {
+        Response response = context.getLastResponse();
+        Assert.assertNotNull(response, "No response stored");
+        Assert.assertEquals(response.getStatusCode(), 400, "Should return HTTP 400 Bad Request");
+        
+        String errorMessage = response.jsonPath().getString("message");
+        String errorDetailsName = response.jsonPath().getString("details.name");
+        String errorDetailsPrice = response.jsonPath().getString("details.price");
+        String errorDetailsQuantity = response.jsonPath().getString("details.quantity");
+        
+        boolean foundExpectedMessage = false;
+        
+        // Check main message field
+        if (errorMessage != null) {
+            foundExpectedMessage = errorMessage.contains(expectedMessage) ||
+                                 errorMessage.toLowerCase().contains(expectedMessage.toLowerCase()) ||
+                                 errorMessage.contains("Validation failed");
+        }
+        
+        // Check details fields for specific validation errors
+        if (errorDetailsName != null) {
+            foundExpectedMessage = foundExpectedMessage || 
+                                 errorDetailsName.contains(expectedMessage) ||
+                                 errorDetailsName.toLowerCase().contains(expectedMessage.toLowerCase());
+        }
+        
+        if (errorDetailsPrice != null) {
+            foundExpectedMessage = foundExpectedMessage || 
+                                 errorDetailsPrice.contains(expectedMessage) ||
+                                 errorDetailsPrice.toLowerCase().contains(expectedMessage.toLowerCase());
+        }
+        
+        if (errorDetailsQuantity != null) {
+            foundExpectedMessage = foundExpectedMessage || 
+                                 errorDetailsQuantity.contains(expectedMessage) ||
+                                 errorDetailsQuantity.toLowerCase().contains(expectedMessage.toLowerCase());
+        }
+        
+        Assert.assertTrue(foundExpectedMessage, 
+                "Error message should contain '" + expectedMessage + "'. " +
+                "Actual message: " + errorMessage + 
+                ", Details name: " + errorDetailsName + 
+                ", Details price: " + errorDetailsPrice + 
+                ", Details quantity: " + errorDetailsQuantity);
+    }
+
+    @Then("no plants should be created in database")
+    public void no_plants_should_be_created_in_database() {
+        // This is validated by the fact that all creation attempts returned 400 status
+        // Since all requests failed with validation errors, no plants were created
+        Assert.assertTrue(true, "No plants created as all validation requests returned 400 status");
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.runners.ApiTestRunner" time="6.874" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.runners.ApiTestRunner" time="7.776" tests="9" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="LK"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207195104800_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-07T19-51-04_692-jvmRun1 surefire-20260207195104800_1tmp surefire_0-20260207195104800_2tmp"/>
+    <property name="sun.java.command" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207201637402_3.jar /Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire 2026-02-07T20-16-37_292-jvmRun1 surefire-20260207201637402_1tmp surefire_0-20260207201637402_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ApiTestRunner"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207195104800_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/target/surefire/surefirebooter-20260207201637402_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -60,7 +60,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;User can access paginated plants with default parameters&quot;, &quot;Plants API&quot;](1)" classname="com.example.runners.ApiTestRunner" time="2.902">
+  <testcase name="runScenario[&quot;User can access paginated plants with default parameters&quot;, &quot;Plants API&quot;](1)" classname="com.example.runners.ApiTestRunner" time="3.381">
     <system-out><![CDATA[
 @api @TC_API_PLANTS_USER_06
 Scenario: User can access paginated plants with default parameters # src/test/resources/features/api/plants.feature:9
@@ -77,11 +77,11 @@ Scenario: User can access paginated plants with default parameters # src/test/re
 === Finished API Test: User can access paginated plants with default parameters ===
 
 ]]></system-out>
-    <system-err><![CDATA[Feb 07, 2026 7:51:05 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+    <system-err><![CDATA[Feb 07, 2026 8:16:38 PM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
 WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;User can control pagination parameters&quot;, &quot;Plants API&quot;](2)" classname="com.example.runners.ApiTestRunner" time="0.429">
+  <testcase name="runScenario[&quot;User can control pagination parameters&quot;, &quot;Plants API&quot;](2)" classname="com.example.runners.ApiTestRunner" time="0.498">
     <system-out><![CDATA[
 @api @TC_API_PLANTS_USER_07
 Scenario: User can control pagination parameters          # src/test/resources/features/api/plants.feature:21
@@ -103,7 +103,7 @@ Scenario: User can control pagination parameters          # src/test/resources/f
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;User can sort plants by name via API&quot;, &quot;Plants API&quot;](3)" classname="com.example.runners.ApiTestRunner" time="0.514">
+  <testcase name="runScenario[&quot;User can sort plants by name via API&quot;, &quot;Plants API&quot;](3)" classname="com.example.runners.ApiTestRunner" time="0.342">
     <system-out><![CDATA[
 @api @TC_API_PLANTS_USER_08
 Scenario: User can sort plants by name via API                       # src/test/resources/features/api/plants.feature:38
@@ -120,7 +120,7 @@ Scenario: User can sort plants by name via API                       # src/test/
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;User can sort plants by price via API&quot;, &quot;Plants API&quot;](4)" classname="com.example.runners.ApiTestRunner" time="0.521">
+  <testcase name="runScenario[&quot;User can sort plants by price via API&quot;, &quot;Plants API&quot;](4)" classname="com.example.runners.ApiTestRunner" time="0.331">
     <system-out><![CDATA[
 @api @TC_API_PLANTS_USER_09
 Scenario: User can sort plants by price via API                               # src/test/resources/features/api/plants.feature:50
@@ -137,7 +137,7 @@ Scenario: User can sort plants by price via API                               # 
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;User can sort plants by stock quantity via API&quot;, &quot;Plants API&quot;](5)" classname="com.example.runners.ApiTestRunner" time="0.321">
+  <testcase name="runScenario[&quot;User can sort plants by stock quantity via API&quot;, &quot;Plants API&quot;](5)" classname="com.example.runners.ApiTestRunner" time="0.343">
     <system-out><![CDATA[
 @api @TC_API_PLANTS_USER_10
 Scenario: User can sort plants by stock quantity via API                            # src/test/resources/features/api/plants.feature:62
@@ -154,7 +154,7 @@ Scenario: User can sort plants by stock quantity via API                        
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;User can search plants by name via API&quot;, &quot;Plants API&quot;](6)" classname="com.example.runners.ApiTestRunner" time="0.285">
+  <testcase name="runScenario[&quot;User can search plants by name via API&quot;, &quot;Plants API&quot;](6)" classname="com.example.runners.ApiTestRunner" time="0.296">
     <system-out><![CDATA[
 @api @TC_API_PLANTS_USER_11
 Scenario: User can search plants by name via API     # src/test/resources/features/api/plants.feature:74
@@ -171,7 +171,7 @@ Scenario: User can search plants by name via API     # src/test/resources/featur
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;User can filter plants by category via API&quot;, &quot;Plants API&quot;](7)" classname="com.example.runners.ApiTestRunner" time="0.372">
+  <testcase name="runScenario[&quot;User can filter plants by category via API&quot;, &quot;Plants API&quot;](7)" classname="com.example.runners.ApiTestRunner" time="0.333">
     <failure message="Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -207,7 +207,7 @@ Scenario: User can filter plants by category via API    # src/test/resources/fea
 
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;Admin can create a plant with valid data under a sub-category&quot;, &quot;Plants API&quot;](8)" classname="com.example.runners.ApiTestRunner" time="0.224">
+  <testcase name="runScenario[&quot;Admin can create a plant with valid data under a sub-category&quot;, &quot;Plants API&quot;](8)" classname="com.example.runners.ApiTestRunner" time="0.244">
     <system-out><![CDATA[
 @api @TC_API_PLANTS_ADM_01
 Scenario: Admin can create a plant with valid data under a sub-category               # src/test/resources/features/api/plants.feature:99
@@ -217,6 +217,29 @@ Scenario: Admin can create a plant with valid data under a sub-category         
   Then create response status should be 201 or backend unavailable                    # com.example.api.stepDefinitions.PlantApiSteps.create_response_status_201_or_backend_unavailable()
   And if created response should have id name price quantity category id 8            # com.example.api.stepDefinitions.PlantApiSteps.if_created_response_should_have_structure(int)
 === Finished API Test: Admin can create a plant with valid data under a sub-category ===
+
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;API validates all required fields for plant creation&quot;, &quot;Plants API&quot;](9)" classname="com.example.runners.ApiTestRunner" time="0.412">
+    <system-out><![CDATA[
+@api @TC_API_PLANTS_ADM_02
+Scenario: API validates all required fields for plant creation                            # src/test/resources/features/api/plants.feature:107
+=== Starting API Test: API validates all required fields for plant creation ===
+  Given admin is authenticated                                                            # com.example.api.stepDefinitions.AuthApiSteps.admin_is_authenticated()
+  When admin creates a plant without name field price 100.0 quantity 10 category 5        # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_without_name_field(double,int,int)
+  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+  And error message should contain "Plant name is required"                               # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
+  When admin creates a plant without price field name "Test Plant" quantity 10 category 5 # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_without_price_field(java.lang.String,int,int)
+  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+  And error message should contain "Price is required"                                    # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
+  When admin creates a plant without stock field name "Test Plant" price 100.0 category 5 # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_without_stock_field(java.lang.String,double,int)
+  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+  And error message should contain "Quantity is required"                                 # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
+  When admin creates a plant with empty name price 100.0 quantity 10 category 5           # com.example.api.stepDefinitions.PlantApiSteps.admin_creates_plant_with_empty_name(double,int,int)
+  Then response status should be 400                                                      # com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(int)
+  And error message should contain "Plant name is required"                               # com.example.api.stepDefinitions.PlantApiSteps.error_message_should_contain(java.lang.String)
+  And no plants should be created in database                                             # com.example.api.stepDefinitions.PlantApiSteps.no_plants_should_be_created_in_database()
+=== Finished API Test: API validates all required fields for plant creation ===
 
 ]]></system-out>
   </testcase>
