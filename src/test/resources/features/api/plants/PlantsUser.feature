@@ -1,4 +1,4 @@
-@API @Plants @User @TC_API_PLANTS_USER_01
+@API @Plants @User 
 Feature: User Plants API
   
   As a Regular User
