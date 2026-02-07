@@ -2,6 +2,7 @@ package com.example.api.stepDefinitions.categories;
 
 import com.example.api.clients.AuthClient;
 import com.example.api.clients.CategoryClient;
+import com.example.api.utils.TokenContext;
 import com.example.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -20,34 +21,8 @@ public class CategoryApiSteps {
     private AuthClient authClient = new AuthClient();
     private CategoryClient categoryClient = new CategoryClient();
     private Response response;
-    private String userToken;
-    private String adminToken;
     private Map<String, Object> categoryRequest;
     private int createdCategoryId;
-
-    @Given("I have a user authentication token")
-    public void iHaveACategoriesUserAuthenticationToken() {
-        try {
-            userToken = authClient.getUserToken();
-            if (userToken == null) {
-                Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-            }
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-        }
-    }
-
-    @Given("I have an admin authentication token")
-    public void iHaveACategoriesAdminAuthenticationToken() {
-        try {
-            adminToken = authClient.getAdminToken();
-            if (adminToken == null) {
-                Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-            }
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-        }
-    }
 
     @Given("I have a valid category ID {string}")
     public void iHaveAValidCategoryID(String categoryId) {
@@ -94,10 +69,10 @@ public class CategoryApiSteps {
 
     @When("I request the categories list")
     public void iRequestTheCategoriesList() {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = categoryClient.getCategories(userToken);
+            response = categoryClient.getCategories(TokenContext.getUserToken());
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -105,10 +80,10 @@ public class CategoryApiSteps {
 
     @When("I request the category with ID {string}")
     public void iRequestTheCategoryWithID(String categoryId) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = categoryClient.getCategoryById(userToken, Integer.parseInt(categoryId));
+            response = categoryClient.getCategoryById(TokenContext.getUserToken(), Integer.parseInt(categoryId));
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -116,7 +91,7 @@ public class CategoryApiSteps {
 
     @When("I create a new category with the following details:")
     public void iCreateANewCategoryWithTheFollowingDetails(io.cucumber.datatable.DataTable dataTable) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         categoryRequest = new HashMap<>();
@@ -124,7 +99,7 @@ public class CategoryApiSteps {
         categoryRequest.put("description", data.get(1).get(1));
         
         try {
-            response = categoryClient.createCategory(adminToken, categoryRequest);
+            response = categoryClient.createCategory(TokenContext.getAdminToken(), categoryRequest);
             if (response.getStatusCode() == 201) {
                 createdCategoryId = response.jsonPath().getInt("id");
             }
@@ -135,14 +110,14 @@ public class CategoryApiSteps {
 
     @When("I create a category with the following details without name field:")
     public void iCreateACategoryWithoutNameField(io.cucumber.datatable.DataTable dataTable) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         categoryRequest = new HashMap<>();
         categoryRequest.put("description", data.get(1).get(0));
         
         try {
-            response = categoryClient.createCategory(adminToken, categoryRequest);
+            response = categoryClient.createCategory(TokenContext.getAdminToken(), categoryRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -150,7 +125,7 @@ public class CategoryApiSteps {
 
     @When("I create a category with the following details with empty name:")
     public void iCreateACategoryWithEmptyName(io.cucumber.datatable.DataTable dataTable) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         categoryRequest = new HashMap<>();
@@ -158,7 +133,7 @@ public class CategoryApiSteps {
         categoryRequest.put("description", data.get(1).get(1));
         
         try {
-            response = categoryClient.createCategory(adminToken, categoryRequest);
+            response = categoryClient.createCategory(TokenContext.getAdminToken(), categoryRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -166,14 +141,14 @@ public class CategoryApiSteps {
 
     @When("I create a new category with name {string}")
     public void iCreateANewCategoryWithName(String categoryName) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         categoryRequest = new HashMap<>();
         categoryRequest.put("name", categoryName);
         categoryRequest.put("description", "Test description");
         
         try {
-            response = categoryClient.createCategory(adminToken, categoryRequest);
+            response = categoryClient.createCategory(TokenContext.getAdminToken(), categoryRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -181,7 +156,7 @@ public class CategoryApiSteps {
 
     @When("I update the category with the following details:")
     public void iUpdateTheCategoryWithTheFollowingDetails(io.cucumber.datatable.DataTable dataTable) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         Map<String, Object> updateRequest = new HashMap<>();
@@ -189,7 +164,7 @@ public class CategoryApiSteps {
         updateRequest.put("description", data.get(1).get(1));
         
         try {
-            response = categoryClient.updateCategory(adminToken, 1, updateRequest);
+            response = categoryClient.updateCategory(TokenContext.getAdminToken(), 1, updateRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -197,14 +172,14 @@ public class CategoryApiSteps {
 
     @When("I update the category with empty name")
     public void iUpdateTheCategoryWithEmptyName() {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         Map<String, Object> updateRequest = new HashMap<>();
         updateRequest.put("name", "");
         updateRequest.put("description", "Updated description");
         
         try {
-            response = categoryClient.updateCategory(adminToken, 1, updateRequest);
+            response = categoryClient.updateCategory(TokenContext.getAdminToken(), 1, updateRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -212,10 +187,10 @@ public class CategoryApiSteps {
 
     @When("I delete the category with ID {string}")
     public void iDeleteTheCategoryWithID(String categoryId) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         try {
-            response = categoryClient.deleteCategory(adminToken, Integer.parseInt(categoryId));
+            response = categoryClient.deleteCategory(TokenContext.getAdminToken(), Integer.parseInt(categoryId));
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -223,10 +198,10 @@ public class CategoryApiSteps {
 
     @When("I attempt to delete a category with ID {string}")
     public void iAttemptToDeleteACategoryWithID(String categoryId) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         try {
-            response = categoryClient.deleteCategory(adminToken, Integer.parseInt(categoryId));
+            response = categoryClient.deleteCategory(TokenContext.getAdminToken(), Integer.parseInt(categoryId));
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -234,10 +209,10 @@ public class CategoryApiSteps {
 
     @When("I attempt to delete the category with ID {string}")
     public void iAttemptToDeleteTheCategoryWithID(String categoryId) {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         try {
-            response = categoryClient.deleteCategory(adminToken, Integer.parseInt(categoryId));
+            response = categoryClient.deleteCategory(TokenContext.getAdminToken(), Integer.parseInt(categoryId));
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -245,10 +220,10 @@ public class CategoryApiSteps {
 
     @When("I search for categories with name containing {string}")
     public void iSearchForCategoriesWithNameContaining(String searchTerm) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = categoryClient.searchCategories(userToken, searchTerm);
+            response = categoryClient.searchCategories(TokenContext.getUserToken(), searchTerm);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -256,10 +231,10 @@ public class CategoryApiSteps {
 
     @When("I request categories with page {string} and size {string}")
     public void iRequestCategoriesWithPageAndSize(String page, String size) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = categoryClient.getCategoriesPaginated(userToken, Integer.parseInt(page), Integer.parseInt(size));
+            response = categoryClient.getCategoriesPaginated(TokenContext.getUserToken(), Integer.parseInt(page), Integer.parseInt(size));
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -267,32 +242,30 @@ public class CategoryApiSteps {
 
     @When("I request the parent category details")
     public void iRequestTheParentCategoryDetails() {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = categoryClient.getCategoryById(userToken, 1); // Assuming category 1 is a parent
+            response = categoryClient.getCategoryById(TokenContext.getUserToken(), 1); // Assuming category 1 is a parent
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
     }
 
-    @Then("the response status code should be {int}")
-    public void theResponseStatusCodeShouldBe(int expectedStatusCode) {
+    @Then("the category response status code should be {int}")
+    public void theCategoryResponseStatusCodeShouldBe(int expectedStatusCode) {
         if (response == null) return;
         
         try {
             Assert.assertEquals(response.getStatusCode(), expectedStatusCode,
                 "Expected status code " + expectedStatusCode + " but got " + response.getStatusCode());
         } catch (AssertionError e) {
-            // Handle gracefully when backend behavior differs
+            // Handle gracefully when backend behavior differs from expectations
             if (expectedStatusCode == 201 && (response.getStatusCode() == 400 || response.getStatusCode() == 404)) {
-                Assert.assertTrue(true, "Backend available but categories endpoint not fully implemented");
+                Assert.assertTrue(true, "Backend available but category endpoint not fully implemented");
             } else if (expectedStatusCode == 400 && response.getStatusCode() == 404) {
-                Assert.assertTrue(true, "Backend available but validation not implemented");
-            } else if (expectedStatusCode == 200 && response.getStatusCode() == 404) {
-                Assert.assertTrue(true, "Backend categories endpoint may not exist");
-            } else if ((expectedStatusCode == 409 || expectedStatusCode == 400) && response.getStatusCode() == 404) {
-                Assert.assertTrue(true, "Backend available but uniqueness validation not implemented");
+                Assert.assertTrue(true, "Backend available but category validation not implemented");
+            } else if (expectedStatusCode == 404 && response.getStatusCode() == 404) {
+                Assert.assertTrue(true, "Backend category endpoint may not exist");
             } else {
                 throw e;
             }
@@ -396,7 +369,7 @@ public class CategoryApiSteps {
 
     @And("the category name should be {string}")
     public void theCategoryNameShouldBe(String expectedName) {
-        if (response == null || response.getStatusCode() != 201) return;
+        if (response == null || (response.getStatusCode() != 200 && response.getStatusCode() != 201)) return;
         
         try {
             response.then()
@@ -408,7 +381,7 @@ public class CategoryApiSteps {
 
     @And("the category description should be {string}")
     public void theCategoryDescriptionShouldBe(String expectedDescription) {
-        if (response == null || response.getStatusCode() != 201) return;
+        if (response == null || (response.getStatusCode() != 200 && response.getStatusCode() != 201)) return;
         
         try {
             response.then()
@@ -472,30 +445,6 @@ public class CategoryApiSteps {
         }
     }
 
-    @And("the category name should be {string}")
-    public void theCategoryNameShouldBeUpdated(String expectedName) {
-        if (response == null || response.getStatusCode() != 200) return;
-        
-        try {
-            response.then()
-                .body("name", equalTo(expectedName));
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend category update name response may differ");
-        }
-    }
-
-    @And("the category description should be {string}")
-    public void theCategoryDescriptionShouldBeUpdated(String expectedDescription) {
-        if (response == null || response.getStatusCode() != 200) return;
-        
-        try {
-            response.then()
-                .body("description", equalTo(expectedDescription));
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend category update description response may differ");
-        }
-    }
-
     @Then("the response status code should be {int}")
     public void theResponseStatusCodeShouldBeForDelete(int expectedStatusCode) {
         if (response == null) return;
@@ -512,17 +461,6 @@ public class CategoryApiSteps {
             } else {
                 throw e;
             }
-        }
-    }
-
-    @When("I request the category with ID {string}")
-    public void iRequestTheCategoryWithIDAfterDeletion(String categoryId) {
-        if (userToken == null) return;
-        
-        try {
-            response = categoryClient.getCategoryById(userToken, Integer.parseInt(categoryId));
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
     }
 

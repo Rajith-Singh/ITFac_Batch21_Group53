@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Test Suite" verbose="1">
+    
+    <!-- Run API Plant Creation Test -->
+    <test name="API Plant Creation Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_PLANTS_ADM_01"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run API Plant Validation Test -->
+    <test name="API Plant Validation Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_PLANTS_ADM_02"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run API Plant Pagination Test -->
+    <test name="API Plant Pagination Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_PLANTS_USER_06 or @TC_API_PLANTS_USER_07"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run API Plant Sorting Test -->
+    <test name="API Plant Sorting Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_PLANTS_USER_08 or @TC_API_PLANTS_USER_09 or @TC_API_PLANTS_USER_10"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run API Plant Search and Filter Test -->
+    <test name="API Plant Search and Filter Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_PLANTS_USER_11 or @TC_API_PLANTS_USER_12"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run API Authentication Test -->
+    <test name="API Authentication Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_AUTH_ADMIN_LOGIN or @TC_API_AUTH_USER_LOGIN or @TC_API_AUTH_INVALID_CREDENTIALS or @TC_API_AUTH_MISSING_FIELDS or @TC_API_AUTH_TOKEN_VALIDATION"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run API Sales Test -->
+    <test name="API Sales Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_SALES_01 or @TC_API_SALES_USER_02 or @TC_API_SALES_USER_03 or @TC_API_SALES_USER_04"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run API Categories Test -->
+    <test name="API Categories Test">
+        <parameter name="cucumber.filter.tags" value="@TC_API_CATEGORIES_USER_01 or @TC_API_CATEGORIES_ADM_01 or @TC_API_CATEGORIES_ADM_02"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
+        </classes>
+    </test>
+
+</suite>

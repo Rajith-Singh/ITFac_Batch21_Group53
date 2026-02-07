@@ -2,6 +2,7 @@ package com.example.api.stepDefinitions.sales;
 
 import com.example.api.clients.AuthClient;
 import com.example.api.clients.SalesClient;
+import com.example.api.utils.TokenContext;
 import com.example.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -20,33 +21,7 @@ public class SalesApiSteps {
     private AuthClient authClient = new AuthClient();
     private SalesClient salesClient = new SalesClient();
     private Response response;
-    private String userToken;
-    private String adminToken;
     private Map<String, Object> saleRequest;
-
-    @Given("I have a user authentication token")
-    public void iHaveASalesUserAuthenticationToken() {
-        try {
-            userToken = authClient.getUserToken();
-            if (userToken == null) {
-                Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-            }
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-        }
-    }
-
-    @Given("I have an admin authentication token")
-    public void iHaveASalesAdminAuthenticationToken() {
-        try {
-            adminToken = authClient.getAdminToken();
-            if (adminToken == null) {
-                Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-            }
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
-        }
-    }
 
     @Given("I have a plant available for sale")
     public void iHaveAPlantAvailableForSale() {
@@ -107,7 +82,7 @@ public class SalesApiSteps {
 
     @When("I create a new sale with the following details:")
     public void iCreateANewSaleWithTheFollowingDetails(io.cucumber.datatable.DataTable dataTable) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         saleRequest = new HashMap<>();
@@ -116,7 +91,7 @@ public class SalesApiSteps {
         saleRequest.put("saleDate", data.get(1).get(2));
         
         try {
-            response = salesClient.createSale(userToken, saleRequest);
+            response = salesClient.createSale(TokenContext.getUserToken(), saleRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -124,7 +99,7 @@ public class SalesApiSteps {
 
     @When("I create a sale with the following details without plantId:")
     public void iCreateASaleWithoutPlantId(io.cucumber.datatable.DataTable dataTable) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         saleRequest = new HashMap<>();
@@ -132,7 +107,7 @@ public class SalesApiSteps {
         saleRequest.put("saleDate", data.get(1).get(1));
         
         try {
-            response = salesClient.createSale(userToken, saleRequest);
+            response = salesClient.createSale(TokenContext.getUserToken(), saleRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -140,7 +115,7 @@ public class SalesApiSteps {
 
     @When("I create a sale with the following details without quantity:")
     public void iCreateASaleWithoutQuantity(io.cucumber.datatable.DataTable dataTable) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         saleRequest = new HashMap<>();
@@ -148,7 +123,7 @@ public class SalesApiSteps {
         saleRequest.put("saleDate", data.get(1).get(1));
         
         try {
-            response = salesClient.createSale(userToken, saleRequest);
+            response = salesClient.createSale(TokenContext.getUserToken(), saleRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -156,7 +131,7 @@ public class SalesApiSteps {
 
     @When("I create a sale with the following details without saleDate:")
     public void iCreateASaleWithoutSaleDate(io.cucumber.datatable.DataTable dataTable) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         List<List<String>> data = dataTable.asLists();
         saleRequest = new HashMap<>();
@@ -164,7 +139,7 @@ public class SalesApiSteps {
         saleRequest.put("quantity", Integer.parseInt(data.get(1).get(1)));
         
         try {
-            response = salesClient.createSale(userToken, saleRequest);
+            response = salesClient.createSale(TokenContext.getUserToken(), saleRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -172,7 +147,7 @@ public class SalesApiSteps {
 
     @When("I create a sale with quantity {string} for the plant")
     public void iCreateASaleWithQuantityForThePlant(String quantity) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         saleRequest = new HashMap<>();
         saleRequest.put("plantId", 1); // Assuming test plant
@@ -180,7 +155,7 @@ public class SalesApiSteps {
         saleRequest.put("saleDate", "2024-01-15");
         
         try {
-            response = salesClient.createSale(userToken, saleRequest);
+            response = salesClient.createSale(TokenContext.getUserToken(), saleRequest);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -188,10 +163,10 @@ public class SalesApiSteps {
 
     @When("I request the sales list")
     public void iRequestTheSalesList() {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = salesClient.getSales(userToken);
+            response = salesClient.getSales(TokenContext.getUserToken());
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -199,10 +174,10 @@ public class SalesApiSteps {
 
     @When("I request sales with page {string} and size {string}")
     public void iRequestSalesWithPageAndSize(String page, String size) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = salesClient.getSalesPaginated(userToken, Integer.parseInt(page), Integer.parseInt(size));
+            response = salesClient.getSalesPaginated(TokenContext.getUserToken(), Integer.parseInt(page), Integer.parseInt(size));
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -210,10 +185,10 @@ public class SalesApiSteps {
 
     @When("I request sales sorted by {string} in {string} order")
     public void iRequestSalesSortedByInOrder(String sortBy, String sortOrder) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = salesClient.getSalesSorted(userToken, sortBy, sortOrder);
+            response = salesClient.getSalesSorted(TokenContext.getUserToken(), sortBy, sortOrder);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -221,10 +196,10 @@ public class SalesApiSteps {
 
     @When("I request sales filtered by date range from {string} to {string}")
     public void iRequestSalesFilteredByDateRangeFromTo(String startDate, String endDate) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = salesClient.getSalesByDateRange(userToken, startDate, endDate);
+            response = salesClient.getSalesByDateRange(TokenContext.getUserToken(), startDate, endDate);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -232,10 +207,10 @@ public class SalesApiSteps {
 
     @When("I request sales filtered by plant name {string}")
     public void iRequestSalesFilteredByPlantName(String plantName) {
-        if (userToken == null) return;
+        if (TokenContext.getUserToken() == null) return;
         
         try {
-            response = salesClient.getSalesByPlant(userToken, plantName);
+            response = salesClient.getSalesByPlant(TokenContext.getUserToken(), plantName);
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
@@ -243,17 +218,17 @@ public class SalesApiSteps {
 
     @When("I request the complete sales list")
     public void iRequestTheCompleteSalesList() {
-        if (adminToken == null) return;
+        if (TokenContext.getAdminToken() == null) return;
         
         try {
-            response = salesClient.getAllSales(adminToken);
+            response = salesClient.getAllSales(TokenContext.getAdminToken());
         } catch (Exception e) {
             Assert.assertTrue(true, "Backend server not available - this is expected in test environment");
         }
     }
 
-    @Then("the response status code should be {int}")
-    public void theResponseStatusCodeShouldBe(int expectedStatusCode) {
+    @Then("the sales response status code should be {int}")
+    public void theSalesResponseStatusCodeShouldBe(int expectedStatusCode) {
         if (response == null) return;
         
         try {

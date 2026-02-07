@@ -1,6 +1,7 @@
 // src/test/java/com/example/hooks/Hooks.java
 package com.example.hooks;
 
+import com.example.api.utils.TokenContext;
 import com.example.utils.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -42,6 +43,7 @@ public class Hooks {
 
     @After("@api")
     public void teardownApi(Scenario scenario) {
+        TokenContext.clear();
         System.out.println("=== Finished API Test: " + scenario.getName() + " ===\n");
     }
 }

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI Test Suite" verbose="1">
+    
+    <!-- Run Sales Sorting Tests Only -->
+    <test name="Sales Sorting Tests">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_11 or @TC_UI_SAL_12 or @TC_UI_SAL_13"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run Sell Plant Navigation Test -->
+    <test name="Sell Plant Navigation Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_14"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Sell Plant Validation Test -->
+    <test name="Sell Plant Validation Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_15"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Multi-tab Stock Update Test -->
+    <test name="Multi-tab Stock Update Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_16"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Form Retention Test -->
+    <test name="Form Retention Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SAL_17"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Sales List Date Sorting Test -->
+    <test name="Sales List Date Sorting Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SALES_USER_06"/>
+        <classes>
+            <class name="com.example.runners.SalesListDateSortingTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Sales List Sold Date Sort Indicator Test -->
+    <test name="Sales List Sold Date Sort Indicator Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SALES_USER_07"/>
+        <classes>
+            <class name="com.example.runners.SalesListSoldDateSortIndicatorTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Sales List Total Price Sorting User Test -->
+    <test name="Sales List Total Price Sorting User Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_SALES_USER_08"/>
+        <classes>
+            <class name="com.example.runners.SalesListTotalPriceSortingUserTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Admin Only Page Restriction Test -->
+    <test name="Admin Only Page Restriction Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_PLANTS_USER_10"/>
+        <classes>
+            <class name="com.example.runners.AdminOnlyPageRestrictionTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Run Edit Plant Page Restriction Test -->
+    <test name="Edit Plant Page Restriction Test">
+        <parameter name="cucumber.filter.tags" value="@TC_UI_PLANTS_USER_11"/>
+        <classes>
+            <class name="com.example.runners.EditPlantPageRestrictionTestRunner"/>
+        </classes>
+    </test>
+
+</suite>

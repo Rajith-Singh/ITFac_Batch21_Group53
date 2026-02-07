@@ -22,8 +22,8 @@ public class PlantApiSteps {
     private String userToken;
     private int createdPlantId;
 
-    @Given("I have an admin authentication token")
-    public void iHaveAnAdminAuthenticationToken() {
+    @Given("I have a plant admin authentication token")
+    public void iHaveAPlantAdminAuthenticationToken() {
         try {
             adminToken = authClient.getAdminToken();
             if (adminToken == null) {
@@ -34,8 +34,8 @@ public class PlantApiSteps {
         }
     }
 
-    @Given("I have a user authentication token")
-    public void iHaveAUserAuthenticationToken() {
+    @Given("I have a plant user authentication token")
+    public void iHaveAPlantUserAuthenticationToken() {
         try {
             userToken = authClient.getUserToken();
             if (userToken == null) {
@@ -181,8 +181,8 @@ public class PlantApiSteps {
         }
     }
 
-    @Then("the response status code should be {int}")
-    public void theResponseStatusCodeShouldBe(int expectedStatusCode) {
+    @Then("the plant response status code should be {int}")
+    public void thePlantResponseStatusCodeShouldBe(int expectedStatusCode) {
         if (response == null) return;
         
         try {
@@ -605,17 +605,5 @@ public class PlantApiSteps {
         // This would require storing previous response data
         // For now, we'll just pass since the structure is validated in previous steps
         Assert.assertTrue(true, "Category difference validation requires state management");
-    }
-
-    @And("the total elements should be greater than or equal to {int}")
-    public void theTotalElementsShouldBeGreaterThanOrEqualToOrEqual(int expectedMin) {
-        if (response == null || response.getStatusCode() != 200) return;
-        
-        try {
-            response.then()
-                .body("totalElements", greaterThanOrEqualTo(expectedMin));
-        } catch (Exception e) {
-            Assert.assertTrue(true, "Backend filtering structure may differ");
-        }
     }
 }

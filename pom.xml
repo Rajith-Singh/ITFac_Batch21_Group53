@@ -14,6 +14,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skip.ui.tests>false</skip.ui.tests>
+        <skip.api.tests>false</skip.api.tests>
         <selenium.version>4.15.0</selenium.version>
         <testng.version>7.8.0</testng.version>
         <webdrivermanager.version>5.6.2</webdrivermanager.version>
@@ -223,18 +225,53 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <!-- NEW: For parallel execution -->
-                    <parallel>methods</parallel>
-                    <threadCount>3</threadCount>
+                    <!-- Shared config for all executions -->
+                    <parallel>none</parallel>
+                    <threadCount>1</threadCount>
                     <useUnlimitedThreads>false</useUnlimitedThreads>
-                    <!-- NEW: For Cucumber reports -->
+                    <forkCount>1</forkCount>
+                    <reuseForks>false</reuseForks>
                     <systemPropertyVariables>
                         <cucumber.options>--plugin pretty</cucumber.options>
+                        <webdriver.http.factory>jdk-http-client</webdriver.http.factory>
                     </systemPropertyVariables>
                 </configuration>
+                <executions>
+                    <!-- Disable default test discovery - we use suite files only -->
+                    <execution>
+                        <id>default-test</id>
+                        <phase>none</phase>
+                        <goals><goal>test</goal></goals>
+                    </execution>
+                    <!-- 1. UI tests first - runs in its own JVM fork -->
+                    <execution>
+                        <id>ui-tests</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <skipTests>${skip.ui.tests}</skipTests>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng-ui.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </execution>
+                    <!-- 2. API tests second - runs in a fresh JVM fork after UI tests complete -->
+                    <execution>
+                        <id>api-tests</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <skipTests>${skip.api.tests}</skipTests>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng-api.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             
             <!-- NEW: Cucumber Reporting Plugin -->
@@ -274,8 +311,20 @@
         </plugins>
     </build>
     
-    <!-- NEW: Reporting Profiles -->
+    <!-- Test execution profiles: use -Pui-only or -Papi-only to run specific suites -->
     <profiles>
+        <profile>
+            <id>ui-only</id>
+            <properties>
+                <skip.api.tests>true</skip.api.tests>
+            </properties>
+        </profile>
+        <profile>
+            <id>api-only</id>
+            <properties>
+                <skip.ui.tests>true</skip.ui.tests>
+            </properties>
+        </profile>
         <profile>
             <id>cucumber-reports</id>
             <build>
