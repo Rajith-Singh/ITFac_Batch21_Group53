@@ -61,4 +61,56 @@ public class PlantClient {
                 .when()
                 .get(BASE_URL + "/paged");
     }
+    
+    public Response createPlantWithoutName(String token, double price, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"price\": %.2f, \"quantity\": %d}",
+            price, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
+    
+    public Response createPlantWithoutPrice(String token, String name, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"%s\", \"quantity\": %d}",
+            name, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
+    
+    public Response createPlantWithoutQuantity(String token, String name, double price, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"%s\", \"price\": %.2f}",
+            name, price);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
+    
+    public Response createPlantWithEmptyName(String token, double price, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"\", \"price\": %.2f, \"quantity\": %d}",
+            price, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
 }

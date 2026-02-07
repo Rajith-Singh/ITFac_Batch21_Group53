@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.example.api.tests.PlantApiTest" class="method navigator-link" hash-for-method="testTC_API_PLANTS_ADM_01">testTC_API_PLANTS_ADM_01</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.example.api.tests.PlantApiTest" class="method navigator-link" hash-for-method="testTC_API_PLANTS_ADM_02">testTC_API_PLANTS_ADM_02</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -126,11 +126,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testTC_API_PLANTS_ADM_01">
-                  </a> <!-- testTC_API_PLANTS_ADM_01 -->
-                  <span class="method-name">testTC_API_PLANTS_ADM_01</span>
+                  <a name="testTC_API_PLANTS_ADM_02">
+                  </a> <!-- testTC_API_PLANTS_ADM_02 -->
+                  <span class="method-name">testTC_API_PLANTS_ADM_02</span>
                   <em>
-(Verify Admin can create a plant with valid data under a sub-category)                  </em>
+(Verify API validates all required fields for plant creation)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -193,9 +193,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testTC_API_PLANTS_ADM_01')
+data.setCell(0, 1, 'testTC_API_PLANTS_ADM_02')
 data.setCell(0, 2, 'com.example.api.tests.PlantApiTest')
-data.setCell(0, 3, 1494);
+data.setCell(0, 3, 1526);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -215,7 +215,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -227,13 +227,15 @@ return data;
                 <br/>
                 <span class="ignored-method-name">testTC_API_PLANTS_USER_10</span>
                 <br/>
-                <span class="ignored-method-name">testTC_API_PLANTS_USER_06</span>
+                <span class="ignored-method-name">testTC_API_PLANTS_ADM_01</span>
                 <br/>
                 <span class="ignored-method-name">testTC_API_PLANTS_USER_12</span>
                 <br/>
                 <span class="ignored-method-name">testTC_API_PLANTS_USER_11</span>
                 <br/>
                 <span class="ignored-method-name">testTC_API_PLANTS_USER_07</span>
+                <br/>
+                <span class="ignored-method-name">testTC_API_PLANTS_USER_06</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -247,7 +249,7 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.example.api.tests.PlantApiTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testTC_API_PLANTS_ADM_01</span>
+                <span class="method-name">testTC_API_PLANTS_ADM_02</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
