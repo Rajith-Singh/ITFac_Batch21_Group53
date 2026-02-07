@@ -40,4 +40,22 @@
             </class>
         </classes>
     </test>
+    <test name="Plant Admin API Test Cases">
+        <classes>
+            <class name="com.example.api.tests.PlantApiTest">
+                <methods>
+                    <include name="testTC_API_PLANTS_ADM_01" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Plant Admin API Test Cases">
+        <classes>
+            <class name="com.example.api.tests.PlantApiTest">
+                <methods>
+                    <include name="testTC_API_PLANTS_ADM_01" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

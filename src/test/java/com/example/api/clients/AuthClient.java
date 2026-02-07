@@ -35,4 +35,10 @@ public class AuthClient {
         String password = ConfigReader.getProperty("user.password");
         return loginUser(username, password);
     }
+    
+    public String getAdminToken() {
+        String username = ConfigReader.getProperty("admin.username");
+        String password = ConfigReader.getProperty("admin.password");
+        return loginUser(username, password);
+    }
 }

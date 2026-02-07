@@ -34,6 +34,19 @@ public class PlantClient {
                 .get(BASE_URL + "/paged");
     }
     
+    public Response createPlant(String token, String name, double price, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"%s\", \"price\": %.2f, \"quantity\": %d}",
+            name, price, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
+    
     public Response filterPlantsByCategory(String token, String category) {
         return given()
                 .header("Authorization", "Bearer " + token)

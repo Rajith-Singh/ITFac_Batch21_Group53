@@ -6,6 +6,7 @@
       <class name="com.example.api.tests.PlantApiTest">
         <methods>
           <include name="testTC_API_PLANTS_USER_12"/>
+          <include name="testTC_API_PLANTS_ADM_01"/>
         </methods>
       </class> <!-- com.example.api.tests.PlantApiTest -->
     </classes>

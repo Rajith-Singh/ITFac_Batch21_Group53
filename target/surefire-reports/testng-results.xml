@@ -1,42 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-07T14:27:48 IST" name="Surefire suite" finished-at="2026-02-07T14:27:50 IST" duration-ms="1534">
+  <suite started-at="2026-02-07T15:40:58 IST" name="Surefire suite" finished-at="2026-02-07T15:40:59 IST" duration-ms="1513">
     <groups>
     </groups>
-    <test started-at="2026-02-07T14:27:48 IST" name="Surefire test" finished-at="2026-02-07T14:27:50 IST" duration-ms="1534">
+    <test started-at="2026-02-07T15:40:58 IST" name="Surefire test" finished-at="2026-02-07T15:40:59 IST" duration-ms="1513">
       <class name="com.example.api.tests.PlantApiTest">
-        <test-method signature="testTC_API_PLANTS_USER_12()[pri:0, instance:com.example.api.tests.PlantApiTest@3c22fc4c]" started-at="2026-02-07T14:27:48 IST" name="testTC_API_PLANTS_USER_12" description="Verify User can filter plants by category via API" finished-at="2026-02-07T14:27:50 IST" duration-ms="1514" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Indoor filter should only return Indoor plants expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Indoor filter should only return Indoor plants expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.example.api.tests.PlantApiTest.testTC_API_PLANTS_USER_12(PlantApiTest.java:387)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="testTC_API_PLANTS_ADM_01()[pri:0, instance:com.example.api.tests.PlantApiTest@460d0a57]" started-at="2026-02-07T15:40:58 IST" name="testTC_API_PLANTS_ADM_01" description="Verify Admin can create a plant with valid data under a sub-category" finished-at="2026-02-07T15:40:59 IST" duration-ms="1494" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTC_API_PLANTS_USER_12 -->
+        </test-method> <!-- testTC_API_PLANTS_ADM_01 -->
       </class> <!-- com.example.api.tests.PlantApiTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
