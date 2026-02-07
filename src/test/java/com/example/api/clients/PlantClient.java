@@ -113,4 +113,43 @@ public class PlantClient {
                 .when()
                 .post(BASE_URL + "/category/" + categoryId);
     }
+    
+    public Response createPlantWithShortName(String token, String name, double price, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"%s\", \"price\": %.2f, \"quantity\": %d}",
+            name, price, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
+    
+    public Response createPlantWithLongName(String token, String name, double price, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"%s\", \"price\": %.2f, \"quantity\": %d}",
+            name, price, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
+    
+    public Response createPlantWithBoundaryName(String token, String name, double price, int quantity, int categoryId) {
+        String requestBody = String.format(
+            "{\"name\": \"%s\", \"price\": %.2f, \"quantity\": %d}",
+            name, price, quantity);
+        
+        return given()
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .body(requestBody)
+                .when()
+                .post(BASE_URL + "/category/" + categoryId);
+    }
 }

@@ -119,3 +119,23 @@ Feature: Plants API
     Then response status should be 400
     And error message should contain "Plant name is required"
     And no plants should be created in database
+
+  # --- Admin plant name length validation ---
+  @TC_API_PLANTS_ADM_03
+  Scenario: API validates plant name length (3-25 characters)
+    Given admin is authenticated
+    When admin creates a plant with name "AB" price 100.0 quantity 10 category 8
+    Then response status should be 400
+    And error message should contain "Plant name must be between 3 and 25 characters"
+    When admin creates a plant with name "ValidTestName" price 100.0 quantity 10 category 8
+    Then response status should be 201
+    And response should contain created plant with name "ValidTestName"
+    When admin creates a plant with name "A very long plant name that exceeds limit" price 100.0 quantity 10 category 8
+    Then response status should be 400
+    And error message should contain "Plant name must be between 3 and 25 characters"
+    When admin creates a plant with name "ZZZ" price 100.0 quantity 10 category 8
+    Then response status should be 201
+    And response should contain created plant with name "ZZZ"
+    When admin creates a plant with name "Exactly25CharsHere" price 100.0 quantity 10 category 8
+    Then response status should be 201
+    And response should contain created plant with name "Exactly25CharsHere"
