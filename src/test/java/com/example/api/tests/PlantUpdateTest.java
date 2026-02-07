@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.*;
 public class PlantUpdateTest extends BaseTest {
 
     @Test
-    public void TC_API_PLANTS_ADMIN_020_verifyPlantUpdatedSuccessfully() {
+    public void TC_API_PLANTS_ADM_011_verifyPlantUpdatedSuccessfully() {
 
         String requestBody =
                 "{\n" +

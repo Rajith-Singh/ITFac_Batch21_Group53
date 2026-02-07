@@ -77,7 +77,7 @@ import static org.hamcrest.Matchers.*;
 public class PlantPaginationSortTest extends BaseTest {
 
     @Test
-    public void TC_API_PLANTS_001_verifyPaginationAndSortingForAllFields() {
+    public void TC_API_PLANTS_ADM_015_verifyPaginationAndSortingForAllFields() {
         // Fields to test
         String[] fields = {"name", "price", "quantity"};
 

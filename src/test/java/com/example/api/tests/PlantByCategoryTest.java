@@ -13,7 +13,7 @@ public class PlantByCategoryTest extends BaseTest {
     }
 
     @Test
-    public void TC_API_PLANTS_USER_015_verifyGetPlantsByCategoryId() {
+    public void TC_API_PLANTS_USER_013_verifyGetPlantsByCategoryId() {
 
         int categoryId = 5;
 

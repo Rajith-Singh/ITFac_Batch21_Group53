@@ -48,7 +48,6 @@ E:\ITFac_Batch21_Group53\src\test\java\com\example\ui\pages\login\LoginPage.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\api\tests\PlantSummaryTest.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\ui\pages\categories\CategoryListPage.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\api\models\request\PlantRequest.java
-E:\ITFac_Batch21_Group53\src\test\java\com\example\api\tests\PlantPaginationTest.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\ui\pages\plants\PlantListPage.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\api\clients\PlantClient.java
 E:\ITFac_Batch21_Group53\src\test\java\com\example\api\stepDefinitions\AuthApiSteps.java
