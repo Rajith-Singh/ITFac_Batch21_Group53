@@ -4,9 +4,17 @@
     
     <!-- Run Admin Tests -->
     <test name="Admin Tests">
-        <parameter name="cucumber.filter.tags" value="@ui and @admin"/>
+        <parameter name="cucumber.filter.tags" value="@ui or @Sales or @admin "/>
         <classes>
             <class name="com.example.runners.UiTestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Run Admin Tests -->
+    <test name="Admin API Tests">
+        <parameter name="cucumber.filter.tags" value="@ui or @Sales or @admin or @API"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunner"/>
         </classes>
     </test>
     

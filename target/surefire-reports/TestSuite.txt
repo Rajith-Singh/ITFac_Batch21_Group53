@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.16 s -- in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.764 s <<< FAILURE! -- in TestSuite
+com.example.runners.ApiTestRunner.runScenario["Verify API handles non-existent category IDs", "User Plants API"](1) -- Time elapsed: 1.654 s <<< FAILURE!
+java.lang.AssertionError: Plants response status code should be 404 expected:<404> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.example.api.stepDefinitions.PlantsUserApiStepDefinitions.the_plants_response_status_code_should_be(PlantsUserApiStepDefinitions.java:309)
+	at ✽.the plants response status code should be 404(file:///D:/L4/QA/QA_Automation/ITFac_Batch21_Group53/src/test/resources/features/api/plants/PlantsUser.feature:54)
+
