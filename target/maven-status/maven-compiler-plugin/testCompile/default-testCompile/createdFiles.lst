@@ -39,6 +39,7 @@ com/example/ui/pages/sales/SellPlantPage.class
 com/example/debug/SortIndicatorDebugTest.class
 com/example/utils/EnhancedWaitUtils.class
 com/example/api/models/response/PlantPaginatedResponse$Pageable$Sort.class
+com/example/runners/CucumberRunners.class
 com/example/ui/pages/login/LoginPage.class
 com/example/runners/ApiTestRunner.class
 com/example/hooks/Hooks.class
@@ -59,7 +60,6 @@ com/example/api/models/request/SaleRequest.class
 com/example/runners/SalesListSortingTestRunner.class
 com/example/runners/SalesListSoldDateSortIndicatorTestRunner.class
 com/example/ui/pages/plants/PlantListPage.class
-com/example/runners/CucumberRunner.class
 com/example/ui/pages/categories/CategoryPage.class
 com/example/ui/stepDefinitions/sales/SalesStepDefinitions.class
 com/example/ui/stepDefinitions/plants/PlantCRUDSteps.class

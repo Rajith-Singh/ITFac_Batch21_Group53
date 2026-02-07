@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
     },
     monochrome = true // Added for cleaner console output
 )
-public class CucumberRunner extends AbstractTestNGCucumberTests {
+public class CucumberRunners extends AbstractTestNGCucumberTests {
         @Override
     @DataProvider(parallel = false)  // This forces sequential execution
     public Object[][] scenarios() {
