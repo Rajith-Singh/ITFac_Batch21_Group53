@@ -119,6 +119,18 @@ Feature: Plants API
     When admin sends create plant request with name "Price Test 3dec" price "0.001" quantity 25 category 8
     Then response status for price decimal edge case should be 400 or 201
 
+  # --- Admin duplicate plant name prevention (same category) ---
+  @TC_API_PLANTS_ADM_07
+  Scenario: Verify duplicate plant name prevention within same category
+    Given admin is authenticated
+    And a plant named "Snake Plant" already exists in category 9
+    When admin creates a plant with name "Snake Plant" price 25 quantity 5 category 9
+    Then response status should be 400
+    And error message should contain "already exists"
+    When admin creates a plant with name "New Unique Plant" price 25 quantity 5 category 9
+    Then response status should be 201
+    And response should contain created plant with name "New Unique Plant"
+
   # --- Admin create plant validation ---
   @TC_API_PLANTS_ADM_02
   Scenario: API validates all required fields for plant creation

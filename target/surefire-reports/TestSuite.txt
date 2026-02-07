@@ -1,15 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.590 s <<< FAILURE! -- in TestSuite
-com.example.runners.ApiTestRunner.runScenario["API validates plant name length (3-25 characters)", "Plants API"](1) -- Time elapsed: 3.690 s <<< FAILURE!
-java.lang.AssertionError: Response status expected [201] but found [400]
+Tests run: 24, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 259.8 s <<< FAILURE! -- in TestSuite
+com.example.runners.SalesListSoldDateSortIndicatorTestRunner.runScenario["TC_UI_SALES_USER_07 - Verify Sold Date column shows descending sort indicator", "Sales List Sold Date Sort Indicator"](1) -- Time elapsed: 30.51 s <<< FAILURE!
+java.lang.AssertionError: Sold Date column header should display a sort indicator expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.theColumnHeaderShouldDisplayAVisualSortIndicator(SalesListSteps.java:666)
+	at ✽.the "Sold Date" column header should display a visual sort indicator(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/ui/sales/sales_list_sold_date_sort_indicator.feature:21)
+
+com.example.runners.ApiTestRunner.runScenario["User can filter plants by category via API", "Plants API"](7) -- Time elapsed: 0.197 s <<< FAILURE!
+java.lang.AssertionError: Indoor filter should only return Indoor plants expected [Indoor] but found [Plants]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.example.api.stepDefinitions.PlantApiSteps.indoor_filter_should_return_only_indoor_plants(PlantApiSteps.java:302)
+	at ✽.Indoor filter should return only Indoor plants(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:94)
+
+com.example.runners.ApiTestRunner.runScenario["Verify price validation during plant creation", "Plants API"](9) -- Time elapsed: 0.190 s <<< FAILURE!
+java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Price Test Min' already exists in this category","timestamp":"2026-02-07T21:33:10.701642"} expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:1419)
 	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:126)
-	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:131)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:116)
+
+com.example.runners.ApiTestRunner.runScenario["API validates plant name length (3-25 characters)", "Plants API"](12) -- Time elapsed: 0.255 s <<< FAILURE!
+java.lang.AssertionError: Response status. When expected 201 but got 400, response body: {"status":400,"error":"DUPLICATE_RESOURCE","message":"Plant 'Exactly25CharsHere' already exists in this category","timestamp":"2026-02-07T21:33:11.397541"} expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.example.api.stepDefinitions.PlantApiSteps.response_status_should_be(PlantApiSteps.java:151)
+	at ✽.response status should be 201(file:///Users/rajithsingh/Desktop/ITQA/ITFac_Batch21_Group53/src/test/resources/features/api/plants.feature:169)
 

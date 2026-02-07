@@ -2,6 +2,7 @@ package com.example.api.stepDefinitions;
 
 import com.example.api.context.ApiTestContext;
 import com.example.api.clients.PlantClient;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
@@ -94,6 +95,26 @@ public class PlantApiSteps {
         Response response = plantClient.filterPlantsByCategory(context.getToken(), category);
         context.setLastResponse(response);
         context.setResponseByKey("category_" + category, response);
+    }
+
+    @Given("a plant named {string} already exists in category {int}")
+    public void a_plant_named_already_exists_in_category(String name, int categoryId) {
+        if (context.getToken() == null) {
+            return;
+        }
+        Response response = plantClient.createPlant(context.getToken(), name, 25, 5, categoryId);
+        int status = response.getStatusCode();
+        if (status == 201) {
+            return;
+        }
+        if (status == 400) {
+            String body = response.getBody().asString();
+            Assert.assertTrue(body != null && body.toLowerCase().contains("already exists"),
+                    "Precondition: plant '" + name + "' should exist in category " + categoryId
+                            + ". Create returned 400 but body did not contain 'already exists'. Body: " + (body != null && body.length() > 300 ? body.substring(0, 300) + "..." : body));
+            return;
+        }
+        Assert.fail("Precondition: could not ensure plant '" + name + "' exists in category " + categoryId + ". Unexpected status: " + status);
     }
 
     @When("admin creates a plant with name {string} price {double} quantity {int} category {int}")
