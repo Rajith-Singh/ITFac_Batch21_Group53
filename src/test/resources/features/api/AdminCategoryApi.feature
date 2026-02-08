@@ -16,7 +16,7 @@ Feature: Admin Category Management API
   Scenario: Verify successful creation of a Sub-Category
     Given the API server is up and running
     And the user is authenticated as "admin"
-    When the user sends a POST request to "/api/categories" with name "Flower_99" and parent ID 1
+    When the user sends a POST request to "/api/categories" with name "Flower_99" and parent ID 19
     Then the API response status code should be 201
     And the response body should contain the field "name" with string value "Flower_99"
     And the response body should contain the field "id"

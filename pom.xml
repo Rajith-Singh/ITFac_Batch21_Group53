@@ -259,9 +259,11 @@
                         <configuration>
                             <projectName>Plant Sales Automation</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
-                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
-                            <enableFlashCharts>false</enableFlashCharts>
-                            <skip>false</skip>
+                            <jsonFiles>
+                                <param>${project.build.directory}/cucumber-reports/api/cucumber.json</param>
+                                <param>${project.build.directory}/cucumber-reports/ui/cucumber.json</param>
+                            </jsonFiles>
+                            <skip>true</skip>
                         </configuration>
                     </execution>
                 </executions>

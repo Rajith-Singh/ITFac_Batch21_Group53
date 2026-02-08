@@ -1,0 +1,16 @@
+# Created at 2026-02-08T07:16:19.526
+org.testng.TestNGException: 
+Two tests in the same suite [Plant Sales Automation Suite] cannot have the same name: API Tests
+	at org.testng.xml.internal.XmlSuiteUtils.ensureNoDuplicateTestsArePresent(XmlSuiteUtils.java:66)
+	at org.testng.xml.internal.XmlSuiteUtils.validateIfSuitesContainDuplicateTests(XmlSuiteUtils.java:27)
+	at org.testng.TestNG.sanityCheck(TestNG.java:1050)
+	at org.testng.TestNG.run(TestNG.java:1075)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+

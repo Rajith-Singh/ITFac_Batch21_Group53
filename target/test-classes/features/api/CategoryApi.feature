@@ -49,9 +49,9 @@ Feature: Category API Management
   Scenario: Verify successful retrieval of a Sub-category and its Parent linkage
     Given the API server is up and running
     And the user is authenticated as "user"
-    When the user sends a GET request to "/api/categories/10"
+    When the user sends a GET request to "/api/categories/20"
     Then the API response status code should be 200
-    And the response body should contain the field "id" with value 10
+    And the response body should contain the field "id" with value 20
     And the response body should contain the field "name" with string value "Flower_Ind"
     
     # These steps will FAIL now (as they should, because it's a bug)

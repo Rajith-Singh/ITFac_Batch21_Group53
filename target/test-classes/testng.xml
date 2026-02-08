@@ -150,6 +150,25 @@
         </classes>
     </test>
 
+    <!-- ============================== Pramudi's Tests ============================== -->
+
+    <!-- UI Tests -->
+    <test name="UI Tests">
+        <parameter name="cucumber.filter.tags" value="@ui"/>
+        <classes>
+            <class name="com.example.runners.UiTestRunnerP"/>
+        </classes>
+    </test>
+    
+    <!-- API Tests -->
+    <test name="API PTests">
+        <parameter name="cucumber.filter.tags" value="@api"/>
+        <classes>
+            <class name="com.example.runners.ApiTestRunnerP"/>
+        </classes>
+    </test>
+
+
     <!-- ============================== Thiruni's Tests ============================== -->
 
     <!-- Run User Tests with specific TC tags -->
