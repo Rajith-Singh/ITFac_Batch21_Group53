@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Feb 08 08:05:46 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>7 seconds (7054 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.runners.EditPlantPageRestrictionTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.example.runners.EditPlantPageRestrictionTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_UI_PLANTS_USER_11 - Verify User cannot access Edit Plant page", "Edit Plant Page Restriction for Regular User"</td>
+<td><div><pre>java.lang.AssertionError: Login failed: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=144.0.7559.133)
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8e528a8cb8f49073f048afd45e889c21, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\MSII\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:14061}, goog:processID: 39732, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:14061/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8e528a8cb8f49073f048afd45e889c21
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication(SalesListSteps.java:651)
+	at ✽.testuser is logged into the application(file:///C:/Users/MSII/Downloads/QA_BUG/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/edit_plant_page_restriction.feature:13)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1599312254", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1599312254'><pre>java.lang.AssertionError: Login failed: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=144.0.7559.133)
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8e528a8cb8f49073f048afd45e889c21, get {url=http://localhost:8081/ui/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\MSII\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:14061}, goog:processID: 39732, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:14061/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8e528a8cb8f49073f048afd45e889c21
+	at org.testng.Assert.fail(Assert.java:111)
+	at com.example.ui.stepDefinitions.sales.SalesListSteps.testuserIsLoggedIntoTheApplication(SalesListSteps.java:651)
+	at ✽.testuser is logged into the application(file:///C:/Users/MSII/Downloads/QA_BUG/ITFac_Batch21_Group53/src/test/resources/features/ui/plants/edit_plant_page_restriction.feature:13)
+</pre></div></td>
+<td>5</td>
+<td>com.example.runners.EditPlantPageRestrictionTestRunner@2f9f7dcf</td></tr>
+</table><p>
+</body>
+</html>

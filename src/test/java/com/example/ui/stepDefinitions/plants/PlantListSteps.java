@@ -331,15 +331,4 @@ public class PlantListSteps {
         Assert.assertFalse(hasSaveButtons, 
             "Save/Update buttons should not be available");
     }
-
-    @Then("save\\/update buttons should not be available")
-    public void save_update_buttons_should_not_be_available() {
-        // Check that save/update buttons are not available
-        boolean hasSaveButtons = plantListPage.hasSaveUpdateButtons();
-        
-        Assert.assertFalse(hasSaveButtons, 
-            "Save/Update buttons should not be available");
-    }
-
-    
 }

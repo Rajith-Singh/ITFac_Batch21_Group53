@@ -39,13 +39,18 @@ public class PlantApiStepsP {
     }
 
     // --- Plant By Category Steps ---
+    private void setResponse(Response r) {
+        this.response = r;
+        CommonApiSteps.setLastResponse(r);
+    }
+
     @When("I send a GET request to get plants by category ID {int}")
     public void iSendAGETRequestToGetPlantsByCategoryID(int categoryId) {
-        response = RestAssured.given()
+        setResponse(RestAssured.given()
                 .spec(requestSpec)
                 .header("Authorization", "Bearer " + token)
                 .when()
-                .get(ApiEndpoints.PLANTS + "/category/" + categoryId);
+                .get(ApiEndpoints.PLANTS + "/category/" + categoryId));
     }
 
     @And("the response body should not be empty")
@@ -70,11 +75,11 @@ public class PlantApiStepsP {
     // --- Plant Delete Steps ---
     @When("I send a DELETE request for a non-existing plant with ID {int}")
     public void iSendADELETERequestForANonExistingPlantWithID(int plantId) {
-        response = RestAssured.given()
+        setResponse(RestAssured.given()
                 .spec(requestSpec)
                 .header("Authorization", "Bearer " + token)
                 .when()
-                .delete(ApiEndpoints.PLANTS + "/" + plantId);
+                .delete(ApiEndpoints.PLANTS + "/" + plantId));
     }
 
     @And("the response body should contain message {string}")
@@ -95,11 +100,11 @@ public class PlantApiStepsP {
     // --- Plant Get By ID Steps ---
     @When("I send a GET request to get plant with ID {int}")
     public void iSendAGETRequestToGetPlantWithID(int plantId) {
-        response = RestAssured.given()
+        setResponse(RestAssured.given()
                 .spec(requestSpec)
                 .header("Authorization", "Bearer " + token)
                 .when()
-                .get(ApiEndpoints.PLANTS + "/" + plantId);
+                .get(ApiEndpoints.PLANTS + "/" + plantId));
     }
 
     @And("the plant ID in response should be {int}")
@@ -130,14 +135,14 @@ public class PlantApiStepsP {
     // --- Pagination and Sorting Steps ---
     @When("I send a GET request for plants with page {int}, size {int}, and sort by {string} in {string} order")
     public void iSendAGETRequestForPlantsWithPageSizeAndSortByInOrder(int page, int size, String field, String order) {
-        response = RestAssured.given()
+        setResponse(RestAssured.given()
                 .spec(requestSpec)
                 .header("Authorization", "Bearer " + token)
                 .queryParam("page", page)
                 .queryParam("size", size)
                 .queryParam("sort", field + "," + order)
                 .when()
-                .get(ApiEndpoints.PLANTS_PAGED);
+                .get(ApiEndpoints.PLANTS_PAGED));
     }
 
     @And("the response should be sorted by {string} in {string} order")
@@ -153,11 +158,11 @@ public class PlantApiStepsP {
     // --- Plant Summary Steps ---
     @When("I send a GET request to get plant summary")
     public void iSendAGETRequestToGetPlantSummary() {
-        response = RestAssured.given()
+        setResponse(RestAssured.given()
                 .spec(requestSpec)
                 .header("Authorization", "Bearer " + token)
                 .when()
-                .get(ApiEndpoints.PLANTS_SUMMARY);
+                .get(ApiEndpoints.PLANTS_SUMMARY));
     }
 
     @And("the summary should contain totalPlants and lowStockPlants")
@@ -197,12 +202,12 @@ public class PlantApiStepsP {
                 "  }\n" +
                 "}";
 
-        response = RestAssured.given()
+        setResponse(RestAssured.given()
                 .spec(requestSpec)
                 .header("Authorization", "Bearer " + token)
                 .body(requestBody)
                 .when()
-                .put(ApiEndpoints.UPDATE_PLANT);
+                .put(ApiEndpoints.UPDATE_PLANT));
     }
 
     @And("the updated plant ID should be {int}")
@@ -233,12 +238,6 @@ public class PlantApiStepsP {
     @And("the updated plant category name should be {string}")
     public void theUpdatedPlantCategoryNameShouldBe(String categoryName) {
         response.then().body("category.name", equalTo(categoryName));
-    }
-
-    // --- General Assertions ---
-    @Then("the response status code should be {int}")
-    public void theResponseStatusCodeShouldBe(int statusCode) {
-        response.then().statusCode(statusCode);
     }
 
     // --- Private Utilities (copied from PlantPaginationSortTest) ---
