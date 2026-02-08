@@ -50,6 +50,7 @@ public class CategoryApiSteps {
         if (endpoint.equals("/api/categories")) {
             // Send request without authentication token
             response = categoryClient.getAllCategories("");
+            CommonApiSteps.setLastResponse(response);
         }
     }
     
@@ -57,6 +58,7 @@ public class CategoryApiSteps {
     public void i_send_get_request_with_user_credentials(String endpoint) {
         if (endpoint.equals("/api/categories")) {
             response = categoryClient.getAllCategories(userToken);
+            CommonApiSteps.setLastResponse(response);
         }
     }
     
@@ -76,21 +78,25 @@ public class CategoryApiSteps {
                 response = categoryClient.getSubCategories(adminToken);
             }
         }
+        CommonApiSteps.setLastResponse(response);
     }
     
     @When("I send a GET request to {string} with category ID {long}")
     public void i_send_get_request_with_category_id(String endpoint, Long categoryId) {
         response = categoryClient.getCategoryById(userToken != null ? userToken : adminToken, categoryId);
+        CommonApiSteps.setLastResponse(response);
     }
     
     @When("I send a GET request to {string} for main categories")
     public void i_send_get_request_for_main_categories(String endpoint) {
         response = categoryClient.getMainCategories(userToken != null ? userToken : adminToken);
+        CommonApiSteps.setLastResponse(response);
     }
     
     @When("I send a GET request to {string} for sub-categories")
     public void i_send_get_request_for_sub_categories(String endpoint) {
         response = categoryClient.getSubCategories(userToken != null ? userToken : adminToken);
+        CommonApiSteps.setLastResponse(response);
     }
     
     @When("I set Authorization header with user token")
@@ -103,12 +109,6 @@ public class CategoryApiSteps {
     public void i_set_accept_header(String contentType) {
         // This is handled automatically in the CategoryClient
         // All requests set Accept: application/json
-    }
-    
-    @Then("the response status code should be {int}")
-    public void the_response_status_code_should_be(int statusCode) {
-        Assert.assertEquals(response.getStatusCode(), statusCode, 
-            "Expected status code " + statusCode + " but got " + response.getStatusCode());
     }
     
     @Then("the response should be a JSON array")
@@ -336,16 +336,19 @@ public class CategoryApiSteps {
     @When("I send a GET request to {string} with default pagination")
     public void i_send_get_request_with_default_pagination(String endpoint) {
         response = categoryClient.getCategoriesPageDefault(userToken != null ? userToken : adminToken);
+        CommonApiSteps.setLastResponse(response);
     }
     
     @When("I send a GET request to {string} with search term {string}")
     public void i_send_get_request_with_search_term(String endpoint, String searchTerm) {
         response = categoryClient.searchCategoriesByName(userToken != null ? userToken : adminToken, searchTerm);
+        CommonApiSteps.setLastResponse(response);
     }
     
     @When("I send a GET request to {string} with parentId {long}")
     public void i_send_get_request_with_parent_id(String endpoint, Long parentId) {
         response = categoryClient.getCategoriesByParentId(userToken != null ? userToken : adminToken, parentId);
+        CommonApiSteps.setLastResponse(response);
     }
     
     @Then("the response should include pagination metadata")

@@ -81,5 +81,6 @@ com/example/api/stepDefinitions/PlantApiSteps.class
 com/example/runners/SalesUiTestRunner.class
 com/example/api/stepDefinitions/CategoryApiSteps.class
 com/example/api/clients/AuthClient.class
+com/example/api/stepDefinitions/CommonApiSteps.class
 com/example/ui/pages/sales/UserSalesPage.class
 com/example/ui/stepDefinitions/dashboard/DashboardSteps.class

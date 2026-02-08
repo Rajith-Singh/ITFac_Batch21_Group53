@@ -243,6 +243,7 @@ public class SalesAdminApiStepDefinitions {
                 .log().all()
                 .extract()
                 .response();
+        CommonApiSteps.setLastResponse(response);
 
         System.out.println("Response Status: " + response.getStatusCode());
 
@@ -286,6 +287,7 @@ public class SalesAdminApiStepDefinitions {
                 .log().all()
                 .extract()
                 .response();
+        CommonApiSteps.setLastResponse(response);
 
         System.out.println("Response Status: " + response.getStatusCode());
         System.out.println("Response Body: " + response.getBody().asString());
@@ -326,6 +328,7 @@ public class SalesAdminApiStepDefinitions {
                 .log().all()
                 .extract()
                 .response();
+        CommonApiSteps.setLastResponse(response);
 
         System.out.println("Response Status: " + response.getStatusCode());
         System.out.println("Response Body: " + response.getBody().asString());
@@ -345,6 +348,7 @@ public class SalesAdminApiStepDefinitions {
                 .log().all()
                 .extract()
                 .response();
+        CommonApiSteps.setLastResponse(response);
 
         System.out.println("Response Status: " + response.getStatusCode());
         System.out.println("Response Body: " + response.getBody().asString());
@@ -370,6 +374,7 @@ public class SalesAdminApiStepDefinitions {
                     .log().all()
                     .extract()
                     .response();
+            CommonApiSteps.setLastResponse(response);
 
             System.out.println("Response Status: " + response.getStatusCode());
             System.out.println("Response Headers: " + response.getHeaders());
@@ -386,43 +391,6 @@ public class SalesAdminApiStepDefinitions {
             e.printStackTrace();
             Assert.fail("DELETE request failed: " + e.getMessage());
         }
-    }
-
-    @Then("the response status code should be {int}")
-    public void the_response_status_code_should_be(Integer expectedStatusCode) {
-        System.out.println("\n=== Verifying response status code ===");
-        System.out.println("Expected: " + expectedStatusCode);
-
-        if (response == null) {
-            Assert.fail("Response is null - request might have failed");
-        }
-
-        int actualStatusCode = response.getStatusCode();
-        System.out.println("Actual: " + actualStatusCode);
-
-        Assert.assertEquals(
-                "Response status code should be " + expectedStatusCode,
-                expectedStatusCode.intValue(),
-                actualStatusCode);
-
-        System.out.println("✓ Status code verification passed");
-    }
-
-    @Then("the response status code should be 200 or 204")
-    public void the_response_status_code_should_be_200_or_204() {
-        System.out.println("\n=== Verifying response status code (200 or 204) ===");
-
-        if (response == null) {
-            Assert.fail("Response is null - DELETE request might have failed");
-        }
-
-        int actualStatusCode = response.getStatusCode();
-        System.out.println("Actual: " + actualStatusCode);
-
-        boolean isValid = actualStatusCode == 200 || actualStatusCode == 204;
-        Assert.assertTrue("Response status code should be 200 or 204 but was " + actualStatusCode, isValid);
-
-        System.out.println("✓ Status code verification passed (accepted 200 or 204)");
     }
 
     @Then("the response body should contain valid sale creation data")
@@ -706,6 +674,7 @@ public class SalesAdminApiStepDefinitions {
                 .header("Authorization", adminToken)
                 .when()
                 .get("/api/sales/" + createdSaleId);
+        CommonApiSteps.setLastResponse(response);
 
         System.out.println("GET Response Status: " + response.getStatusCode());
         System.out.println("GET Response Body: " + response.getBody().asString());
